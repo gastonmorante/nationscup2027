@@ -1,0 +1,336 @@
+/* ==========================================================================
+   NATIONS CUP 2027 — EL REY POLO COUNTRY CLUB
+   Ultra-Luxury B2B Design System Stylesheet
+   Crafted for UHNWI & Global Marketing Executives
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+:root {
+  --color-racing-dark: #07140E;
+  --color-racing-emerald: #0A1E16;
+  --color-racing-subtle: #0E291E;
+  --color-racing-surface: #123326;
+  --color-gold-metallic: #D4AF37;
+  --color-gold-champagne: #C5A059;
+  --color-gold-light: #F3E5AB;
+  --color-gold-glow: rgba(212, 175, 55, 0.28);
+  --color-ivory: #FBF9F5;
+  --color-cream: #F3EFE6;
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-racing-dark);
+  color: var(--color-ivory);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  background: radial-gradient(circle at 50% 0%, #0d261c 0%, #07140e 55%, #040c08 100%);
+  min-height: 100vh;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-gold-metallic);
+  color: #07140e;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #07140e;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4af37 0%, #0e291e 100%);
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Typography Utilities */
+.font-serif-luxury {
+  font-family: var(--font-serif);
+}
+
+.tracking-ultra-wide {
+  letter-spacing: 0.28em;
+}
+
+.tracking-royal {
+  letter-spacing: 0.18em;
+}
+
+/* Metallic Champagne Gold Gradients */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #f3e5ab 35%, #d4af37 70%, #aa8625 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-text-pure {
+  background: linear-gradient(135deg, #f7e6b5 0%, #d4af37 50%, #997d33 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #e6ca65 0%, #d4af37 50%, #b28b2e 100%);
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(135deg, rgba(212, 175, 55, 0.8), rgba(212, 175, 55, 0.15)) 1;
+}
+
+/* Glassmorphism Containers */
+.glass-panel-luxury {
+  background: rgba(10, 30, 22, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(243, 229, 171, 0.15);
+}
+
+.glass-panel-subtle {
+  background: rgba(7, 20, 14, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-panel-cream {
+  background: rgba(251, 249, 245, 0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #0c1a13;
+}
+
+/* Gold Glow & Box Shadows */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+}
+
+.gold-glow-intense {
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.45);
+}
+
+.gold-border-subtle {
+  border: 1px solid rgba(212, 175, 55, 0.22);
+}
+
+.gold-border-active {
+  border: 1px solid rgba(212, 175, 55, 0.75);
+}
+
+/* Button & Hover Micro-interactions */
+.btn-gold-luxury {
+  background: linear-gradient(135deg, #f7e6b5 0%, #d4af37 50%, #aa8625 100%);
+  color: #07140e;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.32);
+}
+.btn-gold-luxury:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.55);
+  filter: brightness(1.08);
+}
+.btn-gold-luxury:active {
+  transform: translateY(0);
+}
+
+.btn-outline-gold {
+  background: rgba(10, 30, 22, 0.4);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: #f3e5ab;
+  transition: all 0.35s ease;
+}
+.btn-outline-gold:hover {
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.12);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Pulsating Beacon Animation */
+@keyframes pulse-gold {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+  }
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2.2s infinite;
+}
+
+@keyframes pulse-emerald {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.8);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+  }
+}
+
+.animate-pulse-emerald {
+  animation: pulse-emerald 2.5s infinite;
+}
+
+/* Shimmer Light Reflection */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shimmer 5s infinite;
+}
+
+/* Floating Dock (Mobile Native) */
+.mobile-action-dock {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background: rgba(7, 20, 14, 0.92);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+/* Pannellum 360 Viewer Customization */
+#panorama-container {
+  width: 100%;
+  height: 560px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  #panorama-container {
+    height: 420px;
+  }
+}
+
+.pnlm-container {
+  background: #07140e !important;
+}
+
+.pnlm-load-box {
+  background: rgba(7, 20, 14, 0.9) !important;
+  border: 1px solid rgba(212, 175, 55, 0.4) !important;
+  color: #f3e5ab !important;
+  border-radius: 8px !important;
+}
+
+.pnlm-load-box p {
+  color: #f3e5ab !important;
+  font-family: var(--font-sans) !important;
+  font-size: 13px !important;
+  letter-spacing: 0.1em !important;
+}
+
+.pnlm-lbar {
+  border: 1px solid rgba(212, 175, 55, 0.5) !important;
+}
+
+.pnlm-lbar-fill {
+  background: #d4af37 !important;
+}
+
+/* Custom 360 HUD Controls */
+.pnlm-controls-custom {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
+  display: flex;
+  gap: 8px;
+}
+
+/* Pitch Deck Slide Transition Styles */
+.deck-slide-content {
+  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+/* Architectural Digest Editorial Image Hover */
+.ad-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ad-gallery-item img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ad-gallery-item:hover {
+  border-color: rgba(212, 175, 55, 0.55);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.65), 0 0 25px rgba(212, 175, 55, 0.2);
+}
+.ad-gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+/* Toast Notification */
+#toast-notification {
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#toast-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+#toast-notification.hide {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}

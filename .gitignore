@@ -1,0 +1,28 @@
+# Production & Video Editing Raw Files in Root Directory
+/Adobe Premiere Pro Audio Previews/
+/Adobe Premiere Pro Auto-Save/
+/Adobe Premiere Pro Video Previews/
+/Animation Composer/
+/Motion Graphics Template Media/
+/osmo 1/
+/insta scouting/
+/video/
+/Propuestas/
+/Invitation box/
+/renders/
+/logos/
+/*.prproj
+/*.prin
+/*.pdf
+
+# Operating System & Editors
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+
+# Python / Environment
+__pycache__/
+*.pyc
+.env
