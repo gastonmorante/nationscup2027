@@ -339,7 +339,7 @@
       titleEn: "Nations Cup 2027: The Legacy of Polo in the Riviera Maya",
       subtitleEs: "13 al 16 de Enero de 2027 | El Rey Polo Country Club, Puerto Morelos, Q. Roo",
       subtitleEn: "January 13 to 16, 2027 | El Rey Polo Country Club, Puerto Morelos, Mexico",
-      image: "assets/renders/Palapa Exterior.jpg",
+      image: "assets/photos/palapa_exterior_rect.jpg",
       pointsEs: [
         "Presentación de patrocinio exclusiva para marcas globales y comités de inversión.",
         "Edición inaugural con 6 selecciones nacionales en el corazón de la Riviera Maya.",
@@ -360,7 +360,7 @@
       titleEn: "«Luxury brands do not buy advertising; they sponsor the space they aspire to own in the client's mind.»",
       subtitleEs: "El polo es el ecosistema de más alto poder adquisitivo y fidelidad relacional del planeta.",
       subtitleEn: "Polo is the preeminent global sports ecosystem for high-net-worth relational equity.",
-      image: "assets/gallery/Explanada 1.jpg",
+      image: "assets/photos/real_field_pitch.jpg",
       pointsEs: [
         "Trascendencia más allá del impacto efímero: vínculos emocionales con tomadores de decisión.",
         "Ambiente curado sin masificación, con protocolos de hospitalidad de nivel Grand Slam.",
@@ -381,7 +381,7 @@
       titleEn: "El Rey Polo Country Club: The Equestrian Jewel of the Mexican Caribbean",
       subtitleEs: "Ruta de los Cenotes Km 11, Puerto Morelos (VX9Q+H2) · A 15 min del Aeropuerto de Cancún (CUN)",
       subtitleEn: "Cenote Route Km 11, Puerto Morelos · 15 minutes from Cancun International Airport (CUN)",
-      image: "assets/renders/Palapa interior.jpg",
+      image: "assets/photos/palapa_interior_rect.jpg",
       pointsEs: [
         "Única cancha oficial reglamentaria de 300 x 200 m (6 hectáreas de césped oficial) en el Sureste de México.",
         "Instalaciones de clase mundial: Casa Club, restaurante gourmet, alberca, caballerizas para 80+ ejemplares.",
@@ -402,7 +402,7 @@
       titleEn: "6 Elite National Teams in High-Goal Competition",
       subtitleEs: "México, Argentina, Inglaterra, Estados Unidos, Brasil e India",
       subtitleEn: "Mexico, Argentina, England, United States, Brazil and India",
-      image: "assets/video/video_poster.jpg",
+      image: "assets/stills/campo_accion.jpg",
       pointsEs: [
         "Torneo de 4 días de competencia avalado por los comités rectores del polo internacional.",
         "Polistas profesionales de alto hándicap y patronos de renombre internacional.",
@@ -423,7 +423,7 @@
       titleEn: "C-Level Demographics and Ultra-High-Net-Worth Profile (NSE A, B & ABC+)",
       subtitleEs: "Hombres y mujeres de 25 a 55 años con capacidad de compra e inversión ilimitada.",
       subtitleEn: "Affluent executives aged 25 to 55 with supreme purchasing and investment capability.",
-      image: "assets/gallery/Zona derecha lounge 1.jpg",
+      image: "assets/photos/real_lounge_right.jpg",
       pointsEs: [
         "Perfiles: CEOs, Directores Globales, Inversionistas, Presidentes de Grupo y Socios de Family Offices.",
         "Afinidades: Alta relojería, superdeportivos, champagne, aviación ejecutiva, arte y real estate de lujo.",
@@ -444,7 +444,7 @@
       titleEn: "4 Days of Championship Polo, Fashion Shows & Bespoke Mixology",
       subtitleEs: "Un festival de estilo de vida que combina chukkers electrizantes con alta costura caribeña.",
       subtitleEn: "A lifestyle festival pairing electrifying chukkers with Caribbean haute couture.",
-      image: "assets/renders/stage.jpg",
+      image: "assets/photos/stage_runway_rect.jpg",
       pointsEs: [
         "Pasarela de diseñadores internacionales y desfiles de alta costura resortwear.",
         "Barras de mixología botánica con destilados ultra-premium y casas de champagne.",
@@ -465,7 +465,7 @@
       titleEn: "Ubiquitous High-Prestige Presence Across All Touchpoints",
       subtitleEs: "Branding en faldones de cancha, pressboard oficial, jerséis de juego y stand comercial.",
       subtitleEn: "Field perimeter boarding, official pressboard, team jerseys, and dedicated pavilions.",
-      image: "assets/renders/zona 1.jpg",
+      image: "assets/photos/vip_lounge_suite_rect.jpg",
       pointsEs: [
         "Faldones perimetrales de 300 metros con visibilidad garantizada en video y transmisiones.",
         "Branding central en los uniformes oficiales de las selecciones nacionales.",
@@ -486,7 +486,7 @@
       titleEn: "Rights Hierarchy: Presenting Partner, Official Partner & Suppliers",
       subtitleEs: "Diseñado para brindar el máximo retorno a cada nivel de asociación estratégica.",
       subtitleEn: "Tailored to yield peak relational return for each tier of strategic alignment.",
-      image: "assets/renders/zona 2.jpg",
+      image: "assets/photos/palco_networking_rect.jpg",
       pointsEs: [
         "Presenting Partner: Naming Right 'Nations Cup presented by [Tu Marca]' con máxima jerarquía.",
         "Official Partner: Blindaje total con exclusividad absoluta para 1 sola marca por industria.",
@@ -507,7 +507,7 @@
       titleEn: "Transparent Investment & Comparative Rights Matrix",
       subtitleEs: "Presenting Partner ($40k MXN) · Official Partner ($30k MXN) · Supplier (A Medida)",
       subtitleEn: "Presenting Partner ($40k MXN) · Official Partner ($30k MXN) · Supplier (Bespoke)",
-      image: "assets/renders/zona 3.jpg",
+      image: "assets/photos/terrace_pergolado_rect.jpg",
       pointsEs: [
         "Presentador: Mesa VIP 10 pax + botella de cortesía + branding en 6 equipos + stand 3x3m.",
         "Oficial: Branding en 1 selección + sala lounge privada + 15 pases VIP + stand 3x3m.",
@@ -528,7 +528,7 @@
       titleEn: "Customized Brand Activations for Luxury Verticals",
       subtitleEs: "Alta Relojería, Automotriz, Champagne, Aviación Privada y Banca de Inversión",
       subtitleEn: "Haute Horlogerie, Supercars, Champagne, Private Aviation & Wealth Management",
-      image: "assets/renders/pool autoshow.jpg",
+      image: "assets/photos/pool_autoshow_rect.jpg",
       pointsEs: [
         "Alta Relojería: Cronometrador oficial de los chukkers y entrega del reloj conmemorativo al MVP.",
         "Automotriz: Exhibición estática de superdeportivos en el césped y servicio de shuttle VIP.",
@@ -549,7 +549,7 @@
       titleEn: "+2.5 Million Qualified Impressions Across Luxury Media & Digital PR",
       subtitleEs: "Campaña hipersegmentada a perfiles C-Level en México, Estados Unidos, Canadá y Europa.",
       subtitleEn: "Hyper-targeted campaign aimed at C-Suite audiences in Mexico, the US, Canada and Europe.",
-      image: "assets/gallery/Explanada 4.jpg",
+      image: "assets/photos/commercial_stands_rect.jpg",
       pointsEs: [
         "+1,000,000 de impresiones pagadas en Meta & Google Ads segmentadas a directores y CEOs.",
         "+1,500,000 de alcance orgánico estimado mediante cobertura de influencers y prensa de estilo de vida.",
@@ -570,7 +570,7 @@
       titleEn: "Post-Event Media Audit, PR Clippings & Executive Networking Data",
       subtitleEs: "Garantizamos métricas cuantitativas y cualitativas de valor publicitario equivalente (AVE).",
       subtitleEn: "Delivering verifiable qualitative and quantitative metrics with Advertising Value Equivalency.",
-      image: "assets/renders/grill.jpg",
+      image: "assets/photos/sunset_grill_rect.jpg",
       pointsEs: [
         "Reporte analítico integral post-evento con métricas de menciones, alcance y visualizaciones.",
         "Dossier fotográfico y mini-clip cinematográfico de 15 segundos personalizado para la marca.",
@@ -591,7 +591,7 @@
       titleEn: "Unbreakable Standard: Strict Limit of 1 Single Brand per Industry Sector",
       subtitleEs: "La reserva de exclusividad se otorga por estricto orden cronológico de formalización.",
       subtitleEn: "Category reservation lock is granted strictly in chronological order of formalization.",
-      image: "assets/renders/zona 4.jpg",
+      image: "assets/stills/champagne_toast.jpg",
       pointsEs: [
         "Blindaje garantizado: Si su marca confirma en 'Automotriz', ninguna otra marca de autos tendrá presencia.",
         "Categorías en proceso de confirmación: Alta Relojería, Champagne, Banca Privada y Aviación.",
@@ -612,7 +612,7 @@
       titleEn: "Private Executive Alignment Meeting with the Committee",
       subtitleEs: "Sesión ejecutiva de 30 minutos presencial o por videoconferencia para afinar activaciones.",
       subtitleEn: "30-minute executive briefing in-person or via secure videoconference to tailor activations.",
-      image: "assets/logos/el rey logo.jpeg",
+      image: "assets/stills/trofeo_championship.jpg",
       pointsEs: [
         "1. Confirmación de disponibilidad de su categoría de industria.",
         "2. Sesión estratégica para diseñar activaciones y presencia en el club.",
@@ -637,7 +637,7 @@
       titleEn: "VIP Arrival & Facade of El Rey Polo Country Club",
       descEs: "Arquitectura tropical contemporánea enmarcada por la exuberante selva maya de la Ruta de los Cenotes.",
       descEn: "Contemporary tropical architecture framed by the lush Mayan jungle on the Cenote Route.",
-      image: "assets/renders/Palapa Exterior.jpg",
+      image: "assets/photos/palapa_exterior_rect.jpg",
       categoryEs: "ARQUITECTURA",
       categoryEn: "ARCHITECTURE"
     },
@@ -647,7 +647,7 @@
       titleEn: "Official Polo Ground (6 Regulation Hectares in Play)",
       descEs: "Campo de césped bermuda reglamentario de 300 x 200 m, único en el Sureste mexicano para torneos de alto hándicap.",
       descEn: "Regulation 300 x 200 m Bermuda grass pitch, unparalleled in the Mexican Caribbean for international polo.",
-      image: "assets/gallery/Explanada 1.jpg",
+      image: "assets/stills/campo_accion.jpg",
       categoryEs: "CAMPO CENTRAL",
       categoryEn: "GRAND PITCH"
     },
@@ -657,7 +657,7 @@
       titleEn: "VIP Hospitality Lounge with Bespoke Mixology",
       descEs: "Espacio central de palapa de lujo con techos de doble altura, barras de mármol y coctelería internacional.",
       descEn: "Grand thatched luxury palapa pavilion with soaring ceilings, marble bars, and premium international mixology.",
-      image: "assets/renders/Palapa interior.jpg",
+      image: "assets/photos/palapa_interior_rect.jpg",
       categoryEs: "HOSPITALIDAD",
       categoryEn: "HOSPITALITY"
     },
@@ -665,21 +665,21 @@
       index: "04",
       titleEs: "Mesas VIP Privadas y Palcos Frente a la Cancha",
       titleEn: "Private VIP Grandstand Tables Overlooking the Pitch",
-      descEs: "Vistas privilegiadas al galope de los caballos con servicio de meseros y champagne en cada chukker.",
+      descEs: "Vistas privilegiadas al juego con servicio personalizado de meseros y champagne en cada chukker.",
       descEn: "Prime viewing of high-octane chukkers with dedicated bottle service and tailored culinary courses.",
-      image: "assets/gallery/Zona derecha lounge 1.jpg",
+      image: "assets/photos/vip_lounge_suite_rect.jpg",
       categoryEs: "EXPERIENCIA VIP",
       categoryEn: "VIP ACCESS"
     },
     {
       index: "05",
-      titleEs: "Zona de Paddock y Calentamiento de Caballos de Élite",
-      titleEn: "Paddock Area & Thoroughbred Warm-up Grounds",
-      descEs: "Área de 1 hectárea dedicada al cuidado, herraje y preparación de más de 80 ejemplares de pura sangre.",
-      descEn: "1-hectare paddock dedicated to the grooming, preparation, and mounting of over 80 high-caliber horses.",
-      image: "assets/video/video_poster.jpg",
-      categoryEs: "ECUESTRE",
-      categoryEn: "EQUESTRIAN"
+      titleEs: "Brindis de Celebración & Casas de Champagne",
+      titleEn: "Celebration Toasts & Grand Marque Champagne",
+      descEs: "Servicio exclusivo de grand marques de champagne servidas en copas de cristal durante cada jornada de juego.",
+      descEn: "Exclusive grand marque champagne service poured in crystal flutes during every chukker of championship play.",
+      image: "assets/stills/champagne_toast.jpg",
+      categoryEs: "CHAMPAGNE VIP",
+      categoryEn: "CHAMPAGNE"
     },
     {
       index: "06",
@@ -687,7 +687,7 @@
       titleEn: "Supercar Showcase & Sponsor Activations Poolside",
       descEs: "Espacios panorámicos junto a la alberca para exhibición estática de superdeportivos, yates y alta relojería.",
       descEn: "Scenic poolside platforms for static exhibitions of supercars, private marine models, and luxury showcases.",
-      image: "assets/renders/pool autoshow.jpg",
+      image: "assets/photos/pool_autoshow_rect.jpg",
       categoryEs: "AUTOMOTRIZ",
       categoryEn: "SUPERCARS"
     },
@@ -697,7 +697,7 @@
       titleEn: "Fashion Show Runway & Contemporary Art Pavilion",
       descEs: "Desfiles de moda resortwear de diseñadores internacionales y subastas privadas de arte contemporáneo.",
       descEn: "International designer resortwear runway shows and private contemporary art showcases under the stars.",
-      image: "assets/renders/stage.jpg",
+      image: "assets/photos/stage_runway_rect.jpg",
       categoryEs: "ALTA COSTURA",
       categoryEn: "FASHION & ART"
     },
@@ -707,7 +707,7 @@
       titleEn: "3x3m Brand Showcase Stand & Networking Concourse",
       descEs: "Pabellones comerciales de alta gama para interacción directa con directivos, presidentes y líderes empresariales.",
       descEn: "High-spec exhibition pavilions for direct interaction with chairs, C-level executives, and affluent guests.",
-      image: "assets/gallery/Explanada 4.jpg",
+      image: "assets/photos/commercial_stands_rect.jpg",
       categoryEs: "NETWORKING",
       categoryEn: "NETWORKING"
     },
@@ -717,7 +717,7 @@
       titleEn: "Golden Hour Cocktail & After-Polo Poolside Sessions",
       descEs: "El atardecer en la selva caribeña acompañado de selectores de música internacionales y gastronomía al grill.",
       descEn: "Riviera Maya sunset accompanied by international vinyl selectors and bespoke woodfire barbecue.",
-      image: "assets/renders/grill.jpg",
+      image: "assets/photos/sunset_grill_rect.jpg",
       categoryEs: "ATARDECER",
       categoryEn: "AFTER-POLO"
     },
@@ -727,7 +727,7 @@
       titleEn: "Official Nations Cup Trophy & Awards Ceremony",
       descEs: "El galardón de plata y obsidiana entregado ante los comités de patrocinio a la selección campeona de 2027.",
       descEn: "The silver and obsidian prize presented before the sponsorship boards to the 2027 champion team.",
-      image: "assets/logos/nations cup logo.jpeg",
+      image: "assets/stills/trofeo_championship.jpg",
       categoryEs: "CEREMONIA",
       categoryEn: "AWARDS"
     }

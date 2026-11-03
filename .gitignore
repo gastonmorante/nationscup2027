@@ -15,6 +15,7 @@
 /*.prin
 /*.pdf
 /SUBIR_A_GITHUB.bat
+/ABRIR_GITHUB_TOKEN.url
 
 # Operating System & Editors
 .DS_Store
