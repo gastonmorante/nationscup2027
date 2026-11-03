@@ -1676,7 +1676,7 @@
     const roleSelect = document.getElementById('form-role');
     const roleText = (roleSelect && roleSelect.selectedIndex > 0) 
       ? roleSelect.options[roleSelect.selectedIndex].text 
-      : (isEs ? "[Cargo C-Level]" : "[C-Level Role]");
+      : (isEs ? "[Cargo Directivo]" : "[Executive Role]");
 
     const catSelect = document.getElementById('form-category');
     const catText = (catSelect && catSelect.selectedIndex > 0) 
