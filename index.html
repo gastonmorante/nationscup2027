@@ -271,20 +271,20 @@
             </p>
           </div>
 
-          <!-- Direct Action CTAs (Above the Video) -->
+          <!-- Direct Action CTAs (Above the Video: Elevated Luxury Aesthetics) -->
           <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 my-space-md">
             <button 
               type="button" 
               onclick="window.openVideoTheater()" 
-              class="inline-flex items-center gap-2.5 px-6 py-3 rounded-DEFAULT bg-warm-bronze hover:bg-champagne-light text-racing-green-dark font-label-md text-label-md uppercase tracking-wider font-semibold shadow-xl transition-all hover:scale-105"
+              class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-DEFAULT bg-gradient-to-r from-[#C5A059] via-[#E2C378] to-[#C5A059] text-[#07140E] font-label-md uppercase tracking-[0.16em] font-bold shadow-[0_4px_22px_rgba(212,175,55,0.35)] hover:shadow-[0_6px_28px_rgba(212,175,55,0.55)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group cursor-pointer"
             >
-              <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+              <span class="material-symbols-outlined text-[20px] text-[#07140E] group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
               <span data-i18n="hero_btn_play_theater">Ver Presentación con Audio HD</span>
             </button>
 
             <a 
               href="#pitch-deck" 
-              class="inline-flex items-center gap-2 px-5 py-3 rounded-DEFAULT bg-racing-green-subtle/80 hover:bg-racing-green-subtle text-canvas-alabaster border border-warm-bronze/40 font-label-md text-label-md uppercase tracking-wider transition-all"
+              class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-DEFAULT bg-[#132E25] hover:bg-[#0E291E] text-[#F3E5AB] hover:text-white border border-[#D4AF37]/50 hover:border-[#D4AF37] font-label-md uppercase tracking-[0.16em] font-semibold shadow-md hover:shadow-[0_0_18px_rgba(212,175,55,0.25)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
               <span class="material-symbols-outlined text-[18px] text-warm-bronze">picture_as_pdf</span>
               <span data-i18n="hero_btn_deck">Pitch Deck Ejecutivo</span>
@@ -292,7 +292,7 @@
 
             <a 
               href="#formulario-whatsapp" 
-              class="inline-flex items-center gap-2 px-5 py-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container-lowest text-racing-green-dark font-label-md text-label-md uppercase tracking-wider font-semibold transition-all shadow-md"
+              class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-DEFAULT bg-white/5 hover:bg-white/10 text-canvas-alabaster border border-[#D4AF37]/35 hover:border-[#D4AF37] font-label-md uppercase tracking-[0.16em] font-semibold shadow-sm hover:shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
               <span class="material-symbols-outlined text-[18px] text-warm-bronze">concierge</span>
               <span data-i18n="hero_btn_whatsapp">WhatsApp VIP Concierge</span>
@@ -301,13 +301,14 @@
 
           <!-- Sizzle Reel / Video Showcase Stage (Interactive Click-to-Theater Trigger) -->
           <div 
-            class="w-full max-w-5xl mt-space-md relative rounded-DEFAULT overflow-hidden shadow-2xl bg-primary-container border border-warm-bronze/35 cursor-pointer group"
+            id="hero-video-stage"
+            class="w-full max-w-5xl mt-space-md relative rounded-DEFAULT overflow-hidden shadow-2xl bg-primary-container border border-warm-bronze/40 cursor-pointer group hover:border-[#D4AF37] hover:shadow-[0_25px_80px_rgba(0,0,0,0.85),0_0_35px_rgba(212,175,55,0.25)] transition-all duration-500"
             onclick="window.openVideoTheater()"
             title="Haz click para abrir en Pantalla Completa con Audio HD"
           >
             <div class="relative w-full aspect-[16/9] bg-racing-green-dark">
               
-              <!-- Video Background Loop -->
+              <!-- Video Background Loop (pointer-events-none ensures reliable click bubbling) -->
               <video 
                 id="sizzle-video" 
                 src="assets/video/sizzle_esp.mp4" 
@@ -317,35 +318,39 @@
                 loop 
                 autoplay
                 preload="metadata"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none"
               >
                 Tu navegador no soporta reproducción de video HTML5.
               </video>
 
               <!-- Subtle Dark Editorial Vignette -->
-              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark via-transparent to-black/30 pointer-events-none"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark via-transparent to-black/35 pointer-events-none"></div>
 
               <!-- Top Left Overlay Badge -->
-              <div class="absolute top-4 left-4 flex items-center gap-space-xs px-3 py-1.5 rounded-DEFAULT bg-racing-green-dark/85 backdrop-blur-md border border-warm-bronze/30">
+              <div class="absolute top-4 left-4 flex items-center gap-space-xs px-3 py-1.5 rounded-DEFAULT bg-racing-green-dark/85 backdrop-blur-md border border-warm-bronze/30 pointer-events-none">
                 <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
                 <span data-i18n="video_playing_label" class="font-label-sm text-label-sm uppercase tracking-wider text-canvas-alabaster">Official Nations Cup 2027 · Sizzle Reel</span>
               </div>
 
-
-
-              <!-- Central Play Trigger Simulation -->
+              <!-- Central Play Trigger Simulation with Golden Micro-Glow -->
               <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div class="group-hover:scale-110 flex flex-col items-center gap-2 transition-all duration-300">
-                  <div class="flex items-center justify-center w-20 h-20 rounded-full bg-racing-green-dark/90 text-champagne-light shadow-2xl border border-warm-bronze/60">
-                    <span class="material-symbols-outlined text-[42px] group-hover:text-pure-white transition-colors" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                <div class="group-hover:scale-110 flex flex-col items-center gap-2.5 transition-all duration-300">
+                  <div class="relative flex items-center justify-center w-22 h-22 rounded-full bg-[#07140E]/90 text-[#F3E5AB] shadow-[0_0_35px_rgba(212,175,55,0.45)] border-2 border-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#07140E] transition-all duration-300">
+                    <span class="material-symbols-outlined text-[44px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
                   </div>
-                  <div class="px-3.5 py-1 rounded-DEFAULT bg-racing-green-dark/90 border border-warm-bronze/40 text-champagne-light font-label-sm text-label-sm uppercase tracking-wider shadow-lg">
+                  <div class="px-4 py-1.5 rounded-DEFAULT bg-[#07140E]/95 border border-[#D4AF37]/60 text-[#F3E5AB] font-label-sm text-label-sm uppercase tracking-[0.16em] font-bold shadow-xl">
                     Click para Audio HD
                   </div>
                 </div>
               </div>
 
-
+              <!-- Full-area Clickable Action Button (Guarantees click trigger on all devices) -->
+              <button 
+                type="button" 
+                onclick="window.openVideoTheater()" 
+                class="absolute inset-0 z-30 w-full h-full cursor-pointer bg-transparent border-0 p-0 m-0 focus:outline-none" 
+                aria-label="Abrir video en modo teatro con audio HD"
+              ></button>
 
             </div>
           </div>
@@ -502,10 +507,10 @@
             </div>
           </div>
 
-          <!-- Centered Download CTA -->
-          <div class="mt-space-lg text-center">
-            <a class="inline-flex items-center gap-space-sm px-space-xl py-space-sm rounded-DEFAULT bg-racing-green-dark hover:bg-racing-green-subtle text-champagne-light font-label-lg text-label-lg uppercase shadow-xl transition-all hover:scale-[1.01]" href="pitch_deck_nations_cup_2027.pdf" download="Pitch_Deck_Nations_Cup_2027.pdf">
-              <span class="material-symbols-outlined text-[20px] text-warm-bronze">picture_as_pdf</span>
+          <!-- Centered Download CTA (Elevated Sovereign Styling) -->
+          <div class="mt-space-xl text-center">
+            <a class="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-DEFAULT bg-[#07140E] hover:bg-[#0E291E] text-[#F3E5AB] hover:text-white border border-[#D4AF37]/70 hover:border-[#D4AF37] font-label-lg uppercase tracking-[0.18em] font-bold shadow-xl hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300" href="pitch_deck_nations_cup_2027.pdf" download="Pitch_Deck_Nations_Cup_2027.pdf">
+              <span class="material-symbols-outlined text-[22px] text-warm-bronze">picture_as_pdf</span>
               <span data-i18n="deck_btn_download">Descargar Pitch Deck Oficial (PDF Ejecutivo)</span>
             </a>
           </div>
@@ -790,7 +795,7 @@
                 </ul>
               </div>
 
-              <a class="w-full text-center py-space-sm px-space-md rounded-DEFAULT bg-racing-green-dark hover:bg-racing-green-subtle text-champagne-light font-label-md text-label-md uppercase tracking-wider transition-all shadow-md font-semibold" href="https://wa.me/34722116248?text=Hola,%20solicito%20formalmente%20el%20bloqueo%20del%20Naming%20Right%20(Presenting%20Partner)%20para%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
+              <a class="w-full text-center py-4 px-6 rounded-DEFAULT bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#07140E] font-label-md uppercase tracking-[0.18em] font-bold shadow-lg hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 inline-block" href="https://wa.me/34722116248?text=Hola,%20solicito%20formalmente%20el%20bloqueo%20del%20Naming%20Right%20(Presenting%20Partner)%20para%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
                 Solicitar Naming Right vía WhatsApp
               </a>
             </div>
@@ -846,7 +851,7 @@
                 </ul>
               </div>
 
-              <a class="w-full text-center py-space-sm px-space-md rounded-DEFAULT bg-surface-container-high hover:bg-surface-container-highest text-racing-green-dark font-label-md text-label-md uppercase tracking-wider transition-all shadow-sm font-semibold" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20la%20exclusividad%20de%20nuestra%20categoría%20como%20Official%20Partner%20de%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
+              <a class="w-full text-center py-4 px-6 rounded-DEFAULT bg-[#07140E] hover:bg-[#0E291E] text-[#F3E5AB] hover:text-white border border-[#D4AF37]/60 font-label-md uppercase tracking-[0.18em] font-bold shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 inline-block" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20la%20exclusividad%20de%20nuestra%20categoría%20como%20Official%20Partner%20de%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
                 Solicitar Categoría vía WhatsApp
               </a>
             </div>
@@ -897,7 +902,7 @@
                 </ul>
               </div>
 
-              <a class="w-full text-center py-space-sm px-space-md rounded-DEFAULT bg-surface-container-high hover:bg-surface-container-highest text-racing-green-dark font-label-md text-label-md uppercase tracking-wider transition-all shadow-sm font-semibold" href="https://wa.me/34722116248?text=Hola,%20deseamos%20presentar%20una%20propuesta%20de%20Official%20Supplier%20para%20la%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
+              <a class="w-full text-center py-4 px-6 rounded-DEFAULT bg-surface-container-high hover:bg-surface-container-highest text-racing-green-dark border border-outline-variant/60 font-label-md uppercase tracking-[0.18em] font-bold hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 inline-block shadow-sm" href="https://wa.me/34722116248?text=Hola,%20deseamos%20presentar%20una%20propuesta%20de%20Official%20Supplier%20para%20la%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
                 Solicitar Propuesta a Medida
               </a>
             </div>
@@ -992,10 +997,11 @@
               <!-- Submit CTA -->
               <div class="md:col-span-2 pt-space-xs">
                 <button 
-                  class="w-full py-space-sm px-space-xl rounded-DEFAULT bg-warm-bronze hover:bg-champagne-light text-racing-green-dark font-label-lg text-label-lg uppercase tracking-wider font-semibold transition-all shadow-xl flex items-center justify-center gap-space-xs" 
+                <button 
+                  class="w-full py-4 px-8 rounded-DEFAULT bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#07140E] font-label-lg uppercase tracking-[0.18em] font-bold shadow-[0_4px_25px_rgba(212,175,55,0.4)] hover:shadow-[0_6px_32px_rgba(212,175,55,0.65)] hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 cursor-pointer flex items-center justify-center gap-2" 
                   type="submit"
                 >
-                  <span class="material-symbols-outlined text-[20px]">send</span>
+                  <span class="material-symbols-outlined text-[20px] text-[#07140E]">send</span>
                   <span data-i18n="btn_submit_whatsapp">Solicitar Dossier & Bloqueo de Exclusividad vía WhatsApp</span>
                 </button>
                 <p data-i18n="form_security_note" class="font-body-sm text-body-sm text-canvas-ivory/60 text-center mt-2">
@@ -1194,40 +1200,45 @@
 
 
   <!-- ========================================================================
-       VIDEO THEATER MODAL (REACT-LIKE ULTRA-LUXURY THEATER WITH HD AUDIO)
+  <!-- ========================================================================
+       VIDEO THEATER MODAL (REACT-LIKE ULTRA-LUXURY CINEMA THEATER WITH HD AUDIO)
        ======================================================================== -->
   <div 
     id="video-theater-modal" 
-    class="fixed inset-0 z-[100] bg-racing-green-dark/95 backdrop-blur-2xl hidden flex-col justify-between p-3 sm:p-6 lg:p-8 animate-theater-in transition-all"
+    class="fixed inset-0 z-[120] bg-black/95 backdrop-blur-2xl hidden flex-col justify-between p-3 sm:p-6 lg:p-8 animate-theater-in transition-all"
     role="dialog"
     aria-modal="true"
     aria-labelledby="theater-title"
-    onclick="if(event.target === this) window.closeVideoTheater();"
   >
-    <!-- Top Theater Header -->
-    <div class="flex items-center justify-between pb-4 border-b border-warm-bronze/30 max-w-7xl mx-auto w-full">
+    <!-- Background Click Overlay: Clicking anywhere outside cinema player immediately closes modal and returns to normal page -->
+    <div 
+      class="absolute inset-0 -z-10 cursor-pointer" 
+      onclick="window.closeVideoTheater()" 
+      title="Haz click para cerrar y volver a la página"
+    ></div>
+
+    <!-- Top Theater Bar -->
+    <div class="flex items-center justify-between pb-4 border-b border-warm-bronze/30 max-w-7xl mx-auto w-full z-10 shrink-0">
       <div class="flex items-center gap-3">
-        <div class="relative w-10 h-10 rounded-full overflow-hidden border border-warm-bronze/50 p-0.5 bg-black/60 shadow-lg">
-          <img src="assets/logos/nations cup logo.jpeg" alt="Nations Cup 2027 Crest" class="w-full h-full object-cover rounded-full">
-        </div>
+        <img src="assets/logos/nations_cup_logo_transparent.png" alt="Nations Cup 2027 Logo" class="h-9 sm:h-10 w-auto object-contain">
         <div>
           <h3 id="theater-title" class="font-serif text-base sm:text-xl font-bold text-white tracking-wide">
             Nations Cup 2027 · <span class="text-champagne-light">Sizzle Reel Oficial</span>
           </h3>
-          <p class="font-label-sm text-[11px] text-gray-400 tracking-wider uppercase font-light">
-            El Rey Polo Country Club · Audio Cinematográfico HD Dolby Atmos
+          <p class="font-label-sm text-[11px] text-[#A88344] tracking-wider uppercase font-medium">
+            El Rey Polo Country Club · Audio Cinematográfico HD
           </p>
         </div>
       </div>
 
       <div class="flex items-center gap-3 sm:gap-4">
         <!-- In-Theater Language Toggle -->
-        <div class="flex items-center bg-white/5 p-1 rounded-DEFAULT border border-warm-bronze/30 text-xs">
+        <div class="flex items-center bg-white/10 p-1 rounded-DEFAULT border border-warm-bronze/40">
           <button 
             id="theater-lang-es" 
             type="button" 
             onclick="window.setTheaterLanguage('es')" 
-            class="px-3 py-1 rounded-DEFAULT text-xs font-semibold bg-warm-bronze text-racing-green-dark transition-all"
+            class="px-3 py-1 rounded-DEFAULT text-xs font-semibold bg-warm-bronze text-racing-green-dark transition-all cursor-pointer"
           >
             Español
           </button>
@@ -1235,56 +1246,63 @@
             id="theater-lang-en" 
             type="button" 
             onclick="window.setTheaterLanguage('en')" 
-            class="px-3 py-1 rounded-DEFAULT text-xs font-medium text-gray-300 hover:text-white transition-all"
+            class="px-3 py-1 rounded-DEFAULT text-xs font-medium text-gray-300 hover:text-white transition-all cursor-pointer"
           >
             English
           </button>
         </div>
 
-        <!-- Close Button -->
+        <!-- Prominent Close Button (Esc) -->
         <button 
           type="button" 
           onclick="window.closeVideoTheater()" 
-          class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-DEFAULT bg-white/10 hover:bg-warm-bronze text-white hover:text-racing-green-dark border border-white/20 hover:border-warm-bronze transition-all text-xs font-semibold uppercase tracking-wider group shadow-lg"
-          title="Cerrar (Esc)"
+          class="flex items-center gap-1.5 px-4 py-2 rounded-DEFAULT bg-[#A88344] hover:bg-[#D4AF37] text-[#07140E] border border-[#D4AF37] transition-all text-xs font-bold uppercase tracking-[0.14em] group shadow-xl hover:scale-105 active:scale-95 cursor-pointer"
+          title="Cerrar y volver a la página (Esc)"
+          aria-label="Cerrar reproductor"
         >
-          <span class="material-symbols-outlined text-[16px]">close</span>
-          <span class="hidden sm:inline">Cerrar (Esc)</span>
+          <span class="material-symbols-outlined text-[18px]">close</span>
+          <span>Cerrar (Esc)</span>
         </button>
       </div>
     </div>
 
     <!-- Central Cinematic Player Container -->
-    <div class="relative flex-1 flex items-center justify-center my-3 sm:my-5 max-w-6xl mx-auto w-full">
-      <div class="relative w-full aspect-video rounded-DEFAULT overflow-hidden shadow-[0_20px_70px_rgba(0,0,0,0.95)] border border-warm-bronze/45 bg-black group">
+    <div class="relative flex-1 flex items-center justify-center my-auto max-w-6xl mx-auto w-full min-h-0 z-10">
+      <div 
+        class="relative w-full max-h-[75vh] aspect-video rounded-DEFAULT overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.98)] border-2 border-[#D4AF37]/50 bg-black group flex items-center justify-center"
+        onclick="event.stopPropagation()"
+      >
         <video 
           id="theater-video-element" 
           src="assets/video/sizzle_esp.mp4" 
           playsinline 
-          preload="auto"
-          class="w-full h-full object-cover cursor-pointer"
+          preload="auto" 
+          class="w-full h-full object-contain cursor-pointer"
           onclick="window.toggleTheaterPlay()"
         ></video>
 
-        <!-- Big Center Play/Pause indicator on click -->
+        <!-- Big Center Play/Pause indicator on hover & click -->
         <div 
           id="theater-center-play-badge" 
           onclick="window.toggleTheaterPlay()"
-          class="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/15 transition-all cursor-pointer opacity-0 pointer-events-none group-hover:opacity-100"
+          class="absolute inset-0 flex items-center justify-center bg-black/25 hover:bg-black/10 transition-all cursor-pointer opacity-0 group-hover:opacity-100"
         >
-          <div class="w-20 h-20 rounded-full bg-warm-bronze/90 text-racing-green-dark flex items-center justify-center shadow-2xl">
-            <span id="theater-center-play-icon" class="material-symbols-outlined text-[42px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+          <div class="w-20 h-20 rounded-full bg-[#07140E]/90 text-[#F3E5AB] border-2 border-[#D4AF37] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+            <span id="theater-center-play-icon" class="material-symbols-outlined text-[44px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Bottom Luxury Theater Controls -->
-    <div class="max-w-6xl mx-auto w-full bg-racing-green-dark/95 rounded-DEFAULT p-4 border border-warm-bronze/35 shadow-2xl">
+    <div 
+      class="max-w-6xl mx-auto w-full bg-[#07140E]/95 backdrop-blur-md rounded-DEFAULT p-4 border border-warm-bronze/40 shadow-2xl z-10 shrink-0"
+      onclick="event.stopPropagation()"
+    >
       <!-- Progress Scrub Bar -->
-      <div class="relative w-full h-2 bg-white/10 rounded-full mb-3.5 cursor-pointer group" id="theater-progress-container" onclick="window.seekTheaterVideo(event)">
-        <div id="theater-progress-bar" class="absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-warm-bronze to-champagne-light w-0 transition-[width] duration-100"></div>
-        <div id="theater-progress-handle" class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-white shadow-md border-2 border-warm-bronze opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" style="left: 0%;"></div>
+      <div class="relative w-full h-2.5 bg-white/15 rounded-full mb-3.5 cursor-pointer group" id="theater-progress-container" onclick="window.seekTheaterVideo(event)">
+        <div id="theater-progress-bar" class="absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-warm-bronze via-[#D4AF37] to-champagne-light w-0 pointer-events-none"></div>
+        <div id="theater-progress-handle" class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-champagne-light shadow-[0_0_10px_rgba(212,175,55,0.8)] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" style="left: 0%;"></div>
       </div>
 
       <!-- Controls Row -->
@@ -1294,20 +1312,20 @@
           <button 
             type="button" 
             onclick="window.toggleTheaterPlay()" 
-            class="flex items-center gap-2 px-3 py-1.5 rounded-DEFAULT bg-white/10 hover:bg-warm-bronze text-white hover:text-racing-green-dark transition-all font-semibold uppercase tracking-wider"
+            class="flex items-center gap-2 px-3.5 py-1.5 rounded-DEFAULT bg-white/10 hover:bg-[#A88344] text-white hover:text-[#07140E] transition-all font-semibold uppercase tracking-wider cursor-pointer border border-white/20 hover:border-[#A88344]"
           >
-            <span id="theater-play-btn-icon" class="material-symbols-outlined text-[18px] text-champagne-light">pause</span>
+            <span id="theater-play-btn-icon" class="material-symbols-outlined text-[18px]">pause</span>
             <span id="theater-play-btn-label">Pausar</span>
           </button>
 
           <!-- Time Display -->
-          <div class="font-mono text-gray-300 tracking-wider">
+          <div class="font-mono text-gray-300 tracking-wider font-medium">
             <span id="theater-curr-time">0:00</span> / <span id="theater-duration">1:45</span>
           </div>
 
           <!-- Volume Control -->
           <div class="flex items-center gap-2">
-            <button type="button" onclick="window.toggleTheaterMute()" class="text-champagne-light hover:text-white transition-colors" title="Silenciar / Activar">
+            <button type="button" onclick="window.toggleTheaterMute()" class="text-champagne-light hover:text-white transition-colors cursor-pointer" title="Silenciar / Activar">
               <span id="theater-vol-icon" class="material-symbols-outlined text-[18px]">volume_up</span>
             </button>
             <input 
@@ -1325,23 +1343,19 @@
 
         <!-- Right specs & direct download -->
         <div class="flex items-center gap-3 sm:gap-4">
-
-
           <button 
             type="button" 
             onclick="window.toggleTheaterFullscreen()" 
-            class="p-1.5 text-gray-300 hover:text-champagne-light transition-colors" 
+            class="p-1.5 text-gray-300 hover:text-champagne-light hover:scale-110 transition-all cursor-pointer"
             title="Pantalla Completa"
           >
-            <span class="material-symbols-outlined text-[18px]">fullscreen</span>
+            <span class="material-symbols-outlined text-[20px]">fullscreen</span>
           </button>
         </div>
       </div>
     </div>
   </div>
 
-
-  <!-- ========================================================================
        GALLERY LIGHTBOX MODAL (HIGH RESOLUTION INSPECTION)
        ======================================================================== -->
   <div 
