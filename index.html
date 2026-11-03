@@ -606,12 +606,20 @@
             <span data-i18n="gallery_kicker" class="font-label-sm text-label-sm uppercase tracking-[0.22em] text-warm-bronze block mb-1">ARQUITECTURA & ATMÓSFERA EDITORIAL</span>
             <h2 data-i18n="gallery_title" class="font-headline-lg text-headline-lg text-racing-green-dark">Galería Editorial</h2>
           </div>
-
-          <!-- Bento-style Editorial Grid (10 Master Shots) -->
+          <!-- Bento-style Editorial Grid (12 Master Shots) -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-md">
             
-            <!-- Shot 1: VIP Arrival (Large 7 cols) -->
+            <!-- Shot 0: Perspectiva Aérea Campo Central (Large 7 cols) -->
             <div onclick="window.openLightbox(0)" class="lg:col-span-7 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
+              <img alt="Perspectiva Aérea Cancha Oficial Nations Cup 2027" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/campo_aereo_nationscup.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Perspectiva Aérea</span>
+                <h3 class="font-headline-sm text-headline-sm">Cancha Oficial de Polo (300 x 200m) · 6 Hectáreas</h3>
+              </div>
+            </div>
+
+            <!-- Shot 1: VIP Arrival (5 cols) -->
+            <div onclick="window.openLightbox(1)" class="lg:col-span-5 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
               <img alt="VIP arrival grand facade" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/entrada_club.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Acceso Soberano</span>
@@ -619,44 +627,17 @@
               </div>
             </div>
 
-            <!-- Shot 2: Official Polo Ground (5 cols) -->
-            <div onclick="window.openLightbox(1)" class="lg:col-span-5 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
-              <img alt="Vast green regulation polo pitch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/real_field_pitch.jpg"/>
+            <!-- Shot 2: Clubhouse & Escenario Aéreo (6 cols) -->
+            <div onclick="window.openLightbox(2)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
+              <img alt="Clubhouse, Escenario Principal & Alberca Panorámica" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/clubhouse_aereo_escenario.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Campo Central</span>
-                <h3 class="font-headline-sm text-headline-sm">Campo Oficial de 6 Hectáreas Reglamentarias</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Clubhouse & Escenario</span>
+                <h3 class="font-headline-sm text-headline-sm">Complejo Central, Escenario Nations Cup & Alberca</h3>
               </div>
             </div>
 
-            <!-- Shot 3: VIP Hospitality & Mixology (4 cols) -->
-            <div onclick="window.openLightbox(2)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
-              <img alt="Luxury equestrian cocktail bar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/mixologia_cocktail.jpg"/>
-              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Toma 03 · Hospitalidad</span>
-                <h3 class="font-headline-sm text-headline-sm text-[20px]">VIP Hospitality Lounge & Coctelería de Autor</h3>
-              </div>
-            </div>
-
-            <!-- Shot 4: Private Grandstand Tables (4 cols) -->
-            <div onclick="window.openLightbox(3)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
-              <img alt="Reserved front-row spectator dining tables" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/palco_networking_rect.jpg"/>
-              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Toma 04 · Primera Fila</span>
-                <h3 class="font-headline-sm text-headline-sm text-[20px]">Palcos Privados y Mesas con Vista a Cancha</h3>
-              </div>
-            </div>
-
-            <!-- Shot 5: Champagne Grand Marque (4 cols) -->
-            <div onclick="window.openLightbox(4)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
-              <img alt="Chilled bottles of vintage champagne" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/champagne_toast.jpg"/>
-              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Toma 05 · Brindis de Honor</span>
-                <h3 class="font-headline-sm text-headline-sm text-[20px]">Celebración Champagne Grand Marque</h3>
-              </div>
-            </div>
-
-            <!-- Shot 6: Supercar Showcase Poolside (6 cols) -->
-            <div onclick="window.openLightbox(5)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
+            <!-- Shot 3: Supercar Showcase Poolside (6 cols) -->
+            <div onclick="window.openLightbox(3)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
               <img alt="Supercar exhibition area" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/pool_autoshow_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Motor Sport & Supercars</span>
@@ -664,17 +645,53 @@
               </div>
             </div>
 
-            <!-- Shot 7: Fashion Show Runway & Art (6 cols) -->
-            <div onclick="window.openLightbox(6)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
-              <img alt="Open air haute couture fashion show runway" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/stage_runway_rect.jpg"/>
-              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Pasarela Haute Couture</span>
-                <h3 class="font-headline-sm text-headline-sm">Fashion Show Runway & Pabellón de Arte</h3>
+            <!-- Shot 4: Campo Central a Nivel de Césped (4 cols) -->
+            <div onclick="window.openLightbox(4)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
+              <img alt="Vast green regulation polo pitch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/real_field_pitch.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Campo Central</span>
+                <h3 class="font-headline-sm text-headline-sm text-[20px]">Campo de Juego a Nivel de Césped</h3>
               </div>
             </div>
 
-            <!-- Shot 8: High-Net-Worth Networking (4 cols) -->
+            <!-- Shot 5: VIP Hospitality & Mixology (4 cols) -->
+            <div onclick="window.openLightbox(5)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
+              <img alt="Luxury equestrian cocktail bar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/mixologia_cocktail.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Hospitalidad de Autor</span>
+                <h3 class="font-headline-sm text-headline-sm text-[20px]">VIP Hospitality Lounge & Coctelería de Autor</h3>
+              </div>
+            </div>
+
+            <!-- Shot 6: Private Grandstand Tables (4 cols) -->
+            <div onclick="window.openLightbox(6)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
+              <img alt="Reserved front-row spectator dining tables" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/palco_networking_rect.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Primera Fila</span>
+                <h3 class="font-headline-sm text-headline-sm text-[20px]">Palcos Privados y Mesas con Vista a Cancha</h3>
+              </div>
+            </div>
+
+            <!-- Shot 7: Champagne Grand Marque (4 cols) -->
             <div onclick="window.openLightbox(7)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
+              <img alt="Chilled bottles of vintage champagne" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/champagne_toast.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Brindis de Honor</span>
+                <h3 class="font-headline-sm text-headline-sm text-[20px]">Celebración Champagne Grand Marque</h3>
+              </div>
+            </div>
+
+            <!-- Shot 8: Fashion Show Runway & Art (4 cols) -->
+            <div onclick="window.openLightbox(8)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
+              <img alt="Open air haute couture fashion show runway" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/stage_runway_rect.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Pasarela Haute Couture</span>
+                <h3 class="font-headline-sm text-headline-sm text-[20px]">Fashion Show Runway & Pabellón de Arte</h3>
+              </div>
+            </div>
+
+            <!-- Shot 9: High-Net-Worth Networking (4 cols) -->
+            <div onclick="window.openLightbox(9)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
               <img alt="Corporate leaders networking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/commercial_stands_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Alianzas B2B</span>
@@ -682,21 +699,21 @@
               </div>
             </div>
 
-            <!-- Shot 9: Golden Hour Cocktail & After-Polo (4 cols) -->
-            <div onclick="window.openLightbox(8)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
+            <!-- Shot 10: Golden Hour Cocktail & After-Polo (6 cols) -->
+            <div onclick="window.openLightbox(10)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
               <img alt="Sunset cocktail party at the terrace" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/sunset_grill_rect.jpg"/>
-              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
+              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Sunset & After-Polo</span>
-                <h3 class="font-headline-sm text-headline-sm text-[20px]">Golden Hour Cocktail & After-Polo Poolside</h3>
+                <h3 class="font-headline-sm text-headline-sm">Golden Hour Cocktail & After-Polo Poolside</h3>
               </div>
             </div>
 
-            <!-- Shot 10: Central Pool Terrace & Club Deck (4 cols) -->
-            <div onclick="window.openLightbox(9)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
+            <!-- Shot 11: Central Pool Terrace & Club Deck (6 cols) -->
+            <div onclick="window.openLightbox(11)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
               <img alt="Terraza y alberca central de El Rey Polo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/real_pool_terrace.jpg"/>
-              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
+              <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Club & Alberca Central</span>
-                <h3 class="font-headline-sm text-headline-sm text-[20px]">Terraza & Alberca Central de El Rey Polo Country Club</h3>
+                <h3 class="font-headline-sm text-headline-sm">Terraza & Alberca Central de El Rey Polo Country Club</h3>
               </div>
             </div>
 
@@ -1397,7 +1414,7 @@
     <div class="flex items-center justify-between pb-4 border-b border-warm-bronze/25 max-w-7xl mx-auto w-full">
       <div>
         <h4 id="lightbox-title" class="font-headline-sm text-headline-sm text-white">VIP Arrival</h4>
-        <span id="lightbox-counter" class="font-label-sm text-label-sm uppercase text-warm-bronze tracking-widest">Toma 01 de 10</span>
+        <span id="lightbox-counter" class="font-label-sm text-label-sm uppercase text-warm-bronze tracking-widest">01 / 12</span>
       </div>
       <button 
         type="button" 

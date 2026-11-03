@@ -245,7 +245,7 @@
 
       // Gallery Module
       gallery_kicker: "ARCHITECTURE & EDITORIAL ATMOSPHERE",
-      gallery_title: "Editorial Gallery (10 Master Shots)",
+      gallery_title: "Editorial Gallery",
       gallery_subtitle: "Architectural Digest aesthetic capturing the authentic prestige and grounds of the club.",
       gallery_view_hint: "Click on any perspective to open the high-resolution lightbox viewer.",
 
@@ -638,51 +638,80 @@
       badge: "FORMALIZACIÓN"
     }
   ];
-
-  // --- 3. 10 MASTER SHOTS GALLERY DATA ---
+  // --- 3. EDITORIAL GALLERY DATA (12 MASTER SHOTS) ---
   const galleryData = [
     {
       index: "01",
+      titleEs: "Perspectiva Aérea · Cancha Oficial de Polo (300 x 200m)",
+      titleEn: "Aerial Perspective · Regulation Polo Ground (300 x 200m)",
+      descEs: "Vista aérea de las 6 hectáreas de césped reglamentario con la firma de Nations Cup 2027, enmarcada en el corazón de la selva maya.",
+      descEn: "Top-down aerial perspective of the 6-hectare championship Bermuda grass pitch with Nations Cup 2027 branding, framed by the Mayan jungle.",
+      image: "assets/photos/campo_aereo_nationscup.jpg",
+      categoryEs: "PERSPECTIVA AÉREA",
+      categoryEn: "AERIAL VIEW"
+    },
+    {
+      index: "02",
       titleEs: "Arribo VIP y Fachada de El Rey Polo Country Club",
       titleEn: "VIP Arrival & Facade of El Rey Polo Country Club",
       descEs: "Arquitectura tropical contemporánea enmarcada por la exuberante selva maya de la Ruta de los Cenotes.",
       descEn: "Contemporary tropical architecture framed by the lush Mayan jungle on the Cenote Route.",
-      image: "assets/photos/palapa_exterior_rect.jpg",
+      image: "assets/stills/entrada_club.jpg",
       categoryEs: "ARQUITECTURA",
       categoryEn: "ARCHITECTURE"
     },
     {
-      index: "02",
-      titleEs: "Cancha de Polo Oficial (6 Hectáreas Reglamentarias)",
-      titleEn: "Official Polo Ground (6 Regulation Hectares in Play)",
-      descEs: "Campo de césped bermuda reglamentario de 300 x 200 m, único en el Sureste mexicano para torneos de alto hándicap.",
+      index: "03",
+      titleEs: "Clubhouse, Escenario Principal & Alberca Panorámica",
+      titleEn: "Clubhouse, Main Stage & Panoramic Poolside Deck",
+      descEs: "Vista aérea del complejo central: arquitectura de palapa, escenario con pantalla gigante Nations Cup 2027, área lounge y alberca para eventos.",
+      descEn: "Aerial view of the central hospitality hub: thatched palapa architecture, main Nations Cup 2027 LED stage, poolside lounge, and shaded pergolas.",
+      image: "assets/photos/clubhouse_aereo_escenario.jpg",
+      categoryEs: "CLUBHOUSE & ESCENARIO",
+      categoryEn: "CLUBHOUSE & STAGE"
+    },
+    {
+      index: "04",
+      titleEs: "Exhibición de Superdeportivos & Activaciones Poolside",
+      titleEn: "Supercar Showcase & Poolside Activations",
+      descEs: "Espacios panorámicos junto a la alberca para exhibición estática de superdeportivos, yates y alta relojería.",
+      descEn: "Scenic poolside platforms for static exhibitions of supercars, private marine models, and luxury showcases.",
+      image: "assets/photos/pool_autoshow_rect.jpg",
+      categoryEs: "AUTOMOTRIZ",
+      categoryEn: "SUPERCARS"
+    },
+    {
+      index: "05",
+      titleEs: "Campo Oficial a Nivel de Césped",
+      titleEn: "Championship Polo Ground at Turf Level",
+      descEs: "Campo de césped bermuda reglamentario de 300 x 200 m, único en el Sureste mexicano para torneos internacionales de alto hándicap.",
       descEn: "Regulation 300 x 200 m Bermuda grass pitch, unparalleled in the Mexican Caribbean for international polo.",
-      image: "assets/stills/campo_accion.jpg",
+      image: "assets/photos/real_field_pitch.jpg",
       categoryEs: "CAMPO CENTRAL",
       categoryEn: "GRAND PITCH"
     },
     {
-      index: "03",
+      index: "06",
       titleEs: "VIP Hospitality Lounge con Mixología de Autor",
       titleEn: "VIP Hospitality Lounge with Bespoke Mixology",
       descEs: "Espacio central de palapa de lujo con techos de doble altura, barras de mármol y coctelería internacional.",
       descEn: "Grand thatched luxury palapa pavilion with soaring ceilings, marble bars, and premium international mixology.",
-      image: "assets/photos/palapa_interior_rect.jpg",
+      image: "assets/stills/mixologia_cocktail.jpg",
       categoryEs: "HOSPITALIDAD",
       categoryEn: "HOSPITALITY"
     },
     {
-      index: "04",
+      index: "07",
       titleEs: "Mesas VIP Privadas y Palcos Frente a la Cancha",
       titleEn: "Private VIP Grandstand Tables Overlooking the Pitch",
       descEs: "Vistas privilegiadas al juego con servicio personalizado de meseros y champagne en cada chukker.",
       descEn: "Prime viewing of high-octane chukkers with dedicated bottle service and tailored culinary courses.",
-      image: "assets/photos/vip_lounge_suite_rect.jpg",
+      image: "assets/photos/palco_networking_rect.jpg",
       categoryEs: "EXPERIENCIA VIP",
       categoryEn: "VIP ACCESS"
     },
     {
-      index: "05",
+      index: "08",
       titleEs: "Brindis de Celebración & Casas de Champagne",
       titleEn: "Celebration Toasts & Grand Marque Champagne",
       descEs: "Servicio exclusivo de grand marques de champagne servidas en copas de cristal durante cada jornada de juego.",
@@ -692,18 +721,8 @@
       categoryEn: "CHAMPAGNE"
     },
     {
-      index: "06",
-      titleEs: "Exhibición de Superdeportivos & Activaciones de Marca",
-      titleEn: "Supercar Showcase & Sponsor Activations Poolside",
-      descEs: "Espacios panorámicos junto a la alberca para exhibición estática de superdeportivos, yates y alta relojería.",
-      descEn: "Scenic poolside platforms for static exhibitions of supercars, private marine models, and luxury showcases.",
-      image: "assets/photos/pool_autoshow_rect.jpg",
-      categoryEs: "AUTOMOTRIZ",
-      categoryEn: "SUPERCARS"
-    },
-    {
-      index: "07",
-      titleEs: "Pasarela del Fashion Show & Galería de Arte",
+      index: "09",
+      titleEs: "Pasarela del Fashion Show Runway & Pabellón de Arte",
       titleEn: "Fashion Show Runway & Contemporary Art Pavilion",
       descEs: "Desfiles de moda resortwear de diseñadores internacionales y subastas privadas de arte contemporáneo.",
       descEn: "International designer resortwear runway shows and private contemporary art showcases under the stars.",
@@ -712,9 +731,9 @@
       categoryEn: "FASHION & ART"
     },
     {
-      index: "08",
-      titleEs: "Stand de Marca 3x3m & Concourse de Networking",
-      titleEn: "3x3m Brand Showcase Stand & Networking Concourse",
+      index: "10",
+      titleEs: "Stand de Marca & Concourse de Networking",
+      titleEn: "Brand Showcase Stand & Networking Concourse",
       descEs: "Pabellones comerciales de alta gama para interacción directa con directivos, presidentes y líderes empresariales.",
       descEn: "High-spec exhibition pavilions for direct interaction with chairs, C-level executives, and affluent guests.",
       image: "assets/photos/commercial_stands_rect.jpg",
@@ -722,9 +741,9 @@
       categoryEn: "NETWORKING"
     },
     {
-      index: "09",
-      titleEs: "Golden Hour Cocktail & After-Polo Sessions con DJ",
-      titleEn: "Golden Hour Cocktail & After-Polo Poolside Sessions",
+      index: "11",
+      titleEs: "Golden Hour Cocktail & After-Polo Sessions",
+      titleEn: "Golden Hour Cocktail & After-Polo Sessions",
       descEs: "El atardecer en la selva caribeña acompañado de selectores de música internacionales y gastronomía al grill.",
       descEn: "Riviera Maya sunset accompanied by international vinyl selectors and bespoke woodfire barbecue.",
       image: "assets/photos/sunset_grill_rect.jpg",
@@ -732,7 +751,7 @@
       categoryEn: "AFTER-POLO"
     },
     {
-      index: "10",
+      index: "12",
       titleEs: "Terraza & Alberca Central de El Rey Polo Country Club",
       titleEn: "Central Pool Terrace & VIP Social Deck",
       descEs: "Área de alberca panorámica, pérgolas de teca y camastros VIP para el cóctel posterior a los partidos.",
