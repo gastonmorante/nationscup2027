@@ -334,3 +334,55 @@ body {
   transform: translateY(20px);
   pointer-events: none;
 }
+
+/* ==========================================================================
+   VIDEO THEATER MODAL (REACT-LIKE ULTRA-LUXURY THEATER)
+   ========================================================================== */
+@keyframes theaterFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-theater-in {
+  animation: theaterFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulseGoldRipple {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ripple {
+  animation: pulseGoldRipple 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+#theater-vol-slider {
+  accent-color: #D4AF37;
+}
+
+/* Hero Video Card Hover Enhancements */
+.hero-video-card {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease, border-color 0.5s ease;
+}
+.hero-video-card:hover {
+  transform: translateY(-3px) scale(1.005);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 35px rgba(212, 175, 55, 0.3);
+  border-color: rgba(212, 175, 55, 0.65);
+}
+

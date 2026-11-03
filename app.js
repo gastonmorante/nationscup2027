@@ -27,17 +27,22 @@
     es: {
       status_beacon: "Comité de Patrocinios · Acceso Privado 2027",
       nav_vision: "La Visión",
-      nav_pitch: "Pitch Deck (14 Láminas)",
+      nav_pitch: "Pitch Deck",
       nav_tour: "Tour 360°",
       nav_gallery: "Galería Editorial",
       nav_tiers: "Inversión & Exclusividad",
       nav_contact: "Contacto Privado",
-      btn_whatsapp_vip: "WhatsApp C-Level",
-      hero_badge: "TORNEO INTERNACIONAL DE POLO & LIFESTYLE",
+      btn_whatsapp_vip: "WhatsApp VIP",
+      hero_badge: "TORNEO INTERNACIONAL DE POLO & ALTA SOCIEDAD · ENERO 2027",
       hero_title: "NATIONS CUP 2027",
       hero_subtitle: "El Legado del Polo en la Riviera Maya",
-      hero_dates_venue: "13 al 16 de Enero de 2027 | El Rey Polo Country Club · Puerto Morelos, México",
-      hero_tagline: "«Las marcas de lujo no compran publicidad; compran Exclusividad, Legado y Acceso.»",
+      hero_dates_venue: "13 al 16 de Enero de 2027 | El Rey Polo Country Club · Puerto Morelos, Cancún, México",
+      hero_tagline: "«Las marcas de lujo no compran publicidad; adquieren Exclusividad, Legado y Acceso Inigualable.»",
+      hero_btn_play_theater: "Ver Presentación con Audio HD",
+      hero_btn_deck: "Pitch Deck Ejecutivo",
+      hero_btn_whatsapp: "WhatsApp VIP Concierge",
+      btn_open_theater: "Reproducir con Audio",
+      btn_theater_modal: "Modo Teatro HD",
       btn_explore_deck: "Explorar Pitch Deck Ejecutivo",
       btn_view_tour: "Ver Recorrido 360°",
       stat_hectares: "6 Hectáreas",
@@ -60,7 +65,7 @@
       
       // Pitch Deck Module
       deck_kicker: "DOSSIER COMERCIAL CONFIDENCIAL",
-      deck_title: "Pitch Deck Ejecutivo (14 Láminas)",
+      deck_title: "Pitch Deck Ejecutivo",
       deck_subtitle: "Presentación de arte interactiva para evaluación de Comités de Patrocinio y Directores Globales.",
       deck_btn_prev: "Anterior",
       deck_btn_next: "Siguiente",
@@ -139,7 +144,7 @@
       ph_name: "Ej. Guillermo Gómez-Pardo",
       lbl_company: "Empresa / Marca Representada *",
       ph_company: "Ej. Audemars Piguet / Aston Martin / Dom Pérignon",
-      lbl_role: "Cargo Ejecutivo (C-Level) *",
+      lbl_role: "Cargo Ejecutivo / Rol Directivo *",
       opt_select_role: "Seleccione su cargo...",
       opt_ceo: "Chief Executive Officer (CEO / Presidente)",
       opt_cmo: "Chief Marketing Officer (CMO / Dir. Marketing)",
@@ -179,17 +184,22 @@
     en: {
       status_beacon: "Sponsorship Committee · Private Access 2027",
       nav_vision: "The Vision",
-      nav_pitch: "Pitch Deck (14 Slides)",
+      nav_pitch: "Pitch Deck",
       nav_tour: "360° Tour",
       nav_gallery: "Editorial Gallery",
       nav_tiers: "Investment & Exclusivity",
       nav_contact: "Private Liaison",
-      btn_whatsapp_vip: "WhatsApp C-Level",
-      hero_badge: "INTERNATIONAL POLO & LIFESTYLE CHAMPIONSHIP",
+      btn_whatsapp_vip: "WhatsApp VIP",
+      hero_badge: "INTERNATIONAL POLO & LIFESTYLE CHAMPIONSHIP · JAN 2027",
       hero_title: "NATIONS CUP 2027",
       hero_subtitle: "The Legacy of Polo in the Riviera Maya",
-      hero_dates_venue: "January 13 to 16, 2027 | El Rey Polo Country Club · Puerto Morelos, Mexico",
+      hero_dates_venue: "January 13 to 16, 2027 | El Rey Polo Country Club · Puerto Morelos, Cancún, Mexico",
       hero_tagline: "«Luxury brands do not buy advertising; they acquire Exclusivity, Legacy, and Access.»",
+      hero_btn_play_theater: "Play Full Presentation (HD Audio)",
+      hero_btn_deck: "Executive Pitch Deck",
+      hero_btn_whatsapp: "WhatsApp VIP Concierge",
+      btn_open_theater: "Play with Audio",
+      btn_theater_modal: "HD Theater Mode",
       btn_explore_deck: "Explore Executive Pitch Deck",
       btn_view_tour: "Launch 360° Tour",
       stat_hectares: "6 Hectares",
@@ -212,7 +222,7 @@
 
       // Pitch Deck Module
       deck_kicker: "CONFIDENTIAL COMMERCIAL DOSSIER",
-      deck_title: "Executive Pitch Deck (14 Slides)",
+      deck_title: "Executive Pitch Deck",
       deck_subtitle: "Interactive art presentation designed for Sponsorship Committees and Global CMO review.",
       deck_btn_prev: "Previous",
       deck_btn_next: "Next",
@@ -291,7 +301,7 @@
       ph_name: "e.g., Lord Alexander Cavendish",
       lbl_company: "Enterprise / Represented Brand *",
       ph_company: "e.g., Audemars Piguet / Aston Martin / Dom Pérignon",
-      lbl_role: "C-Level Position *",
+      lbl_role: "Executive Role / Position *",
       opt_select_role: "Select your role...",
       opt_ceo: "Chief Executive Officer (CEO / President)",
       opt_cmo: "Chief Marketing Officer (CMO / Global Head)",
@@ -900,6 +910,253 @@
     }
   }
 
+  // --- 6B. ULTRA-LUXURY REACT-LIKE VIDEO THEATER MODAL ENGINE ---
+  function formatVideoTime(seconds) {
+    if (isNaN(seconds) || seconds < 0) return "0:00";
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  }
+
+  function initTheaterModal() {
+    const theaterVideo = document.getElementById('theater-video-element');
+    const progressBar = document.getElementById('theater-progress-bar');
+    const progressHandle = document.getElementById('theater-progress-handle');
+    const currTimeEl = document.getElementById('theater-curr-time');
+    const durationEl = document.getElementById('theater-duration');
+    const playBtnLabel = document.getElementById('theater-play-btn-label');
+    const playBtnIcon = document.getElementById('theater-play-btn-icon');
+    const centerPlayIcon = document.getElementById('theater-center-play-icon');
+
+    if (!theaterVideo) return;
+
+    theaterVideo.addEventListener('timeupdate', () => {
+      if (theaterVideo.duration) {
+        const pct = (theaterVideo.currentTime / theaterVideo.duration) * 100;
+        if (progressBar) progressBar.style.width = `${pct}%`;
+        if (progressHandle) progressHandle.style.left = `${pct}%`;
+        if (currTimeEl) currTimeEl.textContent = formatVideoTime(theaterVideo.currentTime);
+      }
+    });
+
+    theaterVideo.addEventListener('loadedmetadata', () => {
+      if (durationEl) durationEl.textContent = formatVideoTime(theaterVideo.duration);
+    });
+
+    theaterVideo.addEventListener('play', () => {
+      if (playBtnLabel) playBtnLabel.textContent = state.lang === 'es' ? "Pausar" : "Pause";
+      if (playBtnIcon) {
+        playBtnIcon.innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>`;
+      }
+      if (centerPlayIcon) {
+        centerPlayIcon.innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>`;
+      }
+    });
+
+    theaterVideo.addEventListener('pause', () => {
+      if (playBtnLabel) playBtnLabel.textContent = state.lang === 'es' ? "Reproducir" : "Play";
+      if (playBtnIcon) {
+        playBtnIcon.innerHTML = `<path d="M8 5v14l11-7z"/>`;
+      }
+      if (centerPlayIcon) {
+        centerPlayIcon.innerHTML = `<path d="M8 5v14l11-7z"/>`;
+      }
+    });
+
+    theaterVideo.addEventListener('ended', () => {
+      theaterVideo.currentTime = 0;
+      if (progressBar) progressBar.style.width = '0%';
+      if (progressHandle) progressHandle.style.left = '0%';
+    });
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('video-theater-modal');
+      if (!modal || modal.classList.contains('hidden')) return;
+
+      if (e.key === 'Escape') {
+        window.closeVideoTheater();
+      } else if (e.key === ' ' || e.key === 'k' || e.key === 'K') {
+        e.preventDefault();
+        window.toggleTheaterPlay();
+      } else if (e.key === 'm' || e.key === 'M') {
+        window.toggleTheaterMute();
+      } else if (e.key === 'f' || e.key === 'F') {
+        window.toggleTheaterFullscreen();
+      }
+    });
+  }
+
+  window.openVideoTheater = function (optLang) {
+    const modal = document.getElementById('video-theater-modal');
+    const theaterVideo = document.getElementById('theater-video-element');
+    const heroVideo = document.getElementById('sizzle-video');
+    if (!modal || !theaterVideo) return;
+
+    // Pause hero background video
+    if (heroVideo && !heroVideo.paused) {
+      heroVideo.pause();
+    }
+
+    const selectedLang = optLang || state.lang || 'es';
+    const videoSrc = selectedLang === 'en' ? 'assets/video/sizzle_ing.mp4' : 'assets/video/sizzle_esp.mp4';
+
+    if (!theaterVideo.src.endsWith(videoSrc)) {
+      theaterVideo.src = videoSrc;
+    }
+
+    // Set unmuted with full volume
+    theaterVideo.muted = false;
+    theaterVideo.volume = 1.0;
+
+    const volSlider = document.getElementById('theater-vol-slider');
+    if (volSlider) volSlider.value = 1.0;
+
+    // Update in-theater language toggle buttons
+    updateTheaterLangButtons(selectedLang);
+
+    // Show modal & disable background body scroll
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+
+    // Play unmuted immediately
+    const playPromise = theaterVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(err => {
+        console.warn("Audio autoplay policy notice:", err);
+      });
+    }
+  };
+
+  window.closeVideoTheater = function () {
+    const modal = document.getElementById('video-theater-modal');
+    const theaterVideo = document.getElementById('theater-video-element');
+    const heroVideo = document.getElementById('sizzle-video');
+    if (!modal || !theaterVideo) return;
+
+    theaterVideo.pause();
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+
+    // Resume ambient hero video
+    if (heroVideo) {
+      heroVideo.play().catch(() => {});
+    }
+  };
+
+  window.toggleTheaterPlay = function () {
+    const theaterVideo = document.getElementById('theater-video-element');
+    if (!theaterVideo) return;
+
+    if (theaterVideo.paused) {
+      theaterVideo.play();
+    } else {
+      theaterVideo.pause();
+    }
+  };
+
+  window.toggleTheaterMute = function () {
+    const theaterVideo = document.getElementById('theater-video-element');
+    const volIcon = document.getElementById('theater-vol-icon');
+    const volSlider = document.getElementById('theater-vol-slider');
+    if (!theaterVideo) return;
+
+    theaterVideo.muted = !theaterVideo.muted;
+    if (theaterVideo.muted) {
+      if (volSlider) volSlider.value = 0;
+      if (volIcon) {
+        volIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>`;
+      }
+    } else {
+      theaterVideo.volume = theaterVideo.volume || 1.0;
+      if (volSlider) volSlider.value = theaterVideo.volume;
+      if (volIcon) {
+        volIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>`;
+      }
+    }
+  };
+
+  window.setTheaterVolume = function (val) {
+    const theaterVideo = document.getElementById('theater-video-element');
+    const volIcon = document.getElementById('theater-vol-icon');
+    if (!theaterVideo) return;
+
+    const volume = parseFloat(val);
+    theaterVideo.volume = volume;
+    theaterVideo.muted = volume === 0;
+
+    if (volIcon) {
+      if (volume === 0) {
+        volIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>`;
+      } else {
+        volIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>`;
+      }
+    }
+  };
+
+  window.seekTheaterVideo = function (e) {
+    const theaterVideo = document.getElementById('theater-video-element');
+    const progressContainer = document.getElementById('theater-progress-container');
+    if (!theaterVideo || !progressContainer || !theaterVideo.duration) return;
+
+    const rect = progressContainer.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const ratio = Math.max(0, Math.min(1, clickX / rect.width));
+    theaterVideo.currentTime = ratio * theaterVideo.duration;
+  };
+
+  function updateTheaterLangButtons(lang) {
+    const btnEs = document.getElementById('theater-lang-es');
+    const btnEn = document.getElementById('theater-lang-en');
+    if (btnEs && btnEn) {
+      if (lang === 'es') {
+        btnEs.className = "px-3 py-1 rounded-full text-xs font-semibold bg-[#D4AF37] text-[#07140E] transition-all";
+        btnEn.className = "px-3 py-1 rounded-full text-xs font-medium text-gray-300 hover:text-white transition-all";
+      } else {
+        btnEn.className = "px-3 py-1 rounded-full text-xs font-semibold bg-[#D4AF37] text-[#07140E] transition-all";
+        btnEs.className = "px-3 py-1 rounded-full text-xs font-medium text-gray-300 hover:text-white transition-all";
+      }
+    }
+  }
+
+  window.setTheaterLanguage = function (lang) {
+    const theaterVideo = document.getElementById('theater-video-element');
+    if (!theaterVideo) return;
+
+    const currTime = theaterVideo.currentTime;
+    const isPaused = theaterVideo.paused;
+    const newSrc = lang === 'en' ? 'assets/video/sizzle_ing.mp4' : 'assets/video/sizzle_esp.mp4';
+
+    if (!theaterVideo.src.endsWith(newSrc)) {
+      theaterVideo.src = newSrc;
+      theaterVideo.currentTime = currTime;
+      theaterVideo.muted = false;
+      if (!isPaused) {
+        theaterVideo.play().catch(() => {});
+      }
+    }
+    updateTheaterLangButtons(lang);
+  };
+
+  window.toggleTheaterFullscreen = function () {
+    const theaterVideo = document.getElementById('theater-video-element');
+    if (!theaterVideo) return;
+
+    if (!document.fullscreenElement) {
+      if (theaterVideo.requestFullscreen) {
+        theaterVideo.requestFullscreen();
+      } else if (theaterVideo.webkitRequestFullscreen) {
+        theaterVideo.webkitRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  };
+
   // --- 7. PITCH DECK SLIDER ENGINE ---
   function renderPitchDeckSlide() {
     const slide = pitchDeckData[state.currentSlide - 1];
@@ -1076,8 +1333,8 @@
     stage: {
       title: "Escenario Fashion Show",
       image: "assets/renders/stage.jpg",
-      yaw: 20,
-      pitch: 2,
+      yaw: -15,
+      pitch: 0,
       hfov: 100
     }
   };
@@ -1521,6 +1778,7 @@
 
     // 3. Components
     initVideoPlayer();
+    initTheaterModal();
     initDeckSwipe();
     initFormHandlers();
     init360Viewer();
