@@ -36,7 +36,7 @@
       hero_badge: "TORNEO INTERNACIONAL DE POLO & ALTA SOCIEDAD · ENERO 2027",
       hero_title: "NATIONS CUP 2027",
       hero_subtitle: "El Legado del Polo en la Riviera Maya",
-      hero_dates_venue: "13 al 16 de Enero de 2027 | El Rey Polo Country Club · Puerto Morelos, Cancún, México",
+      hero_dates_venue: "El Rey Polo Country Club · Puerto Morelos, Cancún, México",
       hero_tagline: "«Las marcas de lujo no compran publicidad; adquieren Exclusividad, Legado y Acceso Inigualable.»",
       hero_btn_play_theater: "Ver Presentación con Audio HD",
       hero_btn_deck: "Pitch Deck Ejecutivo",
@@ -88,7 +88,7 @@
 
       // Gallery Module
       gallery_kicker: "ARQUITECTURA & ATMÓSFERA EDITORIAL",
-      gallery_title: "Galería Fotográfica (10 Tomas Maestras)",
+      gallery_title: "Galería Editorial",
       gallery_subtitle: "Curaduría visual estilo Architectural Digest que captura el refinamiento y la grandeza del club.",
       gallery_view_hint: "Pulsa sobre cualquier perspectiva para abrir el visor en alta resolución.",
 
@@ -193,7 +193,7 @@
       hero_badge: "INTERNATIONAL POLO & LIFESTYLE CHAMPIONSHIP · JAN 2027",
       hero_title: "NATIONS CUP 2027",
       hero_subtitle: "The Legacy of Polo in the Riviera Maya",
-      hero_dates_venue: "January 13 to 16, 2027 | El Rey Polo Country Club · Puerto Morelos, Cancún, Mexico",
+      hero_dates_venue: "El Rey Polo Country Club · Puerto Morelos, Cancún, Mexico",
       hero_tagline: "«Luxury brands do not buy advertising; they acquire Exclusivity, Legacy, and Access.»",
       hero_btn_play_theater: "Play Full Presentation (HD Audio)",
       hero_btn_deck: "Executive Pitch Deck",
@@ -733,13 +733,13 @@
     },
     {
       index: "10",
-      titleEs: "Trofeo Oficial Nations Cup y Ceremonia de Premiación",
-      titleEn: "Official Nations Cup Trophy & Awards Ceremony",
-      descEs: "El galardón de plata y obsidiana entregado ante los comités de patrocinio a la selección campeona de 2027.",
-      descEn: "The silver and obsidian prize presented before the sponsorship boards to the 2027 champion team.",
-      image: "assets/stills/trofeo_championship.jpg",
-      categoryEs: "CEREMONIA",
-      categoryEn: "AWARDS"
+      titleEs: "Terraza & Alberca Central de El Rey Polo Country Club",
+      titleEn: "Central Pool Terrace & VIP Social Deck",
+      descEs: "Área de alberca panorámica, pérgolas de teca y camastros VIP para el cóctel posterior a los partidos.",
+      descEn: "Panoramic pool deck with teak pergolas and VIP loungers for sunset after-polo gatherings.",
+      image: "assets/photos/real_pool_terrace.jpg",
+      categoryEs: "CLUB & ALBERCA",
+      categoryEn: "POOL & CLUB"
     }
   ];
 
@@ -1184,8 +1184,8 @@
       const points = isEs ? slide.pointsEs : slide.pointsEn;
       pointsEl.innerHTML = points.map(pt => `
         <li class="flex items-start gap-3">
-          <span class="inline-block w-2 h-2 rounded-full bg-[#d4af37] mt-2 shrink-0"></span>
-          <span class="text-sm md:text-base text-gray-200 leading-relaxed font-light">${pt}</span>
+          <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">verified</span>
+          <span class="text-sm md:text-[15px] text-racing-green-dark leading-relaxed font-medium">${pt}</span>
         </li>
       `).join('');
     }
@@ -1799,3 +1799,68 @@
   });
 
 })();
+
+  // --- CURRENCY DROPDOWN HELPERS ---
+  window.toggleCurrencyMenu = function () {
+    const menu = document.getElementById('currency-dropdown-menu');
+    if (menu) {
+      menu.classList.toggle('hidden');
+    }
+  };
+
+  window.selectHeaderCurrency = function (curr) {
+    if (typeof window.setCurrency === 'function') {
+      window.setCurrency(curr);
+    }
+    const sel = document.getElementById('header-curr-selected');
+    if (sel) sel.textContent = curr;
+    const menu = document.getElementById('currency-dropdown-menu');
+    if (menu) menu.classList.add('hidden');
+  };
+
+  document.addEventListener('click', function (e) {
+    const btn = document.getElementById('currency-menu-btn');
+    const menu = document.getElementById('currency-dropdown-menu');
+    if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
+
+  // --- LEGAL COMPLIANCE MODAL HELPERS ---
+  window.openLegalModal = function (tab) {
+    const modal = document.getElementById('legal-compliance-modal');
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    if (tab && typeof window.switchLegalTab === 'function') {
+      window.switchLegalTab(tab);
+    }
+  };
+
+  window.closeLegalModal = function () {
+    const modal = document.getElementById('legal-compliance-modal');
+    if (!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  };
+
+  window.switchLegalTab = function (tab) {
+    const privacyContent = document.getElementById('legal-privacy-content');
+    const termsContent = document.getElementById('legal-terms-content');
+    const tabPrivacyBtn = document.getElementById('tab-privacy-btn');
+    const tabTermsBtn = document.getElementById('tab-terms-btn');
+
+    if (tab === 'privacy') {
+      if (privacyContent) privacyContent.classList.remove('hidden');
+      if (termsContent) termsContent.classList.add('hidden');
+      if (tabPrivacyBtn) tabPrivacyBtn.className = "px-4 py-2 border-b-2 border-warm-bronze text-racing-green-dark font-label-md uppercase font-semibold text-xs tracking-wider";
+      if (tabTermsBtn) tabTermsBtn.className = "px-4 py-2 border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark font-label-md uppercase text-xs tracking-wider";
+    } else {
+      if (privacyContent) privacyContent.classList.add('hidden');
+      if (termsContent) termsContent.classList.remove('hidden');
+      if (tabPrivacyBtn) tabPrivacyBtn.className = "px-4 py-2 border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark font-label-md uppercase text-xs tracking-wider";
+      if (tabTermsBtn) tabTermsBtn.className = "px-4 py-2 border-b-2 border-warm-bronze text-racing-green-dark font-label-md uppercase font-semibold text-xs tracking-wider";
+    }
+  };

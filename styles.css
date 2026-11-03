@@ -405,3 +405,28 @@ body {
   border-color: rgba(212, 175, 55, 0.65);
 }
 
+
+/* Currency Dropdown Transition & Styling */
+#currency-dropdown-menu {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Legal Compliance Modal Styling */
+#legal-compliance-modal {
+  transition: opacity 0.3s ease;
+}
+
+#legal-compliance-modal.flex {
+  animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
