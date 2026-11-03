@@ -1005,7 +1005,7 @@
                   <span data-i18n="btn_submit_whatsapp">Solicitar Dossier & Bloqueo de Exclusividad vía WhatsApp</span>
                 </button>
                 <p data-i18n="form_security_note" class="font-body-sm text-body-sm text-canvas-ivory/60 text-center mt-2">
-                  Al hacer clic será redirigido a WhatsApp Oficial (+34 722 11 62 48) con el mensaje estructurado para atención inmediata por el Comité.
+                  Al hacer clic será redirigido a WhatsApp Oficial con el mensaje estructurado para atención inmediata por el Comité.
                 </p>
               </div>
 
@@ -1155,13 +1155,11 @@
           <p class="font-body-sm text-body-sm text-on-surface-variant">
             Atención a comités de marca, firmas auditoras, secretarías de turismo y comitivas internacionales.
           </p>
-          <div class="flex items-center gap-space-xs font-label-md text-label-md text-racing-green-dark">
-            <span class="material-symbols-outlined text-warm-bronze text-[18px]">mail</span>
-            <span>presidencia@nationscuppolo.com</span>
-          </div>
-          <div class="flex items-center gap-space-xs font-label-md text-label-md text-racing-green-dark">
-            <span class="material-symbols-outlined text-warm-bronze text-[18px]">chat</span>
-            <span>Línea Oficial WhatsApp: +34 722 11 62 48</span>
+          <div class="pt-1">
+            <a href="#formulario-whatsapp" class="inline-flex items-center gap-2 font-label-sm text-racing-green-dark hover:text-warm-bronze transition-colors py-1 group">
+              <span class="material-symbols-outlined text-warm-bronze text-[18px] group-hover:scale-110 transition-transform">verified</span>
+              <span class="tracking-wide">Canal Privado de Acreditación</span>
+            </a>
           </div>
           <div class="text-[11px] text-on-surface-variant/80 pt-1">
             Horario de atención comités: Lunes a Viernes de 09:00 a 19:00 hrs (GMT-5).
@@ -1170,19 +1168,50 @@
 
       </div>
 
-      <!-- Legal Disclosure & Disclaimers Row -->
-      <div class="py-space-md border-b border-outline-variant/20 text-[12px] text-on-surface-variant/90 space-y-2">
-        <p>
-          <strong>Aviso Fiscal & Tarifario:</strong> Los importes de inversión y patrocinio presentados en este portal están calculados en Moneda Nacional Mexicana (MXN), más el Impuesto al Valor Agregado (IVA) correspondiente del 16% conforme a las disposiciones fiscales vigentes del Servicio de Administración Tributaria (SAT). Las conversiones a Dólares Americanos (USD) y Euros (EUR) son estimaciones informativas basadas en el tipo de cambio FIX aplicable a la fecha de consulta.
-        </p>
-        <p>
-          <strong>Reserva de Derechos & Propiedad Intelectual:</strong> «Nations Cup 2027» y «El Rey Polo Country Club» son denominaciones, logotipos e identidades gráficas protegidas por las leyes de propiedad industrial e intelectual aplicables (IMPI). Queda estrictamente prohibida la reproducción, copia, distribución, uso comercial no autorizado o alteración de cualquier contenido, fotografía o render presente en este sitio sin la autorización expresa y por escrito del Comité Organizador.
-        </p>
-        <p>
-          <strong>Confidencialidad Comercial:</strong> Las propuestas y beneficios de patrocinio son de carácter confidencial y están dirigidas exclusivamente a los representantes legales autorizados de las empresas solicitantes. La asignación de exclusividad de categoría se rige por el orden riguroso de confirmación mediante contrato mercantil y anticipo correspondiente.
-        </p>
-      </div>
+      <!-- Legal Disclosure & Disclaimers Row (Comprimida e Interactiva React-Like) -->
+      <div class="py-space-sm border-b border-outline-variant/20">
+        <div class="flex flex-wrap items-center justify-between gap-2.5 py-1">
+          <div class="flex items-center gap-2 text-on-surface-variant/80">
+            <span class="material-symbols-outlined text-warm-bronze text-[16px]">gavel</span>
+            <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] font-semibold text-racing-green-dark">Marco Legal & Compliance</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-1.5 sm:gap-2" id="legal-disclaimer-buttons">
+            <button type="button" onclick="window.toggleLegalDisclaimer('fiscal')" id="btn-disc-fiscal" class="legal-disc-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-[11px] tracking-wider transition-all duration-200 cursor-pointer">
+              <span>Aviso Fiscal & Tarifario</span>
+              <span class="material-symbols-outlined text-[15px] transition-transform duration-300" id="icon-disc-fiscal">expand_more</span>
+            </button>
+            <button type="button" onclick="window.toggleLegalDisclaimer('ip')" id="btn-disc-ip" class="legal-disc-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-[11px] tracking-wider transition-all duration-200 cursor-pointer">
+              <span>Propiedad Intelectual</span>
+              <span class="material-symbols-outlined text-[15px] transition-transform duration-300" id="icon-disc-ip">expand_more</span>
+            </button>
+            <button type="button" onclick="window.toggleLegalDisclaimer('confidential')" id="btn-disc-confidential" class="legal-disc-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-[11px] tracking-wider transition-all duration-200 cursor-pointer">
+              <span>Confidencialidad</span>
+              <span class="material-symbols-outlined text-[15px] transition-transform duration-300" id="icon-disc-confidential">expand_more</span>
+            </button>
+          </div>
+        </div>
 
+        <!-- Collapsible Drawer Container -->
+        <div id="legal-disc-drawer" class="hidden overflow-hidden transition-all duration-300 pt-2 pb-1">
+          <div class="p-3.5 bg-surface-container-low/90 rounded-lg border border-outline-variant/30 text-[12px] leading-relaxed text-on-surface-variant relative shadow-sm">
+            <button type="button" onclick="window.toggleLegalDisclaimer(null)" class="absolute top-2 right-2 p-1 text-on-surface-variant hover:text-racing-green-dark cursor-pointer rounded-full hover:bg-surface-container transition-colors" title="Cerrar">
+              <span class="material-symbols-outlined text-[16px]">close</span>
+            </button>
+            <div id="disc-text-fiscal" class="hidden pr-6">
+              <span class="font-semibold text-racing-green-dark block mb-1">Aviso Fiscal & Tarifario:</span>
+              Los importes de inversión y patrocinio presentados en este portal están calculados en Moneda Nacional Mexicana (MXN), más el Impuesto al Valor Agregado (IVA) correspondiente del 16% conforme a las disposiciones fiscales vigentes del Servicio de Administración Tributaria (SAT). Las conversiones a Dólares Americanos (USD) y Euros (EUR) son estimaciones informativas basadas en el tipo de cambio FIX aplicable a la fecha de consulta.
+            </div>
+            <div id="disc-text-ip" class="hidden pr-6">
+              <span class="font-semibold text-racing-green-dark block mb-1">Reserva de Derechos & Propiedad Intelectual:</span>
+              «Nations Cup 2027» y «El Rey Polo Country Club» son denominaciones, logotipos e identidades gráficas protegidas por las leyes de propiedad industrial e intelectual aplicables (IMPI). Queda estrictamente prohibida la reproducción, copia, distribución, uso comercial no autorizado o alteración de cualquier contenido, fotografía o render presente en este sitio sin la autorización expresa y por escrito del Comité Organizador.
+            </div>
+            <div id="disc-text-confidential" class="hidden pr-6">
+              <span class="font-semibold text-racing-green-dark block mb-1">Confidencialidad Comercial:</span>
+              Las propuestas y beneficios de patrocinio son de carácter confidencial y están dirigidas exclusivamente a los representantes legales autorizados de las empresas solicitantes. La asignación de exclusividad de categoría se rige por el orden riguroso de confirmación mediante contrato mercantil y anticipo correspondiente.
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Bottom Copyright & ARCO Access -->
       <div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
         <div class="text-center md:text-left">

@@ -1864,3 +1864,66 @@
       if (tabTermsBtn) tabTermsBtn.className = "px-4 py-2 border-b-2 border-warm-bronze text-racing-green-dark font-label-md uppercase font-semibold text-xs tracking-wider";
     }
   };
+
+
+  // --- FOOTER LEGAL ACCORDION (REACT-LIKE EXPANDABLE DRAWER) ---
+  let activeLegalDisclaimer = null;
+
+  window.toggleLegalDisclaimer = function (key) {
+    const drawer = document.getElementById('legal-disc-drawer');
+    const items = ['fiscal', 'ip', 'confidential'];
+
+    if (!drawer) return;
+
+    // Toggle close if clicking active key again or null passed
+    if (!key || activeLegalDisclaimer === key) {
+      activeLegalDisclaimer = null;
+      drawer.classList.add('hidden');
+      items.forEach(function (k) {
+        const btn = document.getElementById('btn-disc-' + k);
+        const icon = document.getElementById('icon-disc-' + k);
+        const text = document.getElementById('disc-text-' + k);
+        if (btn) {
+          btn.className = 'legal-disc-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-[11px] tracking-wider transition-all duration-200 cursor-pointer';
+        }
+        if (icon) {
+          icon.style.transform = 'rotate(0deg)';
+        }
+        if (text) {
+          text.classList.add('hidden');
+        }
+      });
+      return;
+    }
+
+    activeLegalDisclaimer = key;
+    drawer.classList.remove('hidden');
+
+    items.forEach(function (k) {
+      const btn = document.getElementById('btn-disc-' + k);
+      const icon = document.getElementById('icon-disc-' + k);
+      const text = document.getElementById('disc-text-' + k);
+
+      if (k === key) {
+        if (btn) {
+          btn.className = 'legal-disc-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-warm-bronze bg-racing-green-dark text-champagne-light font-label-sm text-[11px] tracking-wider transition-all duration-200 shadow-sm cursor-pointer';
+        }
+        if (icon) {
+          icon.style.transform = 'rotate(180deg)';
+        }
+        if (text) {
+          text.classList.remove('hidden');
+        }
+      } else {
+        if (btn) {
+          btn.className = 'legal-disc-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-[11px] tracking-wider transition-all duration-200 cursor-pointer';
+        }
+        if (icon) {
+          icon.style.transform = 'rotate(0deg)';
+        }
+        if (text) {
+          text.classList.add('hidden');
+        }
+      }
+    });
+  };
