@@ -397,35 +397,40 @@
 
           <!-- Interactive Slide Canvas Container (5/7 Columns Split) -->
           <div id="pitch-deck-container" class="max-w-5xl mx-auto bg-surface-container-lowest rounded-DEFAULT shadow-xl overflow-hidden border border-outline-variant/40">
+            <!-- Micro Top Progress Bar -->
+            <div class="w-full h-1 bg-surface-container-high/60 overflow-hidden">
+              <div id="deck-progress-bar" class="h-full bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] transition-all duration-300 w-[7.14%]"></div>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px]">
               
               <!-- Slide Meta & Controls (5 cols) -->
-              <div class="lg:col-span-5 p-space-xl bg-canvas-ivory flex flex-col justify-between">
+              <div class="lg:col-span-5 p-6 lg:p-8 bg-canvas-ivory flex flex-col justify-between">
                 <div>
-                  <div class="flex items-center justify-between mb-space-md">
-                    <span id="deck-slide-badge" class="px-2.5 py-1 bg-primary-container text-champagne-light font-label-sm text-label-sm uppercase">COMITÉ COMERCIAL</span>
+                  <div class="flex items-center justify-between mb-4">
+                    <span id="deck-slide-badge" class="px-2.5 py-1 bg-primary-container text-champagne-light font-label-sm text-[11px] tracking-wider uppercase rounded-sm">COMITÉ COMERCIAL</span>
                     <span class="font-label-md text-label-md text-warm-bronze font-semibold">
                       <span id="deck-counter-num">01</span> / <span id="deck-counter-total">14</span>
                     </span>
                   </div>
 
                   <div>
-                    <h3 id="deck-slide-title" class="font-headline-md text-headline-md text-racing-green-dark leading-tight mb-space-sm">
+                    <h3 id="deck-slide-title" class="font-headline-md text-[22px] sm:text-headline-md text-racing-green-dark leading-tight mb-2">
                       Nations Cup 2027: El Legado del Polo en la Riviera Maya
                     </h3>
-                    <p id="deck-slide-subtitle" class="font-label-sm text-label-sm text-warm-bronze uppercase tracking-wider mb-space-md">
+                    <p id="deck-slide-subtitle" class="font-label-sm text-[11px] text-warm-bronze uppercase tracking-wider mb-4">
                       13 al 16 de Enero de 2027 | El Rey Polo Country Club, Puerto Morelos, Q. Roo
                     </p>
-                    <ul id="deck-slide-points" class="space-y-space-xs font-body-sm text-body-sm text-racing-green-dark">
-                      <li class="flex items-start gap-3">
+                    <ul id="deck-slide-points" class="space-y-2 font-body-sm text-[13px] text-racing-green-dark">
+                      <li class="flex items-start gap-2.5">
                         <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">verified</span>
                         <span class="text-racing-green-dark font-medium leading-relaxed">Presentación reservada para comités de marca e inversionistas internacionales.</span>
                       </li>
-                      <li class="flex items-start gap-3">
+                      <li class="flex items-start gap-2.5">
                         <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">verified</span>
                         <span class="text-racing-green-dark font-medium leading-relaxed">6 Selecciones nacionales de polo en el epicentro ecuestre del Caribe Mexicano.</span>
                       </li>
-                      <li class="flex items-start gap-3">
+                      <li class="flex items-start gap-2.5">
                         <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">verified</span>
                         <span class="text-racing-green-dark font-medium leading-relaxed">Conexión y anfitrionía directa con el segmento de mayor patrimonio de la región.</span>
                       </li>
@@ -434,44 +439,85 @@
                 </div>
 
                 <!-- Slide Navigation Controls -->
-                <div class="pt-space-lg">
-                  <div class="flex items-center justify-between mb-space-sm">
-                    <div class="flex items-center gap-space-xs">
-                      <button id="prevSlideBtn" onclick="window.prevDeckSlide()" class="px-space-md py-space-xs rounded-DEFAULT bg-surface-container text-racing-green-dark hover:bg-surface-container-high transition-colors font-label-md text-label-md uppercase font-semibold" type="button">
-                        Anterior
+                <div class="pt-6 border-t border-outline-variant/20 mt-4">
+                  <!-- Buttons & Hint Row -->
+                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3">
+                    <div class="flex items-center gap-2">
+                      <button 
+                        id="prevSlideBtn" 
+                        onclick="window.prevDeckSlide()" 
+                        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-racing-green-dark/20 bg-surface-container-lowest hover:bg-surface-container hover:border-warm-bronze text-racing-green-dark transition-all duration-200 font-label-sm text-[11px] uppercase tracking-[0.14em] font-semibold cursor-pointer shadow-sm group active:scale-95" 
+                        type="button"
+                        title="Lámina anterior"
+                      >
+                        <span class="material-symbols-outlined text-[16px] text-warm-bronze group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+                        <span data-i18n="deck_btn_prev">Anterior</span>
                       </button>
-                      <button id="nextSlideBtn" onclick="window.nextDeckSlide()" class="px-space-md py-space-xs rounded-DEFAULT bg-racing-green-dark text-champagne-light hover:bg-racing-green-subtle transition-colors font-label-md text-label-md uppercase font-semibold" type="button">
-                        Siguiente
+
+                      <button 
+                        id="nextSlideBtn" 
+                        onclick="window.nextDeckSlide()" 
+                        class="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-racing-green-dark hover:bg-racing-green-subtle text-champagne-light border border-warm-bronze/50 hover:border-warm-bronze shadow-[0_2px_12px_rgba(7,20,14,0.25)] hover:shadow-[0_4px_16px_rgba(212,175,55,0.35)] transition-all duration-200 font-label-sm text-[11px] uppercase tracking-[0.14em] font-bold cursor-pointer group active:scale-95" 
+                        type="button"
+                        title="Siguiente lámina"
+                      >
+                        <span data-i18n="deck_btn_next">Siguiente</span>
+                        <span class="material-symbols-outlined text-[16px] text-champagne-light group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
                       </button>
                     </div>
-                    <span class="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline">Navega con flechas o touch</span>
+
+                    <!-- Clean Single-line Gesture / Keyboard Hint -->
+                    <div class="flex items-center gap-1.5 font-label-sm text-[10px] uppercase tracking-[0.14em] text-on-surface-variant/75 whitespace-nowrap">
+                      <span class="material-symbols-outlined text-[15px] text-warm-bronze">swipe</span>
+                      <span>Flechas o Touch</span>
+                    </div>
                   </div>
 
-                  <!-- Pagination Dots & Progress Bar -->
-                  <div class="w-full h-1 bg-surface-container-high rounded-full overflow-hidden mt-2">
-                    <div id="deck-progress-bar" class="h-full bg-warm-bronze rounded-full transition-all duration-300 w-[7.14%]"></div>
+                  <!-- Interactive Slide Pill Indicators Strip -->
+                  <div class="flex items-center justify-between gap-2 pt-1">
+                    <div id="deck-thumbnails-strip" class="flex items-center gap-1.5 flex-wrap"></div>
+                    <span class="font-label-sm text-[10px] text-warm-bronze uppercase tracking-widest font-semibold shrink-0">
+                      <span id="deck-counter-num-sub">01</span> / 14
+                    </span>
                   </div>
-
-                  <!-- Interactive Slide Pill Indicators -->
-                  <div id="deck-thumbnails-strip" class="flex flex-wrap items-center gap-1.5 mt-3 justify-start sm:justify-center"></div>
                 </div>
 
               </div>
 
               <!-- Slide Artwork Preview (7 cols) -->
-              <div class="lg:col-span-7 relative min-h-[340px] bg-racing-green-dark flex items-center justify-center p-space-md">
+              <div class="lg:col-span-7 relative min-h-[340px] bg-racing-green-dark flex items-center justify-center p-4 lg:p-6 group/slide">
                 <img 
                   id="deck-slide-image" 
                   alt="Slide preview" 
-                  class="w-full h-full object-cover rounded-DEFAULT shadow-inner" 
+                  class="w-full h-full object-cover rounded-DEFAULT shadow-inner transition-opacity duration-300" 
                   src="assets/photos/palapa_exterior_rect.jpg"
                 />
-                
+
+                <!-- Slide Navigation Overlay Chevrons (Hover) -->
+                <button 
+                  type="button" 
+                  onclick="window.prevDeckSlide()" 
+                  class="absolute left-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-racing-green-dark/80 hover:bg-[#D4AF37] text-champagne-light hover:text-racing-green-dark border border-warm-bronze/40 flex items-center justify-center transition-all duration-200 opacity-0 group-hover/slide:opacity-100 shadow-lg cursor-pointer"
+                  title="Anterior"
+                  aria-label="Anterior"
+                >
+                  <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                </button>
+                <button 
+                  type="button" 
+                  onclick="window.nextDeckSlide()" 
+                  class="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-racing-green-dark/80 hover:bg-[#D4AF37] text-champagne-light hover:text-racing-green-dark border border-warm-bronze/40 flex items-center justify-center transition-all duration-200 opacity-0 group-hover/slide:opacity-100 shadow-lg cursor-pointer"
+                  title="Siguiente"
+                  aria-label="Siguiente"
+                >
+                  <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                </button>
+
                 <!-- Floating Dossier Tag -->
                 <div class="absolute bottom-6 left-6 right-6 flex justify-start pointer-events-none">
-                  <div class="bg-racing-green-dark/85 backdrop-blur-md p-space-md rounded-DEFAULT max-w-sm border border-warm-bronze/30 shadow-lg">
+                  <div class="bg-racing-green-dark/90 backdrop-blur-md px-4 py-3 rounded-DEFAULT max-w-sm border border-warm-bronze/35 shadow-xl">
                     <span id="deck-slide-tag" class="font-label-sm text-label-sm text-champagne-light uppercase tracking-widest block mb-1">NATIONS CUP 2027 · DOSSIER OFICIAL</span>
-                    <p class="font-headline-sm text-headline-sm text-canvas-alabaster leading-snug">Estructura Comercial & Retorno de Inversión</p>
+                    <p id="deck-slide-tag-title" class="font-headline-sm text-headline-sm text-canvas-alabaster leading-snug">Estructura Comercial & Retorno de Inversión</p>
                   </div>
                 </div>
               </div>

@@ -1185,6 +1185,7 @@
     const numEl = document.getElementById('deck-counter-num');
     const totalEl = document.getElementById('deck-counter-total');
     const tagEl = document.getElementById('deck-slide-tag');
+    const tagTitleEl = document.getElementById('deck-slide-tag-title');
     const titleEl = document.getElementById('deck-slide-title');
     const subtitleEl = document.getElementById('deck-slide-subtitle');
     const pointsEl = document.getElementById('deck-slide-points');
@@ -1195,6 +1196,7 @@
     if (numEl) numEl.textContent = slide.slideNum;
     if (totalEl) totalEl.textContent = state.totalSlides.toString().padStart(2, '0');
     if (tagEl) tagEl.textContent = isEs ? slide.tag : slide.tagEn;
+    if (tagTitleEl) tagTitleEl.textContent = isEs ? slide.titleEs : slide.titleEn;
     if (titleEl) titleEl.textContent = isEs ? slide.titleEs : slide.titleEn;
     if (subtitleEl) subtitleEl.textContent = isEs ? slide.subtitleEs : slide.subtitleEn;
     if (badgeEl) badgeEl.textContent = slide.badge;
@@ -1202,19 +1204,23 @@
     if (pointsEl) {
       const points = isEs ? slide.pointsEs : slide.pointsEn;
       pointsEl.innerHTML = points.map(pt => `
-        <li class="flex items-start gap-3">
+        <li class="flex items-start gap-2.5">
           <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">verified</span>
-          <span class="text-sm md:text-[15px] text-racing-green-dark leading-relaxed font-medium">${pt}</span>
+          <span class="text-sm md:text-[14px] text-racing-green-dark leading-relaxed font-medium">${pt}</span>
         </li>
       `).join('');
     }
 
     if (imageEl) {
-      imageEl.style.opacity = '0.3';
+      imageEl.style.opacity = '0.4';
       imageEl.src = slide.image;
-      imageEl.onload = () => {
+      if (imageEl.complete) {
         imageEl.style.opacity = '1';
-      };
+      } else {
+        imageEl.onload = () => {
+          imageEl.style.opacity = '1';
+        };
+      }
     }
 
     if (progressEl) {
@@ -1236,11 +1242,21 @@
         <button 
           type="button" 
           onclick="window.goToDeckSlide(${idx + 1})" 
-          class="h-1.5 transition-all duration-300 rounded-full ${active ? 'w-8 bg-[#d4af37]' : 'w-2 bg-white/20 hover:bg-white/40'}"
-          aria-label="Slide ${idx + 1}"
+          class="h-2 transition-all duration-300 rounded-full cursor-pointer ${
+            active 
+              ? 'w-7 bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] shadow-[0_0_8px_rgba(212,175,55,0.45)]' 
+              : 'w-2 bg-[#727974]/40 hover:bg-[#A88344]/80 hover:scale-125'
+          }"
+          aria-label="Lámina ${idx + 1}"
+          title="Lámina ${idx + 1}: ${s.titleEs}"
         ></button>
       `;
     }).join('');
+
+    const subNum = document.getElementById('deck-counter-num-sub');
+    if (subNum) {
+      subNum.textContent = state.currentSlide.toString().padStart(2, '0');
+    }
   }
 
   window.nextDeckSlide = function () {
@@ -1268,7 +1284,7 @@
     }
   };
 
-  // Touch Swipe on Pitch Deck
+  // Touch Swipe & Keyboard Navigation on Pitch Deck
   function initDeckSwipe() {
     const container = document.getElementById('pitch-deck-container');
     if (!container) return;
@@ -1295,8 +1311,11 @@
       }
     }
 
-    // Keyboard support
+    // Keyboard support (safeguarded against typing in form inputs)
     document.addEventListener('keydown', (e) => {
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) {
+        return;
+      }
       if (e.key === 'ArrowRight') {
         const deckSec = document.getElementById('pitch-deck');
         if (deckSec && isElementInViewport(deckSec)) {
