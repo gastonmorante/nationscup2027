@@ -1,0 +1,71 @@
+# ==============================================================================
+# NATIONS CUP 2027 — HOSTINGER APACHE / LITESPEED CONFIGURATION (.htaccess)
+# Domain: https://www.nationscup2027.com
+# ==============================================================================
+
+# 1. SECURITY & OPTIONS
+Options -Indexes
+ServerSignature Off
+AddDefaultCharset UTF-8
+
+# 2. CANONICAL HTTPS & WWW REDIRECTION
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Force WWW (redirect non-www to www)
+  RewriteCond %{HTTP_HOST} ^nationscup2027\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.nationscup2027.com/$1 [L,R=301]
+</IfModule>
+
+# 3. COMPRESSION (GZIP & DEFLATE) FOR ULTRA-FAST LOADING
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/vnd.ms-fontobject application/x-font-ttf font/opentype
+</IfModule>
+
+# 4. BROWSER CACHING (EXPIRES HEADERS)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML & Data (revalidate frequently)
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 0 seconds"
+
+  # CSS & JavaScript
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+
+  # Media & Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType application/pdf "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# 5. SECURITY HEADERS
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 6. CUSTOM 404 FALLBACK
+ErrorDocument 404 /index.html
