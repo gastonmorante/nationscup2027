@@ -12,7 +12,7 @@
   // --- 1. GLOBAL STATE & DICTIONARY ---
   const state = {
     lang: 'es', // 'es' or 'en'
-    currency: 'MXN', // 'MXN', 'USD', 'EUR'
+    currency: 'USD', // 'MXN', 'USD', 'EUR'
     currentSlide: 1,
     totalSlides: 14,
     current360Scene: 'lounge',
@@ -822,10 +822,8 @@
     state.lang = lang;
     localStorage.setItem('nationscup_lang', lang);
 
-    // Automatic Currency Sync: Spanish -> MXN (Pesos), English -> USD (Dollars)
-    if (autoCurrency) {
-      state.currency = lang === 'es' ? 'MXN' : 'USD';
-    }
+    // By default, prices are ALWAYS in USD; currency ONLY changes to MXN if user explicitly chooses MXN.
+    // (Preserve user selected currency or default USD regardless of language)
 
     // Update active pill styling
     const pillEs = document.getElementById('lang-toggle-es');
@@ -1572,15 +1570,10 @@
   window.setCurrency = function (curr) {
     if (currencyRates[curr]) {
       state.currency = curr;
-
-      // Bidirectional Congruence: USD -> English (EN), MXN -> Español (ES)
-      if (curr === 'USD' && state.lang !== 'en') {
-        updateLanguageDOM('en', false);
-      } else if (curr === 'MXN' && state.lang !== 'es') {
-        updateLanguageDOM('es', false);
-      } else {
-        updateCurrencyDisplay();
-      }
+      try {
+        localStorage.setItem('nationscup_currency', curr);
+      } catch (e) {}
+      updateCurrencyDisplay();
     }
   };
 
@@ -1632,11 +1625,11 @@
     if (tBCurr) tBCurr.textContent = `${curr.code} + IVA`;
     if (tBEquiv) tBEquiv.textContent = curr.bronceEquiv;
 
-    // Update Special Assets Table prices & currency labels
+    // Update Special Assets Table prices & currency labels (Default USD)
     const specialElements = document.querySelectorAll('.price-val');
     specialElements.forEach(el => {
-      let val = el.getAttribute('data-mxn');
-      if (state.currency === 'USD') val = el.getAttribute('data-usd');
+      let val = el.getAttribute('data-usd'); // DEFAULT USD
+      if (state.currency === 'MXN') val = el.getAttribute('data-mxn');
       if (state.currency === 'EUR') val = el.getAttribute('data-eur');
       if (val) {
         const num = parseInt(val, 10).toLocaleString('en-US');
@@ -1652,6 +1645,13 @@
     const headerCurrEl = document.getElementById('header-curr-selected');
     if (headerCurrEl) {
       headerCurrEl.textContent = curr.code;
+    }
+
+    const tableNoteEl = document.getElementById('table-currency-note');
+    if (tableNoteEl) {
+      tableNoteEl.textContent = state.currency === 'MXN'
+        ? 'Tarifas en Moneda Nacional (MXN + IVA)'
+        : (state.currency === 'EUR' ? 'Tarifas en Euros (EUR + IVA)' : 'Tarifas oficiales en Dólares (USD + IVA)');
     }
   }
 
@@ -1832,7 +1832,20 @@
   document.addEventListener('DOMContentLoaded', async () => {
     // 1. Language determination & rendering
     const initialLang = await detectLanguage();
-    updateLanguageDOM(initialLang);
+
+    // Default currency is ALWAYS USD; only load MXN if user previously explicitly selected it
+    try {
+      const savedCurr = localStorage.getItem('nationscup_currency');
+      if (savedCurr && currencyRates[savedCurr]) {
+        state.currency = savedCurr;
+      } else {
+        state.currency = 'USD'; // DEFAULT USD
+      }
+    } catch (e) {
+      state.currency = 'USD';
+    }
+
+    updateLanguageDOM(initialLang, false);
 
     // 2. Set up language switcher buttons
     const pillEs = document.getElementById('lang-toggle-es');
