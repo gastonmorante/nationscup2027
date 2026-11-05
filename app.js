@@ -1572,7 +1572,15 @@
   window.setCurrency = function (curr) {
     if (currencyRates[curr]) {
       state.currency = curr;
-      updateCurrencyDisplay();
+
+      // Bidirectional Congruence: USD -> English (EN), MXN -> Español (ES)
+      if (curr === 'USD' && state.lang !== 'en') {
+        updateLanguageDOM('en', false);
+      } else if (curr === 'MXN' && state.lang !== 'es') {
+        updateLanguageDOM('es', false);
+      } else {
+        updateCurrencyDisplay();
+      }
     }
   };
 
@@ -1761,6 +1769,65 @@
     }, 4000);
   }
 
+
+  // --- 14. CLIENT-SIDE WEB ROUTING & URL SYNCHRONIZATION ---
+  function initWebRouting() {
+    const sectionMap = {
+      'index.html': '#hero-section',
+      'pitch-deck.html': '#pitch-deck',
+      'tour-360.html': '#tour-360',
+      'galeria.html': '#galeria',
+      'patrocinios.html': '#patrocinios',
+      'contacto.html': '#formulario-whatsapp'
+    };
+
+    const path = window.location.pathname;
+    const isIndex = path.endsWith('index.html') || path.endsWith('/') || !path.includes('.html');
+    
+    if (isIndex) {
+      // Intercept navigation links on index.html to smooth scroll and update URL bar
+      document.querySelectorAll('a[href]').forEach(a => {
+        const href = a.getAttribute('href');
+        if (sectionMap[href]) {
+          a.addEventListener('click', function (e) {
+            const target = document.querySelector(sectionMap[href]);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth' });
+              try {
+                window.history.pushState(null, '', href);
+              } catch (err) {}
+            }
+          });
+        }
+      });
+
+      // Update browser address bar dynamically as user scrolls through sections
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.id;
+              for (const [url, selector] of Object.entries(sectionMap)) {
+                if (selector === `#${id}`) {
+                  try {
+                    window.history.replaceState(null, '', url);
+                  } catch (err) {}
+                  break;
+                }
+              }
+            }
+          });
+        }, { root: null, rootMargin: '-25% 0px -55% 0px', threshold: 0 });
+
+        Object.values(sectionMap).forEach(sel => {
+          const el = document.querySelector(sel);
+          if (el) observer.observe(el);
+        });
+      }
+    }
+  }
+
   // --- 13. INITIALIZATION ORCHESTRATOR ---
   document.addEventListener('DOMContentLoaded', async () => {
     // 1. Language determination & rendering
@@ -1773,12 +1840,13 @@
     if (pillEs) pillEs.addEventListener('click', () => updateLanguageDOM('es'));
     if (pillEn) pillEn.addEventListener('click', () => updateLanguageDOM('en'));
 
-    // 3. Components
+    // 3. Components & Web Routing
     initVideoPlayer();
     initTheaterModal();
     initDeckSwipe();
     initFormHandlers();
     init360Viewer();
+    initWebRouting();
 
     // 4. Smooth Anchor Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

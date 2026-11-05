@@ -151,19 +151,19 @@
       
       <!-- Brand Identity: Transparent Official Logo (Clean, Sharp & perfectly sized) -->
       <div class="flex items-center">
-        <a class="flex items-center group py-1" href="#hero-section" aria-label="Nations Cup 2027">
+        <a class="flex items-center group py-1" href="index.html" aria-label="Nations Cup 2027">
           <img alt="Nations Cup 2027 Official Logo" class="h-11 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/logos/nations_cup_logo_transparent.png" fetchpriority="high"/>
         </a>
       </div>
 
-      <!-- Main Navigation Anchors -->
-      <nav class="hidden xl:flex items-center gap-space-md py-space-xs">
-        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="#hero-section" data-i18n="nav_vision">La Visión</a>
-        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="#pitch-deck" data-i18n="nav_pitch">Pitch Deck</a>
-        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="#tour-360" data-i18n="nav_tour">Tour 360°</a>
-        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="#galeria" data-i18n="nav_gallery">Galería Editorial</a>
-        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="#patrocinios" data-i18n="nav_tiers">Inversión & Exclusividad</a>
-        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="#formulario-whatsapp" data-i18n="nav_contact">Dossier Privado</a>
+      <!-- Main Navigation Anchors (Multi-Page Web Architecture) -->
+      <nav class="hidden xl:flex items-center gap-space-md py-space-xs" id="main-web-nav">
+        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="index.html" data-i18n="nav_vision">La Visión</a>
+        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="pitch-deck.html" data-i18n="nav_pitch">Pitch Deck</a>
+        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="tour-360.html" data-i18n="nav_tour">Tour 360°</a>
+        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="galeria.html" data-i18n="nav_gallery">Galería Editorial</a>
+        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="patrocinios.html" data-i18n="nav_tiers">Inversión & Exclusividad</a>
+        <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="contacto.html" data-i18n="nav_contact">Dossier Privado</a>
       </nav>
 
       <!-- Switchers & Concierge CTA -->
@@ -207,7 +207,7 @@
         <!-- WhatsApp VIP Concierge Elevated Button -->
         <a 
           class="inline-flex items-center gap-2 bg-[#07140E] text-[#F3E5AB] hover:text-white hover:bg-[#0E291E] font-label-md text-label-md uppercase px-4 py-2 rounded-DEFAULT border border-[#D4AF37]/60 hover:border-[#D4AF37] shadow-[0_2px_8px_rgba(0,0,0,0.15)] hover:shadow-[0_0_18px_rgba(212,175,55,0.35)] transition-all duration-300 group" 
-          href="#formulario-whatsapp"
+          href="contacto.html"
         >
           <span class="material-symbols-outlined text-[17px] text-warm-bronze group-hover:scale-110 transition-transform">concierge</span>
           <span data-i18n="btn_whatsapp_vip" class="tracking-[0.14em] font-semibold hidden sm:inline">WhatsApp VIP</span>
@@ -1664,7 +1664,7 @@
             Atención a comités de marca, firmas auditoras, secretarías de turismo y comitivas internacionales.
           </p>
           <div class="pt-1">
-            <a href="#formulario-whatsapp" class="inline-flex items-center gap-2 font-label-sm text-racing-green-dark hover:text-warm-bronze transition-colors py-1 group">
+            <a href="contacto.html" class="inline-flex items-center gap-2 font-label-sm text-racing-green-dark hover:text-warm-bronze transition-colors py-1 group">
               <span class="material-symbols-outlined text-warm-bronze text-[18px] group-hover:scale-110 transition-transform">verified</span>
               <span class="tracking-wide">Canal Privado de Acreditación</span>
             </a>
@@ -1729,7 +1729,7 @@
           <button onclick="window.openLegalModal('privacy')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze">Aviso de Privacidad</button>
           <button onclick="window.openLegalModal('terms')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze">Términos & Condiciones</button>
           <button onclick="window.openBankModal('mxn')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze">Datos de Transferencia</button>
-          <a href="#formulario-whatsapp" class="hover:text-racing-green-dark cursor-pointer transition-colors">Contacto Oficial</a>
+          <a href="contacto.html" class="hover:text-racing-green-dark cursor-pointer transition-colors">Contacto Oficial</a>
         </div>
       </div>
 

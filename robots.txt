@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gastonmorante.github.io/nationscup2027/sitemap.xml
