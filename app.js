@@ -1618,33 +1618,45 @@
   });
 
   // --- 10. CURRENCY CONVERTER ENGINE ---
-  const currencyRates = {
-    MXN: {
-      symbol: "$",
-      code: "MXN",
-      suffix: "MXN",
-      presenting: "40,000",
-      official: "30,000",
-      supplier: "Cotización a Medida",
-      supplierEn: "Bespoke Quotation"
-    },
+    const currencyRates = {
     USD: {
       symbol: "$",
       code: "USD",
       suffix: "USD",
-      presenting: "2,350",
-      official: "1,750",
-      supplier: "Cotización a Medida",
-      supplierEn: "Bespoke Quotation"
+      platino: "45,000",
+      platinoEquiv: "Aprox. $787,500 MXN",
+      oro: "28,000",
+      oroEquiv: "Aprox. $490,000 MXN",
+      plata: "14,000",
+      plataEquiv: "Aprox. $245,000 MXN",
+      bronce: "9,000",
+      bronceEquiv: "Aprox. $157,500 MXN"
+    },
+    MXN: {
+      symbol: "$",
+      code: "MXN",
+      suffix: "MXN",
+      platino: "787,500",
+      platinoEquiv: "Equivalente oficial a $45,000 USD",
+      oro: "490,000",
+      oroEquiv: "Equivalente oficial a $28,000 USD",
+      plata: "245,000",
+      plataEquiv: "Equivalente oficial a $14,000 USD",
+      bronce: "157,500",
+      bronceEquiv: "Equivalente oficial a $9,000 USD"
     },
     EUR: {
       symbol: "€",
       code: "EUR",
       suffix: "EUR",
-      presenting: "2,150",
-      official: "1,600",
-      supplier: "Cotización a Medida",
-      supplierEn: "Bespoke Quotation"
+      platino: "41,400",
+      platinoEquiv: "Aprox. $45,000 USD",
+      oro: "25,750",
+      oroEquiv: "Aprox. $28,000 USD",
+      plata: "12,880",
+      plataEquiv: "Aprox. $14,000 USD",
+      bronce: "8,280",
+      bronceEquiv: "Aprox. $9,000 USD"
     }
   };
 
@@ -1655,37 +1667,65 @@
     }
   };
 
-  function updateCurrencyDisplay() {
-    const curr = currencyRates[state.currency];
+    function updateCurrencyDisplay() {
+    const curr = currencyRates[state.currency] || currencyRates['USD'];
     const isEs = state.lang === 'es';
 
-    // Update active pill button state
-    ['MXN', 'USD', 'EUR'].forEach(c => {
-      const btn = document.getElementById(`curr-pill-${c}`);
+    // Update active currency button state in Header & Patrocinios
+    ['USD', 'MXN', 'EUR'].forEach(c => {
+      const btn = document.getElementById(`curr${c}`);
       if (btn) {
         if (c === state.currency) {
-          btn.className = "px-3 py-1 text-xs font-semibold rounded-full bg-[#d4af37] text-[#07140e] transition-all";
+          btn.className = "currency-btn px-3 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-md text-label-md text-racing-green-dark shadow-sm font-semibold";
         } else {
-          btn.className = "px-3 py-1 text-xs font-medium rounded-full text-[#f3e5ab]/70 hover:text-white transition-all";
+          btn.className = "currency-btn px-3 py-1 rounded-DEFAULT font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-medium";
         }
       }
     });
 
-    // Update Tier 1
-    const t1Price = document.getElementById('tier-presenting-price');
-    const t1Curr = document.getElementById('tier-presenting-currency');
-    if (t1Price) t1Price.textContent = `${curr.symbol}${curr.presenting}`;
-    if (t1Curr) t1Curr.textContent = `${curr.code} + IVA`;
+    // Update Tier Platino
+    const tPPrice = document.getElementById('tier-platino-price');
+    const tPCurr = document.getElementById('tier-platino-currency');
+    const tPEquiv = document.getElementById('tier-platino-equiv');
+    if (tPPrice) tPPrice.textContent = `${curr.symbol}${curr.platino}`;
+    if (tPCurr) tPCurr.textContent = `${curr.code} + IVA`;
+    if (tPEquiv) tPEquiv.textContent = curr.platinoEquiv;
 
-    // Update Tier 2
-    const t2Price = document.getElementById('tier-official-price');
-    const t2Curr = document.getElementById('tier-official-currency');
-    if (t2Price) t2Price.textContent = `${curr.symbol}${curr.official}`;
-    if (t2Curr) t2Curr.textContent = `${curr.code} + IVA`;
+    // Update Tier Oro
+    const tOPrice = document.getElementById('tier-oro-price');
+    const tOCurr = document.getElementById('tier-oro-currency');
+    const tOEquiv = document.getElementById('tier-oro-equiv');
+    if (tOPrice) tOPrice.textContent = `${curr.symbol}${curr.oro}`;
+    if (tOCurr) tOCurr.textContent = `${curr.code} + IVA`;
+    if (tOEquiv) tOEquiv.textContent = curr.oroEquiv;
 
-    // Update Tier 3
-    const t3Price = document.getElementById('tier-supplier-price');
-    if (t3Price) t3Price.textContent = isEs ? curr.supplier : curr.supplierEn;
+    // Update Tier Plata
+    const tSPrice = document.getElementById('tier-plata-price');
+    const tSCurr = document.getElementById('tier-plata-currency');
+    const tSEquiv = document.getElementById('tier-plata-equiv');
+    if (tSPrice) tSPrice.textContent = `${curr.symbol}${curr.plata}`;
+    if (tSCurr) tSCurr.textContent = `${curr.code} + IVA`;
+    if (tSEquiv) tSEquiv.textContent = curr.plataEquiv;
+
+    // Update Tier Bronce
+    const tBPrice = document.getElementById('tier-bronce-price');
+    const tBCurr = document.getElementById('tier-bronce-currency');
+    const tBEquiv = document.getElementById('tier-bronce-equiv');
+    if (tBPrice) tBPrice.textContent = `${curr.symbol}${curr.bronce}`;
+    if (tBCurr) tBCurr.textContent = `${curr.code} + IVA`;
+    if (tBEquiv) tBEquiv.textContent = curr.bronceEquiv;
+
+    // Update Special Assets Table prices
+    const specialElements = document.querySelectorAll('.price-val');
+    specialElements.forEach(el => {
+      let val = el.getAttribute('data-usd');
+      if (state.currency === 'MXN') val = el.getAttribute('data-mxn');
+      if (state.currency === 'EUR') val = el.getAttribute('data-eur');
+      if (val) {
+        const num = parseInt(val, 10).toLocaleString('en-US');
+        el.textContent = `${curr.symbol}${num}`;
+      }
+    });
   }
 
   // Auto pre-select tier and scroll to WhatsApp form
@@ -1965,3 +2005,78 @@
       }
     });
   };
+
+
+  // --- BANK SETTLEMENT MODAL HELPERS ---
+  window.openBankModal = function (tab) {
+    const modal = document.getElementById('bank-settlement-modal');
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    if (tab) {
+      window.switchBankTab(tab);
+    }
+  };
+
+  window.closeBankModal = function () {
+    const modal = document.getElementById('bank-settlement-modal');
+    if (!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  };
+
+  window.switchBankTab = function (tab) {
+    const panelMxn = document.getElementById('bank-panel-mxn');
+    const panelUsd = document.getElementById('bank-panel-usd');
+    const tabMxn = document.getElementById('bank-tab-mxn');
+    const tabUsd = document.getElementById('bank-tab-usd');
+
+    if (tab === 'mxn') {
+      if (panelMxn) panelMxn.classList.remove('hidden');
+      if (panelUsd) panelUsd.classList.add('hidden');
+      if (tabMxn) {
+        tabMxn.className = "flex-1 py-3 px-4 text-center font-label-md text-[12px] uppercase tracking-wider font-bold border-b-2 border-warm-bronze text-racing-green-dark bg-canvas-alabaster transition-all cursor-pointer flex items-center justify-center gap-2";
+      }
+      if (tabUsd) {
+        tabUsd.className = "flex-1 py-3 px-4 text-center font-label-md text-[12px] uppercase tracking-wider font-semibold border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark transition-all cursor-pointer flex items-center justify-center gap-2";
+      }
+    } else {
+      if (panelMxn) panelMxn.classList.add('hidden');
+      if (panelUsd) panelUsd.classList.remove('hidden');
+      if (tabMxn) {
+        tabMxn.className = "flex-1 py-3 px-4 text-center font-label-md text-[12px] uppercase tracking-wider font-semibold border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark transition-all cursor-pointer flex items-center justify-center gap-2";
+      }
+      if (tabUsd) {
+        tabUsd.className = "flex-1 py-3 px-4 text-center font-label-md text-[12px] uppercase tracking-wider font-bold border-b-2 border-warm-bronze text-racing-green-dark bg-canvas-alabaster transition-all cursor-pointer flex items-center justify-center gap-2";
+      }
+    }
+  };
+
+  window.copyBankValue = function (text, btn) {
+    if (!text) return;
+    navigator.clipboard.writeText(text).then(function () {
+      if (btn) {
+        const originalText = btn.textContent;
+        btn.textContent = "¡Copiado! ✓";
+        btn.classList.add('bg-warm-bronze', 'text-white');
+        setTimeout(function () {
+          btn.textContent = originalText;
+          btn.classList.remove('bg-warm-bronze', 'text-white');
+        }, 1800);
+      }
+    }).catch(function (err) {
+      console.error('Error al copiar:', err);
+    });
+  };
+
+  // Close bank modal on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      const modal = document.getElementById('bank-settlement-modal');
+      if (modal && !modal.classList.contains('hidden')) {
+        window.closeBankModal();
+      }
+    }
+  });
