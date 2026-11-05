@@ -1,32 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- 1. Portada Principal & Dossier Ejecutivo -->
   <url>
     <loc>https://www.nationscup2027.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/"/>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://www.nationscup2027.com/pitch-deck.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
+
+  <!-- 2. Matriz de Patrocinios, Tiers & Exclusividad -->
   <url>
     <loc>https://www.nationscup2027.com/patrocinios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/patrocinios.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/patrocinios.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/patrocinios.html"/>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
+
+  <!-- 3. Pitch Deck Ejecutivo Confidencial (14 Láminas) -->
+  <url>
+    <loc>https://www.nationscup2027.com/pitch-deck.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/pitch-deck.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/pitch-deck.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/pitch-deck.html"/>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 4. Recorrido Virtual 360° Inmersivo -->
   <url>
     <loc>https://www.nationscup2027.com/tour-360.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/tour-360.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/tour-360.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/tour-360.html"/>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- 5. Galería Editorial HD -->
   <url>
     <loc>https://www.nationscup2027.com/galeria.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/galeria.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/galeria.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/galeria.html"/>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- 6. Contacto Privado & Concierge VIP -->
   <url>
     <loc>https://www.nationscup2027.com/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/contacto.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/contacto.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/contacto.html"/>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>

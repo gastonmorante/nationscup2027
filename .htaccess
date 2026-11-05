@@ -8,7 +8,15 @@ Options -Indexes
 ServerSignature Off
 AddDefaultCharset UTF-8
 
-# 2. CANONICAL HTTPS & WWW REDIRECTION
+# MIME TYPES (Next-Gen Formats & Web Standards)
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType video/mp4 .mp4
+  AddType application/json .json
+  AddType application/xml .xml
+</IfModule>
+
+# 2. CANONICAL HTTPS & WWW REDIRECTION + ROUTING
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -21,6 +29,31 @@ AddDefaultCharset UTF-8
   # Force WWW (redirect non-www to www)
   RewriteCond %{HTTP_HOST} ^nationscup2027\.com$ [NC]
   RewriteRule ^(.*)$ https://www.nationscup2027.com/$1 [L,R=301]
+
+  # Clean Language Subpaths: /en/ and /es/
+  RewriteRule ^en/?$ index.html?lang=en [NC,QSA,L]
+  RewriteRule ^es/?$ index.html?lang=es [NC,QSA,L]
+  RewriteRule ^en/([a-zA-Z0-9_-]+)/?$ $1.html?lang=en [NC,QSA,L]
+  RewriteRule ^es/([a-zA-Z0-9_-]+)/?$ $1.html?lang=es [NC,QSA,L]
+
+  # Extensionless URLs (e.g. /patrocinios -> patrocinios.html)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^([^/]+)/?$ $1.html [NC,QSA,L]
+
+  # Transparent Next-Gen WebP Delivery for modern browsers
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  RewriteCond %{REQUEST_FILENAME} (.+)\.(jpe?g|png)$ [NC]
+  RewriteCond %1.webp -f
+  RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp,E=accept:1,L]
+</IfModule>
+
+# Vary Header for WebP Content Negotiation & Security Headers
+<IfModule mod_headers.c>
+  Header append Vary Accept env=REDIRECT_accept
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
 # 3. COMPRESSION (GZIP & DEFLATE) FOR ULTRA-FAST LOADING
@@ -60,12 +93,5 @@ AddDefaultCharset UTF-8
   ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
 
-# 5. SECURITY HEADERS
-<IfModule mod_headers.c>
-  Header always set X-Content-Type-Options "nosniff"
-  Header always set X-XSS-Protection "1; mode=block"
-  Header always set Referrer-Policy "strict-origin-when-cross-origin"
-</IfModule>
-
-# 6. CUSTOM 404 FALLBACK
+# 5. CUSTOM 404 FALLBACK
 ErrorDocument 404 /index.html

@@ -348,6 +348,30 @@
     "bank_modal_compliance_note": "Comprobantes válidos para emisión de factura fiscal (CFDI) conforme a la legislación vigente.",
     "deck_slide_tag_title": "Estructura Comercial & Retorno de Inversión",
     "preview_default_text": "Hola, represento a [Empresa]. Mi nombre es [Nombre del Ejecutivo] (Director Global de Patrocinios y Alianzas). Estamos interesados en evaluar el patrocinio para NATIONS CUP 2027 en la categoría de Alta Relojería & Joyería bajo el nivel D. Patrocinador Nombre del Torneo Omnipresente. Solicitamos confirmación de disponibilidad y reunión de alineación comercial.",
+            "meta_title_home": "Nations Cup 2027 | Torneo Internacional de Polo · El Rey Polo Club",
+      "meta_desc_home": "Dossier comercial ejecutivo del Torneo Internacional de Polo Nations Cup 2027 en El Rey Polo Country Club, Puerto Morelos, Cancún, Riviera Maya, México.",
+      "meta_title_patrocinios": "Niveles de Patrocinio & Exclusividad | Nations Cup 2027",
+      "meta_desc_patrocinios": "Estructura comercial oficial: Tiers Platino, Oro, Plata, Bronce y Matriz de Patrocinadores Exclusivos A a G con blindaje de categoría industrial.",
+      "meta_title_pitch": "Pitch Deck Ejecutivo Confidencial | Nations Cup 2027",
+      "meta_desc_pitch": "Presentación ejecutiva de 14 láminas: visión estratégica, demografía de alto standing, plan de medios y retorno de inversión para marcas patrocinadoras.",
+      "meta_title_tour": "Tour Virtual 360° Inmersivo | El Rey Polo Country Club · Nations Cup 2027",
+      "meta_desc_tour": "Recorrido esférico interactivo de alta definición: Salón VIP de Hospitalidad, Campo Central, Stands Comerciales, Terraza Sunset y Escenario Fashion Show.",
+      "meta_title_galeria": "Galería Editorial & Atmósfera | Nations Cup 2027",
+      "meta_desc_galeria": "Colección fotográfica de 12 tomas maestras en alta resolución: acción ecuestre de alto hándicap, palapa club house, autoshow y alta gastronomía.",
+      "meta_title_contacto": "Contacto Privado & Concierge VIP | Nations Cup 2027",
+      "meta_desc_contacto": "Canal privado y confidencial con la Presidencia del Comité Organizador. Solicitud formal de dossier ejecutivo y bloqueo de exclusividad de sector.",
+            "meta_title_home": "Nations Cup 2027 | International Polo Tournament · El Rey Polo Club",
+      "meta_desc_home": "Official commercial dossier for the Nations Cup 2027 International Polo Tournament at El Rey Polo Country Club, Puerto Morelos, Cancun, Riviera Maya, Mexico.",
+      "meta_title_patrocinios": "Sponsorship Tiers & Industry Exclusivity | Nations Cup 2027",
+      "meta_desc_patrocinios": "Official commercial structure: Corporate Tiers (Platinum, Gold, Silver, Bronze) and Exclusive Asset Sponsors A to G with category lock.",
+      "meta_title_pitch": "Confidential Executive Pitch Deck | Nations Cup 2027",
+      "meta_desc_pitch": "14-slide executive presentation: strategic vision, high-standing demographics, media plan, and verified ROI for luxury brand partners.",
+      "meta_title_tour": "360° Immersive Virtual Tour | El Rey Polo Country Club · Nations Cup 2027",
+      "meta_desc_tour": "High-definition interactive spherical tour: VIP Hospitality Lounge, Main Field, Commercial Pavilions, Sunset Terrace, and Fashion Show Stage.",
+      "meta_title_galeria": "Editorial Gallery & Atmosphere | Nations Cup 2027",
+      "meta_desc_galeria": "Curated collection of 12 high-resolution master captures: high-goal equestrian action, clubhouse palapa, supercars, and haute dining.",
+      "meta_title_contacto": "Private Contact & VIP Concierge | Nations Cup 2027",
+      "meta_desc_contacto": "Confidential advisory channel with the Organizing Committee Presidency. Formal dossier requests and category exclusivity locks.",
       "page_meta_title": "Nations Cup 2027 | El Rey Polo Country Club · Dossier Privado de Patrocinio",
       "page_meta_desc": "Portal Comercial B2B y Dossier Ejecutivo de Patrocinio para el Torneo Internacional de Polo Nations Cup 2027 en El Rey Polo Country Club, Puerto Morelos, Riviera Maya, México.",
       "video_fallback": "Tu navegador no soporta reproducción de video HTML5.",
@@ -1276,8 +1300,60 @@
     }
   ];
 
+  // --- URL LANGUAGE & SHARING LOGIC ---
+  function getExplicitUrlLanguage() {
+    try {
+      // 1. Query parameter: ?lang=en or ?lang=es (or ?l=en)
+      const params = new URLSearchParams(window.location.search);
+      const qLang = (params.get('lang') || params.get('l') || '').toLowerCase();
+      if (qLang === 'en' || qLang === 'es') return qLang;
+
+      // 2. Path prefix: /en/ or /es/
+      const path = window.location.pathname.toLowerCase();
+      if (path.startsWith('/en/') || path === '/en' || path.endsWith('/en.html')) return 'en';
+      if (path.startsWith('/es/') || path === '/es' || path.endsWith('/es.html')) return 'es';
+
+      // 3. Hash: #lang=en or #en
+      const hash = (window.location.hash || '').toLowerCase();
+      if (hash === '#en' || hash.includes('lang=en')) return 'en';
+      if (hash === '#es' || hash.includes('lang=es')) return 'es';
+    } catch (e) {
+      console.warn("Language URL parser notice:", e);
+    }
+    return null;
+  }
+
+  window.copyShareableLink = function (targetLang) {
+    const lang = targetLang || state.lang || 'es';
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', lang);
+      const shareUrl = url.toString();
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        const msg = lang === 'es'
+          ? '¡Enlace en Español copiado al portapapeles! 🇪🇸'
+          : 'English link copied to clipboard! 🇺🇸';
+        if (typeof showToast === 'function') showToast(msg);
+      }).catch(() => {
+        prompt(lang === 'es' ? 'Copia este enlace:' : 'Copy this link:', shareUrl);
+      });
+    } catch (e) {
+      console.error('Error al generar enlace compartible:', e);
+    }
+  };
+
   // --- 4. GEOLOCATION & LANGUAGE DETECTION ---
   async function detectLanguage() {
+    // 1. Priority: URL explicitly specified (guarantees that shared links load in the sender's chosen language)
+    const urlLang = getExplicitUrlLanguage();
+    if (urlLang) {
+      try {
+        localStorage.setItem('nationscup_lang', urlLang);
+      } catch (e) {}
+      return urlLang;
+    }
+
+    // 2. Stored user preference
     const saved = localStorage.getItem('nationscup_lang');
     if (saved && (saved === 'es' || saved === 'en')) {
       return saved;
@@ -1315,6 +1391,14 @@
 
   window.setWebsiteLanguage = function (lang) {
     updateLanguageDOM(lang, false);
+
+    // Sync active language in browser URL address bar (enables 1-click sharing of active language)
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', lang);
+      window.history.replaceState({ lang }, '', url.toString());
+    } catch (e) {}
+
     const msg = lang === 'es' 
       ? 'Idioma cambiado a Español 🇪🇸' 
       : 'Language switched to English 🇺🇸';
@@ -1351,12 +1435,41 @@
     const elements = document.querySelectorAll('[data-i18n]');
     const dict = i18n[lang];
     document.documentElement.setAttribute('lang', lang);
-    if (dict['page_meta_title']) {
+
+    // Page-specific dynamic SEO title & description
+    const path = (window.location.pathname || '').toLowerCase();
+    let titleKey = 'meta_title_home';
+    let descKey = 'meta_desc_home';
+    if (path.includes('patrocinios')) {
+      titleKey = 'meta_title_patrocinios';
+      descKey = 'meta_desc_patrocinios';
+    } else if (path.includes('pitch-deck')) {
+      titleKey = 'meta_title_pitch';
+      descKey = 'meta_desc_pitch';
+    } else if (path.includes('tour-360')) {
+      titleKey = 'meta_title_tour';
+      descKey = 'meta_desc_tour';
+    } else if (path.includes('galeria')) {
+      titleKey = 'meta_title_galeria';
+      descKey = 'meta_desc_galeria';
+    } else if (path.includes('contacto')) {
+      titleKey = 'meta_title_contacto';
+      descKey = 'meta_desc_contacto';
+    }
+
+    if (dict[titleKey]) {
+      document.title = dict[titleKey];
+    } else if (dict['page_meta_title']) {
       document.title = dict['page_meta_title'];
     }
+
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && dict['page_meta_desc']) {
-      metaDesc.setAttribute('content', dict['page_meta_desc']);
+    if (metaDesc) {
+      if (dict[descKey]) {
+        metaDesc.setAttribute('content', dict[descKey]);
+      } else if (dict['page_meta_desc']) {
+        metaDesc.setAttribute('content', dict['page_meta_desc']);
+      }
     }
     elements.forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -1405,6 +1518,17 @@
     if (privEn) privEn.classList.toggle('hidden', isEs);
     if (termsEs) termsEs.classList.toggle('hidden', !isEs);
     if (termsEn) termsEn.classList.toggle('hidden', isEs);
+
+    // Synchronize all internal page links to maintain active language in URL when navigating
+    try {
+      const pageLinks = document.querySelectorAll('a[href$=".html"], a[href*=".html?"]');
+      pageLinks.forEach(a => {
+        const rawHref = a.getAttribute('href');
+        if (!rawHref || rawHref.startsWith('http') || rawHref.startsWith('//') || rawHref.startsWith('#')) return;
+        const [basePath] = rawHref.split('?');
+        a.setAttribute('href', `${basePath}?lang=${lang}`);
+      });
+    } catch (e) {}
 
     // Refresh dynamic components
     renderPitchDeckSlide();
