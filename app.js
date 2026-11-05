@@ -817,6 +817,16 @@
     return 'en';
   }
 
+  window.setWebsiteLanguage = function (lang) {
+    updateLanguageDOM(lang, false);
+    const msg = lang === 'es' 
+      ? 'Idioma cambiado a Español 🇪🇸' 
+      : 'Language switched to English 🇺🇸';
+    if (typeof showToast === 'function') {
+      showToast(msg);
+    }
+  };
+
   // --- 5. RENDER TRANSLATIONS (DOM UPDATE) ---
   function updateLanguageDOM(lang, autoCurrency = true) {
     state.lang = lang;
@@ -825,16 +835,19 @@
     // By default, prices are ALWAYS in USD; currency ONLY changes to MXN if user explicitly chooses MXN.
     // (Preserve user selected currency or default USD regardless of language)
 
-    // Update active pill styling
+    // Update luxury active pill styling for language toggle
     const pillEs = document.getElementById('lang-toggle-es');
     const pillEn = document.getElementById('lang-toggle-en');
     if (pillEs && pillEn) {
+      const activeClass = "lang-pill px-2.5 py-1 text-[11px] font-bold uppercase rounded-full transition-all duration-300 flex items-center gap-1 cursor-pointer bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#07140E] shadow-[0_0_12px_rgba(212,175,55,0.45)] scale-[1.03]";
+      const inactiveClass = "lang-pill px-2.5 py-1 text-[11px] font-medium uppercase rounded-full transition-all duration-300 flex items-center gap-1 cursor-pointer text-[#F3E5AB]/75 hover:text-white hover:bg-white/10";
+      
       if (lang === 'es') {
-        pillEs.className = "px-3 py-1 text-xs font-semibold rounded-full bg-[#d4af37] text-[#07140e] transition-all";
-        pillEn.className = "px-3 py-1 text-xs font-medium rounded-full text-[#f3e5ab]/70 hover:text-white transition-all";
+        pillEs.className = activeClass;
+        pillEn.className = inactiveClass;
       } else {
-        pillEn.className = "px-3 py-1 text-xs font-semibold rounded-full bg-[#d4af37] text-[#07140e] transition-all";
-        pillEs.className = "px-3 py-1 text-xs font-medium rounded-full text-[#f3e5ab]/70 hover:text-white transition-all";
+        pillEn.className = activeClass;
+        pillEs.className = inactiveClass;
       }
     }
 

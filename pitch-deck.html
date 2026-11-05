@@ -198,10 +198,29 @@
           </div>
         </div>
 
-        <!-- Language Toggle Pill -->
-        <div class="hidden md:flex items-center bg-surface-container-low px-space-xs py-1 rounded-DEFAULT gap-1">
-          <button id="lang-toggle-es" class="font-label-sm text-label-sm text-on-surface px-1.5 py-0.5 rounded-DEFAULT bg-surface-container-lowest shadow-[0_1px_2px_rgba(0,0,0,0.05)] font-semibold" type="button">ES</button>
-          <button id="lang-toggle-en" class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface px-1.5 py-0.5" type="button">EN</button>
+        <!-- Luxury Language Switcher (High-End Tactile Capsule · Always Visible) -->
+        <div class="flex items-center bg-[#07140E] p-1 rounded-full border border-[#D4AF37]/50 shadow-[0_2px_12px_rgba(0,0,0,0.25)] gap-1">
+          <span class="material-symbols-outlined text-[15px] text-[#D4AF37] ml-1.5 mr-0.5 hidden xs:inline" style="font-variation-settings: 'FILL' 1;">language</span>
+          <button 
+            id="lang-toggle-es" 
+            onclick="window.setWebsiteLanguage('es')" 
+            type="button" 
+            class="lang-pill px-2.5 py-1 text-[11px] font-bold uppercase rounded-full transition-all duration-300 flex items-center gap-1 cursor-pointer bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#07140E] shadow-[0_0_12px_rgba(212,175,55,0.45)] scale-[1.03]"
+            title="Cambiar idioma a Español"
+          >
+            <span>🇪🇸</span>
+            <span>ES</span>
+          </button>
+          <button 
+            id="lang-toggle-en" 
+            onclick="window.setWebsiteLanguage('en')" 
+            type="button" 
+            class="lang-pill px-2.5 py-1 text-[11px] font-medium uppercase rounded-full transition-all duration-300 flex items-center gap-1 cursor-pointer text-[#F3E5AB]/75 hover:text-white hover:bg-white/10"
+            title="Switch language to English"
+          >
+            <span>🇺🇸</span>
+            <span>EN</span>
+          </button>
         </div>
 
         <!-- WhatsApp VIP Concierge Elevated Button -->
