@@ -48,8 +48,8 @@
       stat_hectares: "6 Hectáreas",
       stat_hectares_sub: "Césped oficial reglamentario (300 x 200m)",
       stat_teams: "6 Selecciones",
-      stat_teams_sub: "México, Argentina, Inglaterra, EE.UU., Brasil e India",
-      stat_audience: "Perfil UHNWI",
+      stat_teams_sub: "España, Alemania, México, Canadá, USA y Argentina",
+      stat_audience: "Audiencia de Alto Standing",
       stat_audience_sub: "CEOs, inversionistas y propietarios de alto perfil",
       stat_exclusivity: "1 Marca por Sector",
       stat_exclusivity_sub: "Exclusividad inquebrantable de categoría",
@@ -128,7 +128,7 @@
       tier3_sub: "Proveedor Oficial / Marca Aliada",
       tier3_desc: "Integración de producto y servicios premium en gastronomía, coctelería, moda o movilidad de ultra-lujo.",
       tier3_feat1: "Presencia directa en barras VIP, gastronomía o transporte",
-      tier3_feat2: "Activación de producto y sampling de alta gama a invitados UHNWI",
+      tier3_feat2: "Activación de producto y sampling de alta gama a invitados de alto standing",
       tier3_feat3: "Derechos de uso de marca 'Official Supplier Nations Cup 2027'",
       tier3_feat4: "10 accesos VIP generales para directivos y clientes clave",
       tier3_feat5: "Menciones en programa de mano y pantalla digital del evento",
@@ -205,8 +205,8 @@
       stat_hectares: "6 Hectares",
       stat_hectares_sub: "Official regulation turf field (300 x 200m)",
       stat_teams: "6 National Teams",
-      stat_teams_sub: "Mexico, Argentina, England, USA, Brazil & India",
-      stat_audience: "UHNWI Audience",
+      stat_teams_sub: "Spain, Germany, Mexico, Canada, USA & Argentina",
+      stat_audience: "High-Standing Audience",
       stat_audience_sub: "CEOs, high-net-worth investors and decision makers",
       stat_exclusivity: "1 Brand per Industry",
       stat_exclusivity_sub: "Uncompromising category exclusivity lock",
@@ -285,7 +285,7 @@
       tier3_sub: "Official Supplier / Partner Brand",
       tier3_desc: "Seamless luxury product integration across gastronomy, premium mixology, aviation, or high-end mobility.",
       tier3_feat1: "Direct presence at VIP bars, gourmet tastings or mobility fleets",
-      tier3_feat2: "Curated product activations and bespoke gifting to UHNWI guests",
+      tier3_feat2: "Curated product activations and bespoke gifting to high-standing guests",
       tier3_feat3: "Rights to the designation 'Official Supplier Nations Cup 2027'",
       tier3_feat4: "10 VIP All-Access credentials for executives and key guests",
       tier3_feat5: "Editorial credit in printed tournament book and digital screens",
@@ -352,13 +352,13 @@
       image: "assets/photos/palapa_exterior_rect.jpg",
       pointsEs: [
         "Presentación de patrocinio exclusiva para marcas globales y comités de inversión.",
-        "Edición inaugural con 6 selecciones nacionales en el corazón de la Riviera Maya.",
-        "Integración de deporte de reyes, alta gastronomía, arte y networking UHNWI."
+        "Edición inaugural con 6 selecciones nacionales (España, Alemania, México, Canadá, USA, Argentina) en el corazón de la Riviera Maya.",
+        "Integración de deporte de reyes, alta gastronomía, arte y networking de alto standing."
       ],
       pointsEn: [
         "Exclusive sponsorship briefing tailored for global luxury brands and investment boards.",
-        "Premier international edition featuring 6 national polo teams in the Riviera Maya.",
-        "Uniting the Sport of Kings, haute gastronomy, contemporary art, and UHNWI networking."
+        "Inaugural edition featuring 6 national teams (Spain, Germany, Mexico, Canada, USA, Argentina) in the Riviera Maya.",
+        "Uniting the Sport of Kings, haute gastronomy, contemporary art, and high-standing networking."
       ],
       badge: "COMITÉ COMERCIAL"
     },
@@ -410,8 +410,8 @@
       tagEn: "THE CHAMPIONSHIP",
       titleEs: "6 Selecciones Nacionales de Élite en Competencia",
       titleEn: "6 Elite National Teams in High-Goal Competition",
-      subtitleEs: "México, Argentina, Inglaterra, Estados Unidos, Brasil e India",
-      subtitleEn: "Mexico, Argentina, England, United States, Brazil and India",
+      subtitleEs: "España, Alemania, México, Canadá, Estados Unidos y Argentina",
+      subtitleEn: "Spain, Germany, Mexico, Canada, United States and Argentina",
       image: "assets/stills/campo_accion.jpg",
       pointsEs: [
         "Torneo de 4 días de competencia avalado por los comités rectores del polo internacional.",
@@ -427,8 +427,8 @@
     },
     {
       slideNum: "05",
-      tag: "LA AUDIENCIA UHNWI",
-      tagEn: "THE UHNWI AUDIENCE",
+      tag: "AUDIENCIA DE ALTO STANDING",
+      tagEn: "HIGH-STANDING AUDIENCE",
       titleEs: "Demografía C-Level y Patrimonios Ultra Altos (NSE A, B y ABC+)",
       titleEn: "C-Level Demographics and Ultra-High-Net-Worth Profile (NSE A, B & ABC+)",
       subtitleEs: "Hombres y mujeres de 25 a 55 años con capacidad de compra e inversión ilimitada.",
@@ -800,9 +800,14 @@
   }
 
   // --- 5. RENDER TRANSLATIONS (DOM UPDATE) ---
-  function updateLanguageDOM(lang) {
+  function updateLanguageDOM(lang, autoCurrency = true) {
     state.lang = lang;
     localStorage.setItem('nationscup_lang', lang);
+
+    // Automatic Currency Sync: Spanish -> MXN (Pesos), English -> USD (Dollars)
+    if (autoCurrency) {
+      state.currency = lang === 'es' ? 'MXN' : 'USD';
+    }
 
     // Update active pill styling
     const pillEs = document.getElementById('lang-toggle-es');
@@ -1504,24 +1509,11 @@
   });
 
   // --- 10. CURRENCY CONVERTER ENGINE ---
-    const currencyRates = {
-    USD: {
-      symbol: "$",
-      code: "USD",
-      suffix: "USD",
-      platino: "45,000",
-      platinoEquiv: "Aprox. $787,500 MXN",
-      oro: "28,000",
-      oroEquiv: "Aprox. $490,000 MXN",
-      plata: "14,000",
-      plataEquiv: "Aprox. $245,000 MXN",
-      bronce: "9,000",
-      bronceEquiv: "Aprox. $157,500 MXN"
-    },
+      const currencyRates = {
     MXN: {
       symbol: "$",
       code: "MXN",
-      suffix: "MXN",
+      suffix: "MXN + IVA",
       platino: "787,500",
       platinoEquiv: "Equivalente oficial a $45,000 USD",
       oro: "490,000",
@@ -1531,10 +1523,23 @@
       bronce: "157,500",
       bronceEquiv: "Equivalente oficial a $9,000 USD"
     },
+    USD: {
+      symbol: "$",
+      code: "USD",
+      suffix: "USD + IVA",
+      platino: "45,000",
+      platinoEquiv: "Aprox. $787,500 MXN",
+      oro: "28,000",
+      oroEquiv: "Aprox. $490,000 MXN",
+      plata: "14,000",
+      plataEquiv: "Aprox. $245,000 MXN",
+      bronce: "9,000",
+      bronceEquiv: "Aprox. $157,500 MXN"
+    },
     EUR: {
       symbol: "€",
       code: "EUR",
-      suffix: "EUR",
+      suffix: "EUR + IVA",
       platino: "41,400",
       platinoEquiv: "Aprox. $45,000 USD",
       oro: "25,750",
@@ -1601,17 +1606,27 @@
     if (tBCurr) tBCurr.textContent = `${curr.code} + IVA`;
     if (tBEquiv) tBEquiv.textContent = curr.bronceEquiv;
 
-    // Update Special Assets Table prices
+    // Update Special Assets Table prices & currency labels
     const specialElements = document.querySelectorAll('.price-val');
     specialElements.forEach(el => {
-      let val = el.getAttribute('data-usd');
-      if (state.currency === 'MXN') val = el.getAttribute('data-mxn');
+      let val = el.getAttribute('data-mxn');
+      if (state.currency === 'USD') val = el.getAttribute('data-usd');
       if (state.currency === 'EUR') val = el.getAttribute('data-eur');
       if (val) {
         const num = parseInt(val, 10).toLocaleString('en-US');
         el.textContent = `${curr.symbol}${num}`;
       }
     });
+
+    const currLabels = document.querySelectorAll('.price-curr-label');
+    currLabels.forEach(lbl => {
+      lbl.textContent = `${curr.code} + IVA`;
+    });
+
+    const headerCurrEl = document.getElementById('header-curr-selected');
+    if (headerCurrEl) {
+      headerCurrEl.textContent = curr.code;
+    }
   }
 
   // Auto pre-select tier and scroll to WhatsApp form
