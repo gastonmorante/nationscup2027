@@ -841,72 +841,16 @@
 
     // Refresh dynamic components
     renderPitchDeckSlide();
-    renderGallery();
     updateCurrencyDisplay();
     updateFormWhatsAppPreview();
   }
 
-  // --- 6. VIDEO CONTROLLER ---
+  // --- 6. VIDEO CONTROLLER (STREAMLINED) ---
   function initVideoPlayer() {
+    // Sizzle reel autoplay loop handling
     const video = document.getElementById('sizzle-video');
-    const audioBtn = document.getElementById('video-audio-toggle');
-    const playBtn = document.getElementById('video-play-toggle');
-    const fsBtn = document.getElementById('video-fullscreen-toggle');
-    const audioLabel = document.getElementById('video-audio-label');
-
-    if (!video) return;
-
-    if (audioBtn) {
-      audioBtn.addEventListener('click', () => {
-        if (video.muted) {
-          video.muted = false;
-          video.volume = 1.0;
-          if (audioLabel) {
-            audioLabel.textContent = state.lang === 'es' ? "Silenciar Audio HD" : "Mute HD Audio";
-          }
-          audioBtn.classList.add('bg-[#d4af37]/20', 'border-[#d4af37]');
-        } else {
-          video.muted = true;
-          if (audioLabel) {
-            audioLabel.textContent = state.lang === 'es' ? "Activar Audio HD" : "Enable HD Audio";
-          }
-          audioBtn.classList.remove('bg-[#d4af37]/20', 'border-[#d4af37]');
-        }
-      });
-    }
-
-    if (playBtn) {
-      playBtn.addEventListener('click', () => {
-        if (video.paused) {
-          video.play();
-          playBtn.innerHTML = `
-            <svg class="w-5 h-5 text-[#d4af37]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-            </svg>
-            <span class="text-xs uppercase tracking-widest text-[#f3e5ab]">${state.lang === 'es' ? 'Pausar' : 'Pause'}</span>
-          `;
-        } else {
-          video.pause();
-          playBtn.innerHTML = `
-            <svg class="w-5 h-5 text-[#d4af37]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-            <span class="text-xs uppercase tracking-widest text-[#f3e5ab]">${state.lang === 'es' ? 'Reproducir' : 'Play'}</span>
-          `;
-        }
-      });
-    }
-
-    if (fsBtn) {
-      fsBtn.addEventListener('click', () => {
-        if (video.requestFullscreen) {
-          video.requestFullscreen();
-        } else if (video.webkitRequestFullscreen) {
-          video.webkitRequestFullscreen();
-        } else if (video.msRequestFullscreen) {
-          video.msRequestFullscreen();
-        }
-      });
+    if (video) {
+      video.play().catch(() => {});
     }
   }
 
@@ -1511,64 +1455,6 @@
   };
 
   // --- 9. EDITORIAL GALLERY & LIGHTBOX ---
-  function renderGallery() {
-    const grid = document.getElementById('editorial-gallery-grid');
-    if (!grid) return;
-
-    const isEs = state.lang === 'es';
-
-    grid.innerHTML = galleryData.map((item, idx) => {
-      // Architectural Digest styling with span variations
-      let spanClass = "col-span-1";
-      if (idx === 0 || idx === 3) spanClass = "col-span-1 md:col-span-2";
-      if (idx === 6) spanClass = "col-span-1 md:col-span-2";
-
-      return `
-        <div 
-          class="ad-gallery-item ${spanClass} h-80 md:h-96 cursor-pointer group relative overflow-hidden"
-          onclick="window.openLightbox(${idx})"
-        >
-          <img 
-            src="${item.image}" 
-            alt="${isEs ? item.titleEs : item.titleEn}"
-            loading="lazy"
-            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
-          
-          <!-- Perspective Tag -->
-          <div class="absolute top-4 left-4 z-10 flex items-center gap-2">
-            <span class="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider bg-[#d4af37] text-[#07140e] rounded">
-              ${isEs ? item.categoryEs : item.categoryEn}
-            </span>
-            <span class="text-xs font-mono text-white/70">
-              #${item.index}
-            </span>
-          </div>
-
-          <!-- Bottom Meta -->
-          <div class="absolute bottom-4 left-4 right-4 z-10">
-            <h4 class="font-serif-luxury text-lg md:text-xl font-medium text-white mb-1 group-hover:text-[#f3e5ab] transition-colors leading-snug">
-              ${isEs ? item.titleEs : item.titleEn}
-            </h4>
-            <p class="text-xs text-gray-300 font-light line-clamp-2 leading-relaxed">
-              ${isEs ? item.descEs : item.descEn}
-            </p>
-          </div>
-
-          <!-- Hover Indicator -->
-          <div class="absolute bottom-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
-            <span class="p-2 rounded-full bg-[#d4af37] text-[#07140e] inline-flex">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-              </svg>
-            </span>
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
-
   window.openLightbox = function (index) {
     state.lightboxIndex = index;
     const modal = document.getElementById('gallery-lightbox-modal');

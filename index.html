@@ -16,12 +16,11 @@
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
 
-  <!-- Pannellum 360 Panorama Viewer CSS & JS -->
+  <!-- Pannellum 360 Panorama Viewer CSS & JS (Deferred for Ultra-Fast Initial Paint) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js" defer></script>
 
   <!-- Tailwind CSS CDN with Full Custom Stitch Design Tokens -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -153,7 +152,7 @@
       <!-- Brand Identity: Transparent Official Logo (Clean, Sharp & perfectly sized) -->
       <div class="flex items-center">
         <a class="flex items-center group py-1" href="#hero-section" aria-label="Nations Cup 2027">
-          <img alt="Nations Cup 2027 Official Logo" class="h-11 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/logos/nations_cup_logo_transparent.png"/>
+          <img alt="Nations Cup 2027 Official Logo" class="h-11 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/logos/nations_cup_logo_transparent.png" fetchpriority="high"/>
         </a>
       </div>
 
@@ -274,7 +273,7 @@
           <!-- Sizzle Reel / Video Showcase Stage (Interactive Click-to-Theater Trigger) -->
           <div 
             id="hero-video-stage"
-            class="w-full max-w-5xl mt-space-md relative rounded-DEFAULT overflow-hidden shadow-2xl bg-primary-container border border-warm-bronze/40 cursor-pointer group hover:border-[#D4AF37] hover:shadow-[0_25px_80px_rgba(0,0,0,0.85),0_0_35px_rgba(212,175,55,0.25)] transition-all duration-500"
+            class="w-full max-w-5xl mt-space-md relative rounded-DEFAULT overflow-hidden shadow-[0_25px_90px_rgba(0,0,0,0.95),0_0_60px_rgba(212,175,55,0.22)] bg-primary-container border border-warm-bronze/50 cursor-pointer group hover:border-[#D4AF37] hover:shadow-[0_30px_100px_rgba(0,0,0,0.95),0_0_80px_rgba(212,175,55,0.35)] transition-all duration-500"
             onclick="window.openVideoTheater()"
             title="Haz click para abrir en Pantalla Completa con Audio HD"
           >
@@ -741,7 +740,7 @@
             
             <!-- Shot 0: Perspectiva Aérea Campo Central (Large 7 cols) -->
             <div onclick="window.openLightbox(0)" class="lg:col-span-7 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
-              <img alt="Perspectiva Aérea Cancha Oficial Nations Cup 2027" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/campo_aereo_nationscup.jpg"/>
+              <img alt="Perspectiva Aérea Cancha Oficial Nations Cup 2027" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/campo_aereo_nationscup.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Perspectiva Aérea</span>
                 <h3 class="font-headline-sm text-headline-sm">Cancha Oficial de Polo (300 x 200m) · 6 Hectáreas</h3>
@@ -750,7 +749,7 @@
 
             <!-- Shot 1: VIP Arrival (5 cols) -->
             <div onclick="window.openLightbox(1)" class="lg:col-span-5 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
-              <img alt="VIP arrival grand facade" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/entrada_club.jpg"/>
+              <img alt="VIP arrival grand facade" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/entrada_club.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Acceso Soberano</span>
                 <h3 class="font-headline-sm text-headline-sm">VIP Arrival & Fachada de El Rey Polo Country Club</h3>
@@ -759,7 +758,7 @@
 
             <!-- Shot 2: Clubhouse & Escenario Aéreo (6 cols) -->
             <div onclick="window.openLightbox(2)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
-              <img alt="Clubhouse, Escenario Principal & Alberca Panorámica" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/clubhouse_aereo_escenario.jpg"/>
+              <img alt="Clubhouse, Escenario Principal & Alberca Panorámica" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/clubhouse_aereo_escenario.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Clubhouse & Escenario</span>
                 <h3 class="font-headline-sm text-headline-sm">Complejo Central, Escenario Nations Cup & Alberca</h3>
@@ -768,7 +767,7 @@
 
             <!-- Shot 3: Supercar Showcase Poolside (6 cols) -->
             <div onclick="window.openLightbox(3)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
-              <img alt="Supercar exhibition area" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/pool_autoshow_rect.jpg"/>
+              <img alt="Supercar exhibition area" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/pool_autoshow_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Motor Sport & Supercars</span>
                 <h3 class="font-headline-sm text-headline-sm">Supercar Showcase & Activación Poolside</h3>
@@ -777,7 +776,7 @@
 
             <!-- Shot 4: Campo Central a Nivel de Césped (4 cols) -->
             <div onclick="window.openLightbox(4)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
-              <img alt="Vast green regulation polo pitch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/real_field_pitch.jpg"/>
+              <img alt="Vast green regulation polo pitch" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/real_field_pitch.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Campo Central</span>
                 <h3 class="font-headline-sm text-headline-sm text-[20px]">Campo de Juego a Nivel de Césped</h3>
@@ -786,7 +785,7 @@
 
             <!-- Shot 5: VIP Hospitality & Mixology (4 cols) -->
             <div onclick="window.openLightbox(5)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
-              <img alt="Luxury equestrian cocktail bar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/mixologia_cocktail.jpg"/>
+              <img alt="Luxury equestrian cocktail bar" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/mixologia_cocktail.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Hospitalidad de Autor</span>
                 <h3 class="font-headline-sm text-headline-sm text-[20px]">VIP Hospitality Lounge & Coctelería de Autor</h3>
@@ -795,7 +794,7 @@
 
             <!-- Shot 6: Private Grandstand Tables (4 cols) -->
             <div onclick="window.openLightbox(6)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
-              <img alt="Reserved front-row spectator dining tables" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/palco_networking_rect.jpg"/>
+              <img alt="Reserved front-row spectator dining tables" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/palco_networking_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Primera Fila</span>
                 <h3 class="font-headline-sm text-headline-sm text-[20px]">Palcos Privados y Mesas con Vista a Cancha</h3>
@@ -804,7 +803,7 @@
 
             <!-- Shot 7: Champagne Grand Marque (4 cols) -->
             <div onclick="window.openLightbox(7)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
-              <img alt="Chilled bottles of vintage champagne" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/champagne_toast.jpg"/>
+              <img alt="Chilled bottles of vintage champagne" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/champagne_toast.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Brindis de Honor</span>
                 <h3 class="font-headline-sm text-headline-sm text-[20px]">Celebración Champagne Grand Marque</h3>
@@ -813,7 +812,7 @@
 
             <!-- Shot 8: Fashion Show Runway & Art (4 cols) -->
             <div onclick="window.openLightbox(8)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
-              <img alt="Open air haute couture fashion show runway" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/stage_runway_rect.jpg"/>
+              <img alt="Open air haute couture fashion show runway" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/stage_runway_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Pasarela Haute Couture</span>
                 <h3 class="font-headline-sm text-headline-sm text-[20px]">Fashion Show Runway & Pabellón de Arte</h3>
@@ -822,7 +821,7 @@
 
             <!-- Shot 9: High-Net-Worth Networking (4 cols) -->
             <div onclick="window.openLightbox(9)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
-              <img alt="Corporate leaders networking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/commercial_stands_rect.jpg"/>
+              <img alt="Corporate leaders networking" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/commercial_stands_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Alianzas B2B</span>
                 <h3 class="font-headline-sm text-headline-sm text-[20px]">B2B High-Net-Worth Networking Concourse</h3>
@@ -831,7 +830,7 @@
 
             <!-- Shot 10: Golden Hour Cocktail & After-Polo (6 cols) -->
             <div onclick="window.openLightbox(10)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
-              <img alt="Sunset cocktail party at the terrace" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/sunset_grill_rect.jpg"/>
+              <img alt="Sunset cocktail party at the terrace" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/sunset_grill_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Sunset & After-Polo</span>
                 <h3 class="font-headline-sm text-headline-sm">Golden Hour Cocktail & After-Polo Poolside</h3>
@@ -840,7 +839,7 @@
 
             <!-- Shot 11: Central Pool Terrace & Club Deck (6 cols) -->
             <div onclick="window.openLightbox(11)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
-              <img alt="Terraza y alberca central de El Rey Polo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/real_pool_terrace.jpg"/>
+              <img alt="Terraza y alberca central de El Rey Polo" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/real_pool_terrace.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Club & Alberca Central</span>
                 <h3 class="font-headline-sm text-headline-sm">Terraza & Alberca Central de El Rey Polo Country Club</h3>
@@ -1628,7 +1627,6 @@
   </footer>
 
 
-  <!-- ========================================================================
   <!-- ========================================================================
        VIDEO THEATER MODAL (REACT-LIKE ULTRA-LUXURY CINEMA THEATER WITH HD AUDIO)
        ======================================================================== -->
