@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
@@ -140,12 +140,8 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
-
-<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-champagne-light selection:text-racing-green-dark">
-
-  <!-- ========================================================================
-       HEADER & BRAND NAVIGATION BAR (STITCH EDITORIAL STYLE)
-       ======================================================================== -->
+<body class="bg-surface font-body text-on-surface antialiased selection:bg-warm-bronze selection:text-white flex flex-col min-h-screen">
+  
   <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
     <div class="h-20 max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter flex items-center justify-between gap-space-md">
       
@@ -237,33 +233,8 @@
     </div>
   </header>
 
-  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
-    <div class="flex flex-col w-full">
-
-      <!-- Sub-Page Executive Hero Banner -->
-      <section class="w-full bg-racing-green-dark text-on-primary py-8 sm:py-10 border-b border-warm-bronze/30 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-racing-green-dark via-primary-container/80 to-racing-green-dark pointer-events-none opacity-90"></div>
-        <div class="relative max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter flex flex-col md:flex-row md:items-center justify-between gap-4 z-10">
-          <div>
-            <div class="flex items-center gap-2 text-champagne-light font-label-sm text-[11px] uppercase tracking-widest mb-1.5">
-              <a href="index.html" class="hover:underline text-canvas-ivory/80">Inicio</a>
-              <span class="text-warm-bronze">/</span>
-              <span class="text-warm-bronze font-bold">Dossier Comercial Confidencial</span>
-            </div>
-            <h1 class="font-display-xl text-[26px] sm:text-[34px] font-semibold text-canvas-alabaster tracking-tight leading-tight">
-              Pitch Deck Ejecutivo
-            </h1>
-          </div>
-          <div class="flex items-center gap-3">
-            <a href="https://wa.me/34722116248?text=Hola,%20deseo%20atenci%C3%B3n%20VIP%20para%20Nations%20Cup%202027." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-DEFAULT bg-[#07140E] text-[#F3E5AB] hover:text-white hover:bg-[#0E291E] font-label-md text-label-md uppercase font-semibold border border-[#D4AF37]/60 shadow-md hover:shadow-lg transition-all">
-              <span class="material-symbols-outlined text-[17px] text-warm-bronze">concierge</span>
-              <span>WhatsApp VIP Concierge</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-<section id="pitch-deck" class="w-full bg-canvas-alabaster py-space-xl border-b border-surface-container-high">
+  <main class="flex-grow pt-16 lg:pt-20">
+    <section id="pitch-deck" class="w-full bg-canvas-alabaster py-space-xl border-b border-surface-container-high">
         <div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter">
           
           <div class="text-center max-w-3xl mx-auto mb-space-lg">
@@ -304,7 +275,7 @@
                       </li>
                       <li class="flex items-start gap-2.5">
                         <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">verified</span>
-                        <span class="text-racing-green-dark font-medium leading-relaxed">6 Selecciones nacionales de polo (España, Alemania, México, Canadá, USA, Argentina) en el epicentro ecuestre del Caribe Mexicano.</span>
+                        <span data-i18n="slide_fallback_note" class="text-racing-green-dark font-medium leading-relaxed">6 Selecciones nacionales de polo (España, Alemania, México, Canadá, USA, Argentina) en el epicentro ecuestre del Caribe Mexicano.</span>
                       </li>
                       <li class="flex items-start gap-2.5">
                         <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">verified</span>
@@ -393,7 +364,7 @@
                 <div class="absolute bottom-6 left-6 right-6 flex justify-start pointer-events-none">
                   <div class="bg-racing-green-dark/90 backdrop-blur-md px-4 py-3 rounded-DEFAULT max-w-sm border border-warm-bronze/35 shadow-xl">
                     <span id="deck-slide-tag" class="font-label-sm text-label-sm text-champagne-light uppercase tracking-widest block mb-1">NATIONS CUP 2027 · DOSSIER OFICIAL</span>
-                    <p id="deck-slide-tag-title" class="font-headline-sm text-headline-sm text-canvas-alabaster leading-snug">Estructura Comercial & Retorno de Inversión</p>
+                    <p id="deck-slide-tag-title" data-i18n="deck_slide_tag_title" class="font-headline-sm text-headline-sm text-canvas-alabaster leading-snug">Estructura Comercial & Retorno de Inversión</p>
                   </div>
                 </div>
               </div>
@@ -411,16 +382,8 @@
 
         </div>
       </section>
-</div>
   </main>
 
-
-  <!-- ========================================================================
-       FOOTER (STITCH 4-COLUMN ARCHITECTURE)
-       ======================================================================== -->
-  <!-- ========================================================================
-       FOOTER INSTITUCIONAL & MARCO LEGAL (CONFORME A LEYES MEXICANAS E INTERNACIONALES)
-       ======================================================================== -->
   <footer class="w-full bg-surface-container-low border-t border-surface-container-high text-on-surface">
     <div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter pt-space-xl pb-space-lg">
       
@@ -432,19 +395,19 @@
           <div class="flex items-center gap-space-sm">
             <img alt="Nations Cup Official Logo" class="h-9 w-auto object-contain" src="assets/logos/nations_cup_logo_transparent.png"/>
           </div>
-          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          <p data-i18n="footer_col1_desc" class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
             Torneo Internacional de Polo de Alto Hándicap avalado por comités internacionales de polo y la federación deportiva correspondiente.
           </p>
           <div class="text-[12px] text-on-surface-variant/90 leading-normal">
-            <strong class="text-racing-green-dark">Razón Social:</strong> Nations Cup Polo Organization S.A.P.I. de C.V. en alianza con Operadora El Rey Polo Country Club S.A. de C.V.<br/>
-            <strong class="text-racing-green-dark">Domicilio Fiscal:</strong> Km 11.5 Carretera Puerto Morelos - Leona Vicario, Ruta de los Cenotes, C.P. 77580, Puerto Morelos, Quintana Roo, México.
+            <strong class="text-racing-green-dark" data-i18n="footer_legal_name">Razón Social:</strong> <span data-i18n="footer_legal_name_val">Nations Cup Polo Organization S.A.P.I. de C.V. en alianza con Operadora El Rey Polo Country Club S.A. de C.V.</span><br/>
+            <strong class="text-racing-green-dark" data-i18n="footer_tax_address">Domicilio Fiscal:</strong> <span data-i18n="footer_tax_address_val">Km 11.5 Carretera Puerto Morelos - Leona Vicario, Ruta de los Cenotes, C.P. 77580, Puerto Morelos, Quintana Roo, México.</span>
           </div>
         </div>
 
         <!-- Col 2: Hub Ecuestre & Coordenadas de Navegación -->
         <div class="flex flex-col gap-space-sm">
-          <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]">Sede Oficial & Helipuerto</span>
-          <p class="font-body-sm text-body-sm text-on-surface-variant">
+          <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]" data-i18n="footer_col2_title">Sede Oficial & Helipuerto</span>
+          <p data-i18n="footer_venue_desc" class="font-body-sm text-body-sm text-on-surface-variant">
             El Rey Polo Country Club · 6 hectáreas de infraestructura deportiva y helipuerto privado certificado.
           </p>
           <div class="flex items-start gap-space-xs text-on-surface-variant font-label-md text-label-md">
@@ -456,24 +419,24 @@
           </div>
           <div class="flex items-center gap-space-xs text-warm-bronze font-label-sm text-label-sm uppercase font-semibold">
             <span class="material-symbols-outlined text-[16px]">verified</span>
-            <span>Espacio Aéreo Registrado & Seguridad Privada</span>
+            <span data-i18n="footer_airspace">Espacio Aéreo Registrado & Seguridad Privada</span>
           </div>
         </div>
 
         <!-- Col 3: Marco Jurídico & Documentación Legal Obligatoria -->
         <div class="flex flex-col gap-space-sm">
-          <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]">Marco Legal & Cumplimiento</span>
+          <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]" data-i18n="footer_col3_title">Marco Legal & Cumplimiento</span>
           <ul class="flex flex-col gap-2 font-body-sm text-body-sm">
             <li>
               <button onclick="window.openLegalModal('privacy')" type="button" class="flex items-center gap-space-xs text-on-surface-variant hover:text-racing-green-dark transition-colors text-left group">
                 <span class="material-symbols-outlined text-warm-bronze text-[17px] group-hover:scale-110 transition-transform">policy</span>
-                <span class="font-medium underline decoration-warm-bronze/40 underline-offset-2">Aviso de Privacidad Integral (LFPDPPP)</span>
+                <span class="font-medium underline decoration-warm-bronze/40 underline-offset-2" data-i18n="footer_btn_privacy">Aviso de Privacidad Integral (LFPDPPP)</span>
               </button>
             </li>
             <li>
               <button onclick="window.openLegalModal('terms')" type="button" class="flex items-center gap-space-xs text-on-surface-variant hover:text-racing-green-dark transition-colors text-left group">
                 <span class="material-symbols-outlined text-warm-bronze text-[17px] group-hover:scale-110 transition-transform">gavel</span>
-                <span class="font-medium underline decoration-warm-bronze/40 underline-offset-2">Términos Comerciales & Exclusividad</span>
+                <span class="font-medium underline decoration-warm-bronze/40 underline-offset-2" data-i18n="footer_btn_terms">Términos Comerciales & Exclusividad</span>
               </button>
             </li>
             <li>
@@ -539,16 +502,14 @@
               <span class="material-symbols-outlined text-[16px]">close</span>
             </button>
             <div id="disc-text-fiscal" class="hidden pr-6">
-              <span class="font-semibold text-racing-green-dark block mb-1">Aviso Fiscal & Tarifario:</span>
-              Los importes de inversión y patrocinio presentados en este portal están calculados en Moneda Nacional Mexicana (MXN), más el Impuesto al Valor Agregado (IVA) correspondiente del 16% conforme a las disposiciones fiscales vigentes del Servicio de Administración Tributaria (SAT). Las conversiones a Dólares Americanos (USD) y Euros (EUR) son estimaciones informativas basadas en el tipo de cambio FIX aplicable a la fecha de consulta.
+              <span data-i18n="disc_fiscal_title" class="font-semibold text-racing-green-dark block mb-1">Aviso Fiscal & Tarifario:</span> <span data-i18n="disc_fiscal_text">Los importes de inversión y patrocinio presentados en este portal están calculados en Moneda Nacional Mexicana (MXN), más el Impuesto al Valor Agregado (IVA) correspondiente del 16% conforme a las disposiciones fiscales vigentes del SAT. Las conversiones a Dólares Americanos (USD) y Euros (EUR) son estimaciones informativas.</span>
             </div>
             <div id="disc-text-ip" class="hidden pr-6">
               <span class="font-semibold text-racing-green-dark block mb-1">Reserva de Derechos & Propiedad Intelectual:</span>
               «Nations Cup 2027» y «El Rey Polo Country Club» son denominaciones, logotipos e identidades gráficas protegidas por las leyes de propiedad industrial e intelectual aplicables (IMPI). Queda estrictamente prohibida la reproducción, copia, distribución, uso comercial no autorizado o alteración de cualquier contenido, fotografía o render presente en este sitio sin la autorización expresa y por escrito del Comité Organizador.
             </div>
             <div id="disc-text-confidential" class="hidden pr-6">
-              <span class="font-semibold text-racing-green-dark block mb-1">Confidencialidad Comercial:</span>
-              Las propuestas y beneficios de patrocinio son de carácter confidencial y están dirigidas exclusivamente a los representantes legales autorizados de las empresas solicitantes. La asignación de exclusividad de categoría se rige por el orden riguroso de confirmación mediante contrato mercantil y anticipo correspondiente.
+              <span data-i18n="disc_confidential_title" class="font-semibold text-racing-green-dark block mb-1">Confidencialidad Comercial:</span> <span data-i18n="disc_confidential_text">Las propuestas y beneficios de patrocinio son de carácter confidencial y están dirigidas exclusivamente a los representantes legales autorizados de las empresas solicitantes. La asignación de exclusividad de categoría se rige por el orden riguroso de confirmación mediante contrato mercantil y anticipo correspondiente.</span>
             </div>
           </div>
         </div>
@@ -556,13 +517,13 @@
       <!-- Bottom Copyright & ARCO Access -->
       <div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
         <div class="text-center md:text-left">
-          <span>© 2026-2027 Nations Cup Polo Organization. Todos los derechos reservados. Puerto Morelos, Quintana Roo, México.</span>
+          <span data-i18n="footer_copy_bottom">© 2026-2027 Nations Cup Polo Organization. Todos los derechos reservados. Puerto Morelos, Quintana Roo, México.</span>
         </div>
         <div class="flex flex-wrap items-center justify-center gap-space-md uppercase font-label-sm text-label-sm">
-          <button onclick="window.openLegalModal('privacy')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze">Aviso de Privacidad</button>
-          <button onclick="window.openLegalModal('terms')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze">Términos & Condiciones</button>
-          <button onclick="window.openBankModal('mxn')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze">Datos de Transferencia</button>
-          <a href="contacto.html" class="hover:text-racing-green-dark cursor-pointer transition-colors">Contacto Oficial</a>
+          <button onclick="window.openLegalModal('privacy')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze" data-i18n="legal_tab_privacy">Aviso de Privacidad</button>
+          <button onclick="window.openLegalModal('terms')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze" data-i18n="footer_terms_btn">Términos & Condiciones</button>
+          <button onclick="window.openBankModal('mxn')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze" data-i18n="footer_transfer_data">Datos de Transferencia</button>
+          <a href="contacto.html" class="hover:text-racing-green-dark cursor-pointer transition-colors" data-i18n="footer_contact_official">Contacto Oficial</a>
         </div>
       </div>
 
@@ -570,9 +531,7 @@
   </footer>
 
 
-  <!-- ========================================================================
-       VIDEO THEATER MODAL (REACT-LIKE ULTRA-LUXURY CINEMA THEATER WITH HD AUDIO)
-       ======================================================================== -->
+  <!-- Modal de Modo Teatro HD (Reproductor Cinematografico) -->
   <div 
     id="video-theater-modal" 
     class="fixed inset-0 z-[120] bg-black/95 backdrop-blur-2xl hidden flex-col justify-between p-3 sm:p-6 lg:p-8 animate-theater-in transition-all"
@@ -631,7 +590,7 @@
           aria-label="Cerrar reproductor"
         >
           <span class="material-symbols-outlined text-[18px]">close</span>
-          <span>Cerrar (Esc)</span>
+          <span data-i18n="lightbox_close">Cerrar (Esc)</span>
         </button>
       </div>
     </div>
@@ -725,9 +684,7 @@
       </div>
     </div>
   </div>
-  <!-- ========================================================================
-       GALLERY LIGHTBOX MODAL (HIGH RESOLUTION INSPECTION)
-       ======================================================================== -->
+  <!-- Modal de Visor de Galeria (Lightbox HD) -->
   <div 
     id="gallery-lightbox-modal" 
     class="fixed inset-0 z-[100] bg-racing-green-dark/95 backdrop-blur-2xl hidden flex-col justify-between p-4 sm:p-6 lg:p-8 animate-theater-in transition-all"
@@ -746,7 +703,7 @@
         class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-DEFAULT bg-white/10 hover:bg-warm-bronze text-white hover:text-racing-green-dark border border-white/20 transition-all font-label-sm text-label-sm uppercase font-semibold"
       >
         <span class="material-symbols-outlined text-[16px]">close</span>
-        <span>Cerrar (Esc)</span>
+        <span data-i18n="lightbox_close">Cerrar (Esc)</span>
       </button>
     </div>
 
@@ -808,8 +765,8 @@
       <!-- Modal Top Bar -->
       <div class="p-space-md border-b border-outline-variant/30 flex items-center justify-between bg-surface-container-low shrink-0">
         <div>
-          <h3 id="legal-modal-title" class="font-headline-sm text-headline-sm text-racing-green-dark">Marco Jurídico & Normativo Oficial</h3>
-          <p class="font-label-sm text-label-sm text-warm-bronze uppercase tracking-wider mt-0.5">Nations Cup 2027 · El Rey Polo Country Club</p>
+          <h3 id="legal-modal-title" class="font-headline-sm text-headline-sm text-racing-green-dark" data-i18n="legal_modal_title">Marco Jurídico & Normativo Oficial</h3>
+          <p class="font-label-sm text-label-sm text-warm-bronze uppercase tracking-wider mt-0.5" data-i18n="legal_modal_sub">Nations Cup 2027 · El Rey Polo Country Club</p>
         </div>
         <button 
           onclick="window.closeLegalModal()" 
@@ -836,6 +793,7 @@
           onclick="window.switchLegalTab('terms')" 
           type="button" 
           class="px-4 py-2 border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark font-label-md uppercase text-xs tracking-wider"
+          data-i18n="legal_tab_terms"
         >
           Términos de Patrocinio & Exclusividad
         </button>
@@ -844,53 +802,113 @@
       <!-- Modal Body (Scrollable Legal Content) -->
       <div class="p-space-lg overflow-y-auto space-y-4 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
         
-        <!-- Tab 1: Privacy Notice Content -->
-        <div id="legal-privacy-content" class="space-y-4">
-          <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">AVISO DE PRIVACIDAD INTEGRAL</h4>
-          <p>
-            <strong>Identidad y Domicilio del Responsable:</strong> Nations Cup Polo Organization S.A.P.I. de C.V. y Operadora El Rey Polo Country Club S.A. de C.V., con domicilio legal en Carretera Puerto Morelos - Leona Vicario Km 11.5, Ruta de los Cenotes, C.P. 77580, Municipio de Puerto Morelos, Quintana Roo, México, son los responsables del uso, tratamiento y protección de sus datos personales, en estricto cumplimiento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (en adelante la "LFPDPPP") y su Reglamento.
-          </p>
-          <h5 class="font-bold text-racing-green-dark">1. Datos Personales Recabados:</h5>
-          <p>
-            Para las finalidades comerciales señaladas en el presente aviso, podemos recabar: Nombre completo, correo electrónico corporativo, cargo o puesto directivo, empresa o marca representada, sector de industria, número de teléfono (WhatsApp), así como el nivel de patrocinio de interés. No se recaban datos personales sensibles en este portal.
-          </p>
-          <h5 class="font-bold text-racing-green-dark">2. Finalidades Primarias del Tratamiento:</h5>
-          <ul class="list-disc pl-5 space-y-1">
-            <li>Envío formal del Dossier Comercial y propuesta técnica de patrocinio para el torneo Nations Cup 2027.</li>
-            <li>Gestión y reserva provisional de exclusividad de categoría comercial para la marca solicitante.</li>
-            <li>Contacto institucional directo a través de WhatsApp corporativo o llamada telefónica de protocolo.</li>
-            <li>Elaboración de convenios de confidencialidad (NDA) y contratos mercantiles de patrocinio.</li>
-          </ul>
-          <h5 class="font-bold text-racing-green-dark">3. Derechos ARCO y Mecanismos de Ejercicio:</h5>
-          <p>
-            Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones de su uso (Acceso). Asimismo, es su derecho solicitar la corrección de su información (Rectificación), que la eliminemos de nuestras bases de datos cuando considere que no está siendo utilizada adecuadamente (Cancelación), así como oponerse al uso de los mismos para fines específicos (Oposición). Para el ejercicio de cualquiera de los Derechos ARCO, deberá presentar la solicitud respectiva enviando un correo a: <strong>privacidad@nationscuppolo.com</strong>.
-          </p>
-          <h5 class="font-bold text-racing-green-dark">4. Transferencia de Datos:</h5>
-          <p>
-            Sus datos personales no serán transferidos ni compartidos con terceros ajenos al Comité Organizador sin su consentimiento previo, salvo las excepciones previstas en el artículo 37 de la LFPDPPP.
-          </p>
-        </div>
+        <!-- Tab 1: Privacy Content -->
+          <div id="legal-privacy-content" class="space-y-4">
+            <!-- Privacy ES -->
+            <div id="legal-privacy-es" class="space-y-4">
+              <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">AVISO DE PRIVACIDAD INTEGRAL</h4>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                En cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) de los Estados Unidos Mexicanos, se informa que <strong>Nations Cup Polo Organization S.A.P.I. de C.V.</strong>, en coorganización con <strong>Operadora El Rey Polo Country Club S.A. de C.V.</strong>, con domicilio en Km 11.5 Carretera Puerto Morelos - Leona Vicario, Ruta de los Cenotes, C.P. 77580, Puerto Morelos, Quintana Roo, México, es el responsable del tratamiento y salvaguarda de sus datos personales.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">1. Datos Personales Recabados:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Los datos solicitados a través del formulario de contacto institucional (nombre completo, empresa representada, cargo directivo, categoría de industria y nivel de patrocinio de interés) son tratados de manera estrictamente confidencial.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">2. Finalidades Primarias del Tratamiento:</h5>
+              <ul class="list-disc pl-5 font-body-sm text-[13px] text-on-surface-variant space-y-1">
+                <li>Validar la disponibilidad exclusiva del sector comercial de la marca postulante.</li>
+                <li>Emitir el Dossier Comercial Ejecutivo y la propuesta personalizada de patrocinio.</li>
+                <li>Coordinar reuniones de alineación ejecutiva presenciales o por videoconferencia.</li>
+                <li>Formalización contractual y emisión de comprobantes fiscales digitales (CFDI).</li>
+              </ul>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">3. Derechos ARCO y Mecanismos de Ejercicio:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal (Rectificación); que la eliminemos de nuestros registros (Cancelación); así como oponerse al uso de sus datos para fines específicos (Oposición). Para el ejercicio de cualquiera de los derechos ARCO, favor de comunicarse al correo institucional: <a href="mailto:presidencia@nationscup2027.com" class="text-warm-bronze font-semibold underline">presidencia@nationscup2027.com</a>.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">4. Transferencia de Datos:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Nations Cup Polo Organization no transfiere, vende ni comparte datos personales con terceras entidades ajenas a la organización del torneo, salvo requerimiento expreso de autoridad competente conforme al marco legal aplicable.
+              </p>
+            </div>
 
-        <!-- Tab 2: Commercial Terms Content -->
-        <div id="legal-terms-content" class="space-y-4 hidden">
-          <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">TÉRMINOS Y CONDICIONES COMERCIALES DE PATROCINIO</h4>
-          <p>
-            <strong>1. Naturaleza del Portal:</strong> La presente plataforma constituye un portal informativo y de gestión comercial B2B para directivos de marca, agencias de representación e inversionistas. La solicitud de información o llenado del formulario en WhatsApp no constituye una obligación vinculante de patrocinio hasta la suscripción del Contrato Definitivo de Patrocinio Comercial.
-          </p>
-          <p>
-            <strong>2. Política Estricta de Exclusividad por Sector:</strong> El Comité Organizador garantiza la exclusividad total de una sola marca por categoría industrial para los niveles de Presenting Partner y Official Partner (por ejemplo: un único fabricante automotriz, una sola casa relojera, una única firma de champagne). La prioridad de reserva se determinará estrictamente conforme a la fecha y hora de formalización y anticipo correspondiente.
-          </p>
-          <p>
-            <strong>3. Condiciones Fiscales y de Pago:</strong> Todas las aportaciones estipuladas en el portal están expresadas en Pesos Mexicanos (MXN) más el correspondiente Impuesto al Valor Agregado (IVA del 16%) conforme a los lineamientos del Código Fiscal de la Federación y el SAT. Las facturas fiscales electrónicas (CFDI 4.0) serán emitidas por la entidad moral organizadora.
-          </p>
-          <p>
-            <strong>4. Derechos de Uso de Marca:</strong> Los patrocinadores confirmados recibirán una licencia temporal, no exclusiva e intransferible para el uso de los logotipos oficiales de «Nations Cup 2027» en sus campañas de relaciones públicas y mercadotecnia, sujeta a la aprobación de arte previa del Comité Organizador.
-          </p>
-          <p>
-            <strong>5. Jurisdicción Aplicable:</strong> Para la interpretación y cumplimiento de cualquier relación jurídica derivada de este evento, las partes se someten expresamente a la legislación mercantil aplicable de los Estados Unidos Mexicanos y a la competencia de los tribunales competentes en la ciudad de Cancún, Quintana Roo.
-          </p>
-        </div>
+            <!-- Privacy EN -->
+            <div id="legal-privacy-en" class="space-y-4 hidden">
+              <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">COMPREHENSIVE PRIVACY POLICY</h4>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                In compliance with the Federal Law on Protection of Personal Data Held by Private Parties (LFPDPPP) of the United Mexican States and international data privacy benchmarks, <strong>Nations Cup Polo Organization S.A.P.I. de C.V.</strong>, in joint organization with <strong>Operadora El Rey Polo Country Club S.A. de C.V.</strong>, located at Km 11.5 Puerto Morelos - Leona Vicario Hwy, Cenote Route, Z.C. 77580, Puerto Morelos, Quintana Roo, Mexico, serves as the data controller responsible for the safeguarding and lawful processing of your personal information.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">1. Information Collected:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Personal and corporate details requested through the institutional private liaison form (executive full name, represented enterprise, executive title, industry vertical, and sponsorship level of interest) are treated under strict non-disclosure protocols.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">2. Primary Purposes of Processing:</h5>
+              <ul class="list-disc pl-5 font-body-sm text-[13px] text-on-surface-variant space-y-1">
+                <li>Verify category exclusivity availability for the applicant's industry sector.</li>
+                <li>Issue the Executive Commercial Dossier and bespoke sponsorship term sheet.</li>
+                <li>Coordinate private commercial briefings in-person or via secure video conference.</li>
+                <li>Execute formal sponsorship agreements and corporate tax compliance.</li>
+              </ul>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">3. Exercise of Privacy Rights (ARCO):</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Executives retain the right to access, rectify, cancel, or oppose the processing of their corporate data at any juncture. To submit an institutional inquiry or revoke consent, contact the Organizing Committee Secretariat at: <a href="mailto:presidencia@nationscup2027.com" class="text-warm-bronze font-semibold underline">presidencia@nationscup2027.com</a>.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">4. Data Confidentiality & Non-Transfer:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Nations Cup Polo Organization strictly does not sell, lease, or disseminate corporate partner data to unauthorized third parties, maintaining bank-grade confidentiality across all communications.
+              </p>
+            </div>
+          </div>
 
+          <!-- Tab 2: Terms Content -->
+          <div id="legal-terms-content" class="space-y-4 hidden">
+            <!-- Terms ES -->
+            <div id="legal-terms-es" class="space-y-4">
+              <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">TÉRMINOS Y CONDICIONES COMERCIALES DE PATROCINIO</h4>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                El presente documento establece las directrices que rigen las postulaciones, reservas de categoría y contratos de patrocinio para el torneo internacional <strong>NATIONS CUP 2027</strong> a celebrarse en El Rey Polo Country Club.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">1. Naturaleza de las Propuestas:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Las cotizaciones y presentaciones comerciales emitidas a través de este portal constituyen invitaciones formales a negociar sujetas a disponibilidad y formalización mediante contrato vinculante debidamente suscrito por los apoderados legales autorizados de ambas partes.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">2. Política Estricta de Exclusividad por Sector:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                El Comité Organizador garantiza la regla de <strong>1 sola marca por categoría de industria</strong>. Dicha exclusividad se bloquea temporalmente por 5 días hábiles a partir de la emisión del term sheet formal, y queda ratificada de manera definitiva tras la liquidación del anticipo contractual convenido.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">3. Monedas y Régimen Fiscal:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Las tarifas oficiales se pactan en Dólares Americanos (USD), Moneda Nacional (MXN) o Euros (EUR), debiéndose agregar el Impuesto al Valor Agregado (IVA) correspondiente conforme a las leyes tributarias aplicables en los Estados Unidos Mexicanos.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">4. Derechos de Uso de Marca:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Los patrocinadores confirmados recibirán una licencia no exclusiva de uso de la marca oficial "Nations Cup 2027 · El Rey Polo Country Club" para fines de relaciones públicas, activaciones comerciales y comunicación corporativa durante la vigencia del contrato.
+              </p>
+            </div>
+
+            <!-- Terms EN -->
+            <div id="legal-terms-en" class="space-y-4 hidden">
+              <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">COMMERCIAL SPONSORSHIP TERMS & CONDITIONS</h4>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                This framework outlines the principles governing commercial applications, category locks, and partnership agreements for <strong>NATIONS CUP 2027</strong> hosted at El Rey Polo Country Club.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">1. Nature of Proposals:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                All investment figures and terms presented herein represent confidential invitations to negotiate, subject to category availability and binding formal agreement execution by authorized signatories.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">2. Strict Category Exclusivity Policy:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                The Organizing Committee strictly enforces <strong>one brand per industry sector</strong>. Category locks are granted for 5 business days upon issuance of the formal term sheet, becoming definitive upon execution of the initial agreement installment.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">3. Settlement Currency & Tax Compliance:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Official rates are contracted in US Dollars (USD), Mexican Pesos (MXN), or Euros (EUR), plus applicable value-added tax (VAT) according to statutory fiscal obligations.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">4. Intellectual Property & Brand Usage:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Confirmed corporate partners are granted a sanctioned license to utilize the composite emblem "Nations Cup 2027 · El Rey Polo Country Club" across global PR, VIP client marketing, and institutional campaigns.
+              </p>
+            </div>
+          </div>
       </div>
 
       <!-- Modal Bottom Actions -->
@@ -1098,11 +1116,12 @@
 
       <!-- Modal Footer -->
       <div class="p-3 sm:p-4 bg-surface-container-high border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-on-surface-variant shrink-0">
-        <span class="text-center sm:text-left">Comprobantes válidos para emisión de factura fiscal (CFDI) conforme a la legislación vigente.</span>
+        <span data-i18n="bank_modal_compliance_note" class="text-center sm:text-left">Comprobantes válidos para emisión de factura fiscal (CFDI) conforme a la legislación vigente.</span>
         <button 
           type="button" 
           onclick="window.closeBankModal()" 
           class="px-4 py-1.5 rounded-DEFAULT bg-racing-green-dark text-champagne-light hover:bg-warm-bronze hover:text-racing-green-dark font-label-sm text-[11px] uppercase tracking-wider font-semibold transition-colors cursor-pointer"
+          data-i18n="bank_modal_understood"
         >
           Entendido
         </button>
@@ -1111,5 +1130,8 @@
     </div>
   </div>
 
+
+
+  <script src="app.js"></script>
 </body>
 </html>

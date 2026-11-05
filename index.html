@@ -276,10 +276,10 @@
           <!-- Date & Venue Metadata (Centered & without duplicate dates) -->
           <div class="flex flex-wrap items-center justify-center gap-space-xs text-canvas-ivory/90 font-label-md text-label-md uppercase tracking-[0.16em] mb-space-md text-center">
             <span class="material-symbols-outlined text-[16px] text-warm-bronze">calendar_today</span>
-            <span>13 al 16 de Enero de 2027</span>
+            <span data-i18n="hero_dates">13 al 16 de Enero de 2027</span>
             <span class="text-warm-bronze mx-1">•</span>
             <span class="material-symbols-outlined text-[16px] text-warm-bronze">location_on</span>
-            <span data-i18n="hero_dates_venue">El Rey Polo Country Club · Puerto Morelos, Cancún, México</span>
+            <span data-i18n="hero_venue">El Rey Polo Country Club · Puerto Morelos, Cancún, México</span>
           </div>
 
           <!-- Philosophical Manifesto Quote -->
@@ -446,7 +446,7 @@
                       </li>
                       <li class="flex items-start gap-2.5">
                         <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">verified</span>
-                        <span class="text-racing-green-dark font-medium leading-relaxed">6 Selecciones nacionales de polo (España, Alemania, México, Canadá, USA, Argentina) en el epicentro ecuestre del Caribe Mexicano.</span>
+                        <span data-i18n="slide_fallback_note" class="text-racing-green-dark font-medium leading-relaxed">6 Selecciones nacionales de polo (España, Alemania, México, Canadá, USA, Argentina) en el epicentro ecuestre del Caribe Mexicano.</span>
                       </li>
                       <li class="flex items-start gap-2.5">
                         <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">verified</span>
@@ -535,7 +535,7 @@
                 <div class="absolute bottom-6 left-6 right-6 flex justify-start pointer-events-none">
                   <div class="bg-racing-green-dark/90 backdrop-blur-md px-4 py-3 rounded-DEFAULT max-w-sm border border-warm-bronze/35 shadow-xl">
                     <span id="deck-slide-tag" class="font-label-sm text-label-sm text-champagne-light uppercase tracking-widest block mb-1">NATIONS CUP 2027 · DOSSIER OFICIAL</span>
-                    <p id="deck-slide-tag-title" class="font-headline-sm text-headline-sm text-canvas-alabaster leading-snug">Estructura Comercial & Retorno de Inversión</p>
+                    <p id="deck-slide-tag-title" data-i18n="deck_slide_tag_title" class="font-headline-sm text-headline-sm text-canvas-alabaster leading-snug">Estructura Comercial & Retorno de Inversión</p>
                   </div>
                 </div>
               </div>
@@ -568,21 +568,11 @@
 
           <!-- 360 Navigation Tabs -->
           <div class="flex flex-wrap items-center justify-center gap-2 mb-space-lg">
-            <button onclick="window.switch360Scene('lounge')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-racing-green-dark text-champagne-light font-label-md text-label-md uppercase shadow-sm" type="button">
-              VIP Hospitality Lounge
-            </button>
-            <button onclick="window.switch360Scene('field')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase transition-colors" type="button">
-              Campo Central & Explanada
-            </button>
-            <button onclick="window.switch360Scene('autoshow')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase transition-colors" type="button">
-              Stands Comerciales & Autoshow
-            </button>
-            <button onclick="window.switch360Scene('grill')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase transition-colors" type="button">
-              Sunset Grill & Bar
-            </button>
-            <button onclick="window.switch360Scene('stage')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase transition-colors" type="button">
-              Escenario Fashion Show
-            </button>
+            <button onclick="window.switch360Scene('lounge')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-racing-green-dark text-champagne-light font-label-md text-label-md uppercase shadow-sm" type="button" data-i18n="tour_scene_lounge">Lounge VIP de Hospitalidad</button>
+            <button onclick="window.switch360Scene('field')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase transition-colors" type="button" data-i18n="tour_scene_field">Campo Central & Explanada</button>
+            <button onclick="window.switch360Scene('autoshow')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase transition-colors" type="button" data-i18n="tour_scene_autoshow">Stands Comerciales & Exhibición de Autos</button>
+            <button onclick="window.switch360Scene('grill')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase transition-colors" type="button" data-i18n="tour_scene_grill">Terraza Sunset & Asador Gourmet</button>
+            <button onclick="window.switch360Scene('stage')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase transition-colors" type="button" data-i18n="tour_scene_stage">Escenario del Desfile de Moda</button>
           </div>
 
           <!-- 360 Stage Viewer Container (Interactive Pannellum Canvas) -->
@@ -592,7 +582,7 @@
             <!-- 360 Spatial UI Badges -->
             <div class="absolute top-4 left-4 flex items-center gap-space-xs px-3 py-1.5 rounded-DEFAULT bg-racing-green-dark/85 text-canvas-alabaster backdrop-blur-md border border-warm-bronze/30 pointer-events-none">
               <span class="material-symbols-outlined text-[18px] text-warm-bronze animate-spin" style="animation-duration: 9s;">360</span>
-              <span class="font-label-sm text-label-sm uppercase tracking-wider">Perspectiva Interactiva 360° Activa</span>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider" data-i18n="tour_badge_active">Perspectiva Interactiva 360° Activa</span>
             </div>
 
             <!-- Spatial Controls & Google Drive Button -->
@@ -636,13 +626,15 @@
       <!-- ========================================================================
            MÓDULO 3.5: ECOSISTEMA DEL EVENTO (8 POLOS DE EXPERIENCIA)
            ======================================================================== -->
+      <!-- SECCIÓN ECOSISTEMA DEL EVENTO (8 POLOS DE HOSPITALIDAD) -->
+      <!-- SECCIÓN ECOSISTEMA DEL EVENTO (8 POLOS DE HOSPITALIDAD) -->
       <section id="ecosistema" class="w-full bg-canvas-ivory py-space-xl border-t border-b border-surface-container-high">
         <div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter">
           
           <div class="text-center max-w-3xl mx-auto mb-space-lg">
-            <span class="font-label-sm text-label-sm uppercase tracking-[0.22em] text-warm-bronze block mb-1">ARQUITECTURA & HOSPITALIDAD EXPERIENCIAL</span>
-            <h2 class="font-headline-lg text-headline-lg text-racing-green-dark">Ecosistema del Evento</h2>
-            <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl mx-auto">
+            <span data-i18n="eco_kicker" class="font-label-sm text-label-sm uppercase tracking-[0.22em] text-warm-bronze block mb-1">ARQUITECTURA & HOSPITALIDAD EXPERIENCIAL</span>
+            <h2 data-i18n="eco_title" class="font-headline-lg text-headline-lg text-racing-green-dark">Ecosistema del Evento</h2>
+            <p data-i18n="eco_subtitle" class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl mx-auto">
               Ocho polos curados de hospitalidad y convivencia de alto nivel diseñados para la interacción fluida entre marcas globales, comitivas internacionales y la comunidad ecuestre de alto standing.
             </p>
           </div>
@@ -655,9 +647,9 @@
               <div class="w-12 h-12 rounded-full bg-primary-container text-champagne-light flex items-center justify-center mb-space-sm group-hover:scale-105 transition-transform">
                 <span class="material-symbols-outlined text-[24px]">military_tech</span>
               </div>
-              <h3 class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Polo Club VIP</h3>
-              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
-                Hospitality premium de máxima categoría con servicio dedicado, terrazas de teca y vista preferencial a cada chukker.
+              <h3 data-i18n="eco_card1_title" class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Club de Polo VIP</h3>
+              <p data-i18n="eco_card1_desc" class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Hospitalidad premium de máxima categoría con servicio dedicado, terrazas de teca y vista preferencial a cada chukker.
               </p>
             </div>
 
@@ -666,9 +658,9 @@
               <div class="w-12 h-12 rounded-full bg-primary-container text-champagne-light flex items-center justify-center mb-space-sm group-hover:scale-105 transition-transform">
                 <span class="material-symbols-outlined text-[24px]">local_bar</span>
               </div>
-              <h3 class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Champagne Garden</h3>
-              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
-                Centro social al aire libre para recepciones de gala, coctelería de autor, la tradición del Divot Stomping y Golden Hour.
+              <h3 data-i18n="eco_card2_title" class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Jardín del Champagne</h3>
+              <p data-i18n="eco_card2_desc" class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Centro social al aire libre para recepciones de gala, coctelería de autor, la tradición del pisado del césped y cócteles al atardecer.
               </p>
             </div>
 
@@ -677,8 +669,8 @@
               <div class="w-12 h-12 rounded-full bg-primary-container text-champagne-light flex items-center justify-center mb-space-sm group-hover:scale-105 transition-transform">
                 <span class="material-symbols-outlined text-[24px]">restaurant</span>
               </div>
-              <h3 class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Gourmet Village</h3>
-              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+              <h3 data-i18n="eco_card3_title" class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Villa Gourmet</h3>
+              <p data-i18n="eco_card3_desc" class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
                 Gastronomía de autor, maridajes selectos y experiencias culinarias regionales curadas exclusivamente para restaurantes aliados.
               </p>
             </div>
@@ -688,9 +680,9 @@
               <div class="w-12 h-12 rounded-full bg-primary-container text-champagne-light flex items-center justify-center mb-space-sm group-hover:scale-105 transition-transform">
                 <span class="material-symbols-outlined text-[24px]">diamond</span>
               </div>
-              <h3 class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Luxury Boulevard</h3>
-              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
-                Concourse comercial para exhibición estática de superdeportivos, alta relojería, moda resortwear, náutica y real estate.
+              <h3 data-i18n="eco_card4_title" class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Paseo de Lujo</h3>
+              <p data-i18n="eco_card4_desc" class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Paseo comercial para exhibición estática de superdeportivos, alta relojería, moda resortwear, náutica y bienes raíces de lujo.
               </p>
             </div>
 
@@ -699,8 +691,8 @@
               <div class="w-12 h-12 rounded-full bg-primary-container text-champagne-light flex items-center justify-center mb-space-sm group-hover:scale-105 transition-transform">
                 <span class="material-symbols-outlined text-[24px]">palette</span>
               </div>
-              <h3 class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Maya Artisan Pavilion</h3>
-              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+              <h3 data-i18n="eco_card5_title" class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Pabellón de Arte Maya</h3>
+              <p data-i18n="eco_card5_desc" class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
                 Espacio cultural curado dedicado a la artesanía de alta maestría, arte contemporáneo y la identidad de la Riviera Maya.
               </p>
             </div>
@@ -710,8 +702,8 @@
               <div class="w-12 h-12 rounded-full bg-primary-container text-champagne-light flex items-center justify-center mb-space-sm group-hover:scale-105 transition-transform">
                 <span class="material-symbols-outlined text-[24px]">child_care</span>
               </div>
-              <h3 class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Polo Kids Club</h3>
-              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+              <h3 data-i18n="eco_card6_title" class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Club Infantil de Polo</h3>
+              <p data-i18n="eco_card6_desc" class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
                 Área familiar de alta seguridad con talleres lúdicos, iniciación ecuestre y la experiencia Mini Polo para nuevas generaciones.
               </p>
             </div>
@@ -721,9 +713,9 @@
               <div class="w-12 h-12 rounded-full bg-primary-container text-champagne-light flex items-center justify-center mb-space-sm group-hover:scale-105 transition-transform">
                 <span class="material-symbols-outlined text-[24px]">meeting_room</span>
               </div>
-              <h3 class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Sponsor Suites</h3>
-              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
-                Hospitality privado y exclusivo para marcas patrocinadoras, atención a clientes clave y encuentros confidenciales.
+              <h3 data-i18n="eco_card7_title" class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Suites para Patrocinadores</h3>
+              <p data-i18n="eco_card7_desc" class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Hospitalidad privada y exclusiva para marcas patrocinadoras, atención a clientes clave y encuentros confidenciales.
               </p>
             </div>
 
@@ -732,8 +724,8 @@
               <div class="w-12 h-12 rounded-full bg-primary-container text-champagne-light flex items-center justify-center mb-space-sm group-hover:scale-105 transition-transform">
                 <span class="material-symbols-outlined text-[24px]">videocam</span>
               </div>
-              <h3 class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Media & Content Center</h3>
-              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+              <h3 data-i18n="eco_card8_title" class="font-headline-sm text-[19px] text-racing-green-dark mb-1">Centro de Prensa & Contenido</h3>
+              <p data-i18n="eco_card8_desc" class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
                 Centro de producción audiovisual in-situ, sala de prensa internacional, transmisiones digitales y entrevistas editoriales.
               </p>
             </div>
@@ -759,10 +751,10 @@
             
             <!-- Shot 0: Perspectiva Aérea Campo Central (Large 7 cols) -->
             <div onclick="window.openLightbox(0)" class="lg:col-span-7 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
-              <img alt="Perspectiva Aérea Cancha Oficial Nations Cup 2027" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/campo_aereo_nationscup.jpg"/>
+              <img alt="Cancha Oficial de Polo Nations Cup 2027" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/campo_aereo_nationscup.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Perspectiva Aérea</span>
-                <h3 class="font-headline-sm text-headline-sm">Cancha Oficial de Polo (300 x 200m) · 6 Hectáreas</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot0_cat">PERSPECTIVA AÉREA</span>
+                <h3 class="font-headline-sm text-headline-sm" data-i18n="gal_shot0_title">Cancha Oficial de Polo (300 x 200m) · 6 Hectáreas</h3>
               </div>
             </div>
 
@@ -770,8 +762,8 @@
             <div onclick="window.openLightbox(1)" class="lg:col-span-5 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
               <img alt="VIP arrival grand facade" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/entrada_club.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Acceso Soberano</span>
-                <h3 class="font-headline-sm text-headline-sm">VIP Arrival & Fachada de El Rey Polo Country Club</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot1_cat">ARQUITECTURA</span>
+                <h3 class="font-headline-sm text-headline-sm" data-i18n="gal_shot1_title">Arribo Soberano & Fachada de El Rey Polo</h3>
               </div>
             </div>
 
@@ -779,8 +771,8 @@
             <div onclick="window.openLightbox(2)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
               <img alt="Clubhouse, Escenario Principal & Alberca Panorámica" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/clubhouse_aereo_escenario.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Clubhouse & Escenario</span>
-                <h3 class="font-headline-sm text-headline-sm">Complejo Central, Escenario Nations Cup & Alberca</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot2_cat">CLUBHOUSE & ESCENARIO</span>
+                <h3 class="font-headline-sm text-headline-sm" data-i18n="gal_shot2_title">Complejo Central, Escenario Nations Cup & Alberca</h3>
               </div>
             </div>
 
@@ -788,8 +780,8 @@
             <div onclick="window.openLightbox(3)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
               <img alt="Supercar exhibition area" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/pool_autoshow_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Motor Sport & Supercars</span>
-                <h3 class="font-headline-sm text-headline-sm">Supercar Showcase & Activación Poolside</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot3_cat">AUTOMOTRIZ</span>
+                <h3 class="font-headline-sm text-headline-sm" data-i18n="gal_shot3_title">Exhibición de Superdeportivos & Activación Poolside</h3>
               </div>
             </div>
 
@@ -797,8 +789,8 @@
             <div onclick="window.openLightbox(4)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
               <img alt="Vast green regulation polo pitch" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/real_field_pitch.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Campo Central</span>
-                <h3 class="font-headline-sm text-headline-sm text-[20px]">Campo de Juego a Nivel de Césped</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot4_cat">CAMPO CENTRAL</span>
+                <h3 class="font-headline-sm text-headline-sm text-[20px]" data-i18n="gal_shot4_title">Campo de Juego a Nivel de Césped</h3>
               </div>
             </div>
 
@@ -806,8 +798,8 @@
             <div onclick="window.openLightbox(5)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
               <img alt="Luxury equestrian cocktail bar" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/mixologia_cocktail.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Hospitalidad de Autor</span>
-                <h3 class="font-headline-sm text-headline-sm text-[20px]">VIP Hospitality Lounge & Coctelería de Autor</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot5_cat">HOSPITALIDAD</span>
+                <h3 class="font-headline-sm text-headline-sm text-[20px]" data-i18n="gal_shot5_title">Lounge VIP de Hospitalidad & Coctelería de Autor</h3>
               </div>
             </div>
 
@@ -815,8 +807,8 @@
             <div onclick="window.openLightbox(6)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
               <img alt="Reserved front-row spectator dining tables" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/palco_networking_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Primera Fila</span>
-                <h3 class="font-headline-sm text-headline-sm text-[20px]">Palcos Privados y Mesas con Vista a Cancha</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot6_cat">EXPERIENCIA VIP</span>
+                <h3 class="font-headline-sm text-headline-sm text-[20px]" data-i18n="gal_shot6_title">Palcos Privados y Mesas con Vista a Cancha</h3>
               </div>
             </div>
 
@@ -824,8 +816,8 @@
             <div onclick="window.openLightbox(7)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
               <img alt="Chilled bottles of vintage champagne" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/stills/champagne_toast.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Brindis de Honor</span>
-                <h3 class="font-headline-sm text-headline-sm text-[20px]">Celebración Champagne Grand Marque</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot7_cat">CHAMPAGNE VIP</span>
+                <h3 class="font-headline-sm text-headline-sm text-[20px]" data-i18n="gal_shot7_title">Celebración con Casas de Champagne Grand Marque</h3>
               </div>
             </div>
 
@@ -833,8 +825,8 @@
             <div onclick="window.openLightbox(8)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
               <img alt="Open air haute couture fashion show runway" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/stage_runway_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Pasarela Haute Couture</span>
-                <h3 class="font-headline-sm text-headline-sm text-[20px]">Fashion Show Runway & Pabellón de Arte</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot8_cat">ALTA COSTURA</span>
+                <h3 class="font-headline-sm text-headline-sm text-[20px]" data-i18n="gal_shot8_title">Pasarela del Desfile de Moda & Pabellón de Arte</h3>
               </div>
             </div>
 
@@ -842,8 +834,8 @@
             <div onclick="window.openLightbox(9)" class="lg:col-span-4 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[4/3] bg-surface-container-high cursor-pointer">
               <img alt="Corporate leaders networking" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/commercial_stands_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-md text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Alianzas B2B</span>
-                <h3 class="font-headline-sm text-headline-sm text-[20px]">B2B High-Net-Worth Networking Concourse</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot9_cat">NETWORKING</span>
+                <h3 class="font-headline-sm text-headline-sm text-[20px]" data-i18n="gal_shot9_title">Paseo de Networking Empresarial de Alto Standing</h3>
               </div>
             </div>
 
@@ -851,8 +843,8 @@
             <div onclick="window.openLightbox(10)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
               <img alt="Sunset cocktail party at the terrace" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/sunset_grill_rect.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Sunset & After-Polo</span>
-                <h3 class="font-headline-sm text-headline-sm">Golden Hour Cocktail & After-Polo Poolside</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot10_cat">ATARDECER</span>
+                <h3 class="font-headline-sm text-headline-sm" data-i18n="gal_shot10_title">Cóctel al Atardecer & Asador Gourmet</h3>
               </div>
             </div>
 
@@ -860,8 +852,8 @@
             <div onclick="window.openLightbox(11)" class="lg:col-span-6 group relative overflow-hidden rounded-DEFAULT shadow-md aspect-[16/10] bg-surface-container-high cursor-pointer">
               <img alt="Terraza y alberca central de El Rey Polo" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/photos/real_pool_terrace.jpg"/>
               <div class="absolute inset-0 bg-gradient-to-t from-racing-green-dark/90 via-transparent to-transparent flex flex-col justify-end p-space-lg text-canvas-alabaster">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1">Club & Alberca Central</span>
-                <h3 class="font-headline-sm text-headline-sm">Terraza & Alberca Central de El Rey Polo Country Club</h3>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-champagne-light mb-1" data-i18n="gal_shot11_cat">CLUB & ALBERCA</span>
+                <h3 class="font-headline-sm text-headline-sm" data-i18n="gal_shot11_title">Terraza & Alberca Central de El Rey Polo</h3>
               </div>
             </div>
 
@@ -874,6 +866,8 @@
       <!-- ========================================================================
            MÓDULO 5: ESTRUCTURA DE INVERSIÓN COMERCIAL (STITCH SURFACE LAYOUT)
            ======================================================================== -->
+      <!-- SECCIÓN DE PATROCINIOS Y TIERS CORPORATIVOS -->
+      <!-- SECCIÓN DE PATROCINIOS Y TIERS CORPORATIVOS -->
       <section id="patrocinios" class="w-full bg-surface py-space-xl">
         <div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter">
           
@@ -881,67 +875,59 @@
             <div>
               <span data-i18n="pricing_kicker" class="font-label-sm text-label-sm uppercase tracking-[0.22em] text-warm-bronze block mb-1">DERECHOS DE PATROCINIO & EXCLUSIVIDAD</span>
               <h2 data-i18n="pricing_title" class="font-headline-lg text-headline-lg text-racing-green-dark">Estructura de Inversión Comercial</h2>
-              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              <p data-i18n="pricing_subtitle" class="font-body-sm text-body-sm text-on-surface-variant mt-1">
                 Tres modalidades de vinculación: Niveles Corporativos, Activos Especiales y Alianza Gastronómica.
               </p>
             </div>
 
-            <!-- Currency Selector & Bank Data CTA -->
+            <!-- Currency Selector & Converter -->
             <div class="flex flex-wrap items-center gap-2">
               <div class="flex items-center gap-1.5 p-1 rounded-DEFAULT bg-surface-container-high border border-outline-variant/40">
-                <span class="font-label-sm text-[10px] uppercase px-2 text-on-surface-variant font-medium">Divisa:</span>
-                <button onclick="window.setCurrency('USD')" class="currency-btn px-3 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-md text-label-md text-racing-green-dark shadow-sm font-semibold" id="currUSD" type="button">USD</button>
-                <button onclick="window.setCurrency('MXN')" class="currency-btn px-3 py-1 rounded-DEFAULT font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-medium" id="currMXN" type="button">MXN</button>
-                <button onclick="window.setCurrency('EUR')" class="currency-btn px-3 py-1 rounded-DEFAULT font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-medium" id="currEUR" type="button">EUR</button>
+                <span data-i18n="currency_label" class="font-label-sm text-[10px] uppercase px-2 text-on-surface-variant font-medium">Divisa:</span>
+                <button type="button" onclick="window.setCurrency('USD')" id="currUSD" class="currency-btn px-3 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-md text-label-md text-racing-green-dark shadow-sm font-semibold">USD ($)</button>
+                <button type="button" onclick="window.setCurrency('MXN')" id="currMXN" class="currency-btn px-3 py-1 rounded-DEFAULT font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-medium">MXN ($)</button>
+                <button type="button" onclick="window.setCurrency('EUR')" id="currEUR" class="currency-btn px-3 py-1 rounded-DEFAULT font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-medium">EUR (€)</button>
               </div>
-
-              <!-- Button to Open Bank Settlement Modal -->
-              <button 
-                type="button" 
-                onclick="window.openBankModal('mxn')" 
-                class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-DEFAULT bg-racing-green-dark hover:bg-racing-green-subtle text-champagne-light border border-warm-bronze/50 hover:border-warm-bronze font-label-sm text-[11px] uppercase tracking-wider font-semibold shadow-sm transition-all cursor-pointer"
-                title="Ver datos de transferencia bancaria oficial"
-              >
-                <span class="material-symbols-outlined text-[17px] text-warm-bronze">account_balance</span>
-                <span>Datos de Transferencia</span>
-              </button>
             </div>
           </div>
 
-          <!-- Banner: Regla de Exclusividad Inquebrantable -->
-          <div class="w-full p-space-md rounded-DEFAULT bg-racing-green-dark text-canvas-alabaster shadow-md mb-space-xl flex flex-col md:flex-row items-center gap-space-md border border-warm-bronze/30">
-            <div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center shrink-0 border border-warm-bronze/40">
-              <span class="material-symbols-outlined text-champagne-light text-[24px]">lock</span>
-            </div>
-            <div>
-              <h4 data-i18n="exclusivity_rule_title" class="font-headline-sm text-headline-sm text-champagne-light mb-0.5">REGLA DE EXCLUSIVIDAD INQUEBRANTABLE</h4>
-              <p data-i18n="exclusivity_rule_desc" class="font-body-sm text-body-sm text-canvas-ivory/80">
-                Solo se permite UNA marca por sector de industria (ej. 1 automotriz, 1 alta relojería, 1 champagne, 1 banco privado). El bloqueo es por orden estricto de formalización y confirmación de membresía de patrocinio.
-              </p>
+          <!-- REGLA DE EXCLUSIVIDAD BANNER -->
+          <div class="mb-space-lg p-5 rounded-DEFAULT bg-racing-green-dark text-white border border-warm-bronze/40 shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-full bg-warm-bronze/20 text-champagne-light flex items-center justify-center shrink-0 mt-0.5 border border-warm-bronze/40">
+                <span class="material-symbols-outlined text-[22px]">gavel</span>
+              </div>
+              <div>
+                <span data-i18n="exclusivity_rule_badge" class="font-label-sm text-[10px] uppercase tracking-widest text-champagne-light font-bold block mb-0.5">ESTRICTA RESERVA POR SECTOR</span>
+                <h4 data-i18n="exclusivity_rule_title" class="font-headline-sm text-headline-sm text-champagne-light">REGLA DE EXCLUSIVIDAD INQUEBRANTABLE</h4>
+                <p data-i18n="exclusivity_rule_desc" class="font-body-sm text-[13px] text-gray-200 mt-1 max-w-4xl leading-relaxed">
+                  Estrictamente 1 sola marca permitida por sector de la industria (ej. 1 automotriz, 1 alta relojería, 1 champagne, 1 banca privada). La reserva de categoría se otorga por estricto orden de formalización.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- 4 Corporate Tiers Grid (Platino, Oro, Plata, Bronce) -->
           <div class="mb-space-xl">
             <div class="flex items-center justify-between mb-4 border-b border-outline-variant/30 pb-2">
-              <span class="font-label-sm text-label-sm uppercase tracking-widest text-warm-bronze font-bold">1. SPONSORS CORPORATIVOS POR NIVEL</span>
-              <span class="font-label-sm text-[11px] text-on-surface-variant uppercase">Exclusividad & Presencia en Cancha</span>
+              <span data-i18n="tier_grid_title" class="font-label-sm text-label-sm uppercase tracking-widest text-warm-bronze font-bold">1. SPONSORS CORPORATIVOS POR NIVEL</span>
+              <span data-i18n="tier_grid_sub" class="font-label-sm text-[11px] text-on-surface-variant uppercase">Exclusividad & Presencia en Cancha</span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
               
               <!-- TIER PLATINO ($45,000 USD) -->
               <div class="flex flex-col justify-between p-6 rounded-DEFAULT bg-surface-container-lowest shadow-xl hover:shadow-2xl relative border-2 border-warm-bronze transition-all duration-300">
-                <div class="absolute -top-3 left-4 px-3 py-0.5 bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#07140E] font-label-sm text-[10px] uppercase tracking-wider rounded-sm shadow-sm font-bold">
-                  PATROCINADOR PRINCIPAL
+                <div data-i18n="tier_platino_badge" class="absolute -top-3 left-4 px-3 py-0.5 bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#07140E] font-label-sm text-[10px] uppercase tracking-wider rounded-sm shadow-sm font-bold">
+                  MÁXIMA DISTINCIÓN
                 </div>
                 <div>
                   <div class="flex items-center justify-between mb-2 pt-1">
-                    <span class="font-label-sm text-[11px] uppercase tracking-widest text-warm-bronze font-semibold">NIVEL PLATINO</span>
+                    <span data-i18n="tier_platino_name" class="font-label-sm text-[11px] uppercase tracking-widest text-warm-bronze font-semibold">Patrocinador Platino</span>
                     <span class="material-symbols-outlined text-warm-bronze text-[22px]">military_tech</span>
                   </div>
                   <h3 class="font-headline-sm text-[22px] text-racing-green-dark leading-tight">Platino</h3>
-                  <p class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-3">Máxima Asociación de Marca</p>
+                  <p data-i18n="tier_platino_sub" class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-3">Derecho de Nombre y Presencia Omnipresente</p>
                   
                   <div class="mb-4 p-3 bg-canvas-ivory rounded-DEFAULT border border-outline-variant/30">
                     <span class="font-display-xl text-[28px] text-racing-green-dark font-semibold leading-none" id="tier-platino-price">$45,000</span>
@@ -952,44 +938,48 @@
                   <ul class="space-y-2 font-body-sm text-[13px] text-on-surface pb-4">
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span><strong>Exclusividad total</strong> de categoría en el torneo.</span>
+                      <span data-i18n="tier_platino_f1">Exclusividad absoluta en su categoría de industria</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Presencia estelar de marca en campo y ceremonias.</span>
+                      <span data-i18n="tier_platino_f2">Branding central en jerseys de juego de las 6 selecciones</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Stand preferencial de máxima visibilidad en el campo.</span>
+                      <span data-i18n="tier_platino_f3">Palco VIP privado para 10 invitados + servicio de champagne</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Participación en todas las actividades VIP y cenas de gala.</span>
+                      <span data-i18n="tier_platino_f4">Pabellón comercial de 3x3m en el Paseo de Lujo</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Relaciones públicas, networking y materiales oficiales.</span>
+                      <span data-i18n="tier_platino_f5">Presencia estelar en trofeo, premiación y conferencia de prensa</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
+                      <span data-i18n="tier_platino_f6">Campaña digital hipersegmentada (+1M de impresiones C-Level)</span>
                     </li>
                   </ul>
                 </div>
 
-                <a class="w-full text-center py-3 px-4 rounded-DEFAULT bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#07140E] font-label-sm text-[11px] uppercase tracking-[0.16em] font-bold shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 block" href="https://wa.me/34722116248?text=Hola,%20solicito%20formalmente%20el%20bloqueo%20del%20Nivel%20Platino%20(Patrocinador%20Principal)%20para%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
+                <a data-i18n="tier_platino_btn" class="w-full text-center py-3 px-4 rounded-DEFAULT bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#07140E] font-label-sm text-[11px] uppercase tracking-[0.16em] font-bold shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 block" href="https://wa.me/34722116248?text=Hola,%20solicito%20formalmente%20el%20bloqueo%20del%20Nivel%20Platino%20(Patrocinador%20Principal)%20para%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
                   Solicitar Platino
                 </a>
               </div>
 
               <!-- TIER ORO ($28,000 USD) -->
               <div class="flex flex-col justify-between p-6 rounded-DEFAULT bg-surface-container-lowest shadow-md hover:shadow-xl relative border border-warm-bronze/40 transition-all duration-300">
-                <div class="absolute -top-3 left-4 px-3 py-0.5 bg-racing-green-dark text-champagne-light font-label-sm text-[10px] uppercase tracking-wider rounded-sm shadow-sm font-semibold">
-                  PATROCINADOR GOLD
+                <div data-i18n="tier_oro_badge" class="absolute -top-3 left-4 px-3 py-0.5 bg-racing-green-dark text-champagne-light font-label-sm text-[10px] uppercase tracking-wider rounded-sm shadow-sm font-semibold">
+                  LIDERAZGO DE CATEGORÍA
                 </div>
                 <div>
                   <div class="flex items-center justify-between mb-2 pt-1">
-                    <span class="font-label-sm text-[11px] uppercase tracking-widest text-warm-bronze font-semibold">NIVEL ORO</span>
+                    <span data-i18n="tier_oro_name" class="font-label-sm text-[11px] uppercase tracking-widest text-warm-bronze font-semibold">Patrocinador Oro</span>
                     <span class="material-symbols-outlined text-warm-bronze text-[22px]">workspace_premium</span>
                   </div>
                   <h3 class="font-headline-sm text-[22px] text-racing-green-dark leading-tight">Oro</h3>
-                  <p class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-3">Exposición de Alto Impacto</p>
+                  <p data-i18n="tier_oro_sub" class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-3">Socio Oficial de Categoría</p>
                   
                   <div class="mb-4 p-3 bg-canvas-ivory rounded-DEFAULT border border-outline-variant/30">
                     <span class="font-display-xl text-[28px] text-racing-green-dark font-semibold leading-none" id="tier-oro-price">$28,000</span>
@@ -1000,44 +990,48 @@
                   <ul class="space-y-2 font-body-sm text-[13px] text-on-surface pb-4">
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Stand propio de exhibición en el campo de juego.</span>
+                      <span data-i18n="tier_oro_f1">Exclusividad total en su sector comercial</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Exposición de marca en campo y zonas sociales.</span>
+                      <span data-i18n="tier_oro_f2">Logotipo en el jersey de 1 selección nacional oficial</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Acceso preferente a encuentros empresariales.</span>
+                      <span data-i18n="tier_oro_f3">Stand de exhibición de marca 3x3m en zona comercial</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Participación activa en actividades especiales del torneo.</span>
+                      <span data-i18n="tier_oro_f4">Suite lounge privada para atención de clientes y relaciones VIP</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Campaña y menciones en redes sociales oficiales.</span>
+                      <span data-i18n="tier_oro_f5">15 credenciales VIP All-Access con servicio gourmet y barra</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
+                      <span data-i18n="tier_oro_f6">Menciones en conferencias de prensa y suplemento editorial</span>
                     </li>
                   </ul>
                 </div>
 
-                <a class="w-full text-center py-3 px-4 rounded-DEFAULT bg-[#07140E] hover:bg-[#0E291E] text-[#F3E5AB] hover:text-white border border-[#D4AF37]/60 font-label-sm text-[11px] uppercase tracking-[0.16em] font-bold shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 block" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Nivel%20Oro%20(Patrocinador%20Gold)%20para%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
+                <a data-i18n="tier_oro_btn" class="w-full text-center py-3 px-4 rounded-DEFAULT bg-[#07140E] hover:bg-[#0E291E] text-[#F3E5AB] hover:text-white border border-[#D4AF37]/60 font-label-sm text-[11px] uppercase tracking-[0.16em] font-bold shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 block" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Nivel%20Oro%20para%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
                   Solicitar Oro
                 </a>
               </div>
 
               <!-- TIER PLATA ($14,000 USD) -->
               <div class="flex flex-col justify-between p-6 rounded-DEFAULT bg-surface-container-lowest shadow-md hover:shadow-xl relative border border-outline-variant/50 transition-all duration-300">
-                <div class="absolute -top-3 left-4 px-3 py-0.5 bg-surface-container-high text-on-surface font-label-sm text-[10px] uppercase tracking-wider rounded-sm shadow-sm font-semibold">
-                  PATROCINADOR SILVER
+                <div data-i18n="tier_plata_badge" class="absolute -top-3 left-4 px-3 py-0.5 bg-surface-container-high text-on-surface font-label-sm text-[10px] uppercase tracking-wider rounded-sm shadow-sm font-semibold">
+                  ANFITRIONÍA & VISIBILIDAD
                 </div>
                 <div>
                   <div class="flex items-center justify-between mb-2 pt-1">
-                    <span class="font-label-sm text-[11px] uppercase tracking-widest text-warm-bronze font-semibold">NIVEL PLATA</span>
+                    <span data-i18n="tier_plata_name" class="font-label-sm text-[11px] uppercase tracking-widest text-warm-bronze font-semibold">Patrocinador Plata</span>
                     <span class="material-symbols-outlined text-warm-bronze text-[22px]">verified</span>
                   </div>
                   <h3 class="font-headline-sm text-[22px] text-racing-green-dark leading-tight">Plata</h3>
-                  <p class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-3">Presencia & Visibilidad Digital</p>
+                  <p data-i18n="tier_plata_sub" class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-3">Proveedor Oficial / Marca Aliada</p>
                   
                   <div class="mb-4 p-3 bg-canvas-ivory rounded-DEFAULT border border-outline-variant/30">
                     <span class="font-display-xl text-[28px] text-racing-green-dark font-semibold leading-none" id="tier-plata-price">$14,000</span>
@@ -1048,44 +1042,44 @@
                   <ul class="space-y-2 font-body-sm text-[13px] text-on-surface pb-4">
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Presencia institucional de marca en el venue.</span>
+                      <span data-i18n="tier_plata_f1">Presencia directa en barras VIP, catas o flota de transporte</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Inclusión de marca en material promocional oficial.</span>
+                      <span data-i18n="tier_plata_f2">Activaciones con producto y obsequios a invitados de alto standing</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Participación en las actividades del campeonato.</span>
+                      <span data-i18n="tier_plata_f3">Derecho al título 'Proveedor Oficial Nations Cup 2027'</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Visibilidad de marca en plataformas digitales.</span>
+                      <span data-i18n="tier_plata_f4">10 accesos VIP All-Access para ejecutivos e invitados clave</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Pases de acceso VIP para comitiva empresarial.</span>
+                      <span data-i18n="tier_plata_f5">Crédito editorial en libro oficial del torneo y pantallas</span>
                     </li>
                   </ul>
                 </div>
 
-                <a class="w-full text-center py-3 px-4 rounded-DEFAULT bg-surface-container-high hover:bg-surface-container-highest text-racing-green-dark border border-outline-variant/60 font-label-sm text-[11px] uppercase tracking-[0.16em] font-bold hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 block shadow-sm" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Nivel%20Plata%20(Patrocinador%20Silver)%20para%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
+                <a data-i18n="tier_plata_btn" class="w-full text-center py-3 px-4 rounded-DEFAULT bg-surface-container-high hover:bg-surface-container-highest text-racing-green-dark border border-outline-variant/60 font-label-sm text-[11px] uppercase tracking-[0.16em] font-bold hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 block shadow-sm" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Nivel%20Plata%20para%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
                   Solicitar Plata
                 </a>
               </div>
 
               <!-- TIER BRONCE ($9,000 USD) -->
               <div class="flex flex-col justify-between p-6 rounded-DEFAULT bg-surface-container-lowest shadow-md hover:shadow-xl relative border border-outline-variant/50 transition-all duration-300">
-                <div class="absolute -top-3 left-4 px-3 py-0.5 bg-surface-container-low text-on-surface font-label-sm text-[10px] uppercase tracking-wider rounded-sm shadow-sm font-semibold">
-                  PATROCINADOR BRONZE
+                <div data-i18n="tier_bronce_badge" class="absolute -top-3 left-4 px-3 py-0.5 bg-surface-container-low text-on-surface font-label-sm text-[10px] uppercase tracking-wider rounded-sm shadow-sm font-semibold">
+                  ALIANZA INSTITUCIONAL
                 </div>
                 <div>
                   <div class="flex items-center justify-between mb-2 pt-1">
-                    <span class="font-label-sm text-[11px] uppercase tracking-widest text-warm-bronze font-semibold">NIVEL BRONCE</span>
+                    <span data-i18n="tier_bronce_name" class="font-label-sm text-[11px] uppercase tracking-widest text-warm-bronze font-semibold">Patrocinador Bronce</span>
                     <span class="material-symbols-outlined text-warm-bronze text-[22px]">shield</span>
                   </div>
                   <h3 class="font-headline-sm text-[22px] text-racing-green-dark leading-tight">Bronce</h3>
-                  <p class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-3">Presencia Institucional</p>
+                  <p data-i18n="tier_bronce_sub" class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-3">Aliado Comercial & Networking</p>
                   
                   <div class="mb-4 p-3 bg-canvas-ivory rounded-DEFAULT border border-outline-variant/30">
                     <span class="font-display-xl text-[28px] text-racing-green-dark font-semibold leading-none" id="tier-bronce-price">$9,000</span>
@@ -1096,24 +1090,24 @@
                   <ul class="space-y-2 font-body-sm text-[13px] text-on-surface pb-4">
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Presencia de marca en materiales de comunicación.</span>
+                      <span data-i18n="tier_bronce_f1">Presencia de marca en materiales institucionales y directorio</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Inclusión en el directorio de patrocinadores oficiales.</span>
+                      <span data-i18n="tier_bronce_f2">Espacio para activación o muestreo comercial especializado</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Acceso a las jornadas oficiales del campeonato.</span>
+                      <span data-i18n="tier_bronce_f3">6 pases VIP All-Access con acceso a áreas de hospitalidad</span>
                     </li>
                     <li class="flex items-start gap-2">
                       <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                      <span>Mención institucional en plataformas del torneo.</span>
+                      <span data-i18n="tier_bronce_f4">Mención en el reporte oficial y auditoría de medios</span>
                     </li>
                   </ul>
                 </div>
 
-                <a class="w-full text-center py-3 px-4 rounded-DEFAULT bg-surface-container-high hover:bg-surface-container-highest text-racing-green-dark border border-outline-variant/60 font-label-sm text-[11px] uppercase tracking-[0.16em] font-bold hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 block shadow-sm" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Nivel%20Bronce%20para%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
+                <a data-i18n="tier_bronce_btn" class="w-full text-center py-3 px-4 rounded-DEFAULT bg-surface-container-high hover:bg-surface-container-highest text-racing-green-dark border border-outline-variant/60 font-label-sm text-[11px] uppercase tracking-[0.16em] font-bold hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 block shadow-sm" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Nivel%20Bronce%20para%20Nations%20Cup%202027." rel="noopener noreferrer" target="_blank">
                   Solicitar Bronce
                 </a>
               </div>
@@ -1121,12 +1115,12 @@
             </div>
           </div>
 
-          <!-- 2. SPECIAL ASSETS TABLE (10 ACTIVOS CON PRECIO OFICIAL) -->
+          <!-- 2. SPECIAL ASSETS TABLE (SPONSORS EXCLUSIVOS A A G) -->
           <div class="mb-space-xl">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 border-b border-outline-variant/30 pb-2 gap-2">
               <div>
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-warm-bronze font-bold">2. SPONSORS EXCLUSIVOS (POR ÍTEM · PRECIOS OFICIALES)</span>
-                <p class="font-body-sm text-[13px] text-on-surface-variant">Oportunidades de Naming Right e impacto de marca por elemento específico del torneo.</p>
+                <span data-i18n="table_kicker" class="font-label-sm text-label-sm uppercase tracking-widest text-warm-bronze font-bold">MATRIZ DE SPONSORS EXCLUSIVOS POR ÍTEM</span>
+                <p data-i18n="table_subtitle" class="font-body-sm text-[13px] text-on-surface-variant">Activos individuales de alto impacto con exclusividad absoluta garantizada por contrato.</p>
               </div>
               <span class="font-label-sm text-[11px] text-on-surface-variant uppercase font-medium" id="table-currency-note">Tarifas oficiales en Dólares (USD + IVA)</span>
             </div>
@@ -1136,13 +1130,13 @@
                 <table class="w-full text-left border-collapse">
                   <thead>
                     <tr class="bg-racing-green-dark text-champagne-light font-label-sm text-[11px] uppercase tracking-wider">
-                      <th class="py-3 px-4 font-semibold">Activo Especial</th>
-                      <th class="py-3 px-4 font-semibold">Inversión Propuesta</th>
-                      <th class="py-3 px-4 font-semibold hidden md:table-cell">Alcance & Beneficio Clave</th>
-                      <th class="py-3 px-4 font-semibold text-right">Solicitud</th>
+                      <th data-i18n="th_asset" class="py-3 px-4 font-semibold">Activo / Ítem</th>
+                      <th data-i18n="th_price" class="py-3 px-4 font-semibold">Inversión Oficial</th>
+                      <th data-i18n="th_scope" class="py-3 px-4 font-semibold hidden md:table-cell">Alcance & Beneficios Clave</th>
+                      <th data-i18n="th_action" class="py-3 px-4 font-semibold text-right">Acción</th>
                     </tr>
                   </thead>
-                                    <tbody class="divide-y divide-outline-variant/20 font-body-sm text-[13px] text-on-surface">
+                  <tbody class="divide-y divide-outline-variant/20 font-body-sm text-[13px] text-on-surface">
                     
                     <!-- D. Patrocinador Nombre del Torneo ($80,000 USD) -->
                     <tr class="hover:bg-canvas-ivory/60 transition-colors bg-warm-bronze/5">
@@ -1150,8 +1144,8 @@
                         <div class="flex items-center gap-2">
                           <span class="w-6 h-6 rounded-full bg-warm-bronze text-[#07140E] font-bold text-[11px] flex items-center justify-center shrink-0">D</span>
                           <div>
-                            <span class="text-[14px] font-bold text-racing-green-dark">Patrocinador Nombre del Torneo</span>
-                            <span class="block text-[11px] text-warm-bronze font-semibold uppercase tracking-wider">Naming Right Principal · Presencia en Todos los Puntos</span>
+                            <span data-i18n="item_d_name" class="text-[14px] font-bold text-racing-green-dark">D. Patrocinador Nombre del Torneo</span>
+                            <span data-i18n="item_d_sub" class="block text-[11px] text-warm-bronze font-semibold uppercase tracking-wider">Naming Right Principal · Presencia en Todos los Puntos</span>
                           </div>
                         </div>
                       </td>
@@ -1159,11 +1153,11 @@
                         <span class="price-val" data-usd="80000" data-mxn="1400000" data-eur="73600">$80,000</span>
                         <span class="text-[11px] font-label-sm text-on-surface-variant price-curr-label">USD + IVA</span>
                       </td>
-                      <td class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
-                        <strong>Omnipresencia absoluta:</strong> Arco de llegada, premiación, jerseys, trofeo oficial, photocall, acreditaciones y campaña de medios completa.
+                      <td data-i18n="item_d_scope" class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
+                        Presencia omnipresente en todos los puntos del club, materiales impresos, trofeo, indumentaria, transmisiones y publicidad oficial ('Nations Cup 2027 presentado por [Su Marca]').
                       </td>
                       <td class="py-3.5 px-4 text-right">
-                        <a href="https://wa.me/34722116248?text=Hola,%20deseo%20solicitar%20la%20exclusividad%20del%20Nombre%20del%20Torneo%20(80,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#07140E] hover:scale-105 text-[11px] font-label-sm uppercase font-bold transition-all shadow-sm" target="_blank">Reservar</a>
+                        <a data-i18n="btn_reserve_item" href="https://wa.me/34722116248?text=Hola,%20deseo%20solicitar%20la%20exclusividad%20del%20Nombre%20del%20Torneo%20(80,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#07140E] hover:scale-105 text-[11px] font-label-sm uppercase font-bold transition-all shadow-sm" target="_blank">Reservar</a>
                       </td>
                     </tr>
 
@@ -1173,21 +1167,20 @@
                         <div class="flex items-center gap-2">
                           <span class="w-6 h-6 rounded-full bg-racing-green-dark text-champagne-light font-bold text-[11px] flex items-center justify-center shrink-0">C</span>
                           <div>
-                            <span class="text-[14px] font-bold text-racing-green-dark">Sponsoreo de Equipo Exclusivo</span>
-                            <span class="block text-[11px] text-on-surface-variant font-medium">1 Marca Exclusiva por Selección Nacional</span>
+                            <span data-i18n="item_c_name" class="text-[14px] font-bold text-racing-green-dark">C. Sponsoreo de Equipo Exclusivo</span>
+                            <span data-i18n="item_c_sub" class="block text-[11px] text-on-surface-variant font-medium">España, Alemania, México, Canadá, USA o Argentina</span>
                           </div>
                         </div>
                       </td>
                       <td class="py-3.5 px-4 font-bold text-warm-bronze font-display-xl text-[18px]">
                         <span class="price-val" data-usd="25000" data-mxn="437500" data-eur="23000">$25,000</span>
                         <span class="text-[11px] font-label-sm text-on-surface-variant price-curr-label">USD + IVA</span>
-                        <span class="block text-[10px] text-on-surface-variant/70 font-normal">por selección</span>
                       </td>
-                      <td class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
-                        <strong>Branding central en jersey oficial</strong> de una selección: 🇪🇸 España, 🇩🇪 Alemania, 🇲🇽 México, 🇨🇦 Canadá, 🇺🇸 USA o 🇦🇷 Argentina.
+                      <td data-i18n="item_c_scope" class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
+                        Branding central exclusivo en el jersey oficial de una de las 6 selecciones participantes (España, Alemania, México, Canadá, USA o Argentina) durante todos los encuentros.
                       </td>
                       <td class="py-3.5 px-4 text-right">
-                        <a href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Sponsoreo%20Exclusivo%20de%20un%20Equipo%20(25,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
+                        <a data-i18n="btn_reserve_item" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Sponsoreo%20Exclusivo%20de%20un%20Equipo%20(25,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
                       </td>
                     </tr>
 
@@ -1197,8 +1190,8 @@
                         <div class="flex items-center gap-2">
                           <span class="w-6 h-6 rounded-full bg-racing-green-dark text-champagne-light font-bold text-[11px] flex items-center justify-center shrink-0">E</span>
                           <div>
-                            <span class="text-[14px] font-bold text-racing-green-dark">Patrocinador Exclusivo Speaker del Torneo</span>
-                            <span class="block text-[11px] text-on-surface-variant font-medium">Voz Oficial del Campeonato</span>
+                            <span data-i18n="item_e_name" class="text-[14px] font-bold text-racing-green-dark">E. Patrocinador Exclusivo del Narrador Oficial</span>
+                            <span data-i18n="item_e_sub" class="block text-[11px] text-on-surface-variant font-medium">Menciones en Cada Narración en Vivo</span>
                           </div>
                         </div>
                       </td>
@@ -1206,11 +1199,11 @@
                         <span class="price-val" data-usd="20000" data-mxn="350000" data-eur="18400">$20,000</span>
                         <span class="text-[11px] font-label-sm text-on-surface-variant price-curr-label">USD + IVA</span>
                       </td>
-                      <td class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
-                        Menciones y agradecimientos de honor por el speaker oficial en cada narración en vivo, apertura de chukkers y protocolo de premiación.
+                      <td data-i18n="item_e_scope" class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
+                        Menciones y agradecimientos de honor por el locutor y narrador oficial en vivo durante cada chukker, apertura de partidos, premiaciones y ceremonias de gala.
                       </td>
                       <td class="py-3.5 px-4 text-right">
-                        <a href="https://wa.me/34722116248?text=Hola,%20deseo%20solicitar%20el%20Patrocinio%20Exclusivo%20de%20Speaker%20(20,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
+                        <a data-i18n="btn_reserve_item" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Patrocinio%20del%20Speaker%20del%20Torneo%20(20,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
                       </td>
                     </tr>
 
@@ -1220,8 +1213,8 @@
                         <div class="flex items-center gap-2">
                           <span class="w-6 h-6 rounded-full bg-racing-green-dark text-champagne-light font-bold text-[11px] flex items-center justify-center shrink-0">B</span>
                           <div>
-                            <span class="text-[14px] font-bold text-racing-green-dark">Patrocinio Vídeos en Pantallas Gigantes</span>
-                            <span class="block text-[11px] text-on-surface-variant font-medium">Spots LED Monumentales</span>
+                            <span data-i18n="item_b_name" class="text-[14px] font-bold text-racing-green-dark">B. Patrocinio de Video en Pantallas Gigantes LED</span>
+                            <span data-i18n="item_b_sub" class="block text-[11px] text-on-surface-variant font-medium">Emisión Continua de Spots en Pantallas Monumentales</span>
                           </div>
                         </div>
                       </td>
@@ -1229,11 +1222,11 @@
                         <span class="price-val" data-usd="20000" data-mxn="350000" data-eur="18400">$20,000</span>
                         <span class="text-[11px] font-label-sm text-on-surface-variant price-curr-label">USD + IVA</span>
                       </td>
-                      <td class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
-                        Emisión continua y rotativa de spots audiovisuales de alta definición en las pantallas LED monumentales de campo y VIP Lounge.
+                      <td data-i18n="item_b_scope" class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
+                        Emisión continua y rotativa de spots audiovisuales en alta definición en las pantallas LED monumentales ubicadas en el campo principal y zona clubhouse.
                       </td>
                       <td class="py-3.5 px-4 text-right">
-                        <a href="https://wa.me/34722116248?text=Hola,%20deseo%20solicitar%20el%20Patrocinio%20de%20Vídeos%20en%20Pantallas%20Gigantes%20(20,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
+                        <a data-i18n="btn_reserve_item" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Patrocinio%20de%20V%C3%ADdeos%20en%20Pantallas%20Gigantes%20(20,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
                       </td>
                     </tr>
 
@@ -1243,8 +1236,8 @@
                         <div class="flex items-center gap-2">
                           <span class="w-6 h-6 rounded-full bg-racing-green-dark text-champagne-light font-bold text-[11px] flex items-center justify-center shrink-0">F</span>
                           <div>
-                            <span class="text-[14px] font-bold text-racing-green-dark">Nombre del Campo de Polo</span>
-                            <span class="block text-[11px] text-on-surface-variant font-medium">Naming Oficial de Cancha (6 Hectáreas)</span>
+                            <span data-i18n="item_f_name" class="text-[14px] font-bold text-racing-green-dark">F. Nombre Oficial del Campo de Polo</span>
+                            <span data-i18n="item_f_sub" class="block text-[11px] text-on-surface-variant font-medium">Denominación Oficial de Cancha Reglamentaria</span>
                           </div>
                         </div>
                       </td>
@@ -1252,22 +1245,22 @@
                         <span class="price-val" data-usd="15000" data-mxn="262500" data-eur="13800">$15,000</span>
                         <span class="text-[11px] font-label-sm text-on-surface-variant price-curr-label">USD + IVA</span>
                       </td>
-                      <td class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
-                        Bautizo oficial del terreno de juego reglamentario ("Campo de Polo [Tu Marca]") en todo el fixture, mapa del venue y menciones.
+                      <td data-i18n="item_f_scope" class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
+                        Denominación oficial del campo central reglamentario de 300 x 200m en toda la cartelería, planos, programa de mano y menciones en transmisiones.
                       </td>
                       <td class="py-3.5 px-4 text-right">
-                        <a href="https://wa.me/34722116248?text=Hola,%20deseo%20solicitar%20el%20Nombre%20del%20Campo%20de%20Polo%20(15,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
+                        <a data-i18n="btn_reserve_item" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Nombre%20del%20Campo%20de%20Polo%20(15,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
                       </td>
                     </tr>
 
-                    <!-- A. Patrocinio Cartelera / Vallas ($5,000 USD) -->
+                    <!-- A. Patrocinio Cartelera en Cancha ($5,000 USD) -->
                     <tr class="hover:bg-canvas-ivory/60 transition-colors">
                       <td class="py-3.5 px-4 font-bold text-racing-green-dark">
                         <div class="flex items-center gap-2">
                           <span class="w-6 h-6 rounded-full bg-racing-green-dark text-champagne-light font-bold text-[11px] flex items-center justify-center shrink-0">A</span>
                           <div>
-                            <span class="text-[14px] font-bold text-racing-green-dark">Patrocinio Cartelera en Cancha</span>
-                            <span class="block text-[11px] text-on-surface-variant font-medium">Vallas Perimetrales de Alta Visibilidad</span>
+                            <span data-i18n="item_a_name" class="text-[14px] font-bold text-racing-green-dark">A. Patrocinio de Cartelera en Cancha</span>
+                            <span data-i18n="item_a_sub" class="block text-[11px] text-on-surface-variant font-medium">Presencia en Tablas Perimetrales de la Cancha</span>
                           </div>
                         </div>
                       </td>
@@ -1275,22 +1268,22 @@
                         <span class="price-val" data-usd="5000" data-mxn="87500" data-eur="4600">$5,000</span>
                         <span class="text-[11px] font-label-sm text-on-surface-variant price-curr-label">USD + IVA</span>
                       </td>
-                      <td class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
-                        Presencia estática de cartelera en las tablas perimetrales del campo con alta exposición en fotos de juego y retransmisiones.
+                      <td data-i18n="item_a_scope" class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
+                        Presencia estática de cartelera en las tablas perimetrales del campo con alta exposición en fotos de acción ecuestre, transmisiones y cobertura de medios.
                       </td>
                       <td class="py-3.5 px-4 text-right">
-                        <a href="https://wa.me/34722116248?text=Hola,%20deseo%20solicitar%20el%20Patrocinio%20de%20Cartelera%20(5,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
+                        <a data-i18n="btn_reserve_item" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Patrocinio%20de%20Cartelera%20(5,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
                       </td>
                     </tr>
 
-                    <!-- G1. Premio Mejor Jugador ($5,000 USD) -->
+                    <!-- G1. Premio Mejor Jugador MVP ($5,000 USD) -->
                     <tr class="hover:bg-canvas-ivory/60 transition-colors">
                       <td class="py-3.5 px-4 font-bold text-racing-green-dark">
                         <div class="flex items-center gap-2">
                           <span class="w-6 h-6 rounded-full bg-racing-green-dark text-champagne-light font-bold text-[11px] flex items-center justify-center shrink-0">G1</span>
                           <div>
-                            <span class="text-[14px] font-bold text-racing-green-dark">Premio Mejor Jugador (MVP Award)</span>
-                            <span class="block text-[11px] text-on-surface-variant font-medium">Galardón Individual de Honor</span>
+                            <span data-i18n="item_g1_name" class="text-[14px] font-bold text-racing-green-dark">G1. Premio al Mejor Jugador (MVP)</span>
+                            <span data-i18n="item_g1_sub" class="block text-[11px] text-on-surface-variant font-medium">Entrega Oficial de Galardón MVP en Ceremonia</span>
                           </div>
                         </div>
                       </td>
@@ -1298,22 +1291,22 @@
                         <span class="price-val" data-usd="5000" data-mxn="87500" data-eur="4600">$5,000</span>
                         <span class="text-[11px] font-label-sm text-on-surface-variant price-curr-label">USD + IVA</span>
                       </td>
-                      <td class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
-                        Presentación y entrega del trofeo al Jugador Más Valioso en la ceremonia de clausura con cobertura editorial y photocall.
+                      <td data-i18n="item_g1_scope" class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
+                        Presentación oficial del trofeo y obsequio conmemorativo al mejor jugador del torneo durante la ceremonia de premiación con mención de honor y cobertura de prensa.
                       </td>
                       <td class="py-3.5 px-4 text-right">
-                        <a href="https://wa.me/34722116248?text=Hola,%20deseo%20solicitar%20el%20Premio%20Mejor%20Jugador%20MVP%20(5,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
+                        <a data-i18n="btn_reserve_item" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Patrocinio%20Premio%20Mejor%20Jugador%20MVP%20(5,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
                       </td>
                     </tr>
 
-                    <!-- G2. Premio Mejor Caballo ($5,000 USD) -->
+                    <!-- G2. Premio Mejor Caballo (Best Playing Pony) ($5,000 USD) -->
                     <tr class="hover:bg-canvas-ivory/60 transition-colors">
                       <td class="py-3.5 px-4 font-bold text-racing-green-dark">
                         <div class="flex items-center gap-2">
                           <span class="w-6 h-6 rounded-full bg-racing-green-dark text-champagne-light font-bold text-[11px] flex items-center justify-center shrink-0">G2</span>
                           <div>
-                            <span class="text-[14px] font-bold text-racing-green-dark">Premio Mejor Caballo (Best Playing Pony)</span>
-                            <span class="block text-[11px] text-on-surface-variant font-medium">Tradición Ecuestre de Prestigio</span>
+                            <span data-i18n="item_g2_name" class="text-[14px] font-bold text-racing-green-dark">G2. Premio al Mejor Caballo (Best Playing Pony)</span>
+                            <span data-i18n="item_g2_sub" class="block text-[11px] text-on-surface-variant font-medium">Reconocimiento al Mejor Ejemplar Equino</span>
                           </div>
                         </div>
                       </td>
@@ -1321,11 +1314,11 @@
                         <span class="price-val" data-usd="5000" data-mxn="87500" data-eur="4600">$5,000</span>
                         <span class="text-[11px] font-label-sm text-on-surface-variant price-curr-label">USD + IVA</span>
                       </td>
-                      <td class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
-                        Entrega de la manta bordada oficial y distinción al mejor ejemplar equino del certamen ante los medios internacionales.
+                      <td data-i18n="item_g2_scope" class="py-3.5 px-4 text-on-surface-variant hidden md:table-cell">
+                        Presentación de la manta conmemorativa y reconocimiento al mejor ejemplar equino de la final, destacando la excelencia, crianza y nobleza del caballo de polo.
                       </td>
                       <td class="py-3.5 px-4 text-right">
-                        <a href="https://wa.me/34722116248?text=Hola,%20deseo%20solicitar%20el%20Premio%20Mejor%20Caballo%20(5,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
+                        <a data-i18n="btn_reserve_item" href="https://wa.me/34722116248?text=Hola,%20deseo%20bloquear%20el%20Patrocinio%20Premio%20Mejor%20Caballo%20(5,000%20USD)%20para%20Nations%20Cup%202027." class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-racing-green-dark text-champagne-light hover:bg-warm-bronze text-[11px] font-label-sm uppercase font-semibold transition-colors" target="_blank">Reservar</a>
                       </td>
                     </tr>
 
@@ -1335,101 +1328,78 @@
             </div>
           </div>
 
-          <!-- 3. GASTRONOMY SPONSOR & 4. VIP MOBILITY SERVICES (TWO-COLUMN LUXURY CARDS) -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg mb-space-lg">
+          <!-- 3. ALLIANCES: GASTRONOMÍA & MOVILIDAD -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mb-space-lg">
             
             <!-- Gastronomy Sponsor Card -->
-            <div class="p-space-xl rounded-DEFAULT bg-surface-container-lowest border border-warm-bronze/40 shadow-md flex flex-col justify-between">
+            <div class="p-6 rounded-DEFAULT bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex flex-col justify-between">
               <div>
-                <div class="flex items-center justify-between mb-3">
-                  <span class="font-label-sm text-[11px] uppercase tracking-widest text-warm-bronze font-semibold">3. ALIANZA GASTRONÓMICA</span>
-                  <span class="material-symbols-outlined text-warm-bronze text-[24px]">restaurant_menu</span>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-label-sm text-[10px] uppercase tracking-widest text-warm-bronze font-bold">ALIANZA GASTRONÓMICA</span>
+                  <span class="material-symbols-outlined text-warm-bronze text-[22px]">restaurant</span>
                 </div>
-                <h3 class="font-headline-md text-headline-md text-racing-green-dark mb-1">Sponsor Gastronomía</h3>
-                <p class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-4">Exclusivo para Restaurantes & Casas Culinarias</p>
-                <p class="font-body-sm text-[13px] text-on-surface-variant mb-4 leading-relaxed">
-                  Participación reservada para firmas de alta cocina, mariscos, cortes y conceptos de autor con presencia protagónica en el <strong>Gourmet Village</strong> y en el catering del <strong>Polo Club VIP</strong>.
+                <h3 data-i18n="gastro_title" class="font-headline-md text-headline-md text-racing-green-dark mb-1">Sponsor de Gastronomía</h3>
+                <p data-i18n="gastro_sub" class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-3">Pabellón Gourmet & Experiencias de Maridaje</p>
+                <p data-i18n="gastro_desc" class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed mb-4">
+                  Oportunidad exclusiva para restaurantes de alta cocina y grupos restauranteros de posicionarse ante una audiencia de alto standing.
                 </p>
-                <ul class="space-y-2 font-body-sm text-[13px] text-on-surface mb-6">
+                <ul class="space-y-2 font-body-sm text-[13px] text-on-surface pb-4">
                   <li class="flex items-start gap-2">
                     <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                    <span>Espacio exclusivo de cocina y servicio dentro del Gourmet Village.</span>
+                    <span data-i18n="gastro_f1">Espacio exclusivo para pop-up gastronómico o cata guiada</span>
                   </li>
                   <li class="flex items-start gap-2">
                     <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                    <span>Esquema adaptado: Aportación de producto/servicio + Fee de activación.</span>
+                    <span data-i18n="gastro_f2">Presencia de marca en menús oficiales y señalización del evento</span>
                   </li>
                   <li class="flex items-start gap-2">
                     <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
-                    <span>Acceso directo al paladar de invitados de la más alta esfera económica.</span>
+                    <span data-i18n="gastro_f3">8 pases VIP All-Access para directivos y chefs del restaurante</span>
                   </li>
                 </ul>
               </div>
-
-              <a href="https://wa.me/34722116248?text=Hola,%20deseo%20postular%20nuestro%20restaurante%20como%20Sponsor%20Gastronómico%20en%20Nations%20Cup%202027." class="w-full text-center py-3.5 px-6 rounded-DEFAULT bg-[#07140E] hover:bg-[#0E291E] text-[#F3E5AB] hover:text-white border border-[#D4AF37]/50 font-label-md uppercase tracking-[0.16em] font-semibold transition-all duration-300 block" target="_blank">
+              <a data-i18n="gastro_btn" class="w-full text-center py-2.5 px-4 rounded-DEFAULT bg-racing-green-dark hover:bg-racing-green-mid text-champagne-light hover:text-white font-label-sm text-[11px] uppercase tracking-wider font-semibold transition-colors block" href="https://wa.me/34722116248?text=Hola,%20deseo%20postular%20nuestro%20restaurante%20como%20Sponsor%20Gastron%C3%B3mico%20para%20Nations%20Cup%202027." target="_blank">
                 Postular Restaurante vía WhatsApp
               </a>
             </div>
 
-            <!-- VIP Mobility & Concierge Services Card -->
-            <div class="p-space-xl rounded-DEFAULT bg-canvas-ivory border border-outline-variant/40 shadow-md flex flex-col justify-between">
+            <!-- Mobility Sponsor Card -->
+            <div class="p-6 rounded-DEFAULT bg-surface-container-lowest border border-outline-variant/40 shadow-sm flex flex-col justify-between">
               <div>
-                <div class="flex items-center justify-between mb-3">
-                  <span class="font-label-sm text-[11px] uppercase tracking-widest text-warm-bronze font-semibold">4. SERVICIOS INCLUIDOS</span>
-                  <span class="material-symbols-outlined text-warm-bronze text-[24px]">directions_car</span>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-label-sm text-[10px] uppercase tracking-widest text-warm-bronze font-bold">LOGÍSTICA & FLOTA OFICIAL</span>
+                  <span class="material-symbols-outlined text-warm-bronze text-[22px]">flight_takeoff</span>
                 </div>
-                <h3 class="font-headline-md text-headline-md text-racing-green-dark mb-1">Movilidad & Concierge VIP</h3>
-                <p class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-4">Logística Integral Garantizada para Patrocinadores</p>
-                <div class="space-y-3 font-body-sm text-[13px] text-on-surface">
-                  <div class="flex items-start gap-2.5">
-                    <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">commute</span>
-                    <div>
-                      <strong class="text-racing-green-dark">1. Transporte Terrestre:</strong>
-                      <p class="text-on-surface-variant text-[12px]">Traslados continuos desde los hoteles oficiales hacia el campo de polo y todas las actividades del certamen.</p>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-2.5">
-                    <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">flight_land</span>
-                    <div>
-                      <strong class="text-racing-green-dark">2. Traslados Aeroportuarios:</strong>
-                      <p class="text-on-surface-variant text-[12px]">Recepción protocolaria y transporte de invitados, empresarios y personalidades aeropuerto ↔ hotel.</p>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-2.5">
-                    <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">flight</span>
-                    <div>
-                      <strong class="text-racing-green-dark">3. Transporte Aéreo:</strong>
-                      <p class="text-on-surface-variant text-[12px]">Coordinación y gestión de vuelos nacionales e internacionales según el paquete contratado.</p>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-2.5">
-                    <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">local_taxi</span>
-                    <div>
-                      <strong class="text-racing-green-dark">4. Movilidad en el Campeonato:</strong>
-                      <p class="text-on-surface-variant text-[12px]">Vehículos asignados para eventos especiales, reuniones privadas y encuentros de negocios.</p>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-2.5">
-                    <span class="material-symbols-outlined text-warm-bronze text-[18px] shrink-0 mt-0.5">support_agent</span>
-                    <div>
-                      <strong class="text-racing-green-dark">5. Atención VIP Personalizada:</strong>
-                      <p class="text-on-surface-variant text-[12px]">Coordinación de itinerarios a la medida, recepción y asistencia dedicada durante toda su estancia.</p>
-                    </div>
-                  </div>
-                </div>
+                <h3 data-i18n="mobility_title" class="font-headline-md text-headline-md text-racing-green-dark mb-1">Movilidad & Concierge VIP</h3>
+                <p data-i18n="mobility_sub" class="font-label-sm text-[11px] uppercase text-on-surface-variant mb-3">Vehículos Oficiales, Helicópteros & Yates</p>
+                <p data-i18n="mobility_desc" class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed mb-4">
+                  Traslados ejecutivos desde el Aeropuerto de Cancún, helipuerto in-situ y experiencias náuticas privadas en el Caribe Mexicano.
+                </p>
+                <ul class="space-y-2 font-body-sm text-[13px] text-on-surface pb-4">
+                  <li class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
+                    <span data-i18n="mobility_f1">Designación como Transportista / Flota Oficial del Torneo</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
+                    <span data-i18n="mobility_f2">Exhibición de unidades en la entrada principal y helipuerto</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="material-symbols-outlined text-warm-bronze text-[16px] shrink-0 mt-0.5">check_circle</span>
+                    <span data-i18n="mobility_f3">Traslado exclusivo de jugadores, patronos e invitados de honor</span>
+                  </li>
+                </ul>
               </div>
-
-              <div class="pt-4 border-t border-outline-variant/30 mt-4 flex items-center justify-between text-[11px] font-label-sm uppercase text-warm-bronze">
-                <span>Certificación de Hospitalidad Oficial</span>
-                <span class="material-symbols-outlined text-[16px]">verified</span>
-              </div>
+              <a data-i18n="mobility_btn" class="w-full text-center py-2.5 px-4 rounded-DEFAULT bg-racing-green-dark hover:bg-racing-green-mid text-champagne-light hover:text-white font-label-sm text-[11px] uppercase tracking-wider font-semibold transition-colors block" href="https://wa.me/34722116248?text=Hola,%20deseo%20coordinar%20una%20alianza%20de%20Movilidad%20o%20Transporte%20Oficial%20para%20Nations%20Cup%202027." target="_blank">
+                Coordinar Alianza vía WhatsApp
+              </a>
             </div>
 
           </div>
 
-          <!-- Bottom Footer Note -->
-          <div class="mt-space-md text-center text-on-surface-variant text-[12px]">
-            <span>* Todos los importes están calculados más IVA. La exclusividad de categoría se asigna en orden riguroso de confirmación.</span>
+          <!-- Bottom Security & VAT Notice -->
+          <div class="p-4 rounded-DEFAULT bg-surface-container-high border border-outline-variant/30 text-center">
+            <span data-i18n="vat_notice" class="font-body-sm text-[12px] text-on-surface-variant font-medium">* Más IVA correspondiente. Sujeto a disponibilidad de categoría al momento de formalizar la reserva.</span>
           </div>
 
         </div>
@@ -1439,13 +1409,17 @@
       <!-- ========================================================================
            MÓDULO 6: SOLICITUD DE DOSSIER & BLOQUEO (STITCH PRIVATE CONCIERGE)
            ======================================================================== -->
+      <!-- SECCIÓN FORMULARIO DE CONTACTO VIP WHATSAPP -->
+      <!-- SECCIÓN FORMULARIO DE CONTACTO VIP WHATSAPP -->
       <section id="formulario-whatsapp" class="w-full bg-racing-green-dark text-on-primary py-space-xl">
         <div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter">
           
           <div class="max-w-3xl mx-auto text-center mb-space-xl">
-            <span data-i18n="form_kicker" class="font-label-sm text-label-sm uppercase tracking-[0.22em] text-champagne-light block mb-1">CONTACTO INSTITUCIONAL RESERVADO</span>
+            <span data-i18n="form_kicker" class="font-label-sm text-label-sm uppercase tracking-[0.22em] text-champagne-light block mb-1">PROTOCOLO INSTITUCIONAL RESERVADO</span>
             <h2 data-i18n="form_title" class="font-headline-lg text-headline-lg text-canvas-alabaster">Solicitud de Dossier & Bloqueo de Exclusividad</h2>
-
+            <p data-i18n="form_subtitle" class="font-body-md text-body-md text-gray-300 mt-2">
+              Contacto directo con la Presidencia del Comité de Patrocinios vía WhatsApp (+34 722 11 62 48).
+            </p>
           </div>
 
           <div class="max-w-4xl mx-auto p-space-xl rounded-DEFAULT bg-racing-green-subtle/80 shadow-2xl backdrop-blur-md border border-warm-bronze/30">
@@ -1453,85 +1427,80 @@
               
               <!-- Field 1: Name -->
               <div class="flex flex-col gap-1.5">
-                <label data-i18n="lbl_name" class="font-label-md text-label-md uppercase text-champagne-light tracking-wider" for="form-name">Nombre y Apellidos del Ejecutivo *</label>
-                <input class="px-space-md py-2.5 rounded-DEFAULT bg-primary-container text-canvas-alabaster focus:outline-none focus:ring-1 focus:ring-warm-bronze font-body-md text-body-md border border-outline-variant/30" id="form-name" required="" type="text" value="Lord Alexander Cavendish"/>
+                <label data-i18n="lbl_name" class="font-label-md text-label-md uppercase text-champagne-light tracking-wider" for="form-name">Nombre Completo del Directivo *</label>
+                <input class="px-space-md py-2.5 rounded-DEFAULT bg-primary-container text-canvas-alabaster focus:outline-none focus:ring-1 focus:ring-warm-bronze border border-outline-variant/40 placeholder:text-gray-400 font-body-sm text-body-sm" id="form-name" placeholder="Ej. Lic. Fernando de la Mora" data-i18n-ph="ph_name" required="" type="text"/>
               </div>
 
-              <!-- Field 2: Enterprise -->
+              <!-- Field 2: Company -->
               <div class="flex flex-col gap-1.5">
                 <label data-i18n="lbl_company" class="font-label-md text-label-md uppercase text-champagne-light tracking-wider" for="form-company">Empresa / Marca Representada *</label>
-                <input class="px-space-md py-2.5 rounded-DEFAULT bg-primary-container text-canvas-alabaster focus:outline-none focus:ring-1 focus:ring-warm-bronze font-body-md text-body-md border border-outline-variant/30" id="form-company" required="" type="text" value="Audemars Piguet / Aston Martin / Dom Pérignon"/>
+                <input class="px-space-md py-2.5 rounded-DEFAULT bg-primary-container text-canvas-alabaster focus:outline-none focus:ring-1 focus:ring-warm-bronze border border-outline-variant/40 placeholder:text-gray-400 font-body-sm text-body-sm" id="form-company" placeholder="Ej. Audemars Piguet / Aston Martin / Dom Pérignon" data-i18n-ph="ph_company" required="" type="text"/>
               </div>
 
-              <!-- Field 3: Title -->
+              <!-- Field 3: Executive Role -->
               <div class="flex flex-col gap-1.5">
-                <label data-i18n="lbl_role" class="font-label-md text-label-md uppercase text-champagne-light tracking-wider" for="form-role">Cargo Ejecutivo / Rol Directivo *</label>
-                <select class="px-space-md py-2.5 rounded-DEFAULT bg-primary-container text-canvas-alabaster focus:outline-none focus:ring-1 focus:ring-warm-bronze font-body-md text-body-md border border-outline-variant/30" id="form-role">
-                  <option value="Chief Executive Officer (CEO / Presidente)">Chief Executive Officer (CEO / Presidente)</option>
-                  <option value="Chief Marketing Officer (CMO / Dir. Marketing)">Chief Marketing Officer (CMO / Dir. Marketing)</option>
-                  <option selected="" value="Director Global de Patrocinios y Alianzas">Director Global de Patrocinios y Alianzas</option>
-                  <option value="Inversionista / Family Office Principal">Inversionista / Family Office Principal</option>
-                  <option value="Vicepresidente / Director General">Vicepresidente / Director General</option>
+                <label data-i18n="lbl_role" class="font-label-md text-label-md uppercase text-champagne-light tracking-wider" for="form-role">Cargo / Posición Ejecutiva *</label>
+                <select class="px-space-md py-2.5 rounded-DEFAULT bg-primary-container text-canvas-alabaster focus:outline-none focus:ring-1 focus:ring-warm-bronze border border-outline-variant/40 font-body-sm text-body-sm" id="form-role" required="">
+                  <option value="Chief Executive Officer (CEO / Presidente)" data-i18n="opt_ceo">Director Ejecutivo (CEO / Presidente)</option>
+                  <option value="Chief Marketing Officer (CMO / Dir. Marketing)" data-i18n="opt_cmo">Director de Marketing (CMO / Dir. Marketing)</option>
+                  <option selected="" value="Director Global de Patrocinios y Alianzas" data-i18n="opt_sponsorship">Director Global de Patrocinios y Alianzas</option>
+                  <option value="Inversionista / Family Office Principal" data-i18n="opt_investor">Inversionista / Family Office Principal</option>
+                  <option value="Vicepresidente / Director General" data-i18n="opt_other">Vicepresidente / Director General</option>
                 </select>
               </div>
 
               <!-- Field 4: Industry Category -->
               <div class="flex flex-col gap-1.5">
                 <label data-i18n="lbl_category" class="font-label-md text-label-md uppercase text-champagne-light tracking-wider" for="form-category">Categoría de Industria *</label>
-                <select class="px-space-md py-2.5 rounded-DEFAULT bg-primary-container text-canvas-alabaster focus:outline-none focus:ring-1 focus:ring-warm-bronze font-body-md text-body-md border border-outline-variant/30" id="form-category">
-                  <option value="Automotriz de Lujo & Superdeportivos">Automotriz de Lujo & Superdeportivos</option>
-                  <option selected="" value="Alta Relojería & Joyería">Alta Relojería & Joyería</option>
-                  <option value="Champagne, Vinos & Destilados Ultra-Premium">Champagne, Vinos & Destilados Ultra-Premium</option>
-                  <option value="Aviación Privada & Náutica / Yates">Aviación Privada & Náutica / Yates</option>
-                  <option value="Banca Privada, Real Estate & Family Offices">Banca Privada, Real Estate & Family Offices</option>
-                  <option value="Alta Costura, Moda & Cuero">Alta Costura, Moda & Cuero</option>
-                  <option value="Tecnología de Lujo & Servicios Exclusivos">Tecnología de Lujo & Servicios Exclusivos</option>
-                  <option value="Hotelería 5 Diamantes & Lifestyle">Hotelería 5 Diamantes & Lifestyle</option>
+                <select class="px-space-md py-2.5 rounded-DEFAULT bg-primary-container text-canvas-alabaster focus:outline-none focus:ring-1 focus:ring-warm-bronze border border-outline-variant/40 font-body-sm text-body-sm" id="form-category" required="">
+                  <option value="Automotriz de Lujo & Superdeportivos" data-i18n="opt_cat_auto">Automotriz de Lujo & Superdeportivos</option>
+                  <option selected="" value="Alta Relojería & Joyería" data-i18n="opt_cat_watch">Alta Relojería & Joyería</option>
+                  <option value="Champagne, Vinos & Destilados Ultra-Premium" data-i18n="opt_cat_spirits">Champagne, Vinos & Destilados Ultra-Premium</option>
+                  <option value="Aviación Privada & Náutica / Yates" data-i18n="opt_cat_aviation">Aviación Privada & Náutica / Yates</option>
+                  <option value="Banca Privada, Real Estate & Family Offices" data-i18n="opt_cat_finance">Banca Privada, Real Estate & Family Offices</option>
+                  <option value="Alta Costura, Moda & Cuero" data-i18n="opt_cat_fashion">Alta Costura, Moda & Cuero</option>
+                  <option value="Tecnología de Lujo & Servicios Exclusivos" data-i18n="opt_cat_tech">Tecnología de Lujo & Servicios Exclusivos</option>
+                  <option value="Hotelería 5 Diamantes & Lifestyle" data-i18n="opt_cat_hospitality">Hotelería 5 Diamantes & Lifestyle</option>
                 </select>
               </div>
 
-              <!-- Field 5: Tier of Interest (Full width) -->
-              <div class="md:col-span-2 flex flex-col gap-1.5">
+              <!-- Field 5: Tier Selection (Full width) -->
+              <div class="flex flex-col gap-1.5 md:col-span-2">
                 <label data-i18n="lbl_tier" class="font-label-md text-label-md uppercase text-champagne-light tracking-wider" for="form-tier">Nivel de Patrocinio de Interés *</label>
-                <select class="px-space-md py-2.5 rounded-DEFAULT bg-primary-container text-canvas-alabaster focus:outline-none focus:ring-1 focus:ring-warm-bronze font-body-md text-body-md border border-outline-variant/30" id="form-tier">
-                  <option selected="" value="D. Patrocinador Nombre del Torneo Omnipresente ($80,000 USD / $1,400,000 MXN)">D. Patrocinador Nombre del Torneo Omnipresente ($80,000 USD / $1,400,000 MXN)</option>
-                  <option value="C. Sponsoreo de Equipo Exclusivo ($25,000 USD / $437,500 MXN)">C. Sponsoreo de Equipo Exclusivo ($25,000 USD / $437,500 MXN)</option>
-                  <option value="E. Patrocinador Exclusivo Speaker Torneo ($20,000 USD / $350,000 MXN)">E. Patrocinador Exclusivo Speaker Torneo ($20,000 USD / $350,000 MXN)</option>
-                  <option value="B. Patrocinio Vídeos Pantallas Gigantes ($20,000 USD / $350,000 MXN)">B. Patrocinio Vídeos Pantallas Gigantes ($20,000 USD / $350,000 MXN)</option>
-                  <option value="F. Nombre del Campo de Polo ($15,000 USD / $262,500 MXN)">F. Nombre del Campo de Polo ($15,000 USD / $262,500 MXN)</option>
-                  <option value="A. Patrocinio Cartelera en Cancha ($5,000 USD / $87,500 MXN)">A. Patrocinio Cartelera en Cancha ($5,000 USD / $87,500 MXN)</option>
-                  <option value="G1. Premio Mejor Jugador MVP ($5,000 USD / $87,500 MXN)">G1. Premio Mejor Jugador MVP ($5,000 USD / $87,500 MXN)</option>
-                  <option value="G2. Premio Mejor Caballo Best Playing Pony ($5,000 USD / $87,500 MXN)">G2. Premio Mejor Caballo Best Playing Pony ($5,000 USD / $87,500 MXN)</option>
-                  <option value="Nivel Platino ($45,000 USD / $787,500 MXN)">Nivel Platino ($45,000 USD / $787,500 MXN)</option>
-                  <option value="Nivel Oro ($28,000 USD / $490,000 MXN)">Nivel Oro ($28,000 USD / $490,000 MXN)</option>
-                  <option value="Nivel Plata ($14,000 USD / $245,000 MXN)">Nivel Plata ($14,000 USD / $245,000 MXN)</option>
-                  <option value="Nivel Bronce ($9,000 USD / $157,500 MXN)">Nivel Bronce ($9,000 USD / $157,500 MXN)</option>
-                  <option value="Sponsor Gastronomía (Restaurantes & Gourmet Village)">Sponsor Gastronomía (Restaurantes & Gourmet Village)</option>
+                <select class="px-space-md py-2.5 rounded-DEFAULT bg-primary-container text-canvas-alabaster focus:outline-none focus:ring-1 focus:ring-warm-bronze border border-outline-variant/40 font-body-sm text-body-sm" id="form-tier" required="">
+                  <option selected="" value="tier_d" data-i18n="opt_tier_d">D. Patrocinador Nombre del Torneo Omnipresente ($80,000 USD / $1,400,000 MXN)</option>
+                  <option value="tier_c" data-i18n="opt_tier_c">C. Sponsoreo de Equipo Exclusivo ($25,000 USD / $437,500 MXN)</option>
+                  <option value="tier_e" data-i18n="opt_tier_e">E. Patrocinador Exclusivo Speaker Torneo ($20,000 USD / $350,000 MXN)</option>
+                  <option value="tier_b" data-i18n="opt_tier_b">B. Patrocinio Vídeos Pantallas Gigantes ($20,000 USD / $350,000 MXN)</option>
+                  <option value="tier_f" data-i18n="opt_tier_f">F. Nombre del Campo de Polo ($15,000 USD / $262,500 MXN)</option>
+                  <option value="tier_a" data-i18n="opt_tier_a">A. Patrocinio Cartelera en Cancha ($5,000 USD / $87,500 MXN)</option>
+                  <option value="tier_g1" data-i18n="opt_tier_g1">G1. Premio Mejor Jugador MVP ($5,000 USD / $87,500 MXN)</option>
+                  <option value="tier_g2" data-i18n="opt_tier_g2">G2. Premio Mejor Caballo Best Playing Pony ($5,000 USD / $87,500 MXN)</option>
+                  <option value="tier_platino" data-i18n="opt_tier_platino">Nivel Platino ($45,000 USD / $787,500 MXN)</option>
+                  <option value="tier_oro" data-i18n="opt_tier_oro">Nivel Oro ($28,000 USD / $490,000 MXN)</option>
+                  <option value="tier_plata" data-i18n="opt_tier_plata">Nivel Plata ($14,000 USD / $245,000 MXN)</option>
+                  <option value="tier_bronce" data-i18n="opt_tier_bronce">Nivel Bronce ($9,000 USD / $157,500 MXN)</option>
                 </select>
               </div>
 
-              <!-- WhatsApp Live Message Preview Box -->
-              <div class="md:col-span-2 p-space-md rounded-DEFAULT bg-racing-green-dark shadow-inner text-canvas-ivory border border-warm-bronze/30">
-                <div class="flex items-center gap-space-xs text-warm-bronze font-label-sm text-label-sm uppercase mb-2">
-                  <span class="material-symbols-outlined text-[16px]">chat</span>
-                  <span data-i18n="preview_label">Vista Previa del Mensaje Oficial a WhatsApp:</span>
+              <!-- Live WhatsApp Message Preview Container -->
+              <div class="md:col-span-2 p-4 rounded-DEFAULT bg-black/40 border border-warm-bronze/20 text-left">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="material-symbols-outlined text-warm-bronze text-[18px]">chat</span>
+                  <span data-i18n="preview_label" class="font-label-sm text-[11px] uppercase tracking-wider text-warm-bronze font-semibold">Vista Previa del Mensaje Oficial a WhatsApp:</span>
                 </div>
-                <p class="font-body-sm text-body-sm text-canvas-ivory/90 italic leading-relaxed" id="whatsapp-message-preview">
-                  «Hola, represento a [Empresa]. Mi nombre es [Nombre] ([Cargo]). Nos encontramos evaluando el patrocinio de NATIONS CUP 2027 en la categoría de [Industria] bajo el rango [Nivel de Interés]. Solicitamos disponibilidad formal y alineación con el Comité Organizador.»
+                <p id="whatsapp-message-preview" data-i18n="preview_default_text" class="font-mono text-[12px] text-gray-300 leading-relaxed italic break-words">
+                  Hola, represento a [Empresa]. Mi nombre es [Nombre del Ejecutivo] (Director Global de Patrocinios y Alianzas). Estamos interesados en evaluar el patrocinio para NATIONS CUP 2027 en la categoría de Alta Relojería & Joyería bajo el nivel D. Patrocinador Nombre del Torneo Omnipresente. Solicitamos confirmación de disponibilidad y reunión de alineación comercial.
                 </p>
               </div>
 
-              <!-- Submit CTA -->
-              <div class="md:col-span-2 pt-space-xs">
-                <button 
-                <button 
-                  class="w-full py-4 px-8 rounded-DEFAULT bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#07140E] font-label-lg uppercase tracking-[0.18em] font-bold shadow-[0_4px_25px_rgba(212,175,55,0.4)] hover:shadow-[0_6px_32px_rgba(212,175,55,0.65)] hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 cursor-pointer flex items-center justify-center gap-2" 
-                  type="submit"
-                >
-                  <span class="material-symbols-outlined text-[20px] text-[#07140E]">send</span>
+              <!-- Submit Button (Direct to WhatsApp) -->
+              <div class="md:col-span-2 pt-2">
+                <button class="w-full py-4 px-6 rounded-DEFAULT bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] hover:scale-[1.01] active:scale-[0.99] text-[#07140E] font-label-md text-label-md uppercase tracking-[0.16em] font-bold shadow-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer" type="submit">
+                  <span class="material-symbols-outlined text-[20px]">send</span>
                   <span data-i18n="btn_submit_whatsapp">Solicitar Dossier & Bloqueo de Exclusividad vía WhatsApp</span>
                 </button>
-                <p data-i18n="form_security_note" class="font-body-sm text-body-sm text-canvas-ivory/60 text-center mt-2">
+                <p data-i18n="form_security_note" class="text-center font-body-sm text-[11px] text-gray-400 mt-2">
                   Al hacer clic será redirigido a WhatsApp Oficial con el mensaje estructurado para atención inmediata por el Comité.
                 </p>
               </div>
@@ -1574,7 +1543,7 @@
 
               <div class="pt-2">
                 <a class="inline-flex items-center gap-space-xs font-label-md text-label-md uppercase text-racing-green-dark hover:text-warm-bronze transition-colors font-semibold" href="https://maps.google.com/?q=VX9Q+H2+Puerto+Morelos,+Quintana+Roo" rel="noopener noreferrer" target="_blank">
-                  <span>Ver Ubicación Satelital en Google Maps</span>
+                  <span data-i18n="footer_maps_btn">Ver Ubicación Satelital en Google Maps</span>
                   <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                 </a>
               </div>
@@ -1586,9 +1555,9 @@
                 <div class="absolute bottom-4 left-4 right-4 p-space-sm rounded-DEFAULT bg-racing-green-dark/85 backdrop-blur-md text-canvas-alabaster flex items-center justify-between border border-warm-bronze/25">
                   <div class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-warm-bronze text-[20px]">explore</span>
-                    <span class="font-label-sm text-label-sm uppercase tracking-wider">Ruta de los Cenotes · Cancún - Tulum Hub</span>
+                    <span class="font-label-sm text-label-sm uppercase tracking-wider" data-i18n="footer_route_hub">Ruta de los Cenotes · Cancún - Tulum Hub</span>
                   </div>
-                  <span class="font-label-sm text-label-sm text-champagne-light hidden sm:inline">Privacidad & Seguridad Blindada</span>
+                  <span class="font-label-sm text-label-sm text-champagne-light hidden sm:inline" data-i18n="footer_security_badge">Privacidad & Seguridad Blindada</span>
                 </div>
               </div>
             </div>
@@ -1601,12 +1570,8 @@
   </main>
 
 
-  <!-- ========================================================================
-       FOOTER (STITCH 4-COLUMN ARCHITECTURE)
-       ======================================================================== -->
-  <!-- ========================================================================
-       FOOTER INSTITUCIONAL & MARCO LEGAL (CONFORME A LEYES MEXICANAS E INTERNACIONALES)
-       ======================================================================== -->
+  <!-- PIE DE PÁGINA INSTITUCIONAL & MARCO CORPORATIVO -->
+  
   <footer class="w-full bg-surface-container-low border-t border-surface-container-high text-on-surface">
     <div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter pt-space-xl pb-space-lg">
       
@@ -1618,19 +1583,19 @@
           <div class="flex items-center gap-space-sm">
             <img alt="Nations Cup Official Logo" class="h-9 w-auto object-contain" src="assets/logos/nations_cup_logo_transparent.png"/>
           </div>
-          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          <p data-i18n="footer_col1_desc" class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
             Torneo Internacional de Polo de Alto Hándicap avalado por comités internacionales de polo y la federación deportiva correspondiente.
           </p>
           <div class="text-[12px] text-on-surface-variant/90 leading-normal">
-            <strong class="text-racing-green-dark">Razón Social:</strong> Nations Cup Polo Organization S.A.P.I. de C.V. en alianza con Operadora El Rey Polo Country Club S.A. de C.V.<br/>
-            <strong class="text-racing-green-dark">Domicilio Fiscal:</strong> Km 11.5 Carretera Puerto Morelos - Leona Vicario, Ruta de los Cenotes, C.P. 77580, Puerto Morelos, Quintana Roo, México.
+            <strong class="text-racing-green-dark" data-i18n="footer_legal_name">Razón Social:</strong> <span data-i18n="footer_legal_name_val">Nations Cup Polo Organization S.A.P.I. de C.V. en alianza con Operadora El Rey Polo Country Club S.A. de C.V.</span><br/>
+            <strong class="text-racing-green-dark" data-i18n="footer_tax_address">Domicilio Fiscal:</strong> <span data-i18n="footer_tax_address_val">Km 11.5 Carretera Puerto Morelos - Leona Vicario, Ruta de los Cenotes, C.P. 77580, Puerto Morelos, Quintana Roo, México.</span>
           </div>
         </div>
 
         <!-- Col 2: Hub Ecuestre & Coordenadas de Navegación -->
         <div class="flex flex-col gap-space-sm">
-          <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]">Sede Oficial & Helipuerto</span>
-          <p class="font-body-sm text-body-sm text-on-surface-variant">
+          <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]" data-i18n="footer_col2_title">Sede Oficial & Helipuerto</span>
+          <p data-i18n="footer_venue_desc" class="font-body-sm text-body-sm text-on-surface-variant">
             El Rey Polo Country Club · 6 hectáreas de infraestructura deportiva y helipuerto privado certificado.
           </p>
           <div class="flex items-start gap-space-xs text-on-surface-variant font-label-md text-label-md">
@@ -1642,24 +1607,24 @@
           </div>
           <div class="flex items-center gap-space-xs text-warm-bronze font-label-sm text-label-sm uppercase font-semibold">
             <span class="material-symbols-outlined text-[16px]">verified</span>
-            <span>Espacio Aéreo Registrado & Seguridad Privada</span>
+            <span data-i18n="footer_airspace">Espacio Aéreo Registrado & Seguridad Privada</span>
           </div>
         </div>
 
         <!-- Col 3: Marco Jurídico & Documentación Legal Obligatoria -->
         <div class="flex flex-col gap-space-sm">
-          <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]">Marco Legal & Cumplimiento</span>
+          <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]" data-i18n="footer_col3_title">Marco Legal & Cumplimiento</span>
           <ul class="flex flex-col gap-2 font-body-sm text-body-sm">
             <li>
               <button onclick="window.openLegalModal('privacy')" type="button" class="flex items-center gap-space-xs text-on-surface-variant hover:text-racing-green-dark transition-colors text-left group">
                 <span class="material-symbols-outlined text-warm-bronze text-[17px] group-hover:scale-110 transition-transform">policy</span>
-                <span class="font-medium underline decoration-warm-bronze/40 underline-offset-2">Aviso de Privacidad Integral (LFPDPPP)</span>
+                <span class="font-medium underline decoration-warm-bronze/40 underline-offset-2" data-i18n="footer_btn_privacy">Aviso de Privacidad Integral (LFPDPPP)</span>
               </button>
             </li>
             <li>
               <button onclick="window.openLegalModal('terms')" type="button" class="flex items-center gap-space-xs text-on-surface-variant hover:text-racing-green-dark transition-colors text-left group">
                 <span class="material-symbols-outlined text-warm-bronze text-[17px] group-hover:scale-110 transition-transform">gavel</span>
-                <span class="font-medium underline decoration-warm-bronze/40 underline-offset-2">Términos Comerciales & Exclusividad</span>
+                <span class="font-medium underline decoration-warm-bronze/40 underline-offset-2" data-i18n="footer_btn_terms">Términos Comerciales & Exclusividad</span>
               </button>
             </li>
             <li>
@@ -1725,16 +1690,14 @@
               <span class="material-symbols-outlined text-[16px]">close</span>
             </button>
             <div id="disc-text-fiscal" class="hidden pr-6">
-              <span class="font-semibold text-racing-green-dark block mb-1">Aviso Fiscal & Tarifario:</span>
-              Los importes de inversión y patrocinio presentados en este portal están calculados en Moneda Nacional Mexicana (MXN), más el Impuesto al Valor Agregado (IVA) correspondiente del 16% conforme a las disposiciones fiscales vigentes del Servicio de Administración Tributaria (SAT). Las conversiones a Dólares Americanos (USD) y Euros (EUR) son estimaciones informativas basadas en el tipo de cambio FIX aplicable a la fecha de consulta.
+              <span data-i18n="disc_fiscal_title" class="font-semibold text-racing-green-dark block mb-1">Aviso Fiscal & Tarifario:</span> <span data-i18n="disc_fiscal_text">Los importes de inversión y patrocinio presentados en este portal están calculados en Moneda Nacional Mexicana (MXN), más el Impuesto al Valor Agregado (IVA) correspondiente del 16% conforme a las disposiciones fiscales vigentes del SAT. Las conversiones a Dólares Americanos (USD) y Euros (EUR) son estimaciones informativas.</span>
             </div>
             <div id="disc-text-ip" class="hidden pr-6">
               <span class="font-semibold text-racing-green-dark block mb-1">Reserva de Derechos & Propiedad Intelectual:</span>
               «Nations Cup 2027» y «El Rey Polo Country Club» son denominaciones, logotipos e identidades gráficas protegidas por las leyes de propiedad industrial e intelectual aplicables (IMPI). Queda estrictamente prohibida la reproducción, copia, distribución, uso comercial no autorizado o alteración de cualquier contenido, fotografía o render presente en este sitio sin la autorización expresa y por escrito del Comité Organizador.
             </div>
             <div id="disc-text-confidential" class="hidden pr-6">
-              <span class="font-semibold text-racing-green-dark block mb-1">Confidencialidad Comercial:</span>
-              Las propuestas y beneficios de patrocinio son de carácter confidencial y están dirigidas exclusivamente a los representantes legales autorizados de las empresas solicitantes. La asignación de exclusividad de categoría se rige por el orden riguroso de confirmación mediante contrato mercantil y anticipo correspondiente.
+              <span data-i18n="disc_confidential_title" class="font-semibold text-racing-green-dark block mb-1">Confidencialidad Comercial:</span> <span data-i18n="disc_confidential_text">Las propuestas y beneficios de patrocinio son de carácter confidencial y están dirigidas exclusivamente a los representantes legales autorizados de las empresas solicitantes. La asignación de exclusividad de categoría se rige por el orden riguroso de confirmación mediante contrato mercantil y anticipo correspondiente.</span>
             </div>
           </div>
         </div>
@@ -1742,13 +1705,13 @@
       <!-- Bottom Copyright & ARCO Access -->
       <div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
         <div class="text-center md:text-left">
-          <span>© 2026-2027 Nations Cup Polo Organization. Todos los derechos reservados. Puerto Morelos, Quintana Roo, México.</span>
+          <span data-i18n="footer_copy_bottom">© 2026-2027 Nations Cup Polo Organization. Todos los derechos reservados. Puerto Morelos, Quintana Roo, México.</span>
         </div>
         <div class="flex flex-wrap items-center justify-center gap-space-md uppercase font-label-sm text-label-sm">
-          <button onclick="window.openLegalModal('privacy')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze">Aviso de Privacidad</button>
-          <button onclick="window.openLegalModal('terms')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze">Términos & Condiciones</button>
-          <button onclick="window.openBankModal('mxn')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze">Datos de Transferencia</button>
-          <a href="contacto.html" class="hover:text-racing-green-dark cursor-pointer transition-colors">Contacto Oficial</a>
+          <button onclick="window.openLegalModal('privacy')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze" data-i18n="legal_tab_privacy">Aviso de Privacidad</button>
+          <button onclick="window.openLegalModal('terms')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze" data-i18n="footer_terms_btn">Términos & Condiciones</button>
+          <button onclick="window.openBankModal('mxn')" type="button" class="hover:text-racing-green-dark cursor-pointer transition-colors underline decoration-warm-bronze" data-i18n="footer_transfer_data">Datos de Transferencia</button>
+          <a href="contacto.html" class="hover:text-racing-green-dark cursor-pointer transition-colors" data-i18n="footer_contact_official">Contacto Oficial</a>
         </div>
       </div>
 
@@ -1756,9 +1719,7 @@
   </footer>
 
 
-  <!-- ========================================================================
-       VIDEO THEATER MODAL (REACT-LIKE ULTRA-LUXURY CINEMA THEATER WITH HD AUDIO)
-       ======================================================================== -->
+  <!-- Modal de Modo Teatro HD (Reproductor Cinematografico) -->
   <div 
     id="video-theater-modal" 
     class="fixed inset-0 z-[120] bg-black/95 backdrop-blur-2xl hidden flex-col justify-between p-3 sm:p-6 lg:p-8 animate-theater-in transition-all"
@@ -1817,7 +1778,7 @@
           aria-label="Cerrar reproductor"
         >
           <span class="material-symbols-outlined text-[18px]">close</span>
-          <span>Cerrar (Esc)</span>
+          <span data-i18n="lightbox_close">Cerrar (Esc)</span>
         </button>
       </div>
     </div>
@@ -1911,9 +1872,7 @@
       </div>
     </div>
   </div>
-  <!-- ========================================================================
-       GALLERY LIGHTBOX MODAL (HIGH RESOLUTION INSPECTION)
-       ======================================================================== -->
+  <!-- Modal de Visor de Galeria (Lightbox HD) -->
   <div 
     id="gallery-lightbox-modal" 
     class="fixed inset-0 z-[100] bg-racing-green-dark/95 backdrop-blur-2xl hidden flex-col justify-between p-4 sm:p-6 lg:p-8 animate-theater-in transition-all"
@@ -1932,7 +1891,7 @@
         class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-DEFAULT bg-white/10 hover:bg-warm-bronze text-white hover:text-racing-green-dark border border-white/20 transition-all font-label-sm text-label-sm uppercase font-semibold"
       >
         <span class="material-symbols-outlined text-[16px]">close</span>
-        <span>Cerrar (Esc)</span>
+        <span data-i18n="lightbox_close">Cerrar (Esc)</span>
       </button>
     </div>
 
@@ -1994,8 +1953,8 @@
       <!-- Modal Top Bar -->
       <div class="p-space-md border-b border-outline-variant/30 flex items-center justify-between bg-surface-container-low shrink-0">
         <div>
-          <h3 id="legal-modal-title" class="font-headline-sm text-headline-sm text-racing-green-dark">Marco Jurídico & Normativo Oficial</h3>
-          <p class="font-label-sm text-label-sm text-warm-bronze uppercase tracking-wider mt-0.5">Nations Cup 2027 · El Rey Polo Country Club</p>
+          <h3 id="legal-modal-title" class="font-headline-sm text-headline-sm text-racing-green-dark" data-i18n="legal_modal_title">Marco Jurídico & Normativo Oficial</h3>
+          <p class="font-label-sm text-label-sm text-warm-bronze uppercase tracking-wider mt-0.5" data-i18n="legal_modal_sub">Nations Cup 2027 · El Rey Polo Country Club</p>
         </div>
         <button 
           onclick="window.closeLegalModal()" 
@@ -2022,6 +1981,7 @@
           onclick="window.switchLegalTab('terms')" 
           type="button" 
           class="px-4 py-2 border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark font-label-md uppercase text-xs tracking-wider"
+          data-i18n="legal_tab_terms"
         >
           Términos de Patrocinio & Exclusividad
         </button>
@@ -2030,53 +1990,113 @@
       <!-- Modal Body (Scrollable Legal Content) -->
       <div class="p-space-lg overflow-y-auto space-y-4 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
         
-        <!-- Tab 1: Privacy Notice Content -->
-        <div id="legal-privacy-content" class="space-y-4">
-          <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">AVISO DE PRIVACIDAD INTEGRAL</h4>
-          <p>
-            <strong>Identidad y Domicilio del Responsable:</strong> Nations Cup Polo Organization S.A.P.I. de C.V. y Operadora El Rey Polo Country Club S.A. de C.V., con domicilio legal en Carretera Puerto Morelos - Leona Vicario Km 11.5, Ruta de los Cenotes, C.P. 77580, Municipio de Puerto Morelos, Quintana Roo, México, son los responsables del uso, tratamiento y protección de sus datos personales, en estricto cumplimiento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (en adelante la "LFPDPPP") y su Reglamento.
-          </p>
-          <h5 class="font-bold text-racing-green-dark">1. Datos Personales Recabados:</h5>
-          <p>
-            Para las finalidades comerciales señaladas en el presente aviso, podemos recabar: Nombre completo, correo electrónico corporativo, cargo o puesto directivo, empresa o marca representada, sector de industria, número de teléfono (WhatsApp), así como el nivel de patrocinio de interés. No se recaban datos personales sensibles en este portal.
-          </p>
-          <h5 class="font-bold text-racing-green-dark">2. Finalidades Primarias del Tratamiento:</h5>
-          <ul class="list-disc pl-5 space-y-1">
-            <li>Envío formal del Dossier Comercial y propuesta técnica de patrocinio para el torneo Nations Cup 2027.</li>
-            <li>Gestión y reserva provisional de exclusividad de categoría comercial para la marca solicitante.</li>
-            <li>Contacto institucional directo a través de WhatsApp corporativo o llamada telefónica de protocolo.</li>
-            <li>Elaboración de convenios de confidencialidad (NDA) y contratos mercantiles de patrocinio.</li>
-          </ul>
-          <h5 class="font-bold text-racing-green-dark">3. Derechos ARCO y Mecanismos de Ejercicio:</h5>
-          <p>
-            Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones de su uso (Acceso). Asimismo, es su derecho solicitar la corrección de su información (Rectificación), que la eliminemos de nuestras bases de datos cuando considere que no está siendo utilizada adecuadamente (Cancelación), así como oponerse al uso de los mismos para fines específicos (Oposición). Para el ejercicio de cualquiera de los Derechos ARCO, deberá presentar la solicitud respectiva enviando un correo a: <strong>privacidad@nationscuppolo.com</strong>.
-          </p>
-          <h5 class="font-bold text-racing-green-dark">4. Transferencia de Datos:</h5>
-          <p>
-            Sus datos personales no serán transferidos ni compartidos con terceros ajenos al Comité Organizador sin su consentimiento previo, salvo las excepciones previstas en el artículo 37 de la LFPDPPP.
-          </p>
-        </div>
+        <!-- Tab 1: Privacy Content -->
+          <div id="legal-privacy-content" class="space-y-4">
+            <!-- Privacy ES -->
+            <div id="legal-privacy-es" class="space-y-4">
+              <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">AVISO DE PRIVACIDAD INTEGRAL</h4>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                En cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) de los Estados Unidos Mexicanos, se informa que <strong>Nations Cup Polo Organization S.A.P.I. de C.V.</strong>, en coorganización con <strong>Operadora El Rey Polo Country Club S.A. de C.V.</strong>, con domicilio en Km 11.5 Carretera Puerto Morelos - Leona Vicario, Ruta de los Cenotes, C.P. 77580, Puerto Morelos, Quintana Roo, México, es el responsable del tratamiento y salvaguarda de sus datos personales.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">1. Datos Personales Recabados:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Los datos solicitados a través del formulario de contacto institucional (nombre completo, empresa representada, cargo directivo, categoría de industria y nivel de patrocinio de interés) son tratados de manera estrictamente confidencial.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">2. Finalidades Primarias del Tratamiento:</h5>
+              <ul class="list-disc pl-5 font-body-sm text-[13px] text-on-surface-variant space-y-1">
+                <li>Validar la disponibilidad exclusiva del sector comercial de la marca postulante.</li>
+                <li>Emitir el Dossier Comercial Ejecutivo y la propuesta personalizada de patrocinio.</li>
+                <li>Coordinar reuniones de alineación ejecutiva presenciales o por videoconferencia.</li>
+                <li>Formalización contractual y emisión de comprobantes fiscales digitales (CFDI).</li>
+              </ul>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">3. Derechos ARCO y Mecanismos de Ejercicio:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal (Rectificación); que la eliminemos de nuestros registros (Cancelación); así como oponerse al uso de sus datos para fines específicos (Oposición). Para el ejercicio de cualquiera de los derechos ARCO, favor de comunicarse al correo institucional: <a href="mailto:presidencia@nationscup2027.com" class="text-warm-bronze font-semibold underline">presidencia@nationscup2027.com</a>.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">4. Transferencia de Datos:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Nations Cup Polo Organization no transfiere, vende ni comparte datos personales con terceras entidades ajenas a la organización del torneo, salvo requerimiento expreso de autoridad competente conforme al marco legal aplicable.
+              </p>
+            </div>
 
-        <!-- Tab 2: Commercial Terms Content -->
-        <div id="legal-terms-content" class="space-y-4 hidden">
-          <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">TÉRMINOS Y CONDICIONES COMERCIALES DE PATROCINIO</h4>
-          <p>
-            <strong>1. Naturaleza del Portal:</strong> La presente plataforma constituye un portal informativo y de gestión comercial B2B para directivos de marca, agencias de representación e inversionistas. La solicitud de información o llenado del formulario en WhatsApp no constituye una obligación vinculante de patrocinio hasta la suscripción del Contrato Definitivo de Patrocinio Comercial.
-          </p>
-          <p>
-            <strong>2. Política Estricta de Exclusividad por Sector:</strong> El Comité Organizador garantiza la exclusividad total de una sola marca por categoría industrial para los niveles de Presenting Partner y Official Partner (por ejemplo: un único fabricante automotriz, una sola casa relojera, una única firma de champagne). La prioridad de reserva se determinará estrictamente conforme a la fecha y hora de formalización y anticipo correspondiente.
-          </p>
-          <p>
-            <strong>3. Condiciones Fiscales y de Pago:</strong> Todas las aportaciones estipuladas en el portal están expresadas en Pesos Mexicanos (MXN) más el correspondiente Impuesto al Valor Agregado (IVA del 16%) conforme a los lineamientos del Código Fiscal de la Federación y el SAT. Las facturas fiscales electrónicas (CFDI 4.0) serán emitidas por la entidad moral organizadora.
-          </p>
-          <p>
-            <strong>4. Derechos de Uso de Marca:</strong> Los patrocinadores confirmados recibirán una licencia temporal, no exclusiva e intransferible para el uso de los logotipos oficiales de «Nations Cup 2027» en sus campañas de relaciones públicas y mercadotecnia, sujeta a la aprobación de arte previa del Comité Organizador.
-          </p>
-          <p>
-            <strong>5. Jurisdicción Aplicable:</strong> Para la interpretación y cumplimiento de cualquier relación jurídica derivada de este evento, las partes se someten expresamente a la legislación mercantil aplicable de los Estados Unidos Mexicanos y a la competencia de los tribunales competentes en la ciudad de Cancún, Quintana Roo.
-          </p>
-        </div>
+            <!-- Privacy EN -->
+            <div id="legal-privacy-en" class="space-y-4 hidden">
+              <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">COMPREHENSIVE PRIVACY POLICY</h4>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                In compliance with the Federal Law on Protection of Personal Data Held by Private Parties (LFPDPPP) of the United Mexican States and international data privacy benchmarks, <strong>Nations Cup Polo Organization S.A.P.I. de C.V.</strong>, in joint organization with <strong>Operadora El Rey Polo Country Club S.A. de C.V.</strong>, located at Km 11.5 Puerto Morelos - Leona Vicario Hwy, Cenote Route, Z.C. 77580, Puerto Morelos, Quintana Roo, Mexico, serves as the data controller responsible for the safeguarding and lawful processing of your personal information.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">1. Information Collected:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Personal and corporate details requested through the institutional private liaison form (executive full name, represented enterprise, executive title, industry vertical, and sponsorship level of interest) are treated under strict non-disclosure protocols.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">2. Primary Purposes of Processing:</h5>
+              <ul class="list-disc pl-5 font-body-sm text-[13px] text-on-surface-variant space-y-1">
+                <li>Verify category exclusivity availability for the applicant's industry sector.</li>
+                <li>Issue the Executive Commercial Dossier and bespoke sponsorship term sheet.</li>
+                <li>Coordinate private commercial briefings in-person or via secure video conference.</li>
+                <li>Execute formal sponsorship agreements and corporate tax compliance.</li>
+              </ul>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">3. Exercise of Privacy Rights (ARCO):</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Executives retain the right to access, rectify, cancel, or oppose the processing of their corporate data at any juncture. To submit an institutional inquiry or revoke consent, contact the Organizing Committee Secretariat at: <a href="mailto:presidencia@nationscup2027.com" class="text-warm-bronze font-semibold underline">presidencia@nationscup2027.com</a>.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">4. Data Confidentiality & Non-Transfer:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Nations Cup Polo Organization strictly does not sell, lease, or disseminate corporate partner data to unauthorized third parties, maintaining bank-grade confidentiality across all communications.
+              </p>
+            </div>
+          </div>
 
+          <!-- Tab 2: Terms Content -->
+          <div id="legal-terms-content" class="space-y-4 hidden">
+            <!-- Terms ES -->
+            <div id="legal-terms-es" class="space-y-4">
+              <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">TÉRMINOS Y CONDICIONES COMERCIALES DE PATROCINIO</h4>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                El presente documento establece las directrices que rigen las postulaciones, reservas de categoría y contratos de patrocinio para el torneo internacional <strong>NATIONS CUP 2027</strong> a celebrarse en El Rey Polo Country Club.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">1. Naturaleza de las Propuestas:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Las cotizaciones y presentaciones comerciales emitidas a través de este portal constituyen invitaciones formales a negociar sujetas a disponibilidad y formalización mediante contrato vinculante debidamente suscrito por los apoderados legales autorizados de ambas partes.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">2. Política Estricta de Exclusividad por Sector:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                El Comité Organizador garantiza la regla de <strong>1 sola marca por categoría de industria</strong>. Dicha exclusividad se bloquea temporalmente por 5 días hábiles a partir de la emisión del term sheet formal, y queda ratificada de manera definitiva tras la liquidación del anticipo contractual convenido.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">3. Monedas y Régimen Fiscal:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Las tarifas oficiales se pactan en Dólares Americanos (USD), Moneda Nacional (MXN) o Euros (EUR), debiéndose agregar el Impuesto al Valor Agregado (IVA) correspondiente conforme a las leyes tributarias aplicables en los Estados Unidos Mexicanos.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">4. Derechos de Uso de Marca:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Los patrocinadores confirmados recibirán una licencia no exclusiva de uso de la marca oficial "Nations Cup 2027 · El Rey Polo Country Club" para fines de relaciones públicas, activaciones comerciales y comunicación corporativa durante la vigencia del contrato.
+              </p>
+            </div>
+
+            <!-- Terms EN -->
+            <div id="legal-terms-en" class="space-y-4 hidden">
+              <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">COMMERCIAL SPONSORSHIP TERMS & CONDITIONS</h4>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                This framework outlines the principles governing commercial applications, category locks, and partnership agreements for <strong>NATIONS CUP 2027</strong> hosted at El Rey Polo Country Club.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">1. Nature of Proposals:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                All investment figures and terms presented herein represent confidential invitations to negotiate, subject to category availability and binding formal agreement execution by authorized signatories.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">2. Strict Category Exclusivity Policy:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                The Organizing Committee strictly enforces <strong>one brand per industry sector</strong>. Category locks are granted for 5 business days upon issuance of the formal term sheet, becoming definitive upon execution of the initial agreement installment.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">3. Settlement Currency & Tax Compliance:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Official rates are contracted in US Dollars (USD), Mexican Pesos (MXN), or Euros (EUR), plus applicable value-added tax (VAT) according to statutory fiscal obligations.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">4. Intellectual Property & Brand Usage:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Confirmed corporate partners are granted a sanctioned license to utilize the composite emblem "Nations Cup 2027 · El Rey Polo Country Club" across global PR, VIP client marketing, and institutional campaigns.
+              </p>
+            </div>
+          </div>
       </div>
 
       <!-- Modal Bottom Actions -->
@@ -2284,11 +2304,12 @@
 
       <!-- Modal Footer -->
       <div class="p-3 sm:p-4 bg-surface-container-high border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-on-surface-variant shrink-0">
-        <span class="text-center sm:text-left">Comprobantes válidos para emisión de factura fiscal (CFDI) conforme a la legislación vigente.</span>
+        <span data-i18n="bank_modal_compliance_note" class="text-center sm:text-left">Comprobantes válidos para emisión de factura fiscal (CFDI) conforme a la legislación vigente.</span>
         <button 
           type="button" 
           onclick="window.closeBankModal()" 
           class="px-4 py-1.5 rounded-DEFAULT bg-racing-green-dark text-champagne-light hover:bg-warm-bronze hover:text-racing-green-dark font-label-sm text-[11px] uppercase tracking-wider font-semibold transition-colors cursor-pointer"
+          data-i18n="bank_modal_understood"
         >
           Entendido
         </button>
