@@ -9,20 +9,20 @@
   <meta name="description" content="Portal Comercial B2B y Dossier Ejecutivo de Patrocinio para el Torneo Internacional de Polo Nations Cup 2027 en El Rey Polo Country Club, Puerto Morelos, Riviera Maya, México.">
   <meta name="theme-color" content="#07140E">
 
-  <!-- Favicon / Brand Icon -->
+  <!-- Icono de Marca / Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/logos/nations cup logo.jpeg">
 
-  <!-- Google Fonts Preconnect & Stylesheets -->
+  <!-- Tipografias Oficiales y Hojas de Estilo -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
 
-  <!-- Pannellum 360 Panorama Viewer CSS & JS (Deferred for Ultra-Fast Initial Paint) -->
+  <!-- Visor Panoramico Pannellum 360 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
   <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js" defer></script>
 
-  <!-- Tailwind CSS CDN with Full Custom Stitch Design Tokens -->
+  <!-- Tailwind CSS con Configuracion Oficial -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
     tailwind.config = {
@@ -137,7 +137,7 @@
     };
   </script>
 
-  <!-- Custom Stylesheet -->
+  <!-- Hoja de Estilos Personalizada -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-surface font-body text-on-surface antialiased selection:bg-warm-bronze selection:text-white flex flex-col min-h-screen">
@@ -145,14 +145,14 @@
   <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
     <div class="h-20 max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter flex items-center justify-between gap-space-md">
       
-      <!-- Brand Identity: Transparent Official Logo (Clean, Sharp & perfectly sized) -->
+      <!-- Identidad de Marca: Logotipo Oficial -->
       <div class="flex items-center">
         <a class="flex items-center group py-1" href="index.html" aria-label="Nations Cup 2027">
           <img alt="Nations Cup 2027 Official Logo" class="h-11 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="assets/logos/nations_cup_logo_transparent.png" fetchpriority="high"/>
         </a>
       </div>
 
-      <!-- Main Navigation Anchors (Multi-Page Web Architecture) -->
+      <!-- Enlaces Principales de Navegacion -->
       <nav class="hidden xl:flex items-center gap-space-md py-space-xs" id="main-web-nav">
         <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="index.html" data-i18n="nav_vision">La Visión</a>
         <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="pitch-deck.html" data-i18n="nav_pitch">Pitch Deck</a>
@@ -162,10 +162,10 @@
         <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" href="contacto.html" data-i18n="nav_contact">Dossier Privado</a>
       </nav>
 
-      <!-- Switchers & Concierge CTA -->
+      <!-- Selectores de Divisa, Idioma y Acceso VIP -->
       <div class="flex items-center gap-space-sm">
         
-        <!-- Currency Selector Hamburger Dropdown (Optimizes Space) -->
+        <!-- Selector de Divisa -->
         <div class="relative">
           <button 
             id="currency-menu-btn" 
@@ -194,7 +194,7 @@
           </div>
         </div>
 
-        <!-- Luxury Language Switcher (High-End Tactile Capsule · Always Visible) -->
+        <!-- Selector de Idioma -->
         <div class="flex items-center bg-[#07140E] p-1 rounded-full border border-[#D4AF37]/50 shadow-[0_2px_12px_rgba(0,0,0,0.25)] gap-1">
           <span class="material-symbols-outlined text-[15px] text-[#D4AF37] ml-1.5 mr-0.5 hidden xs:inline" style="font-variation-settings: 'FILL' 1;">language</span>
           <button 
@@ -219,7 +219,7 @@
           </button>
         </div>
 
-        <!-- WhatsApp VIP Concierge Elevated Button -->
+        <!-- Boton de WhatsApp VIP Concierge -->
         <a 
           class="inline-flex items-center gap-2 bg-[#07140E] text-[#F3E5AB] hover:text-white hover:bg-[#0E291E] font-label-md text-label-md uppercase px-4 py-2 rounded-DEFAULT border border-[#D4AF37]/60 hover:border-[#D4AF37] shadow-[0_2px_8px_rgba(0,0,0,0.15)] hover:shadow-[0_0_18px_rgba(212,175,55,0.35)] transition-all duration-300 group" 
           href="contacto.html"
@@ -242,7 +242,7 @@
             <h2 data-i18n="tour_title" class="font-headline-lg text-headline-lg text-racing-green-dark">Tour Virtual 360° · El Rey Polo</h2>
           </div>
 
-          <!-- 360 Navigation Tabs -->
+          <!-- Pestañas de Navegacion 360 -->
           <div class="flex flex-wrap items-center justify-center gap-2 mb-space-lg">
             <button onclick="window.switch360Scene('lounge')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-racing-green-dark text-champagne-light font-label-md text-label-md uppercase shadow-sm" type="button" data-i18n="tour_scene_lounge">Lounge VIP de Hospitalidad</button>
             <button onclick="window.switch360Scene('field')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase transition-colors" type="button" data-i18n="tour_scene_field">Campo Central & Explanada</button>
@@ -251,17 +251,17 @@
             <button onclick="window.switch360Scene('stage')" class="tour-tab px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase transition-colors" type="button" data-i18n="tour_scene_stage">Escenario del Desfile de Moda</button>
           </div>
 
-          <!-- 360 Stage Viewer Container (Interactive Pannellum Canvas) -->
+          <!-- Contenedor del Visor Panoramico 360 -->
           <div class="relative w-full max-w-5xl mx-auto aspect-[16/9] md:aspect-[21/9] rounded-DEFAULT overflow-hidden shadow-2xl bg-racing-green-dark border border-warm-bronze/30">
             <div id="panorama-container" class="w-full h-full"></div>
 
-            <!-- 360 Spatial UI Badges -->
+            <!-- Badges Espaciales 360 -->
             <div class="absolute top-4 left-4 flex items-center gap-space-xs px-3 py-1.5 rounded-DEFAULT bg-racing-green-dark/85 text-canvas-alabaster backdrop-blur-md border border-warm-bronze/30 pointer-events-none">
               <span class="material-symbols-outlined text-[18px] text-warm-bronze animate-spin" style="animation-duration: 9s;">360</span>
               <span class="font-label-sm text-label-sm uppercase tracking-wider" data-i18n="tour_badge_active">Perspectiva Interactiva 360° Activa</span>
             </div>
 
-            <!-- Spatial Controls & Google Drive Button -->
+            <!-- Controles Espaciales 360 -->
             <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-canvas-alabaster pointer-events-none">
               <div class="hidden sm:flex items-center gap-space-xs px-3 py-1.5 rounded-DEFAULT bg-racing-green-dark/80 backdrop-blur-md font-label-sm text-label-sm border border-warm-bronze/20">
                 <span class="material-symbols-outlined text-[16px] text-warm-bronze">screen_rotation</span>
@@ -279,15 +279,7 @@
                   <span data-i18n="tour_btn_autorotate">Auto-Rotación</span>
                 </button>
 
-                <button 
-                  id="tour-btn-gyro" 
-                  onclick="window.toggleGyroscope()" 
-                  type="button" 
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-DEFAULT bg-racing-green-dark/90 hover:bg-racing-green-dark text-champagne-light border border-warm-bronze/40 font-label-sm text-label-sm uppercase transition-all shadow-md"
-                >
-                  <span class="material-symbols-outlined text-[16px]">stay_current_portrait</span>
-                  <span>Giroscopio</span>
-                </button>
+                <button id="tour-btn-gyro" onclick="window.toggleGyroscope()" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-DEFAULT bg-racing-green-dark/90 hover:bg-racing-green-dark text-champagne-light border border-warm-bronze/40 font-label-sm text-label-sm uppercase transition-all shadow-md"><span class="material-symbols-outlined text-[16px]">stay_current_portrait</span><span data-i18n="tour_btn_gyro">Giroscopio</span></button>
 
 
               </div>
@@ -301,10 +293,10 @@
   <footer class="w-full bg-surface-container-low border-t border-surface-container-high text-on-surface">
     <div class="max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter pt-space-xl pb-space-lg">
       
-      <!-- 4 Columns Master Architecture -->
+      <!-- Arquitectura de 4 Columnas del Pie de Pagina -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg pb-space-lg border-b border-outline-variant/30">
         
-        <!-- Col 1: Entidad Organizadora & Domicilio Legal -->
+        <!-- Columna 1: Entidad Organizadora y Domicilio Legal -->
         <div class="flex flex-col gap-space-sm">
           <div class="flex items-center gap-space-sm">
             <img alt="Nations Cup Official Logo" class="h-9 w-auto object-contain" src="assets/logos/nations_cup_logo_transparent.png"/>
@@ -318,7 +310,7 @@
           </div>
         </div>
 
-        <!-- Col 2: Hub Ecuestre & Coordenadas de Navegación -->
+        <!-- Columna 2: Hub Ecuestre y Coordenadas de Navegacion -->
         <div class="flex flex-col gap-space-sm">
           <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]" data-i18n="footer_col2_title">Sede Oficial & Helipuerto</span>
           <p data-i18n="footer_venue_desc" class="font-body-sm text-body-sm text-on-surface-variant">
@@ -328,7 +320,7 @@
             <span class="material-symbols-outlined text-warm-bronze text-[18px]">pin_drop</span>
             <div>
               <span class="font-semibold text-racing-green-dark">20°51'24.8"N 86°57'02.4"W</span><br/>
-              <span class="font-label-sm text-label-sm text-on-surface-variant">Coordenadas Helipad: 20.8569, -86.9507</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant" data-i18n="footer_helipad">Coordenadas Helipad: 20.8569, -86.9507</span>
             </div>
           </div>
           <div class="flex items-center gap-space-xs text-warm-bronze font-label-sm text-label-sm uppercase font-semibold">
@@ -337,7 +329,7 @@
           </div>
         </div>
 
-        <!-- Col 3: Marco Jurídico & Documentación Legal Obligatoria -->
+        <!-- Columna 3: Marco Juridico y Documentacion Legal -->
         <div class="flex flex-col gap-space-sm">
           <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]" data-i18n="footer_col3_title">Marco Legal & Cumplimiento</span>
           <ul class="flex flex-col gap-2 font-body-sm text-body-sm">
@@ -356,60 +348,60 @@
             <li>
               <a href="pitch_deck_nations_cup_2027.pdf" download="Pitch_Deck_Nations_Cup_2027.pdf" class="flex items-center gap-space-xs text-on-surface-variant hover:text-racing-green-dark transition-colors">
                 <span class="material-symbols-outlined text-warm-bronze text-[17px]">picture_as_pdf</span>
-                <span>Dossier Comercial Ejecutivo (PDF)</span>
+                <span data-i18n="footer_deck_pdf">Dossier Comercial Ejecutivo (PDF)</span>
               </a>
             </li>
             <li>
-              <div class="text-[11px] text-on-surface-variant/80 pt-1">
+              <div class="text-[11px] text-on-surface-variant/80 pt-1" data-i18n="footer_legal_framework">
                 Conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y Código de Comercio de los Estados Unidos Mexicanos.
               </div>
             </li>
           </ul>
         </div>
 
-        <!-- Col 4: Atención Institucional & Compliance -->
+        <!-- Columna 4: Atencion Institucional y Cumplimiento -->
         <div class="flex flex-col gap-space-sm">
-          <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]">Atención VIP & Compliance</span>
-          <p class="font-body-sm text-body-sm text-on-surface-variant">
+          <span class="font-label-lg text-label-lg text-racing-green-dark uppercase tracking-[0.14em]" data-i18n="footer_vip_title">Atención VIP & Compliance</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant" data-i18n="footer_vip_desc">
             Atención a comités de marca, firmas auditoras, secretarías de turismo y comitivas internacionales.
           </p>
           <div class="pt-1">
             <a href="contacto.html" class="inline-flex items-center gap-2 font-label-sm text-racing-green-dark hover:text-warm-bronze transition-colors py-1 group">
               <span class="material-symbols-outlined text-warm-bronze text-[18px] group-hover:scale-110 transition-transform">verified</span>
-              <span class="tracking-wide">Canal Privado de Acreditación</span>
+              <span class="tracking-wide" data-i18n="footer_channel_btn">Canal Privado de Acreditación</span>
             </a>
           </div>
-          <div class="text-[11px] text-on-surface-variant/80 pt-1">
+          <div class="text-[11px] text-on-surface-variant/80 pt-1" data-i18n="footer_hours">
             Horario de atención comités: Lunes a Viernes de 09:00 a 19:00 hrs (GMT-5).
           </div>
         </div>
 
       </div>
 
-      <!-- Legal Disclosure & Disclaimers Row (Comprimida e Interactiva React-Like) -->
+      <!-- Fila de Avisos Legales y Reservas -->
       <div class="py-space-sm border-b border-outline-variant/20">
         <div class="flex flex-wrap items-center justify-between gap-2.5 py-1">
           <div class="flex items-center gap-2 text-on-surface-variant/80">
             <span class="material-symbols-outlined text-warm-bronze text-[16px]">gavel</span>
-            <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] font-semibold text-racing-green-dark">Marco Legal & Compliance</span>
+            <span class="font-label-sm text-[10px] uppercase tracking-[0.2em] font-semibold text-racing-green-dark" data-i18n="footer_compliance_title">Marco Legal & Compliance</span>
           </div>
           <div class="flex flex-wrap items-center gap-1.5 sm:gap-2" id="legal-disclaimer-buttons">
             <button type="button" onclick="window.toggleLegalDisclaimer('fiscal')" id="btn-disc-fiscal" class="legal-disc-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-[11px] tracking-wider transition-all duration-200 cursor-pointer">
-              <span>Aviso Fiscal & Tarifario</span>
+              <span data-i18n="footer_tab_fiscal">Aviso Fiscal & Tarifario</span>
               <span class="material-symbols-outlined text-[15px] transition-transform duration-300" id="icon-disc-fiscal">expand_more</span>
             </button>
             <button type="button" onclick="window.toggleLegalDisclaimer('ip')" id="btn-disc-ip" class="legal-disc-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-[11px] tracking-wider transition-all duration-200 cursor-pointer">
-              <span>Propiedad Intelectual</span>
+              <span data-i18n="footer_tab_ip">Propiedad Intelectual</span>
               <span class="material-symbols-outlined text-[15px] transition-transform duration-300" id="icon-disc-ip">expand_more</span>
             </button>
             <button type="button" onclick="window.toggleLegalDisclaimer('confidential')" id="btn-disc-confidential" class="legal-disc-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-outline-variant/40 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-[11px] tracking-wider transition-all duration-200 cursor-pointer">
-              <span>Confidencialidad</span>
+              <span data-i18n="footer_tab_conf">Confidencialidad</span>
               <span class="material-symbols-outlined text-[15px] transition-transform duration-300" id="icon-disc-confidential">expand_more</span>
             </button>
           </div>
         </div>
 
-        <!-- Collapsible Drawer Container -->
+        <!-- Contenedor Desplegable de Avisos Legales -->
         <div id="legal-disc-drawer" class="hidden overflow-hidden transition-all duration-300 pt-2 pb-1">
           <div class="p-3.5 bg-surface-container-low/90 rounded-lg border border-outline-variant/30 text-[12px] leading-relaxed text-on-surface-variant relative shadow-sm">
             <button type="button" onclick="window.toggleLegalDisclaimer(null)" class="absolute top-2 right-2 p-1 text-on-surface-variant hover:text-racing-green-dark cursor-pointer rounded-full hover:bg-surface-container transition-colors" title="Cerrar">
@@ -419,8 +411,8 @@
               <span data-i18n="disc_fiscal_title" class="font-semibold text-racing-green-dark block mb-1">Aviso Fiscal & Tarifario:</span> <span data-i18n="disc_fiscal_text">Los importes de inversión y patrocinio presentados en este portal están calculados en Moneda Nacional Mexicana (MXN), más el Impuesto al Valor Agregado (IVA) correspondiente del 16% conforme a las disposiciones fiscales vigentes del SAT. Las conversiones a Dólares Americanos (USD) y Euros (EUR) son estimaciones informativas.</span>
             </div>
             <div id="disc-text-ip" class="hidden pr-6">
-              <span class="font-semibold text-racing-green-dark block mb-1">Reserva de Derechos & Propiedad Intelectual:</span>
-              «Nations Cup 2027» y «El Rey Polo Country Club» son denominaciones, logotipos e identidades gráficas protegidas por las leyes de propiedad industrial e intelectual aplicables (IMPI). Queda estrictamente prohibida la reproducción, copia, distribución, uso comercial no autorizado o alteración de cualquier contenido, fotografía o render presente en este sitio sin la autorización expresa y por escrito del Comité Organizador.
+              <span class="font-semibold text-racing-green-dark block mb-1" data-i18n="footer_ip_heading">Reserva de Derechos & Propiedad Intelectual:</span>
+              <div data-i18n="footer_ip_body">«Nations Cup 2027» y «El Rey Polo Country Club» son denominaciones, logotipos e identidades gráficas protegidas por las leyes de propiedad industrial e intelectual aplicables (IMPI). Queda estrictamente prohibida la reproducción, copia, distribución, uso comercial no autorizado o alteración de cualquier contenido, fotografía o render presente en este sitio sin la autorización expresa y por escrito del Comité Organizador.</div>
             </div>
             <div id="disc-text-confidential" class="hidden pr-6">
               <span data-i18n="disc_confidential_title" class="font-semibold text-racing-green-dark block mb-1">Confidencialidad Comercial:</span> <span data-i18n="disc_confidential_text">Las propuestas y beneficios de patrocinio son de carácter confidencial y están dirigidas exclusivamente a los representantes legales autorizados de las empresas solicitantes. La asignación de exclusividad de categoría se rige por el orden riguroso de confirmación mediante contrato mercantil y anticipo correspondiente.</span>
@@ -428,7 +420,7 @@
           </div>
         </div>
       </div>
-      <!-- Bottom Copyright & ARCO Access -->
+      <!-- Derechos Reservados y Acceso ARCO -->
       <div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
         <div class="text-center md:text-left">
           <span data-i18n="footer_copy_bottom">© 2026-2027 Nations Cup Polo Organization. Todos los derechos reservados. Puerto Morelos, Quintana Roo, México.</span>
@@ -444,8 +436,7 @@
     </div>
   </footer>
 
-
-  <!-- Modal de Modo Teatro HD (Reproductor Cinematografico) -->
+<!-- Modal de Modo Teatro HD (Reproductor Cinematografico) -->
   <div 
     id="video-theater-modal" 
     class="fixed inset-0 z-[120] bg-black/95 backdrop-blur-2xl hidden flex-col justify-between p-3 sm:p-6 lg:p-8 animate-theater-in transition-all"
@@ -453,29 +444,25 @@
     aria-modal="true"
     aria-labelledby="theater-title"
   >
-    <!-- Background Click Overlay: Clicking anywhere outside cinema player immediately closes modal and returns to normal page -->
+    <!-- Capa de Fondo para Cerrar al Hacer Clic -->
     <div 
       class="absolute inset-0 -z-10 cursor-pointer" 
       onclick="window.closeVideoTheater()" 
       title="Haz click para cerrar y volver a la página"
     ></div>
 
-    <!-- Top Theater Bar -->
+    <!-- Barra Superior del Modo Teatro -->
     <div class="flex items-center justify-between pb-4 border-b border-warm-bronze/30 max-w-7xl mx-auto w-full z-10 shrink-0">
       <div class="flex items-center gap-3">
         <img src="assets/logos/nations_cup_logo_transparent.png" alt="Nations Cup 2027 Logo" class="h-9 sm:h-10 w-auto object-contain">
         <div>
-          <h3 id="theater-title" class="font-serif text-base sm:text-xl font-bold text-white tracking-wide">
-            Nations Cup 2027 · <span class="text-champagne-light">Sizzle Reel Oficial</span>
-          </h3>
-          <p class="font-label-sm text-[11px] text-[#A88344] tracking-wider uppercase font-medium">
-            El Rey Polo Country Club · Audio Cinematográfico HD
-          </p>
+          <h3 id="theater-title" class="font-serif text-base sm:text-xl font-bold text-white tracking-wide" data-i18n="theater_heading">Nations Cup 2027 · Film Oficial</h3>
+          <p class="font-label-sm text-[11px] text-[#A88344] tracking-wider uppercase font-medium" data-i18n="theater_subheading">El Rey Polo Country Club · Audio Cinematográfico HD</p>
         </div>
       </div>
 
       <div class="flex items-center gap-3 sm:gap-4">
-        <!-- In-Theater Language Toggle -->
+        <!-- Selector de Idioma en Modo Teatro -->
         <div class="flex items-center bg-white/10 p-1 rounded-DEFAULT border border-warm-bronze/40">
           <button 
             id="theater-lang-es" 
@@ -495,7 +482,7 @@
           </button>
         </div>
 
-        <!-- Prominent Close Button (Esc) -->
+        <!-- Boton de Cierre del Modo Teatro -->
         <button 
           type="button" 
           onclick="window.closeVideoTheater()" 
@@ -509,7 +496,7 @@
       </div>
     </div>
 
-    <!-- Central Cinematic Player Container -->
+    <!-- Contenedor Central del Reproductor Cinematografico -->
     <div class="relative flex-1 flex items-center justify-center my-auto max-w-6xl mx-auto w-full min-h-0 z-10">
       <div 
         class="relative w-full max-h-[75vh] aspect-video rounded-DEFAULT overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.98)] border-2 border-[#D4AF37]/50 bg-black group flex items-center justify-center"
@@ -524,7 +511,7 @@
           onclick="window.toggleTheaterPlay()"
         ></video>
 
-        <!-- Big Center Play/Pause indicator on hover & click -->
+        <!-- Indicador Central de Reproduccion y Pausa -->
         <div 
           id="theater-center-play-badge" 
           onclick="window.toggleTheaterPlay()"
@@ -537,21 +524,21 @@
       </div>
     </div>
 
-    <!-- Bottom Luxury Theater Controls -->
+    <!-- Controles Inferiores del Modo Teatro -->
     <div 
       class="max-w-6xl mx-auto w-full bg-[#07140E]/95 backdrop-blur-md rounded-DEFAULT p-4 border border-warm-bronze/40 shadow-2xl z-10 shrink-0"
       onclick="event.stopPropagation()"
     >
-      <!-- Progress Scrub Bar -->
+      <!-- Barra de Progreso del Video -->
       <div class="relative w-full h-2.5 bg-white/15 rounded-full mb-3.5 cursor-pointer group" id="theater-progress-container" onclick="window.seekTheaterVideo(event)">
         <div id="theater-progress-bar" class="absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-warm-bronze via-[#D4AF37] to-champagne-light w-0 pointer-events-none"></div>
         <div id="theater-progress-handle" class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-champagne-light shadow-[0_0_10px_rgba(212,175,55,0.8)] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" style="left: 0%;"></div>
       </div>
 
-      <!-- Controls Row -->
+      <!-- Fila de Controles -->
       <div class="flex flex-wrap items-center justify-between gap-3 text-xs">
         <div class="flex items-center gap-3 sm:gap-4">
-          <!-- Play / Pause -->
+          <!-- Control de Reproduccion y Pausa -->
           <button 
             type="button" 
             onclick="window.toggleTheaterPlay()" 
@@ -561,12 +548,12 @@
             <span id="theater-play-btn-label">Pausar</span>
           </button>
 
-          <!-- Time Display -->
+          <!-- Indicador de Tiempo -->
           <div class="font-mono text-gray-300 tracking-wider font-medium">
             <span id="theater-curr-time">0:00</span> / <span id="theater-duration">1:45</span>
           </div>
 
-          <!-- Volume Control -->
+          <!-- Control de Volumen -->
           <div class="flex items-center gap-2">
             <button type="button" onclick="window.toggleTheaterMute()" class="text-champagne-light hover:text-white transition-colors cursor-pointer" title="Silenciar / Activar">
               <span id="theater-vol-icon" class="material-symbols-outlined text-[18px]">volume_up</span>
@@ -584,7 +571,7 @@
           </div>
         </div>
 
-        <!-- Right specs & direct download -->
+        <!-- Especificaciones y Acceso a Material HD -->
         <div class="flex items-center gap-3 sm:gap-4">
           <button 
             type="button" 
@@ -598,6 +585,7 @@
       </div>
     </div>
   </div>
+
   <!-- Modal de Visor de Galeria (Lightbox HD) -->
   <div 
     id="gallery-lightbox-modal" 
@@ -608,7 +596,7 @@
   >
     <div class="flex items-center justify-between pb-4 border-b border-warm-bronze/25 max-w-7xl mx-auto w-full">
       <div>
-        <h4 id="lightbox-title" class="font-headline-sm text-headline-sm text-white">VIP Arrival</h4>
+        <h4 id="lightbox-title" class="font-headline-sm text-headline-sm text-white" data-i18n="lightbox_default_title">Recepción VIP & Alta Atmósfera</h4>
         <span id="lightbox-counter" class="font-label-sm text-label-sm uppercase text-warm-bronze tracking-widest">01 / 12</span>
       </div>
       <button 
@@ -648,24 +636,15 @@
     </div>
   </div>
 
-
-  <!-- ========================================================================
-       TOAST NOTIFICATION COMPONENT
-       ======================================================================== -->
+  <!-- Componente de Notificaciones Toast -->
   <div id="toast-notification" class="hide fixed bottom-20 sm:bottom-8 right-4 sm:right-8 z-50 max-w-md bg-racing-green-dark/95 p-4 rounded-DEFAULT border border-warm-bronze/50 shadow-2xl flex items-center gap-3 backdrop-blur-md">
     <div class="p-2 rounded-full bg-warm-bronze/20 text-champagne-light shrink-0">
       <span class="material-symbols-outlined text-[20px]">info</span>
     </div>
-    <div id="toast-message" class="font-body-sm text-body-sm text-gray-200 font-medium leading-relaxed">
-      Notificación del sistema...
-    </div>
+    <div id="toast-message" class="font-body-sm text-body-sm text-gray-200 font-medium leading-relaxed" data-i18n="toast_default">Notificación del sistema...</div>
   </div>
 
-
-
-  <!-- ========================================================================
-       LEGAL COMPLIANCE MODAL (AVISO DE PRIVACIDAD & TÉRMINOS CONFORME A LEY)
-       ======================================================================== -->
+  <!-- Modal de Cumplimiento Legal y Normativo -->
   <div 
     id="legal-compliance-modal" 
     class="fixed inset-0 z-[110] bg-racing-green-dark/95 backdrop-blur-2xl hidden flex-col justify-center items-center p-3 sm:p-6"
@@ -676,7 +655,7 @@
   >
     <div class="bg-surface-container-lowest text-on-surface rounded-DEFAULT shadow-2xl w-full max-w-4xl max-h-[88vh] flex flex-col overflow-hidden border border-warm-bronze/30">
       
-      <!-- Modal Top Bar -->
+      <!-- Barra Superior del Modal -->
       <div class="p-space-md border-b border-outline-variant/30 flex items-center justify-between bg-surface-container-low shrink-0">
         <div>
           <h3 id="legal-modal-title" class="font-headline-sm text-headline-sm text-racing-green-dark" data-i18n="legal_modal_title">Marco Jurídico & Normativo Oficial</h3>
@@ -686,13 +665,13 @@
           onclick="window.closeLegalModal()" 
           type="button" 
           class="p-2 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-racing-green-dark transition-colors"
-          aria-label="Cerrar modal"
+          data-i18n-aria="btn_close_modal" aria-label="Cerrar ventana"
         >
           <span class="material-symbols-outlined text-[20px]">close</span>
         </button>
       </div>
 
-      <!-- Navigation Tabs -->
+      <!-- Pestañas de Navegacion -->
       <div class="flex items-center border-b border-outline-variant/30 px-space-md bg-surface shrink-0">
         <button 
           id="tab-privacy-btn" 
@@ -713,12 +692,12 @@
         </button>
       </div>
 
-      <!-- Modal Body (Scrollable Legal Content) -->
+      <!-- Contenido del Marco Legal -->
       <div class="p-space-lg overflow-y-auto space-y-4 font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
         
-        <!-- Tab 1: Privacy Content -->
+        <!-- Pestaña 1: Politica de Privacidad -->
           <div id="legal-privacy-content" class="space-y-4">
-            <!-- Privacy ES -->
+            <!-- Privacidad en Español -->
             <div id="legal-privacy-es" class="space-y-4">
               <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">AVISO DE PRIVACIDAD INTEGRAL</h4>
               <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
@@ -745,7 +724,7 @@
               </p>
             </div>
 
-            <!-- Privacy EN -->
+            <!-- Privacidad en Ingles -->
             <div id="legal-privacy-en" class="space-y-4 hidden">
               <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">COMPREHENSIVE PRIVACY POLICY</h4>
               <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
@@ -773,9 +752,9 @@
             </div>
           </div>
 
-          <!-- Tab 2: Terms Content -->
+          <!-- Pestaña 2: Terminos y Condiciones -->
           <div id="legal-terms-content" class="space-y-4 hidden">
-            <!-- Terms ES -->
+            <!-- Terminos en Español -->
             <div id="legal-terms-es" class="space-y-4">
               <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">TÉRMINOS Y CONDICIONES COMERCIALES DE PATROCINIO</h4>
               <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
@@ -799,7 +778,7 @@
               </p>
             </div>
 
-            <!-- Terms EN -->
+            <!-- Terminos en Ingles -->
             <div id="legal-terms-en" class="space-y-4 hidden">
               <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">COMMERCIAL SPONSORSHIP TERMS & CONDITIONS</h4>
               <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
@@ -825,7 +804,7 @@
           </div>
       </div>
 
-      <!-- Modal Bottom Actions -->
+      <!-- Acciones Inferiores del Modal -->
       <div class="p-space-md border-t border-outline-variant/30 flex justify-between items-center bg-surface-container-low shrink-0">
         <span class="text-[11px] text-on-surface-variant font-mono">Documento Oficial V. 2.4 · Noviembre 2026</span>
         <button 
@@ -840,13 +819,7 @@
     </div>
   </div>
 
-  <!-- Core Application Engine Scripts -->
-  <script src="app.js"></script>
-
-
-  <!-- ============================================================================
-       MODAL: DATOS BANCARIOS OFICIALES PARA TRANSFERENCIAS (B2B SETTLEMENT WINDOW)
-       ============================================================================ -->
+  <!-- Modal de Liquidacion Bancaria Oficial -->
   <div 
     id="bank-settlement-modal" 
     class="fixed inset-0 z-[130] bg-black/90 backdrop-blur-xl hidden flex-col justify-center items-center p-3 sm:p-6"
@@ -856,28 +829,29 @@
   >
     <div class="relative w-full max-w-2xl bg-canvas-alabaster rounded-DEFAULT shadow-2xl border border-warm-bronze/40 overflow-hidden flex flex-col max-h-[92vh]">
       
-      <!-- Modal Header -->
+      <!-- Encabezado del Modal -->
       <div class="flex items-center justify-between p-4 sm:p-5 bg-racing-green-dark text-canvas-alabaster border-b border-warm-bronze/30 shrink-0">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-full bg-primary-container border border-warm-bronze/40 flex items-center justify-center text-champagne-light">
             <span class="material-symbols-outlined text-[20px]">account_balance</span>
           </div>
           <div>
-            <h3 class="font-headline-sm text-[18px] sm:text-[20px] text-champagne-light leading-snug">Datos para Transferencia Bancaria Oficial</h3>
-            <p class="font-label-sm text-[10px] text-warm-bronze uppercase tracking-widest">Nations Cup 2027 · El Rey Polo Country Club</p>
+            <h3 class="font-headline-sm text-[18px] sm:text-[20px] text-champagne-light leading-snug" data-i18n="bank_title">Datos para Transferencia Bancaria Oficial</h3>
+            <p class="font-label-sm text-[10px] text-warm-bronze uppercase tracking-widest" data-i18n="bank_subtitle">Nations Cup 2027 · El Rey Polo Country Club</p>
           </div>
         </div>
         <button 
           type="button" 
           onclick="window.closeBankModal()" 
           class="p-2 text-canvas-alabaster/70 hover:text-white hover:bg-white/10 rounded-full transition-colors cursor-pointer"
+          data-i18n-title="btn_close_modal"
           title="Cerrar ventana"
         >
           <span class="material-symbols-outlined text-[22px]">close</span>
         </button>
       </div>
 
-      <!-- Currency / Account Type Selector Tabs -->
+      <!-- Pestañas Selectoras de Moneda y Cuenta -->
       <div class="flex border-b border-outline-variant/30 bg-surface-container-high shrink-0">
         <button 
           id="bank-tab-mxn"
@@ -886,7 +860,7 @@
           class="flex-1 py-3 px-4 text-center font-label-md text-[12px] uppercase tracking-wider font-bold border-b-2 border-warm-bronze text-racing-green-dark bg-canvas-alabaster transition-all cursor-pointer flex items-center justify-center gap-2"
         >
           <span class="text-[16px]">🇲🇽</span>
-          <span>Cuenta México (BBVA · MXN)</span>
+          <span data-i18n="bank_tab_label_mxn">Cuenta México (BBVA · MXN)</span>
         </button>
         <button 
           id="bank-tab-usd"
@@ -895,82 +869,82 @@
           class="flex-1 py-3 px-4 text-center font-label-md text-[12px] uppercase tracking-wider font-semibold border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark transition-all cursor-pointer flex items-center justify-center gap-2"
         >
           <span class="text-[16px]">🇺🇸</span>
-          <span>Cuenta EE.UU. (Lead Bank · USD Wire)</span>
+          <span data-i18n="bank_tab_label_usd">Cuenta EE.UU. (Lead Bank · USD Wire)</span>
         </button>
       </div>
 
-      <!-- Modal Body (Scrollable) -->
+      <!-- Cuerpo del Modal (Desplazable) -->
       <div class="p-4 sm:p-6 overflow-y-auto space-y-4">
         
-        <!-- PANEL 1: BBVA BANCOMER MÉXICO -->
+        <!-- Panel 1: BBVA Bancomer Mexico -->
         <div id="bank-panel-mxn" class="space-y-3.5">
-          <div class="p-3 bg-canvas-ivory rounded-DEFAULT border border-outline-variant/30 text-[12px] text-on-surface-variant">
+          <div class="p-3 bg-canvas-ivory rounded-DEFAULT border border-outline-variant/30 text-[12px] text-on-surface-variant" data-i18n="bank_mxn_intro">
             Transferencias electrónicas nacionales (SPEI) e internacionales en Moneda Nacional hacia El Rey Polo Country Club.
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
             
             <div class="p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30">
-              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">Institución Bancaria</span>
+              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_bank">Institución Bancaria</span>
               <span class="font-body-md text-[14px] font-semibold text-racing-green-dark">BBVA Bancomer</span>
             </div>
 
             <div class="p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30">
-              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">Sucursal</span>
+              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_branch">Sucursal</span>
               <span class="font-body-md text-[14px] font-semibold text-racing-green-dark">0050</span>
             </div>
 
             <div class="sm:col-span-2 p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 flex items-center justify-between gap-2">
               <div>
-                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">Nombre / Beneficiario</span>
+                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_beneficiary">Nombre / Beneficiario</span>
                 <span class="font-body-md text-[14px] font-semibold text-racing-green-dark" id="val-mxn-nombre">MARIA TERESA CALVETE AGUIRRE</span>
               </div>
-              <button onclick="window.copyBankValue('MARIA TERESA CALVETE AGUIRRE', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0">Copiar</button>
+              <button onclick="window.copyBankValue('MARIA TERESA CALVETE AGUIRRE', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0" data-i18n="bank_btn_copy">Copiar</button>
             </div>
 
             <div class="sm:col-span-2 p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 flex items-center justify-between gap-2">
               <div>
-                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">CLABE Interbancaria (SPEI)</span>
+                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_clabe">CLABE Interbancaria (SPEI)</span>
                 <span class="font-mono text-[14px] font-bold text-racing-green-dark" id="val-mxn-clabe">012 180 011940334937</span>
               </div>
-              <button onclick="window.copyBankValue('012180011940334937', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0">Copiar CLABE</button>
+              <button onclick="window.copyBankValue('012180011940334937', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0" data-i18n="bank_btn_copy_clabe">Copiar CLABE</button>
             </div>
 
             <div class="p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 flex items-center justify-between gap-2">
               <div>
-                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">Número de Cuenta</span>
+                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_acc_num">Número de Cuenta</span>
                 <span class="font-mono text-[14px] font-semibold text-racing-green-dark" id="val-mxn-cuenta">1194033493</span>
               </div>
-              <button onclick="window.copyBankValue('1194033493', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0">Copiar</button>
+              <button onclick="window.copyBankValue('1194033493', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0" data-i18n="bank_btn_copy">Copiar</button>
             </div>
 
             <div class="p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 flex items-center justify-between gap-2">
               <div>
-                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">Código SWIFT / BIC</span>
+                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_swift">Código SWIFT / BIC</span>
                 <span class="font-mono text-[14px] font-bold text-racing-green-dark" id="val-mxn-swift">BCMRMXMMPYM</span>
               </div>
-              <button onclick="window.copyBankValue('BCMRMXMMPYM', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0">Copiar</button>
+              <button onclick="window.copyBankValue('BCMRMXMMPYM', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0" data-i18n="bank_btn_copy">Copiar</button>
             </div>
 
             <div class="sm:col-span-2 p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30">
-              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">Domicilio Fiscal Registrado</span>
+              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_tax_address">Domicilio Fiscal Registrado</span>
               <span class="font-body-sm text-[12px] text-on-surface-variant">Canal de Miramontes 7620, Col. Residencial Villa Coapa, Ciudad de México</span>
             </div>
 
             <div class="sm:col-span-2 p-3 bg-primary-container text-champagne-light rounded-DEFAULT border border-warm-bronze/40 flex items-center justify-between gap-2">
               <div>
-                <span class="font-label-sm text-[10px] uppercase text-champagne-light/70 font-semibold block mb-0.5">Envío de Comprobantes de Pago</span>
+                <span class="font-label-sm text-[10px] uppercase text-champagne-light/70 font-semibold block mb-0.5" data-i18n="bank_label_receipt_email">Envío de Comprobantes de Pago</span>
                 <span class="font-body-md text-[13px] font-bold text-champagne-light" id="val-mxn-email">renatacalvo@hotmail.com</span>
               </div>
-              <button onclick="window.copyBankValue('renatacalvo@hotmail.com', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-warm-bronze text-[#07140e] hover:bg-champagne-light rounded font-bold transition-colors cursor-pointer shrink-0">Copiar Email</button>
+              <button onclick="window.copyBankValue('renatacalvo@hotmail.com', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-warm-bronze text-[#07140e] hover:bg-champagne-light rounded font-bold transition-colors cursor-pointer shrink-0" data-i18n="bank_btn_copy_email">Copiar Email</button>
             </div>
 
           </div>
         </div>
 
-        <!-- PANEL 2: LEAD BANK ESTADOS UNIDOS -->
+        <!-- Panel 2: Lead Bank Estados Unidos -->
         <div id="bank-panel-usd" class="space-y-3.5 hidden">
-          <div class="p-3 bg-canvas-ivory rounded-DEFAULT border border-outline-variant/30 text-[12px] text-on-surface-variant">
+          <div class="p-3 bg-canvas-ivory rounded-DEFAULT border border-outline-variant/30 text-[12px] text-on-surface-variant" data-i18n="bank_usd_intro">
             Transferencias electrónicas internacionales en Dólares Americanos (USD Wire / ACH) gestionadas a través del Comité Organizador.
           </div>
 
@@ -978,49 +952,49 @@
             
             <div class="sm:col-span-2 p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 flex items-center justify-between gap-2">
               <div>
-                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">Nombre del Destinatario (Beneficiary)</span>
+                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_usd_beneficiary">Nombre del Destinatario (Beneficiary)</span>
                 <span class="font-body-md text-[14px] font-semibold text-racing-green-dark" id="val-usd-nombre">Francisco Schang</span>
               </div>
-              <button onclick="window.copyBankValue('Francisco Schang', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0">Copiar</button>
+              <button onclick="window.copyBankValue('Francisco Schang', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0" data-i18n="bank_btn_copy">Copiar</button>
             </div>
 
             <div class="p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30">
-              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">Nombre del Banco</span>
+              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_usd_bank">Nombre del Banco</span>
               <span class="font-body-md text-[14px] font-semibold text-racing-green-dark">Lead Bank</span>
             </div>
 
             <div class="p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30">
-              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">Tipo de Cuenta</span>
-              <span class="font-body-md text-[14px] font-semibold text-racing-green-dark">Corriente (Checking Account)</span>
+              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_account_type">Tipo de Cuenta</span>
+              <span class="font-body-md text-[14px] font-semibold text-racing-green-dark" data-i18n="bank_val_account_type">Corriente (Checking Account)</span>
             </div>
 
             <div class="p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 flex items-center justify-between gap-2">
               <div>
-                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">ABA / Número de Ruta (Routing)</span>
+                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_routing">ABA / Número de Ruta (Routing)</span>
                 <span class="font-mono text-[14px] font-bold text-racing-green-dark" id="val-usd-aba">101019644</span>
               </div>
-              <button onclick="window.copyBankValue('101019644', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0">Copiar ABA</button>
+              <button onclick="window.copyBankValue('101019644', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0" data-i18n="bank_btn_copy_aba">Copiar ABA</button>
             </div>
 
             <div class="p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 flex items-center justify-between gap-2">
               <div>
-                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">Número de Cuenta</span>
+                <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_acc_num">Número de Cuenta</span>
                 <span class="font-mono text-[14px] font-bold text-racing-green-dark" id="val-usd-cuenta">216696450496</span>
               </div>
-              <button onclick="window.copyBankValue('216696450496', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0">Copiar Cuenta</button>
+              <button onclick="window.copyBankValue('216696450496', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-surface-container hover:bg-warm-bronze hover:text-white rounded text-racing-green-dark transition-colors cursor-pointer shrink-0" data-i18n="bank_btn_copy_acc">Copiar Cuenta</button>
             </div>
 
             <div class="sm:col-span-2 p-3 bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30">
-              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5">Dirección del Banco en EE.UU.</span>
+              <span class="font-label-sm text-[10px] uppercase text-warm-bronze font-bold block mb-0.5" data-i18n="bank_label_bank_address">Dirección del Banco en EE.UU.</span>
               <span class="font-body-sm text-[12px] text-on-surface-variant">1801 Main St., Kansas City, Missouri 64108, Estados Unidos</span>
             </div>
 
             <div class="sm:col-span-2 p-3 bg-primary-container text-champagne-light rounded-DEFAULT border border-warm-bronze/40 flex items-center justify-between gap-2">
               <div>
-                <span class="font-label-sm text-[10px] uppercase text-champagne-light/70 font-semibold block mb-0.5">Envío de Comprobantes de Transferencia Internacional</span>
+                <span class="font-label-sm text-[10px] uppercase text-champagne-light/70 font-semibold block mb-0.5" data-i18n="bank_label_intl_receipt">Envío de Comprobantes de Transferencia Internacional</span>
                 <span class="font-body-md text-[13px] font-bold text-champagne-light">renatacalvo@hotmail.com</span>
               </div>
-              <button onclick="window.copyBankValue('renatacalvo@hotmail.com', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-warm-bronze text-[#07140e] hover:bg-champagne-light rounded font-bold transition-colors cursor-pointer shrink-0">Copiar Email</button>
+              <button onclick="window.copyBankValue('renatacalvo@hotmail.com', this)" type="button" class="px-2.5 py-1 text-[11px] font-label-sm uppercase bg-warm-bronze text-[#07140e] hover:bg-champagne-light rounded font-bold transition-colors cursor-pointer shrink-0" data-i18n="bank_btn_copy_email">Copiar Email</button>
             </div>
 
           </div>
@@ -1028,7 +1002,7 @@
 
       </div>
 
-      <!-- Modal Footer -->
+      <!-- Pie del Modal -->
       <div class="p-3 sm:p-4 bg-surface-container-high border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-on-surface-variant shrink-0">
         <span data-i18n="bank_modal_compliance_note" class="text-center sm:text-left">Comprobantes válidos para emisión de factura fiscal (CFDI) conforme a la legislación vigente.</span>
         <button 
@@ -1044,8 +1018,7 @@
     </div>
   </div>
 
-
-
+  <!-- Scripts del Motor Principal de la Aplicacion -->
   <script src="app.js"></script>
 </body>
 </html>

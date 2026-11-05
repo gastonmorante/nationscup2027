@@ -49,6 +49,7 @@
     "stat_teams": "6 Selecciones",
     "stat_teams_sub": "España, Alemania, México, Canadá, USA y Argentina",
     "stat_audience": "Audiencia de Alto Standing",
+      "stat_standing": "Alto Standing",
     "stat_audience_sub": "CEOs, inversionistas y propietarios de alto perfil",
     "stat_exclusivity": "1 Marca por Sector",
     "stat_exclusivity_sub": "Exclusividad inquebrantable de categoría",
@@ -78,7 +79,7 @@
     "tour_kicker": "RECORRIDO ESPACIAL EN ALTA DEFINICIÓN",
     "tour_title": "Tour Virtual 360° · El Rey Polo",
     "tour_subtitle": "Previsualice la integración de marca y áreas VIP desde cualquier perspectiva con soporte giroscópico.",
-    "tour_scene_lounge": "Lounge VIP de Hospitalidad",
+    "tour_scene_lounge": "Salón VIP de Hospitalidad",
     "tour_scene_field": "Campo Central & Explanada",
     "tour_scene_autoshow": "Stands Comerciales & Exhibición de Autos",
     "tour_scene_grill": "Terraza Sunset & Asador Gourmet",
@@ -124,7 +125,7 @@
     "gal_shot4_cat": "CAMPO CENTRAL",
     "gal_shot4_title": "Campo de Juego a Nivel de Césped",
     "gal_shot5_cat": "HOSPITALIDAD",
-    "gal_shot5_title": "Lounge VIP de Hospitalidad & Coctelería de Autor",
+    "gal_shot5_title": "Salón VIP de Hospitalidad & Coctelería de Autor",
     "gal_shot6_cat": "EXPERIENCIA VIP",
     "gal_shot6_title": "Palcos Privados y Mesas con Vista a Cancha",
     "gal_shot7_cat": "CHAMPAGNE VIP",
@@ -148,6 +149,10 @@
     "vat_notice": "* Más IVA correspondiente. Sujeto a disponibilidad de categoría al momento de formalizar la reserva.",
     "tier_platino_badge": "MÁXIMA DISTINCIÓN",
     "tier_platino_name": "Patrocinador Platino",
+      "tier_platino_title": "Platino",
+      "tier_oro_title": "Oro",
+      "tier_plata_title": "Plata",
+      "tier_bronce_title": "Bronce",
     "tier_platino_sub": "Derecho de Nombre y Presencia Omnipresente",
     "tier_platino_desc": "La cumbre de la vinculación corporativa con máxima visibilidad en cada punto del club y transmisiones.",
     "tier_platino_f1": "Exclusividad absoluta en su categoría de industria",
@@ -164,7 +169,7 @@
     "tier_oro_f1": "Exclusividad total en su sector comercial",
     "tier_oro_f2": "Logotipo en el jersey de 1 selección nacional oficial",
     "tier_oro_f3": "Stand de exhibición de marca 3x3m en zona comercial",
-    "tier_oro_f4": "Suite lounge privada para atención de clientes y relaciones VIP",
+    "tier_oro_f4": "Palco privado para atención de clientes y relaciones VIP",
     "tier_oro_f5": "15 credenciales VIP All-Access con servicio gourmet y barra",
     "tier_oro_f6": "Menciones en conferencias de prensa y suplemento editorial",
     "tier_oro_btn": "Solicitar Oro",
@@ -211,7 +216,7 @@
     "item_a_scope": "Presencia estática de cartelera en las tablas perimetrales del campo con alta exposición en fotos de acción ecuestre, transmisiones y cobertura de medios.",
     "item_g1_name": "G1. Premio al Mejor Jugador (MVP)",
     "item_g1_scope": "Presentación oficial del trofeo y obsequio conmemorativo al mejor jugador del torneo durante la ceremonia de premiación con mención de honor y cobertura de prensa.",
-    "item_g2_name": "G2. Premio al Mejor Caballo (Best Playing Pony)",
+    "item_g2_name": "G2. Patrocinio al Mejor Caballo del Torneo",
     "item_g2_scope": "Presentación de la manta conmemorativa y reconocimiento al mejor ejemplar equino de la final, destacando la excelencia, crianza y nobleza del caballo de polo.",
     "gastro_title": "Sponsor de Gastronomía",
     "gastro_sub": "Pabellón Gourmet & Experiencias de Maridaje",
@@ -260,13 +265,13 @@
     "opt_tier_f": "F. Nombre del Campo de Polo ($15,000 USD / $262,500 MXN)",
     "opt_tier_a": "A. Patrocinio Cartelera en Cancha ($5,000 USD / $87,500 MXN)",
     "opt_tier_g1": "G1. Premio Mejor Jugador MVP ($5,000 USD / $87,500 MXN)",
-    "opt_tier_g2": "G2. Premio Mejor Caballo Best Playing Pony ($5,000 USD / $87,500 MXN)",
+    "opt_tier_g2": "G2. Patrocinio Mejor Caballo ($5,000 USD / $87,500 MXN)",
     "opt_tier_platino": "Nivel Platino ($45,000 USD / $787,500 MXN)",
     "opt_tier_oro": "Nivel Oro ($28,000 USD / $490,000 MXN)",
     "opt_tier_plata": "Nivel Plata ($14,000 USD / $245,000 MXN)",
     "opt_tier_bronce": "Nivel Bronce ($9,000 USD / $157,500 MXN)",
     "preview_label": "Vista Previa del Mensaje Oficial a WhatsApp:",
-    "btn_submit_whatsapp": "Solicitar Dossier & Bloqueo de Exclusividad vía WhatsApp",
+    "btn_submit_whatsapp": "Solicitar Dossier y Bloqueo de Exclusividad por WhatsApp",
     "form_security_note": "Al hacer clic será redirigido a WhatsApp Oficial con el mensaje estructurado para atención inmediata por el Comité.",
     "dock_deck": "Pitch Deck",
     "dock_tour": "Tour 360°",
@@ -310,7 +315,7 @@
     "footer_whatsapp_direct": "Línea Directa Comité: +34 722 11 62 48",
     "tier_grid_title": "1. SPONSORS CORPORATIVOS POR NIVEL",
     "tier_grid_sub": "Exclusividad & Presencia en Cancha",
-    "item_d_sub": "Naming Right Principal · Presencia en Todos los Puntos",
+    "item_d_sub": "Patrocinador Titular (Nombre del Torneo) · Presencia en Todos los Puntos",
     "item_c_sub": "España, Alemania, México, Canadá, USA o Argentina",
     "item_e_sub": "Menciones en Cada Narración en Vivo",
     "item_b_sub": "Emisión Continua de Spots en Pantallas Monumentales",
@@ -342,8 +347,83 @@
     "bank_modal_understood": "Entendido",
     "bank_modal_compliance_note": "Comprobantes válidos para emisión de factura fiscal (CFDI) conforme a la legislación vigente.",
     "deck_slide_tag_title": "Estructura Comercial & Retorno de Inversión",
-    "preview_default_text": "Hola, represento a [Empresa]. Mi nombre es [Nombre del Ejecutivo] (Director Global de Patrocinios y Alianzas). Estamos interesados en evaluar el patrocinio para NATIONS CUP 2027 en la categoría de Alta Relojería & Joyería bajo el nivel D. Patrocinador Nombre del Torneo Omnipresente. Solicitamos confirmación de disponibilidad y reunión de alineación comercial."
-},
+    "preview_default_text": "Hola, represento a [Empresa]. Mi nombre es [Nombre del Ejecutivo] (Director Global de Patrocinios y Alianzas). Estamos interesados en evaluar el patrocinio para NATIONS CUP 2027 en la categoría de Alta Relojería & Joyería bajo el nivel D. Patrocinador Nombre del Torneo Omnipresente. Solicitamos confirmación de disponibilidad y reunión de alineación comercial.",
+      "page_meta_title": "Nations Cup 2027 | El Rey Polo Country Club · Dossier Privado de Patrocinio",
+      "page_meta_desc": "Portal Comercial B2B y Dossier Ejecutivo de Patrocinio para el Torneo Internacional de Polo Nations Cup 2027 en El Rey Polo Country Club, Puerto Morelos, Riviera Maya, México.",
+      "video_fallback": "Tu navegador no soporta reproducción de video HTML5.",
+      "video_badge_audio": "Click para Audio HD",
+      "hero_pill_audience": "Alto Standing",
+      "hero_pill_committee": "Comité Comercial",
+      "deck_badge_fallback": "COMITÉ COMERCIAL",
+      "deck_title_fallback": "Nations Cup 2027: El Legado del Polo en la Riviera Maya",
+      "deck_subtitle_fallback": "13 al 16 de Enero de 2027 | El Rey Polo Country Club, Puerto Morelos, Q. Roo",
+      "deck_point1_fallback": "Presentación reservada para comités de marca e inversionistas internacionales.",
+      "deck_point2_fallback": "Conexión y anfitrionía directa con el segmento de mayor patrimonio de la región.",
+      "deck_nav_hint": "Flechas o Touch",
+      "deck_tag_fallback": "NATIONS CUP 2027 · DOSSIER OFICIAL",
+      "price_suffix": "USD + IVA",
+      "price_suffix_mxn": "MXN + IVA",
+      "table_currency_note": "Tarifas oficiales en Dólares (USD + IVA)",
+      "badge_gastronomy": "ALIANZA GASTRONÓMICA",
+      "badge_mobility": "LOGÍSTICA & FLOTA OFICIAL",
+      "venue_badge": "Sede Oficial 2027",
+      "venue_title": "El Rey Polo Country Club",
+      "venue_desc": "Ubicado en el epicentro natural de la Ruta de los Cenotes, a solo 25 minutos del Aeropuerto Internacional de Cancún y del nuevo Aeropuerto de Tulum. Cancha oficial reglamentaria internacional con drenaje láser y palapa club house de primer nivel mundial.",
+      "venue_coord_title": "Coordenadas de Acceso & Helipuerto",
+      "venue_address": "Carretera Puerto Morelos - Leona Vicario Km 11 (VX9Q+H2 Puerto Morelos, Quintana Roo, México).",
+      "venue_helipad": "Coordenadas Helipuerto: 20.8569, -86.9507",
+      "footer_helipad": "Coordenadas Helipad: 20.8569, -86.9507",
+      "footer_deck_pdf": "Dossier Comercial Ejecutivo (PDF)",
+      "footer_legal_framework": "Conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y Código de Comercio de los Estados Unidos Mexicanos.",
+      "footer_vip_title": "Atención VIP & Compliance",
+      "footer_vip_desc": "Atención a comités de marca, firmas auditoras, secretarías de turismo y comitivas internacionales.",
+      "footer_channel_btn": "Canal Privado de Acreditación",
+      "footer_hours": "Horario de atención comités: Lunes a Viernes de 09:00 a 19:00 hrs (GMT-5).",
+      "footer_compliance_title": "Marco Legal & Compliance",
+      "footer_tab_fiscal": "Aviso Fiscal & Tarifario",
+      "footer_tab_ip": "Propiedad Intelectual",
+      "footer_tab_conf": "Confidencialidad",
+      "footer_ip_heading": "Reserva de Derechos & Propiedad Intelectual:",
+      "footer_ip_body": "«Nations Cup 2027» y «El Rey Polo Country Club» son denominaciones, logotipos e identidades gráficas protegidas por las leyes de propiedad industrial e intelectual aplicables (IMPI). Queda estrictamente prohibida la reproducción, copia, distribución, uso comercial no autorizado o alteración de cualquier contenido, fotografía o render presente en este sitio sin la autorización expresa y por escrito del Comité Organizador.",
+      "theater_heading": "Nations Cup 2027 · Film Oficial",
+      "theater_subheading": "El Rey Polo Country Club · Audio Cinematográfico HD",
+      "theater_play_label": "Pausar",
+      "theater_play_label_play": "Reproducir",
+      "theater_close_btn": "Cerrar Teatro",
+      "lightbox_default_title": "Recepción VIP & Alta Atmósfera",
+      "lightbox_default_desc": "Perspectiva fotográfica de alta resolución del entorno ecuestre y arquitectónico.",
+      "toast_default": "Notificación del sistema...",
+      "toast_copied_es": "¡Dato copiado al portapapeles con éxito!",
+      "bank_title": "Datos para Transferencia Bancaria Oficial",
+      "bank_subtitle": "Nations Cup 2027 · El Rey Polo Country Club",
+      "bank_tab_label_mxn": "Cuenta México (BBVA · MXN)",
+      "bank_tab_label_usd": "Cuenta EE.UU. (Lead Bank · USD Wire)",
+      "bank_mxn_intro": "Transferencias electrónicas nacionales (SPEI) e internacionales en Moneda Nacional hacia El Rey Polo Country Club.",
+      "bank_label_bank": "Institución Bancaria",
+      "bank_label_branch": "Sucursal",
+      "bank_label_beneficiary": "Nombre / Beneficiario",
+      "bank_btn_copy": "Copiar",
+      "bank_label_clabe": "CLABE Interbancaria (SPEI)",
+      "bank_btn_copy_clabe": "Copiar CLABE",
+      "bank_label_acc_num": "Número de Cuenta",
+      "bank_btn_copy_acc": "Copiar Cuenta",
+      "bank_label_swift": "Código SWIFT / BIC",
+      "bank_label_tax_address": "Domicilio Fiscal Registrado",
+      "bank_label_receipt_email": "Envío de Comprobantes de Pago",
+      "bank_btn_copy_email": "Copiar Email",
+      "bank_usd_intro": "Transferencias electrónicas internacionales en Dólares Americanos (USD Wire / ACH) gestionadas a través del Comité Organizador.",
+      "bank_label_usd_beneficiary": "Nombre del Destinatario (Beneficiary)",
+      "bank_label_usd_bank": "Nombre del Banco",
+      "bank_label_account_type": "Tipo de Cuenta",
+      "bank_val_account_type": "Corriente (Checking Account)",
+      "bank_label_routing": "ABA / Número de Ruta (Routing)",
+      "bank_btn_copy_aba": "Copiar ABA",
+      "bank_label_bank_address": "Dirección del Banco en EE.UU.",
+      "bank_label_intl_receipt": "Envío de Comprobantes de Transferencia Internacional",
+      "bank_notice_cfdi": "Comprobantes válidos para emisión de factura fiscal (CFDI) conforme a la legislación vigente.",
+      "bank_btn_understood": "Entendido",
+      "btn_close_modal": "Cerrar",
+    },
     en: {
     "status_beacon": "Sponsorship Committee · Private Access 2027",
     "nav_vision": "The Vision",
@@ -369,6 +449,7 @@
     "stat_teams": "6 National Teams",
     "stat_teams_sub": "Spain, Germany, Mexico, Canada, USA & Argentina",
     "stat_audience": "High-Standing Audience",
+      "stat_standing": "High Standing",
     "stat_audience_sub": "CEOs, high-net-worth investors and decision makers",
     "stat_exclusivity": "1 Brand per Industry",
     "stat_exclusivity_sub": "Uncompromising category exclusivity lock",
@@ -386,7 +467,7 @@
     "theater_subtitle": "4 Days of International Championship, High-Goal Polo & Ultra-Luxury Lifestyle",
     "theater_close": "Close Theater Mode (Esc)",
     "theater_overlay_hint": "Click anywhere to close and return to the page",
-    "deck_kicker": "CONFIDENTIAL COMMERCIAL DOSSIER",
+    "deck_kicker": "CONFIDENTIAL EXECUTIVE SPONSORSHIP DOSSIER",
     "deck_title": "Executive Pitch Deck",
     "deck_subtitle": "Interactive art presentation designed for Sponsorship Committees and Global CMO review.",
     "deck_btn_prev": "Previous",
@@ -468,6 +549,10 @@
     "vat_notice": "* Plus applicable tax (VAT). Strictly subject to sector availability upon formal reservation.",
     "tier_platino_badge": "HIGHEST DISTINCTION",
     "tier_platino_name": "Platinum Partner",
+      "tier_platino_title": "Platinum",
+      "tier_oro_title": "Gold",
+      "tier_plata_title": "Silver",
+      "tier_bronce_title": "Bronze",
     "tier_platino_sub": "Tournament Naming Right & Ubiquitous Presence",
     "tier_platino_desc": "The pinnacle of corporate alignment with paramount prominence across all tournament touchpoints and broadcasts.",
     "tier_platino_f1": "Absolute sector exclusivity guaranteed by contract",
@@ -529,9 +614,9 @@
     "item_f_scope": "Official naming rights for the 300 x 200m regulation championship pitch across all signage, venue maps, event programs, and broadcast mentions.",
     "item_a_name": "A. Championship Pitch Perimeter Boarding",
     "item_a_scope": "Static boarding signage along the field boundary boards with high-impact visibility in sports action photography, video streams, and editorial media.",
-    "item_g1_name": "G1. Most Valuable Player (MVP) Award Partner",
+    "item_g1_name": "G1. Best Player of the Tournament Trophy Sponsorship",
     "item_g1_scope": "Official trophy presentation and commemorative luxury gift to the tournament MVP at the grand awards ceremony with honorary press coverage.",
-    "item_g2_name": "G2. Best Playing Pony Award Partner",
+    "item_g2_name": "G2. Best Playing Pony Championship Trophy Sponsorship",
     "item_g2_scope": "Presentation of the embroidered ceremonial blanket and honor to the championship's top equine athlete, celebrating horsemanship and breeding excellence.",
     "gastro_title": "Gastronomy Partner",
     "gastro_sub": "Gourmet Village & Fine Dining Pairings",
@@ -548,7 +633,7 @@
     "mobility_f3": "Private executive transfers for players, team patrons and VIP guests",
     "mobility_btn": "Coordinate Mobility via WhatsApp",
     "form_kicker": "RESERVED INSTITUTIONAL PROTOCOL",
-    "form_title": "Dossier Request & Exclusivity Lock",
+    "form_title": "Executive Dossier Request & Exclusivity Lock",
     "form_subtitle": "Direct communication with the Organizing Committee Presidency on WhatsApp (+34 722 11 62 48).",
     "lbl_name": "Executive Full Name *",
     "ph_name": "e.g., Lord Alexander Cavendish",
@@ -580,13 +665,13 @@
     "opt_tier_f": "F. Official Polo Field Naming Right ($15,000 USD / $262,500 MXN)",
     "opt_tier_a": "A. Championship Field Boarding Signage ($5,000 USD / $87,500 MXN)",
     "opt_tier_g1": "G1. MVP Award Official Partner ($5,000 USD / $87,500 MXN)",
-    "opt_tier_g2": "G2. Best Playing Pony Award Partner ($5,000 USD / $87,500 MXN)",
+    "opt_tier_g2": "G2. Best Playing Pony Trophy ($5,000 USD / $87,500 MXN)",
     "opt_tier_platino": "Platinum Corporate Tier ($45,000 USD / $787,500 MXN)",
     "opt_tier_oro": "Gold Corporate Tier ($28,000 USD / $490,000 MXN)",
     "opt_tier_plata": "Silver Corporate Tier ($14,000 USD / $245,000 MXN)",
     "opt_tier_bronce": "Bronze Corporate Tier ($9,000 USD / $157,500 MXN)",
     "preview_label": "Official WhatsApp Message Preview:",
-    "btn_submit_whatsapp": "Request Dossier & Exclusivity Lock via WhatsApp",
+    "btn_submit_whatsapp": "Request Executive Dossier & Exclusivity Lock via WhatsApp",
     "form_security_note": "Clicking will redirect to official WhatsApp with the formatted request for expedited committee review.",
     "dock_deck": "Pitch Deck",
     "dock_tour": "360° Tour",
@@ -630,7 +715,7 @@
     "footer_whatsapp_direct": "Direct Committee Desk: +34 722 11 62 48",
     "tier_grid_title": "1. CORPORATE SPONSORSHIP TIERS",
     "tier_grid_sub": "Exclusivity & Pitch Presence",
-    "item_d_sub": "Premier Naming Right · Presence Across All Venues",
+    "item_d_sub": "Title Tournament Naming Rights · Ubiquitous Presence at All Touchpoints",
     "item_c_sub": "Spain, Germany, Mexico, Canada, USA or Argentina",
     "item_e_sub": "Verbal Brand Integration in Live Commentary",
     "item_b_sub": "Continuous Spot Rotation on Monumental Screens",
@@ -662,8 +747,83 @@
     "bank_modal_understood": "Understood",
     "bank_modal_compliance_note": "Valid wire settlement receipts for tax-compliant commercial invoicing (CFDI/VAT).",
     "deck_slide_tag_title": "Commercial Structure & Investment ROI",
-    "preview_default_text": "Hello, I represent [Company]. My name is [Executive Name] (Global Sponsorship & Partnerships Director). We are interested in evaluating sponsorship for NATIONS CUP 2027 in the Haute Horlogerie & High Jewelry category under the D. Tournament Official Naming Partner tier. We request availability confirmation and a commercial alignment meeting."
-}
+    "preview_default_text": "Hello, I represent [Company]. My name is [Executive Name] (Global Sponsorship & Partnerships Director). We are interested in evaluating sponsorship for NATIONS CUP 2027 in the Haute Horlogerie & High Jewelry category under the D. Tournament Official Naming Partner tier. We request availability confirmation and a commercial alignment meeting.",
+      "page_meta_title": "Nations Cup 2027 | El Rey Polo Country Club · Private Sponsorship Dossier",
+      "page_meta_desc": "Official B2B Commercial Portal & Executive Sponsorship Dossier for the Nations Cup 2027 International Polo Tournament at El Rey Polo Country Club, Puerto Morelos, Riviera Maya, Mexico.",
+      "video_fallback": "Your browser does not support HTML5 video playback.",
+      "video_badge_audio": "Click for HD Audio",
+      "hero_pill_audience": "High Standing",
+      "hero_pill_committee": "Commercial Committee",
+      "deck_badge_fallback": "COMMERCIAL COMMITTEE",
+      "deck_title_fallback": "Nations Cup 2027: The Legacy of Polo in the Riviera Maya",
+      "deck_subtitle_fallback": "January 13 to 16, 2027 | El Rey Polo Country Club, Puerto Morelos, Q. Roo",
+      "deck_point1_fallback": "Confidential presentation reserved for brand executive boards and global investors.",
+      "deck_point2_fallback": "Direct alignment and private hospitality with the highest-net-worth segment.",
+      "deck_nav_hint": "Arrows or Touch",
+      "deck_tag_fallback": "NATIONS CUP 2027 · OFFICIAL DOSSIER",
+      "price_suffix": "USD + VAT",
+      "price_suffix_mxn": "MXN + VAT",
+      "table_currency_note": "Official rates in US Dollars (USD + VAT)",
+      "badge_gastronomy": "GASTRONOMIC PARTNERSHIP",
+      "badge_mobility": "OFFICIAL LOGISTICS & FLEET",
+      "venue_badge": "Official 2027 Venue",
+      "venue_title": "El Rey Polo Country Club",
+      "venue_desc": "Nestled in the prime natural setting of the Cenote Route, just 25 minutes from Cancun International Airport and Tulum Airport. World-class regulation championship polo ground with laser drainage and premier luxury clubhouse palapa.",
+      "venue_coord_title": "Access Coordinates & Helipad",
+      "venue_address": "Puerto Morelos - Leona Vicario Road Km 11 (VX9Q+H2 Puerto Morelos, Quintana Roo, Mexico).",
+      "venue_helipad": "Helipad Coordinates: 20.8569, -86.9507",
+      "footer_helipad": "Helipad Coordinates: 20.8569, -86.9507",
+      "footer_deck_pdf": "Executive Sponsorship Dossier (PDF)",
+      "footer_legal_framework": "In compliance with the Mexican Federal Law on Protection of Personal Data (LFPDPPP) and Commercial Code.",
+      "footer_vip_title": "VIP Liaison & Corporate Compliance",
+      "footer_vip_desc": "Dedicated advisory for brand committees, audit firms, tourism boards, and global delegations.",
+      "footer_channel_btn": "Private Accreditation Channel",
+      "footer_hours": "Executive hours: Monday through Friday from 09:00 to 19:00 hrs (GMT-5).",
+      "footer_compliance_title": "Legal Framework & Compliance",
+      "footer_tab_fiscal": "Fiscal & Tax Notice",
+      "footer_tab_ip": "Intellectual Property",
+      "footer_tab_conf": "Confidentiality",
+      "footer_ip_heading": "Reservation of Rights & Intellectual Property:",
+      "footer_ip_body": "“Nations Cup 2027” and “El Rey Polo Country Club” are trademarks, logos, and graphic identities protected under applicable intellectual property laws (IMPI/WIPO). Reproduction, commercial distribution, unauthorized usage, or modification of any material, render, or content on this site is strictly prohibited without prior written authorization from the Organizing Committee.",
+      "theater_heading": "Nations Cup 2027 · Official Film",
+      "theater_subheading": "El Rey Polo Country Club · High-Definition Cinema Audio",
+      "theater_play_label": "Pause",
+      "theater_play_label_play": "Play",
+      "theater_close_btn": "Close Cinema",
+      "lightbox_default_title": "VIP Arrival & Haute Hospitality",
+      "lightbox_default_desc": "High-resolution editorial photography of the equestrian venue and prime architecture.",
+      "toast_default": "System notification...",
+      "toast_copied_es": "Information successfully copied to clipboard!",
+      "bank_title": "Official Bank Settlement & Wire Instructions",
+      "bank_subtitle": "Nations Cup 2027 · El Rey Polo Country Club",
+      "bank_tab_label_mxn": "Mexico Account (BBVA · MXN)",
+      "bank_tab_label_usd": "U.S. Account (Lead Bank · USD Wire)",
+      "bank_mxn_intro": "Domestic wire transfers (SPEI) and international settlements in Mexican Pesos for El Rey Polo Country Club.",
+      "bank_label_bank": "Banking Institution",
+      "bank_label_branch": "Branch Code",
+      "bank_label_beneficiary": "Account Beneficiary",
+      "bank_btn_copy": "Copy",
+      "bank_label_clabe": "Interbank CLABE (SPEI)",
+      "bank_btn_copy_clabe": "Copy CLABE",
+      "bank_label_acc_num": "Account Number",
+      "bank_btn_copy_acc": "Copy Account",
+      "bank_label_swift": "SWIFT / BIC Code",
+      "bank_label_tax_address": "Registered Tax Address",
+      "bank_label_receipt_email": "Payment Confirmation & Invoicing",
+      "bank_btn_copy_email": "Copy Email",
+      "bank_usd_intro": "International wire transfers in US Dollars (USD Wire / ACH) administered through the Organizing Committee.",
+      "bank_label_usd_beneficiary": "Beneficiary Account Name",
+      "bank_label_usd_bank": "Bank Name",
+      "bank_label_account_type": "Account Type",
+      "bank_val_account_type": "Commercial Checking Account",
+      "bank_label_routing": "ABA / Routing Transit Number",
+      "bank_btn_copy_aba": "Copy ABA",
+      "bank_label_bank_address": "Bank Address (USA)",
+      "bank_label_intl_receipt": "International Wire Proof Submission",
+      "bank_notice_cfdi": "Official receipts eligible for compliant commercial invoice issuance (CFDI / VAT receipt).",
+      "bank_btn_understood": "Understood",
+      "btn_close_modal": "Close",
+    }
   };
 
   // --- 2. 14-SLIDE PITCH DECK DATA ---
@@ -674,51 +834,45 @@
       tagEn: "CONFIDENTIAL COVER",
       titleEs: "Nations Cup 2027: El Legado del Polo en la Riviera Maya",
       titleEn: "Nations Cup 2027: The Legacy of Polo in the Riviera Maya",
-      subtitleEs: "13 al 16 de Enero de 2027 | El Rey Polo Country Club, Puerto Morelos, Q. Roo",
-      subtitleEn: "January 13 to 16, 2027 | El Rey Polo Country Club, Puerto Morelos, Mexico",
-      image: "assets/photos/palapa_exterior_rect.jpg",
+      subtitleEs: "13 al 16 de Enero de 2027 | El Rey Polo Country Club, Puerto Morelos, Cancún, México",
+      subtitleEn: "January 13 to 16, 2027 | El Rey Polo Country Club, Puerto Morelos, Cancun, Mexico",
+      image: "assets/photos/real_palapa_exterior.jpg",
       pointsEs: [
-        "Presentación de patrocinio exclusiva para marcas globales y comités de inversión.",
-        "Edición inaugural con 6 selecciones nacionales (España, Alemania, México, Canadá, USA, Argentina) en el corazón de la Riviera Maya.",
-        "Integración de deporte de reyes, alta gastronomía, arte y networking de alto standing."
+        "Dossier ejecutivo de patrocinio internacional reservado para marcas de alto standing e inversionistas globales.",
+        "El encuentro cumbre del deporte de reyes en el Caribe Mexicano: 4 jornadas de polo internacional, lifestyle y networking C-Level.",
+        "6 selecciones nacionales en competencia reglamentaria de alto hándicap."
       ],
       pointsEn: [
-        "Exclusive sponsorship briefing tailored for global luxury brands and investment boards.",
-        "Inaugural edition featuring 6 national teams (Spain, Germany, Mexico, Canada, USA, Argentina) in the Riviera Maya.",
-        "Uniting the Sport of Kings, haute gastronomy, contemporary art, and high-standing networking."
+        "Executive international sponsorship dossier reserved for high-standing luxury brands and global investors.",
+        "The premier championship of the sport of kings in the Mexican Caribbean: 4 days of high-goal polo, luxury lifestyle, and C-Suite networking.",
+        "6 national teams in official international championship competition."
       ],
-      badge: "COMITÉ COMERCIAL"
+      badgeEs: "PORTADA OFICIAL",
+      badgeEn: "OFFICIAL COVER",
+      badge: "PORTADA OFICIAL"
     },
     {
       slideNum: "02",
       tag: "LA VISIÓN ESTRATÉGICA",
       tagEn: "STRATEGIC VISION",
       titleEs: "«Las marcas de lujo no compran publicidad; patrocinan el lugar que quieren ocupar en la mente del cliente.»",
-      titleEn: "«Luxury brands do not buy advertising; they sponsor the space they aspire to own in the client's mind.»",
-      subtitleEs: "El polo es el ecosistema de más alto poder adquisitivo y fidelidad relacional del planeta.",
-      subtitleEn: "Polo is the preeminent global sports ecosystem for high-net-worth relational equity.",
-      image: "assets/photos/real_field_pitch.jpg",
+      titleEn: "“Luxury brands do not buy advertising; they sponsor the space they aspire to own in the client's mind.”",
+      subtitleEs: "El polo es el ecosistema de más alto poder adquisitivo del deporte global",
+      subtitleEn: "Polo is the preeminent global sports ecosystem for high net worth audiences",
+      image: "assets/photos/real_action_play.jpg",
       pointsEs: [
-        "Trascendencia más allá del impacto efímero: vínculos emocionales con tomadores de decisión.",
-        "Ambiente curado sin masificación, con protocolos de hospitalidad de nivel Grand Slam.",
-        "Alineación con valores de nobleza, precisión, elegancia y tradición ecuestre centenaria."
+        "Audiencia con un valor neto patrimonial extraordinario: empresarios, diplomáticos, coleccionistas y líderes C-Level.",
+        "Ambiente orgánico sin saturación comercial: máximo de 1 sola marca por categoría de industria.",
+        "Asociación directa con los valores de nobleza, tradición ecuestre, potencia y sofisticación intemporal."
       ],
       pointsEn: [
-        "Transcending transient ads: generating deep emotional bonds with elite decision makers.",
-        "Curated non-massified setting with Grand Slam-calibre hospitality and privacy protocols.",
-        "Alignment with values of timeless nobility, precision horsemanship, and legacy."
+        "Ultra-high-net-worth audience: business founders, diplomats, art collectors, and C-Suite executives.",
+        "Organic environment free of visual clutter: strictly 1 brand per industry sector.",
+        "Direct brand alignment with timeless equestrian heritage, nobility, power, and high prestige."
       ],
-      badgeEs: "FILOSOFÍA DE MARCA",
-      badgeEn: "BRAND PHILOSOPHY",
-      badgeEs: "FILOSOFÍA DE MARCA",
-      badgeEn: "BRAND PHILOSOPHY",
-      badgeEs: "FILOSOFÍA DE MARCA",
-      badgeEn: "BRAND PHILOSOPHY",
-      badgeEs: "FILOSOFÍA DE MARCA",
-      badgeEn: "BRAND PHILOSOPHY",
-      badgeEs: "FILOSOFÍA DE MARCA",
-      badgeEn: "BRAND PHILOSOPHY",
-      badge: "FILOSOFÍA DE MARCA"
+      badgeEs: "VISIÓN",
+      badgeEn: "VISION",
+      badge: "VISIÓN"
     },
     {
       slideNum: "03",
@@ -726,30 +880,22 @@
       tagEn: "THE HOST & VENUE",
       titleEs: "El Rey Polo Country Club: La Joya Ecuestre del Caribe Mexicano",
       titleEn: "El Rey Polo Country Club: The Equestrian Jewel of the Mexican Caribbean",
-      subtitleEs: "Ruta de los Cenotes Km 11, Puerto Morelos (VX9Q+H2) · A 15 min del Aeropuerto de Cancún (CUN)",
-      subtitleEn: "Cenote Route Km 11, Puerto Morelos · 15 minutes from Cancun International Airport (CUN)",
-      image: "assets/photos/palapa_interior_rect.jpg",
+      subtitleEs: "Ruta de los Cenotes Km 11, Puerto Morelos · A 25 min de Cancún y Playa del Carmen",
+      subtitleEn: "Cenote Route Km 11, Puerto Morelos · 25 minutes from Cancun and Playa del Carmen",
+      image: "assets/photos/real_palapa_interior.jpg",
       pointsEs: [
-        "Única cancha oficial reglamentaria de 300 x 200 m (6 hectáreas de césped oficial) en el Sureste de México.",
-        "Instalaciones de clase mundial: Casa Club, restaurante gourmet, alberca, caballerizas para 80+ ejemplares.",
-        "Paddock de 1 hectárea, tee de golf de práctica y club de playa privado en el Mar Caribe."
+        "Cancha oficial reglamentaria internacional (300 x 200m) con césped Bermuda y drenaje láser de última generación.",
+        "Club House de palapa maya monumental con salones VIP, terrazas elevadas, alberca panorámica y helipuerto oficial.",
+        "Reconocido como el centro ecuestre y de polo más exclusivo de todo el sureste mexicano."
       ],
       pointsEn: [
-        "Sole regulation 300 x 200 m (6-hectare official turf) championship field in Southeast Mexico.",
-        "World-class country club amenities: Clubhouse, gourmet dining, swimming pool, stables for 80+ polo ponies.",
-        "1-hectare paddock, golf driving range, and private Caribbean beach club integration."
+        "World-class regulation polo ground (300 x 200m) with laser drainage and championship Bermuda turf.",
+        "Monumental Mayan palapa clubhouse with VIP hospitality lounges, elevated viewing terraces, panoramic pool, and helipad.",
+        "Recognized as the premier equestrian and polo destination across the Mexican Caribbean."
       ],
-      badgeEs: "INFRAESTRUCTURA",
-      badgeEn: "INFRASTRUCTURE",
-      badgeEs: "INFRAESTRUCTURA",
-      badgeEn: "INFRASTRUCTURE",
-      badgeEs: "INFRAESTRUCTURA",
-      badgeEn: "INFRASTRUCTURE",
-      badgeEs: "INFRAESTRUCTURA",
-      badgeEn: "INFRASTRUCTURE",
-      badgeEs: "INFRAESTRUCTURA",
-      badgeEn: "INFRASTRUCTURE",
-      badge: "INFRAESTRUCTURA"
+      badgeEs: "SEDE OFICIAL",
+      badgeEn: "OFFICIAL VENUE",
+      badge: "SEDE OFICIAL"
     },
     {
       slideNum: "04",
@@ -759,59 +905,43 @@
       titleEn: "6 Elite National Teams in High-Goal Competition",
       subtitleEs: "España, Alemania, México, Canadá, Estados Unidos y Argentina",
       subtitleEn: "Spain, Germany, Mexico, Canada, United States and Argentina",
-      image: "assets/stills/campo_accion.jpg",
+      image: "assets/photos/real_teams_lineup.jpg",
       pointsEs: [
-        "Torneo de 4 días de competencia avalado por los comités rectores del polo internacional.",
-        "Polistas profesionales de alto hándicap y patronos de renombre internacional.",
-        "Trofeo oficial artesanalmente forjado para inmortalizar al combinado campeón."
+        "6 países con vasta tradición de polo disputando la copa oficial Nations Cup 2027.",
+        "Jornadas clasificatorias, semifinales y la gran final de campeonato con premiación de gala.",
+        "Participación de polistas de alto hándicap, criadores de renombre y comitivas internacionales."
       ],
       pointsEn: [
-        "4-day international polo championship sanctioned under official polo federation standards.",
-        "High-goal professional players and renowned international team patrons.",
-        "Handcrafted luxury silver & obsidian trophy commemorating the tournament champions."
+        "6 nations with distinguished polo heritage competing for the official Nations Cup 2027 trophy.",
+        "Qualifying chukkers, semifinals, and the grand championship final with an evening awards gala.",
+        "High-goal international players, renowned equine breeders, and distinguished global delegations."
       ],
-      badgeEs: "COMPETENCIA",
-      badgeEn: "COMPETITION",
-      badgeEs: "COMPETENCIA",
-      badgeEn: "COMPETITION",
-      badgeEs: "COMPETENCIA",
-      badgeEn: "COMPETITION",
-      badgeEs: "COMPETENCIA",
-      badgeEn: "COMPETITION",
-      badgeEs: "COMPETENCIA",
-      badgeEn: "COMPETITION",
-      badge: "COMPETENCIA"
+      badgeEs: "TORNEO",
+      badgeEn: "CHAMPIONSHIP",
+      badge: "TORNEO"
     },
     {
       slideNum: "05",
       tag: "AUDIENCIA DE ALTO STANDING",
       tagEn: "HIGH-STANDING AUDIENCE",
-      titleEs: "Demografía C-Level y Patrimonios Ultra Altos (NSE A, B y ABC+)",
-      titleEn: "C-Level Demographics and Ultra-High-Net-Worth Profile (NSE A, B & ABC+)",
-      subtitleEs: "Hombres y mujeres de 25 a 55 años con capacidad de compra e inversión ilimitada.",
-      subtitleEn: "Affluent executives aged 25 to 55 with supreme purchasing and investment capability.",
-      image: "assets/photos/real_lounge_right.jpg",
+      titleEs: "Demografía C-Level y Patrimonios de Alto Standing (NSE A, B y ABC+)",
+      titleEn: "C-Level Demographics and High-Standing Audience (NSE A, B & ABC+)",
+      subtitleEs: "Hombres y mujeres de 25 a 55 años con suprema capacidad de consumo e inversión",
+      subtitleEn: "Affluent executives aged 25 to 55 with supreme purchasing power and capital allocation authority",
+      image: "assets/photos/real_crowd_cheering.jpg",
       pointsEs: [
-        "Perfiles: CEOs, Directores Globales, Inversionistas, Presidentes de Grupo y Socios de Family Offices.",
-        "Afinidades: Alta relojería, superdeportivos, champagne, aviación ejecutiva, arte y real estate de lujo.",
-        "Audiencia cautiva durante 4 jornadas consecutivas en atmósfera relajada de alto networking."
+        "60% Directores Generales (CEOs), Presidentes de Consejo, Socios Directores e Inversionistas de Family Offices.",
+        "40% Coleccionistas de arte, propietarios de yates, diplomáticos y personalidades de la alta sociedad.",
+        "Tiempo de permanencia promedio superior a 6 horas por jornada en un entorno distendido y receptivo."
       ],
       pointsEn: [
-        "Profiles: CEOs, Global Chairs, Family Office Principals, Real Estate Developers, Tech Founders.",
-        "Passions: Haute horlogerie, supercars, vintage champagne, private aviation, fine art and luxury estates.",
-        "Captive audience over 4 consecutive days in a relaxed yet high-stakes networking environment."
+        "60% Chief Executive Officers (CEOs), Board Chairs, Managing Partners, and Family Office Principals.",
+        "40% Art collectors, yacht owners, international diplomats, and distinguished high-society figures.",
+        "Average dwell time exceeding 6 hours per day in a relaxed, highly receptive hospitality atmosphere."
       ],
-      badgeEs: "DEMOGRAFÍA",
+      badgeEs: "AUDIENCIA",
       badgeEn: "DEMOGRAPHICS",
-      badgeEs: "DEMOGRAFÍA",
-      badgeEn: "DEMOGRAPHICS",
-      badgeEs: "DEMOGRAFÍA",
-      badgeEn: "DEMOGRAPHICS",
-      badgeEs: "DEMOGRAFÍA",
-      badgeEn: "DEMOGRAPHICS",
-      badgeEs: "DEMOGRAFÍA",
-      badgeEn: "DEMOGRAPHICS",
-      badge: "DEMOGRAFÍA"
+      badge: "AUDIENCIA"
     },
     {
       slideNum: "06",
@@ -819,30 +949,22 @@
       tagEn: "THE LIFESTYLE EXPERIENCE",
       titleEs: "4 Jornadas de Emoción Deportiva, Fashion Show & Mixología de Autor",
       titleEn: "4 Days of Championship Polo, Fashion Shows & Bespoke Mixology",
-      subtitleEs: "Un festival de estilo de vida que combina chukkers electrizantes con alta costura caribeña.",
-      subtitleEn: "A lifestyle festival pairing electrifying chukkers with Caribbean haute couture.",
-      image: "assets/photos/stage_runway_rect.jpg",
+      subtitleEs: "Un festival de estilo de vida que combina chukkers electrizantes, alta cocina y coctelería",
+      subtitleEn: "A lifestyle festival pairing electrifying chukkers, haute cuisine, and fine champagne",
+      image: "assets/photos/real_social_sunset.jpg",
       pointsEs: [
-        "Pasarela de diseñadores internacionales y desfiles de alta costura resortwear.",
-        "Barras de mixología botánica con destilados ultra-premium y casas de champagne.",
-        "After-Polo Golden Hour sessions con reconocidos DJs internacionales junto a la alberca."
+        "Tradición del «Divot Stomping» (pisado de pasto) al medio tiempo con copas de champagne de cortesía.",
+        "Desfile de modas internacional sobre la pasarela de la palapa club con diseñadores de alta costura.",
+        "Sunset after-polo: mixología de autor, selectores de vinilo internacionales y cena maridaje al atardecer."
       ],
       pointsEn: [
-        "International designer fashion runway showcasing luxury resortwear and equestrian couture.",
-        "Botanical mixology bars featuring ultra-premium spirits and grand marque champagnes.",
-        "After-Polo Golden Hour sessions featuring international DJs poolside amidst lush jungle."
+        "Traditional half-time Divot Stomping paired with signature complimentary champagne flutes.",
+        "International runway fashion show on the clubhouse palapa featuring haute couture designers.",
+        "Sunset after-polo: bespoke mixology, international vinyl selectors, and fine dining under the Caribbean sky."
       ],
-      badgeEs: "HOSPITALIDAD",
-      badgeEn: "HOSPITALITY",
-      badgeEs: "HOSPITALIDAD",
-      badgeEn: "HOSPITALITY",
-      badgeEs: "HOSPITALIDAD",
-      badgeEn: "HOSPITALITY",
-      badgeEs: "HOSPITALIDAD",
-      badgeEn: "HOSPITALITY",
-      badgeEs: "HOSPITALIDAD",
-      badgeEn: "HOSPITALITY",
-      badge: "HOSPITALIDAD"
+      badgeEs: "EXPERIENCIA",
+      badgeEn: "LIFESTYLE",
+      badge: "EXPERIENCIA"
     },
     {
       slideNum: "07",
@@ -850,89 +972,65 @@
       tagEn: "360° BRAND VISIBILITY",
       titleEs: "Presencia Omnipresente y de Máxima Categoría para su Marca",
       titleEn: "Ubiquitous High-Prestige Presence Across All Touchpoints",
-      subtitleEs: "Branding en faldones de cancha, pressboard oficial, jerséis de juego y stand comercial.",
-      subtitleEn: "Field perimeter boarding, official pressboard, team jerseys, and dedicated pavilions.",
-      image: "assets/photos/vip_lounge_suite_rect.jpg",
+      subtitleEs: "Branding en faldones de cancha, pressboard oficial, jerseys de equipos y material digital",
+      subtitleEn: "Field perimeter boarding, official pressboard, team jerseys, and bespoke digital campaigns",
+      image: "assets/photos/aerial_field_drone_rect.jpg",
       pointsEs: [
-        "Faldones perimetrales de 300 metros con visibilidad garantizada en video y transmisiones.",
-        "Branding central en los uniformes oficiales de las selecciones nacionales.",
-        "Stand comercial 3x3m en el Boulevard Comercial para activación y atención VIP directa."
+        "Exposición estelar en faldones perimetrales de 300 metros frente a palcos VIP y transmisiones.",
+        "Presencia en photocall oficial de prensa por el que desfilan todos los invitados, jugadores y celebridades.",
+        "Integración en el video reel cinematográfico del torneo con distribución en plataformas premium."
       ],
       pointsEn: [
-        "300-meter field boundary boards with prime exposure in official broadcasts and high-res photography.",
-        "Dominant chest branding on national polo team jerseys worn in every match.",
-        "3x3m exhibition pavilion on the Commercial Boulevard for direct client engagements."
+        "Prime perimeter field boarding along the 300-meter sidelines facing VIP pavilions and camera angles.",
+        "Prominent logo placement on the official press photocall welcoming all VIP guests and team players.",
+        "Native brand integration in the tournament's official cinematic highlight reel distributed across luxury channels."
       ],
-      badgeEs: "IMPACTO VISUAL",
-      badgeEn: "VISUAL IMPACT",
-      badgeEs: "IMPACTO VISUAL",
-      badgeEn: "VISUAL IMPACT",
-      badgeEs: "IMPACTO VISUAL",
-      badgeEn: "VISUAL IMPACT",
-      badgeEs: "IMPACTO VISUAL",
-      badgeEn: "VISUAL IMPACT",
-      badgeEs: "IMPACTO VISUAL",
-      badgeEn: "VISUAL IMPACT",
-      badge: "IMPACTO VISUAL"
+      badgeEs: "VISIBILIDAD",
+      badgeEn: "VISIBILITY",
+      badge: "VISIBILIDAD"
     },
     {
       slideNum: "08",
       tag: "ESTRUCTURA DE PATROCINIO",
-      tagEn: "SPONSORSHIP TIERS",
-      titleEs: "Estructura Comercial 2027: 4 Tiers Corporativos & Sponsors por Ítem",
-      titleEn: "Commercial Structure 2027: 4 Corporate Tiers & Exclusive Item Sponsors",
-      subtitleEs: "Platino ($45k USD), Oro ($28k USD), Plata ($14k USD) y Bronce ($9k USD)",
-      subtitleEn: "Platinum ($45k USD), Gold ($28k USD), Silver ($14k USD) & Bronze ($9k USD)",
+      tagEn: "SPONSORSHIP STRUCTURE",
+      titleEs: "Estructura Comercial 2027: 4 Niveles Corporativos & Patrocinios por Activo",
+      titleEn: "Commercial Structure 2027: 4 Corporate Tiers & Exclusive Asset Sponsorships",
+      subtitleEs: "Platino ($45,000 USD), Oro ($28,000 USD), Plata ($14,000 USD) y Bronce ($9,000 USD)",
+      subtitleEn: "Platinum ($45,000 USD), Gold ($28,000 USD), Silver ($14,000 USD) & Bronze ($9,000 USD)",
       image: "assets/photos/palco_networking_rect.jpg",
       pointsEs: [
-        "Tiers Corporativos con exclusividad de sector: Platino ($45k USD), Oro ($28k USD), Plata ($14k USD) y Bronce ($9k USD).",
-        "Sponsors Exclusivos por Ítem: Naming del Torneo ($80k USD), Sponsoreo de Equipo ($25k USD) y Speaker del Torneo ($20k USD).",
-        "Activos de Alta Visibilidad: Pantallas Gigantes ($20k USD), Nombre del Campo ($15k USD) y Premios de Honor ($5k USD)."
+        "Niveles Corporativos con exclusividad de sector: Platino ($45k USD), Oro ($28k USD), Plata ($14k USD) y Bronce ($9k USD).",
+        "Patrocinios Exclusivos por activo: Nombre del Torneo ($80k USD), Patrocinio de Equipo ($25k USD) y Locutor Oficial ($20k USD).",
+        "Activos de Alta Visibilidad: Pantallas Gigantes ($20k USD), Nombre del Campo ($15k USD), Cartelera ($5k USD) y Premios de Honor ($5k USD c/u)."
       ],
       pointsEn: [
         "Corporate Tiers with sector exclusivity: Platinum ($45k USD), Gold ($28k USD), Silver ($14k USD) & Bronze ($9k USD).",
-        "Exclusive Item Sponsorships: Tournament Naming Right ($80k USD), Team Jersey ($25k USD) & Official Speaker ($20k USD).",
-        "High-Visibility Assets: Giant LED Screens ($20k USD), Field Naming ($15k USD) & MVP/Horse Awards ($5k USD)."
+        "Exclusive Asset Sponsorships: Tournament Title Naming ($80k USD), Team Jersey ($25k USD) & Official Announcer ($20k USD).",
+        "High-Visibility Assets: Giant LED Screens ($20k USD), Field Naming ($15k USD), Boarding ($5k USD) & Honor Trophies ($5k USD each)."
       ],
-      badgeEs: "ESTRUCTURA",
-      badgeEn: "TIER STRUCTURE",
-      badgeEs: "ESTRUCTURA",
-      badgeEn: "TIER STRUCTURE",
-      badgeEs: "ESTRUCTURA",
-      badgeEn: "TIER STRUCTURE",
-      badgeEs: "ESTRUCTURA",
-      badgeEn: "TIER STRUCTURE",
       badgeEs: "ESTRUCTURA",
       badgeEn: "TIER STRUCTURE",
       badge: "ESTRUCTURA"
     },
     {
       slideNum: "09",
-      tag: "MATRIZ DE SPONSORS EXCLUSIVOS",
-      tagEn: "EXCLUSIVE SPONSORS MATRIX",
-      titleEs: "Inversión por Activo Específico: Del Naming Right a Premios de Honor",
+      tag: "MATRIZ DE PATROCINIOS EXCLUSIVOS",
+      tagEn: "EXCLUSIVE SPONSORSHIPS MATRIX",
+      titleEs: "Inversión por Activo Específico: Del Patrocinador Titular a Premios de Honor",
       titleEn: "Investment by Specific Asset: From Tournament Naming to Trophy Awards",
-      subtitleEs: "D. Torneo ($80k USD) · C. Equipo ($25k USD) · E. Speaker ($20k USD) · B. Pantallas ($20k USD)",
-      subtitleEn: "D. Tournament ($80k USD) · C. Team ($25k USD) · E. Speaker ($20k USD) · B. Screens ($20k USD)",
+      subtitleEs: "D. Torneo ($80k USD) · C. Equipo ($25k USD) · E. Locutor Oficial ($20k USD) · B. Pantallas ($20k USD)",
+      subtitleEn: "D. Tournament ($80k USD) · C. Team ($25k USD) · E. Announcer ($20k USD) · B. Screens ($20k USD)",
       image: "assets/photos/terrace_pergolado_rect.jpg",
       pointsEs: [
-        "D. Patrocinador Nombre del Torneo: $80,000 USD ($1,400,000 MXN) — Omnipresencia en todos los puntos del club y fixture.",
-        "C. Sponsoreo de Equipo: $25,000 USD ($437,500 MXN) por selección exclusiva (España, Alemania, México, Canadá, USA o Argentina).",
-        "E, B, F, A y G: Speaker ($20k USD), Pantallas ($20k USD), Campo ($15k USD), Cartelera ($5k USD) y Premios MVP/Caballo ($5k USD c/u)."
+        "D. Patrocinador Nombre del Torneo: $80,000 USD ($1,400,000 MXN) — Presencia en todos los puntos del club y fixture oficial.",
+        "C. Patrocinio de Equipo Exclusivo: $25,000 USD ($437,500 MXN) por selección (España, Alemania, México, Canadá, Estados Unidos o Argentina).",
+        "E, B, F, A y G: Locutor Oficial ($20k USD), Pantallas ($20k USD), Nombre del Campo ($15k USD), Cartelera ($5k USD) y Premios Mejor Jugador/Caballo ($5k USD c/u)."
       ],
       pointsEn: [
-        "D. Tournament Naming Partner: $80,000 USD ($1,400,000 MXN) — Ubiquitous presence across all venue touchpoints and broadcasts.",
+        "D. Tournament Title Naming Partner: $80,000 USD ($1,400,000 MXN) — Ubiquitous presence across all venue touchpoints and broadcasts.",
         "C. Exclusive Team Jersey Sponsor: $25,000 USD ($437,500 MXN) per nation (Spain, Germany, Mexico, Canada, USA or Argentina).",
-        "E, B, F, A & G: Speaker ($20k USD), LED Screens ($20k USD), Field ($15k USD), Boarding ($5k USD) & MVP/Pony Awards ($5k USD each)."
+        "E, B, F, A & G: Official Announcer ($20k USD), Giant LED Screens ($20k USD), Field ($15k USD), Boarding ($5k USD) & MVP/Horse Awards ($5k USD each)."
       ],
-      badgeEs: "MATRIZ COMERCIAL",
-      badgeEn: "COMMERCIAL MATRIX",
-      badgeEs: "MATRIZ COMERCIAL",
-      badgeEn: "COMMERCIAL MATRIX",
-      badgeEs: "MATRIZ COMERCIAL",
-      badgeEn: "COMMERCIAL MATRIX",
-      badgeEs: "MATRIZ COMERCIAL",
-      badgeEn: "COMMERCIAL MATRIX",
       badgeEs: "MATRIZ COMERCIAL",
       badgeEn: "COMMERCIAL MATRIX",
       badge: "MATRIZ COMERCIAL"
@@ -941,31 +1039,23 @@
       slideNum: "10",
       tag: "ACTIVACIONES A MEDIDA",
       tagEn: "BESPOKE ACTIVATIONS",
-      titleEs: "Oportunidades Personalizadas para Sectores de Alto Perfil",
-      titleEn: "Customized Brand Activations for Luxury Verticals",
-      subtitleEs: "Alta Relojería, Automotriz, Champagne, Aviación Privada y Banca de Inversión",
-      subtitleEn: "Haute Horlogerie, Supercars, Champagne, Private Aviation & Wealth Management",
+      titleEs: "Oportunidades Personalizadas para Sectores de Alto Standing",
+      titleEn: "Customized Brand Activations for High-Standing Verticals",
+      subtitleEs: "Alta Relojería, Automotriz, Champagne, Aviación Privada, Bienes Raíces y Banca Privada",
+      subtitleEn: "Haute Horlogerie, Supercars, Fine Champagne, Private Aviation, Real Estate & Wealth Management",
       image: "assets/photos/pool_autoshow_rect.jpg",
       pointsEs: [
-        "Alta Relojería: Cronometrador oficial de los chukkers y entrega del reloj conmemorativo al MVP.",
-        "Automotriz: Exhibición estática de superdeportivos en el césped y servicio de shuttle VIP.",
-        "Champagne & Spirits: Celebración del brindis oficial de campeones y barra exclusiva en el Paddock."
+        "Exhibición de automóviles de lujo y supercars junto a la alberca central con prueba de manejo para invitados VIP.",
+        "Cavas y salones privados de degustación para firmas de champagne, vinos de culto y alta gastronomía.",
+        "Espacio de hospitalidad exclusivo para reuniones confidenciales con clientes de alto patrimonio."
       ],
       pointsEn: [
-        "Haute Horlogerie: Official Tournament Timekeeper with commemorative MVP watch presentation.",
-        "Luxury Automotive: Static supercar showcase along pristine greens and executive VIP transfers.",
-        "Champagne & Spirits: Official victory chukker toast and dedicated champagne pavilion."
+        "Bespoke supercar display alongside the central pool deck with private test-drive appointments for VIPs.",
+        "Private tasting lounges for prestige champagne houses, rare spirits, and culinary caviar pairings.",
+        "Dedicated hospitality pavilions designed for confidential advisory sessions with high-net-worth clients."
       ],
       badgeEs: "ACTIVACIONES",
-      badgeEn: "BESPOKE ACTIVATIONS",
-      badgeEs: "ACTIVACIONES",
-      badgeEn: "BESPOKE ACTIVATIONS",
-      badgeEs: "ACTIVACIONES",
-      badgeEn: "BESPOKE ACTIVATIONS",
-      badgeEs: "ACTIVACIONES",
-      badgeEn: "BESPOKE ACTIVATIONS",
-      badgeEs: "ACTIVACIONES",
-      badgeEn: "BESPOKE ACTIVATIONS",
+      badgeEn: "ACTIVATIONS",
       badge: "ACTIVACIONES"
     },
     {
@@ -974,30 +1064,22 @@
       tagEn: "MEDIA & PR CAMPAIGN",
       titleEs: "+2.5 Millones de Impactos Calificados en Medios y Plataformas Digitales",
       titleEn: "+2.5 Million Qualified Impressions Across Luxury Media & Digital PR",
-      subtitleEs: "Campaña hipersegmentada a perfiles C-Level en México, Estados Unidos, Canadá y Europa.",
-      subtitleEn: "Hyper-targeted campaign aimed at C-Suite audiences in Mexico, the US, Canada and Europe.",
-      image: "assets/photos/commercial_stands_rect.jpg",
+      subtitleEs: "Campaña hipersegmentada a perfiles C-Level en México, Estados Unidos, Canadá y Europa",
+      subtitleEn: "Hyper-targeted campaign aimed at C-Suite audiences across Mexico, the United States, Canada, and Europe",
+      image: "assets/photos/drone_field_match_rect.jpg",
       pointsEs: [
-        "+1,000,000 de impresiones pagadas en Meta & Google Ads segmentadas a directores y CEOs.",
-        "+1,500,000 de alcance orgánico estimado mediante cobertura de influencers y prensa de estilo de vida.",
-        "Cobertura editorial confirmada en LM Magazine y suplemento especial MEXICO POLO LIFE."
+        "Cobertura editorial en las principales revistas de estilo de vida, negocios, aviación y turismo de lujo.",
+        "Estrategia de relaciones públicas con líderes de opinión, celebridades ecuestres y embajadores de marca.",
+        "Generación de contenido audiovisual 4K y banco de imágenes profesionales para uso corporativo de los patrocinadores."
       ],
       pointsEn: [
-        "+1,000,000 paid impressions on Meta & Google Ads targeted strictly at high-income leaders.",
-        "+1,500,000 estimated organic reach through lifestyle opinion leaders, patrons, and society press.",
-        "Dedicated editorial coverage in LM Magazine, Robb Report style press and Mexico Polo Life."
+        "Comprehensive editorial coverage across leading luxury lifestyle, private wealth, business, and equestrian publications.",
+        "Strategic PR outreach engaging high-profile tastemakers, equestrian patrons, and luxury ambassadors.",
+        "Delivery of 4K cinematic highlight footage and high-resolution photo archives for sponsor marketing usage."
       ],
-      badgeEs: "ALCANCE",
-      badgeEn: "MEDIA & REACH",
-      badgeEs: "ALCANCE",
-      badgeEn: "MEDIA & REACH",
-      badgeEs: "ALCANCE",
-      badgeEn: "MEDIA & REACH",
-      badgeEs: "ALCANCE",
-      badgeEn: "MEDIA & REACH",
-      badgeEs: "ALCANCE",
-      badgeEn: "MEDIA & REACH",
-      badge: "ALCANCE"
+      badgeEs: "DIFUSIÓN & PR",
+      badgeEn: "MEDIA & PR",
+      badge: "DIFUSIÓN & PR"
     },
     {
       slideNum: "12",
@@ -1005,58 +1087,42 @@
       tagEn: "METRICS & ROI AUDIT",
       titleEs: "Auditoría Post-Evento, Clipping de Medios y Base de Datos PR",
       titleEn: "Post-Event Media Audit, PR Clippings & Executive Networking Data",
-      subtitleEs: "Garantizamos métricas cuantitativas y cualitativas de valor publicitario equivalente (AVE).",
-      subtitleEn: "Delivering verifiable qualitative and quantitative metrics with Advertising Value Equivalency.",
-      image: "assets/photos/sunset_grill_rect.jpg",
+      subtitleEs: "Garantizamos métricas cuantitativas y cualitativas que respaldan su inversión",
+      subtitleEn: "Delivering verifiable qualitative and quantitative metrics to validate your investment",
+      image: "assets/photos/polo_match_gallop_rect.jpg",
       pointsEs: [
-        "Reporte analítico integral post-evento con métricas de menciones, alcance y visualizaciones.",
-        "Dossier fotográfico y mini-clip cinematográfico de 15 segundos personalizado para la marca.",
-        "Acceso directo y validado a la red de contactos y patrocinadores participantes."
+        "Reporte integral de valor publicitario equivalente (VPE) y alcance total alcanzado en medios de comunicación.",
+        "Auditoría fotográfica y videográfica detallada de todas las presencias de marca en cancha y zonas de hospitalidad VIP.",
+        "Oportunidades de seguimiento comercial directo con los tomadores de decisiones acreditados durante el evento."
       ],
       pointsEn: [
-        "Comprehensive post-event analytics dossier documenting impressions, engagement, and reach.",
-        "Curated high-resolution photo library and bespoke 15-second cinematic highlight reel for your brand.",
-        "Direct access to tournament attendee database for relationship-building and VIP hospitality follow-up."
+        "Comprehensive post-event report calculating Equivalent Advertising Value (EAV) and verified audience reach.",
+        "Detailed photographic and video audit cataloging every brand placement across grounds and hospitality pavilions.",
+        "Targeted business development follow-up pathways with accredited C-Level executives attending the tournament."
       ],
-      badgeEs: "ANALÍTICA",
-      badgeEn: "ANALYTICS & ROI",
-      badgeEs: "ANALÍTICA",
-      badgeEn: "ANALYTICS & ROI",
-      badgeEs: "ANALÍTICA",
-      badgeEn: "ANALYTICS & ROI",
-      badgeEs: "ANALÍTICA",
-      badgeEn: "ANALYTICS & ROI",
-      badgeEs: "ANALÍTICA",
-      badgeEn: "ANALYTICS & ROI",
-      badge: "ANALÍTICA"
+      badgeEs: "RETORNO ROI",
+      badgeEn: "METRICS & ROI",
+      badge: "RETORNO ROI"
     },
     {
       slideNum: "13",
       tag: "DISPONIBILIDAD POR SECTOR",
       tagEn: "INDUSTRY EXCLUSIVITY",
-      titleEs: "Regla Inquebrantable: Estricto Límite de 1 Sola Marca por Sector",
+      titleEs: "Regla Inquebrantable: Estricto Límite de 1 Sola Marca por Sector Industrial",
       titleEn: "Unbreakable Standard: Strict Limit of 1 Single Brand per Industry Sector",
-      subtitleEs: "La reserva de exclusividad se otorga por estricto orden cronológico de formalización.",
-      subtitleEn: "Category reservation lock is granted strictly in chronological order of formalization.",
-      image: "assets/stills/champagne_toast.jpg",
+      subtitleEs: "La reserva de exclusividad se otorga por estricto orden de formalización comercial",
+      subtitleEn: "Category reservation lock is granted strictly in order of commercial confirmation",
+      image: "assets/photos/stewards_prep_rect.jpg",
       pointsEs: [
-        "Blindaje garantizado: Si su marca confirma en 'Automotriz', ninguna otra marca de autos tendrá presencia.",
-        "Categorías en proceso de confirmación: Alta Relojería, Champagne, Banca Privada y Aviación.",
-        "Recomendamos contactar de inmediato para verificar la disponibilidad de su industria."
+        "Blindaje absoluto: su competencia directa queda terminantemente excluida del evento una vez formalizada la firma.",
+        "Sectores prioritarios: Alta Relojería, Automotriz, Banca Privada, Champagne, Aviación, Bienes Raíces y Moda.",
+        "Garantía de entorno limpio, exclusivo y de máxima relevancia para los asistentes de alto standing."
       ],
       pointsEn: [
-        "Guaranteed competitor shield: When your brand locks 'Automotive', all rivals are barred.",
-        "Categories currently under active negotiation: Horlogerie, Champagne, Private Banking and Aviation.",
-        "Immediate inquiry is strongly recommended to secure your category before industry closure."
+        "Total commercial exclusivity: direct competitors are strictly barred once category lock is formalized.",
+        "Priority sectors: Haute Horlogerie, Luxury Automotive, Private Wealth, Champagne, Aviation, Prime Real Estate, and Fashion.",
+        "Uncluttered, prestigious environment ensuring maximum visibility and brand salience for affluent patrons."
       ],
-      badgeEs: "EXCLUSIVIDAD",
-      badgeEn: "EXCLUSIVITY",
-      badgeEs: "EXCLUSIVIDAD",
-      badgeEn: "EXCLUSIVITY",
-      badgeEs: "EXCLUSIVIDAD",
-      badgeEn: "EXCLUSIVITY",
-      badgeEs: "EXCLUSIVIDAD",
-      badgeEn: "EXCLUSIVITY",
       badgeEs: "EXCLUSIVIDAD",
       badgeEn: "EXCLUSIVITY",
       badge: "EXCLUSIVIDAD"
@@ -1067,34 +1133,25 @@
       tagEn: "CLOSING PROTOCOL",
       titleEs: "Reunión de Alineación Privada con el Comité Organizador",
       titleEn: "Private Executive Alignment Meeting with the Committee",
-      subtitleEs: "Sesión ejecutiva de 30 minutos presencial o por videoconferencia para afinar activaciones.",
-      subtitleEn: "30-minute executive briefing in-person or via secure videoconference to tailor activations.",
-      image: "assets/stills/trofeo_championship.jpg",
+      subtitleEs: "Sesión ejecutiva de 30 minutos presencial o por videoconferencia segura",
+      subtitleEn: "30-minute executive briefing in-person or via secure videoconference",
+      image: "assets/photos/sunset_grill_rect.jpg",
       pointsEs: [
-        "1. Confirmación de disponibilidad de su categoría de industria.",
-        "2. Sesión estratégica para diseñar activaciones y presencia en el club.",
-        "3. Emisión de contrato de patrocinio formal con bloqueo de exclusividad.",
-        "Canal directo: Presidencia de Patrocinios vía WhatsApp al +34 722 11 62 48."
+        "Paso 1: Solicitud formal de disponibilidad de categoría y emisión del acuerdo de confidencialidad (NDA).",
+        "Paso 2: Presentación de la propuesta comercial personalizada con plano de activación en El Rey Polo Club.",
+        "Paso 3: Reserva y bloqueo de categoría mediante carta de intención (LOI) y formalización de patrocinio."
       ],
       pointsEn: [
-        "1. Real-time availability check for your specific commercial sector.",
-        "2. Strategic session to customize brand activations, lounges, and hospitality.",
-        "3. Formal agreement issuance with legal category exclusivity guarantee.",
-        "Direct liaison: Sponsorship Presidency on WhatsApp at +34 722 11 62 48."
+        "Step 1: Formal inquiry on industry sector availability and execution of bilateral Non-Disclosure Agreement (NDA).",
+        "Step 2: Presentation of tailored sponsorship proposal with venue spatial activation mapping.",
+        "Step 3: Category lock formalized via Letter of Intent (LOI) and final sponsorship partnership agreement."
       ],
-      badgeEs: "FORMALIZACIÓN",
-      badgeEn: "CLOSING PROTOCOL",
-      badgeEs: "FORMALIZACIÓN",
-      badgeEn: "CLOSING PROTOCOL",
-      badgeEs: "FORMALIZACIÓN",
-      badgeEn: "CLOSING PROTOCOL",
-      badgeEs: "FORMALIZACIÓN",
-      badgeEn: "CLOSING PROTOCOL",
-      badgeEs: "FORMALIZACIÓN",
-      badgeEn: "CLOSING PROTOCOL",
-      badge: "FORMALIZACIÓN"
+      badgeEs: "PROTOCOLO",
+      badgeEn: "NEXT STEPS",
+      badge: "PROTOCOLO"
     }
   ];
+
   // --- 3. EDITORIAL GALLERY DATA (12 MASTER SHOTS) ---
   const galleryData = [
     {
@@ -1149,7 +1206,7 @@
     },
     {
       index: "06",
-      titleEs: "VIP Hospitality Lounge con Mixología de Autor",
+      titleEs: "Salón VIP de Hospitalidad con Mixología de Autor",
       titleEn: "VIP Hospitality Lounge with Bespoke Mixology",
       descEs: "Espacio central de palapa de lujo con techos de doble altura, barras de mármol y coctelería internacional.",
       descEn: "Grand thatched luxury palapa pavilion with soaring ceilings, marble bars, and premium international mixology.",
@@ -1199,7 +1256,7 @@
     },
     {
       index: "11",
-      titleEs: "Golden Hour Cocktail & After-Polo Sessions",
+      titleEs: "Cóctel al Atardecer & Sesiones de After-Polo",
       titleEn: "Golden Hour Cocktail & After-Polo Sessions",
       descEs: "El atardecer en la selva caribeña acompañado de selectores de música internacionales y gastronomía al grill.",
       descEn: "Riviera Maya sunset accompanied by international vinyl selectors and bespoke woodfire barbecue.",
@@ -1293,6 +1350,14 @@
     // Translate all [data-i18n]
     const elements = document.querySelectorAll('[data-i18n]');
     const dict = i18n[lang];
+    document.documentElement.setAttribute('lang', lang);
+    if (dict['page_meta_title']) {
+      document.title = dict['page_meta_title'];
+    }
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && dict['page_meta_desc']) {
+      metaDesc.setAttribute('content', dict['page_meta_desc']);
+    }
     elements.forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (dict[key]) {
@@ -1790,13 +1855,17 @@
   // --- 8. 360° SPHERICAL TOUR (PANNELLUM) ---
   const scenes360 = {
     lounge: {
-      title: "VIP Hospitality Lounge",
+      titleEs: "Salón VIP de Hospitalidad",
+      titleEn: "VIP Hospitality Lounge",
+      title: "Salón VIP de Hospitalidad",
       image: "assets/renders/Palapa interior.jpg",
       yaw: 15,
       pitch: -2,
       hfov: 100
     },
     field: {
+      titleEs: "Campo Central & Explanada",
+      titleEn: "Main Ground & Concours",
       title: "Campo Central & Explanada",
       image: "assets/renders/Palapa Exterior.jpg",
       yaw: -30,
@@ -1804,21 +1873,27 @@
       hfov: 105
     },
     autoshow: {
-      title: "Stands Comerciales & Autoshow",
+      titleEs: "Stands Comerciales & Exhibición de Autos",
+      titleEn: "Commercial Pavilions & Concours",
+      title: "Stands Comerciales & Exhibición de Autos",
       image: "assets/renders/pool autoshow.jpg",
       yaw: 50,
       pitch: -5,
       hfov: 95
     },
     grill: {
-      title: "Sunset Grill & Bar",
+      titleEs: "Terraza Sunset & Asador Gourmet",
+      titleEn: "Sunset Terrace & Gourmet Grill",
+      title: "Terraza Sunset & Asador Gourmet",
       image: "assets/renders/grill.jpg",
       yaw: 0,
       pitch: -4,
       hfov: 100
     },
     stage: {
-      title: "Escenario Fashion Show",
+      titleEs: "Escenario Fashion Show & Premiación",
+      titleEn: "Fashion Show & Awards Stage",
+      title: "Escenario Fashion Show & Premiación",
       image: "assets/renders/stage.jpg",
       yaw: -15,
       pitch: 0,
@@ -2013,41 +2088,50 @@
     MXN: {
       symbol: "$",
       code: "MXN",
-      suffix: "MXN + IVA",
       platino: "787,500",
-      platinoEquiv: "Equivalente oficial a $45,000 USD",
+      platinoEquivEs: "Equivalente oficial a $45,000 USD",
+      platinoEquivEn: "Official equivalent: $45,000 USD",
       oro: "490,000",
-      oroEquiv: "Equivalente oficial a $28,000 USD",
+      oroEquivEs: "Equivalente oficial a $28,000 USD",
+      oroEquivEn: "Official equivalent: $28,000 USD",
       plata: "245,000",
-      plataEquiv: "Equivalente oficial a $14,000 USD",
+      plataEquivEs: "Equivalente oficial a $14,000 USD",
+      plataEquivEn: "Official equivalent: $14,000 USD",
       bronce: "157,500",
-      bronceEquiv: "Equivalente oficial a $9,000 USD"
+      bronceEquivEs: "Equivalente oficial a $9,000 USD",
+      bronceEquivEn: "Official equivalent: $9,000 USD"
     },
     USD: {
       symbol: "$",
       code: "USD",
-      suffix: "USD + IVA",
       platino: "45,000",
-      platinoEquiv: "Aprox. $787,500 MXN",
+      platinoEquivEs: "Aprox. $787,500 MXN",
+      platinoEquivEn: "Approx. $787,500 MXN",
       oro: "28,000",
-      oroEquiv: "Aprox. $490,000 MXN",
+      oroEquivEs: "Aprox. $490,000 MXN",
+      oroEquivEn: "Approx. $490,000 MXN",
       plata: "14,000",
-      plataEquiv: "Aprox. $245,000 MXN",
+      plataEquivEs: "Aprox. $245,000 MXN",
+      plataEquivEn: "Approx. $245,000 MXN",
       bronce: "9,000",
-      bronceEquiv: "Aprox. $157,500 MXN"
+      bronceEquivEs: "Aprox. $157,500 MXN",
+      bronceEquivEn: "Approx. $157,500 MXN"
     },
     EUR: {
       symbol: "€",
       code: "EUR",
-      suffix: "EUR + IVA",
       platino: "41,400",
-      platinoEquiv: "Aprox. $45,000 USD",
+      platinoEquivEs: "Aprox. $45,000 USD",
+      platinoEquivEn: "Approx. $45,000 USD",
       oro: "25,750",
-      oroEquiv: "Aprox. $28,000 USD",
+      oroEquivEs: "Aprox. $28,000 USD",
+      oroEquivEn: "Approx. $28,000 USD",
       plata: "12,880",
-      plataEquiv: "Aprox. $14,000 USD",
+      plataEquivEs: "Aprox. $14,000 USD",
+      plataEquivEn: "Approx. $14,000 USD",
       bronce: "8,280",
-      bronceEquiv: "Aprox. $9,000 USD"
+      bronceEquivEs: "Aprox. $9,000 USD",
+      bronceEquivEn: "Approx. $9,000 USD"
     }
   };
 
@@ -2061,7 +2145,7 @@
     }
   };
 
-    function updateCurrencyDisplay() {
+  function updateCurrencyDisplay() {
     const curr = currencyRates[state.currency] || currencyRates['USD'];
     const isEs = state.lang === 'es';
 
@@ -2077,39 +2161,59 @@
       }
     });
 
+    const vatSuffix = isEs ? `${curr.code} + IVA` : `${curr.code} + VAT`;
+
     // Update Tier Platino
     const tPPrice = document.getElementById('tier-platino-price');
     const tPCurr = document.getElementById('tier-platino-currency');
     const tPEquiv = document.getElementById('tier-platino-equiv');
     if (tPPrice) tPPrice.textContent = `${curr.symbol}${curr.platino}`;
-    if (tPCurr) tPCurr.textContent = isEs ? `${curr.code} + IVA` : `${curr.code} + VAT`;
-    if (tPEquiv) tPEquiv.textContent = curr.platinoEquiv;
+    if (tPCurr) tPCurr.textContent = vatSuffix;
+    if (tPEquiv) tPEquiv.textContent = isEs ? curr.platinoEquivEs : curr.platinoEquivEn;
 
     // Update Tier Oro
     const tOPrice = document.getElementById('tier-oro-price');
     const tOCurr = document.getElementById('tier-oro-currency');
     const tOEquiv = document.getElementById('tier-oro-equiv');
     if (tOPrice) tOPrice.textContent = `${curr.symbol}${curr.oro}`;
-    if (tOCurr) tOCurr.textContent = isEs ? `${curr.code} + IVA` : `${curr.code} + VAT`;
-    if (tOEquiv) tOEquiv.textContent = curr.oroEquiv;
+    if (tOCurr) tOCurr.textContent = vatSuffix;
+    if (tOEquiv) tOEquiv.textContent = isEs ? curr.oroEquivEs : curr.oroEquivEn;
 
     // Update Tier Plata
     const tSPrice = document.getElementById('tier-plata-price');
     const tSCurr = document.getElementById('tier-plata-currency');
     const tSEquiv = document.getElementById('tier-plata-equiv');
     if (tSPrice) tSPrice.textContent = `${curr.symbol}${curr.plata}`;
-    if (tSCurr) tSCurr.textContent = isEs ? `${curr.code} + IVA` : `${curr.code} + VAT`;
-    if (tSEquiv) tSEquiv.textContent = curr.plataEquiv;
+    if (tSCurr) tSCurr.textContent = vatSuffix;
+    if (tSEquiv) tSEquiv.textContent = isEs ? curr.plataEquivEs : curr.plataEquivEn;
 
     // Update Tier Bronce
     const tBPrice = document.getElementById('tier-bronce-price');
     const tBCurr = document.getElementById('tier-bronce-currency');
     const tBEquiv = document.getElementById('tier-bronce-equiv');
     if (tBPrice) tBPrice.textContent = `${curr.symbol}${curr.bronce}`;
-    if (tBCurr) tBCurr.textContent = isEs ? `${curr.code} + IVA` : `${curr.code} + VAT`;
-    if (tBEquiv) tBEquiv.textContent = curr.bronceEquiv;
+    if (tBCurr) tBCurr.textContent = vatSuffix;
+    if (tBEquiv) tBEquiv.textContent = isEs ? curr.bronceEquivEs : curr.bronceEquivEn;
 
-    // Update Special Assets Table prices & currency labels (Default USD)
+    // Update Special Assets Table note
+    const tableCurrNote = document.getElementById('table-currency-note');
+    if (tableCurrNote) {
+      if (state.currency === 'USD') {
+        tableCurrNote.textContent = isEs ? "Tarifas oficiales en Dólares (USD + IVA)" : "Official rates in US Dollars (USD + VAT)";
+      } else if (state.currency === 'MXN') {
+        tableCurrNote.textContent = isEs ? "Tarifas convertidas a Pesos Mexicanos (MXN + IVA)" : "Rates converted to Mexican Pesos (MXN + VAT)";
+      } else {
+        tableCurrNote.textContent = isEs ? "Tarifas convertidas a Euros (EUR + IVA)" : "Rates converted to Euros (EUR + VAT)";
+      }
+    }
+
+    // Update all suffixes in the special assets table
+    const tableSuffixes = document.querySelectorAll('.table-vat-suffix');
+    tableSuffixes.forEach(s => {
+      s.textContent = vatSuffix;
+    });
+
+    // Update Special Assets Table prices (Default USD)
     const specialElements = document.querySelectorAll('.price-val');
     specialElements.forEach(el => {
       let val = el.getAttribute('data-usd'); // DEFAULT USD
@@ -2120,41 +2224,8 @@
         el.textContent = `${curr.symbol}${num}`;
       }
     });
-
-    const currLabels = document.querySelectorAll('.price-curr-label');
-    currLabels.forEach(lbl => {
-      lbl.textContent = isEs ? `${curr.code} + IVA` : `${curr.code} + VAT`;
-    });
-
-    const headerCurrEl = document.getElementById('header-curr-selected');
-    if (headerCurrEl) {
-      headerCurrEl.textContent = curr.code;
-    }
-
-    const tableNoteEl = document.getElementById('table-currency-note');
-    if (tableNoteEl) {
-      tableNoteEl.textContent = state.currency === 'MXN'
-        ? (isEs ? 'Tarifas en Moneda Nacional (MXN + IVA)' : 'Official rates in Mexican Pesos (MXN + VAT)')
-        : (state.currency === 'EUR' 
-            ? (isEs ? 'Tarifas en Euros (EUR + IVA)' : 'Official rates in Euros (EUR + VAT)') 
-            : (isEs ? 'Tarifas oficiales en Dólares (USD + IVA)' : 'Official rates in US Dollars (USD + VAT)'));
-    }
   }
 
-  // Auto pre-select tier and scroll to WhatsApp form
-  window.selectTierForContact = function (tierKey) {
-    const formSection = document.getElementById('formulario-whatsapp');
-    const tierSelect = document.getElementById('form-tier');
-
-    if (tierSelect) {
-      tierSelect.value = tierKey;
-      updateFormWhatsAppPreview();
-    }
-
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   // --- 11. DIRECT WHATSAPP URL GENERATOR (+34 722 11 62 48) ---
   const WHATSAPP_PHONE = "34722116248"; // +34 722 11 62 48
@@ -2545,7 +2616,8 @@
     navigator.clipboard.writeText(text).then(function () {
       if (btn) {
         const originalText = btn.textContent;
-        btn.textContent = "¡Copiado! ✓";
+        const isEs = (state.lang || 'es') === 'es';
+        btn.textContent = isEs ? "¡Copiado! ✓" : "Copied! ✓";
         btn.classList.add('bg-warm-bronze', 'text-white');
         setTimeout(function () {
           btn.textContent = originalText;
