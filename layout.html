@@ -393,154 +393,148 @@
             decoding="async"
           />
 
-          <!-- Capa de Pines Interactivos (Hotspots) -->
+                    <!-- Capa de Zonas Físicas y Pines Interactivos (Ubicaciones Exactas s/ Master Plan) -->
           <div id="hotspots-layer" class="absolute inset-0 pointer-events-auto">
             
-            <!-- Pin 1: VIP Polo Club (top: 58%, left: 50%) -->
+            <!-- 1. ZONA DE JUGADORES & PADDOCK (left: 11%-26%, top: 1%-17%) -->
             <div 
-              class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer group/pin z-20"
-              style="top: 58%; left: 50%;"
-              onclick="window.openZoneModal('vip-polo-club')"
-            >
-              <div class="relative w-8 h-8 flex items-center justify-center">
-                <div class="radar-pulse"></div>
-                <div class="w-5 h-5 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/pin:scale-125 transition-transform duration-300">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#07140E]"></span>
-                </div>
-              </div>
-              <!-- Tooltip Flotante -->
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/pin:flex flex-col items-center pointer-events-none min-w-[200px] z-30">
-                <div class="bg-[#07140E]/95 border border-[#D4AF37] px-3 py-1.5 rounded-lg shadow-2xl backdrop-blur-md text-center">
-                  <span class="text-[10px] text-[#D4AF37] font-bold uppercase tracking-widest block">VIP Polo Club</span>
-                  <span class="text-xs text-[#FBF9F5] font-semibold block" data-price-tag="vip-polo-club">Desde $4,500 MXN / $265 USD</span>
-                </div>
-                <div class="w-2 h-2 bg-[#D4AF37] rotate-45 -mt-1"></div>
-              </div>
-            </div>
-
-            <!-- Pin 2: Premium Lounge (top: 52%, left: 32%) -->
-            <div 
-              class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer group/pin z-20"
-              style="top: 52%; left: 32%;"
-              onclick="window.openZoneModal('premium-lounge')"
-            >
-              <div class="relative w-8 h-8 flex items-center justify-center">
-                <div class="radar-pulse"></div>
-                <div class="w-5 h-5 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/pin:scale-125 transition-transform duration-300">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#07140E]"></span>
-                </div>
-              </div>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/pin:flex flex-col items-center pointer-events-none min-w-[200px] z-30">
-                <div class="bg-[#07140E]/95 border border-[#D4AF37] px-3 py-1.5 rounded-lg shadow-2xl backdrop-blur-md text-center">
-                  <span class="text-[10px] text-[#D4AF37] font-bold uppercase tracking-widest block">Zona Premium</span>
-                  <span class="text-xs text-[#FBF9F5] font-semibold block" data-price-tag="premium-lounge">Desde $3,500 MXN / $205 USD</span>
-                </div>
-                <div class="w-2 h-2 bg-[#D4AF37] rotate-45 -mt-1"></div>
-              </div>
-            </div>
-
-            <!-- Pin 3: General & Polo Village (top: 72%, left: 75%) -->
-            <div 
-              class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer group/pin z-20"
-              style="top: 72%; left: 75%;"
-              onclick="window.openZoneModal('general-village')"
-            >
-              <div class="relative w-8 h-8 flex items-center justify-center">
-                <div class="radar-pulse"></div>
-                <div class="w-5 h-5 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/pin:scale-125 transition-transform duration-300">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#07140E]"></span>
-                </div>
-              </div>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/pin:flex flex-col items-center pointer-events-none min-w-[200px] z-30">
-                <div class="bg-[#07140E]/95 border border-[#D4AF37] px-3 py-1.5 rounded-lg shadow-2xl backdrop-blur-md text-center">
-                  <span class="text-[10px] text-[#D4AF37] font-bold uppercase tracking-widest block">Zona General</span>
-                  <span class="text-xs text-[#FBF9F5] font-semibold block" data-price-tag="general-village">Desde $1,000 MXN / $56 USD</span>
-                </div>
-                <div class="w-2 h-2 bg-[#D4AF37] rotate-45 -mt-1"></div>
-              </div>
-            </div>
-
-            <!-- Pin 4: Players Zone (top: 38%, left: 16%) -->
-            <div 
-              class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer group/pin z-20"
-              style="top: 38%; left: 16%;"
+              class="absolute border border-transparent hover:border-[#D4AF37]/80 hover:bg-[#D4AF37]/10 transition-all duration-300 rounded-lg cursor-pointer group/zone z-10"
+              style="left: 11%; top: 1%; width: 15%; height: 16%;"
               onclick="window.openZoneModal('players-zone')"
+              title="Zona de Jugadores & Paddock"
             >
-              <div class="relative w-8 h-8 flex items-center justify-center">
-                <div class="radar-pulse"></div>
-                <div class="w-5 h-5 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/pin:scale-125 transition-transform duration-300">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#07140E]"></span>
+              <!-- Pin Dorado Centrado en la Zona -->
+              <div class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20" style="left: 50%; top: 50%;">
+                <div class="relative w-8 h-8 flex items-center justify-center">
+                  <div class="radar-pulse"></div>
+                  <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/zone:scale-125 transition-transform duration-300">
+                    <span class="material-symbols-outlined text-[13px] text-[#07140E] font-bold">sports_handball</span>
+                  </div>
                 </div>
               </div>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/pin:flex flex-col items-center pointer-events-none min-w-[200px] z-30">
-                <div class="bg-[#07140E]/95 border border-[#D4AF37] px-3 py-1.5 rounded-lg shadow-2xl backdrop-blur-md text-center">
-                  <span class="text-[10px] text-[#D4AF37] font-bold uppercase tracking-widest block">Players Zone & Paddock</span>
-                  <span class="text-xs text-[#FBF9F5] font-semibold block">Cena Gala $2,500 MXN / Equipos $25k</span>
-                </div>
-                <div class="w-2 h-2 bg-[#D4AF37] rotate-45 -mt-1"></div>
+              <!-- Etiqueta Visible -->
+              <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#07140E]/90 border border-[#D4AF37]/60 px-2 py-0.5 rounded text-[10px] text-[#D4AF37] font-bold uppercase tracking-wider backdrop-blur-sm pointer-events-none group-hover/zone:border-[#D4AF37] group-hover/zone:bg-[#D4AF37] group-hover/zone:text-[#07140E] transition-all">
+                Jugadores & Paddock
               </div>
             </div>
 
-            <!-- Pin 5: Fashion Stage (top: 48%, left: 62%) -->
+            <!-- 2. ESCENARIO PRINCIPAL & FASHION SHOW RUNWAY (left: 27%-39.5%, top: 1%-17%) -->
             <div 
-              class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer group/pin z-20"
-              style="top: 48%; left: 62%;"
+              class="absolute border border-transparent hover:border-[#D4AF37]/80 hover:bg-[#D4AF37]/10 transition-all duration-300 rounded-lg cursor-pointer group/zone z-10"
+              style="left: 27%; top: 1%; width: 12.5%; height: 16%;"
               onclick="window.openZoneModal('fashion-stage')"
+              title="Escenario Principal & Fashion Show"
             >
-              <div class="relative w-8 h-8 flex items-center justify-center">
-                <div class="radar-pulse"></div>
-                <div class="w-5 h-5 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/pin:scale-125 transition-transform duration-300">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#07140E]"></span>
+              <div class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20" style="left: 50%; top: 50%;">
+                <div class="relative w-8 h-8 flex items-center justify-center">
+                  <div class="radar-pulse"></div>
+                  <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/zone:scale-125 transition-transform duration-300">
+                    <span class="material-symbols-outlined text-[13px] text-[#07140E] font-bold">styler</span>
+                  </div>
                 </div>
               </div>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/pin:flex flex-col items-center pointer-events-none min-w-[200px] z-30">
-                <div class="bg-[#07140E]/95 border border-[#D4AF37] px-3 py-1.5 rounded-lg shadow-2xl backdrop-blur-md text-center">
-                  <span class="text-[10px] text-[#D4AF37] font-bold uppercase tracking-widest block">Escenario Fashion Show</span>
-                  <span class="text-xs text-[#FBF9F5] font-semibold block">Cartelera $5,000 USD / Speaker $20k</span>
-                </div>
-                <div class="w-2 h-2 bg-[#D4AF37] rotate-45 -mt-1"></div>
+              <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#07140E]/90 border border-[#D4AF37]/60 px-2 py-0.5 rounded text-[10px] text-[#D4AF37] font-bold uppercase tracking-wider backdrop-blur-sm pointer-events-none group-hover/zone:border-[#D4AF37] group-hover/zone:bg-[#D4AF37] group-hover/zone:text-[#07140E] transition-all">
+                Escenario & Runway
               </div>
             </div>
 
-            <!-- Pin 6: Giant Screen (top: 28%, left: 78%) -->
+            <!-- 3. VIP POLO CLUB & HOSPITALITY (left: 40%-53.5%, top: 1%-17%) -->
             <div 
-              class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer group/pin z-20"
-              style="top: 28%; left: 78%;"
+              class="absolute border-2 border-[#D4AF37]/40 hover:border-[#D4AF37] bg-[#D4AF37]/5 hover:bg-[#D4AF37]/15 transition-all duration-300 rounded-lg cursor-pointer group/zone z-10 shadow-[0_0_15px_rgba(212,175,55,0.2)]"
+              style="left: 40%; top: 1%; width: 13.5%; height: 16%;"
+              onclick="window.openZoneModal('vip-polo-club')"
+              title="VIP Polo Club & Corporate Hospitality"
+            >
+              <div class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20" style="left: 50%; top: 50%;">
+                <div class="relative w-9 h-9 flex items-center justify-center">
+                  <div class="radar-pulse"></div>
+                  <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_18px_rgba(212,175,55,1)] flex items-center justify-center group-hover/zone:scale-125 transition-transform duration-300">
+                    <span class="material-symbols-outlined text-[15px] text-[#07140E] font-bold">crown</span>
+                  </div>
+                </div>
+              </div>
+              <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#07140E] border border-[#D4AF37] px-2.5 py-0.5 rounded text-[10px] text-[#D4AF37] font-bold uppercase tracking-wider shadow-lg pointer-events-none group-hover/zone:bg-[#D4AF37] group-hover/zone:text-[#07140E] transition-all">
+                ★ VIP Polo Club
+              </div>
+            </div>
+
+            <!-- 4. ZONA PREMIUM LOUNGE (left: 54.5%-68.5%, top: 1%-17%) -->
+            <div 
+              class="absolute border border-transparent hover:border-[#D4AF37]/80 hover:bg-[#D4AF37]/10 transition-all duration-300 rounded-lg cursor-pointer group/zone z-10"
+              style="left: 54.5%; top: 1%; width: 14%; height: 16%;"
+              onclick="window.openZoneModal('premium-lounge')"
+              title="Zona Premium Lounge"
+            >
+              <div class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20" style="left: 50%; top: 50%;">
+                <div class="relative w-8 h-8 flex items-center justify-center">
+                  <div class="radar-pulse"></div>
+                  <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/zone:scale-125 transition-transform duration-300">
+                    <span class="material-symbols-outlined text-[13px] text-[#07140E] font-bold">chair</span>
+                  </div>
+                </div>
+              </div>
+              <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#07140E]/90 border border-[#D4AF37]/60 px-2 py-0.5 rounded text-[10px] text-[#D4AF37] font-bold uppercase tracking-wider backdrop-blur-sm pointer-events-none group-hover/zone:border-[#D4AF37] group-hover/zone:bg-[#D4AF37] group-hover/zone:text-[#07140E] transition-all">
+                Premium Lounge
+              </div>
+            </div>
+
+            <!-- 5. ZONA GENERAL & POLO VILLAGE (left: 69.5%-91.5%, top: 1%-26%) -->
+            <div 
+              class="absolute border border-transparent hover:border-[#D4AF37]/80 hover:bg-[#D4AF37]/10 transition-all duration-300 rounded-lg cursor-pointer group/zone z-10"
+              style="left: 69.5%; top: 1%; width: 22%; height: 26%;"
+              onclick="window.openZoneModal('general-village')"
+              title="Zona General & Polo Village"
+            >
+              <div class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20" style="left: 40%; top: 38%;">
+                <div class="relative w-8 h-8 flex items-center justify-center">
+                  <div class="radar-pulse"></div>
+                  <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/zone:scale-125 transition-transform duration-300">
+                    <span class="material-symbols-outlined text-[13px] text-[#07140E] font-bold">groups</span>
+                  </div>
+                </div>
+              </div>
+              <div class="absolute top-2 right-2 whitespace-nowrap bg-[#07140E]/90 border border-[#D4AF37]/60 px-2 py-0.5 rounded text-[10px] text-[#D4AF37] font-bold uppercase tracking-wider backdrop-blur-sm pointer-events-none group-hover/zone:border-[#D4AF37] group-hover/zone:bg-[#D4AF37] group-hover/zone:text-[#07140E] transition-all">
+                General & Ocio
+              </div>
+            </div>
+
+            <!-- 6. PANTALLA GIGANTE & MARCADOR DIGITAL (left: 84%-96%, top: 16%-30%) -->
+            <div 
+              class="absolute border border-transparent hover:border-[#D4AF37]/80 hover:bg-[#D4AF37]/10 transition-all duration-300 rounded-lg cursor-pointer group/zone z-20"
+              style="left: 84%; top: 16%; width: 12%; height: 14%;"
               onclick="window.openZoneModal('giant-screen')"
+              title="Pantalla Gigante Audiovisual"
             >
-              <div class="relative w-8 h-8 flex items-center justify-center">
-                <div class="radar-pulse"></div>
-                <div class="w-5 h-5 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/pin:scale-125 transition-transform duration-300">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#07140E]"></span>
+              <div class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20" style="left: 50%; top: 50%;">
+                <div class="relative w-8 h-8 flex items-center justify-center">
+                  <div class="radar-pulse"></div>
+                  <div class="w-6 h-6 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/zone:scale-125 transition-transform duration-300">
+                    <span class="material-symbols-outlined text-[13px] text-[#07140E] font-bold">tv</span>
+                  </div>
                 </div>
               </div>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/pin:flex flex-col items-center pointer-events-none min-w-[200px] z-30">
-                <div class="bg-[#07140E]/95 border border-[#D4AF37] px-3 py-1.5 rounded-lg shadow-2xl backdrop-blur-md text-center">
-                  <span class="text-[10px] text-[#D4AF37] font-bold uppercase tracking-widest block">Pantalla Gigante</span>
-                  <span class="text-xs text-[#FBF9F5] font-semibold block">Vídeos Exclusivos $20,000 USD</span>
-                </div>
-                <div class="w-2 h-2 bg-[#D4AF37] rotate-45 -mt-1"></div>
+              <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#07140E]/90 border border-[#D4AF37]/60 px-2 py-0.5 rounded text-[10px] text-[#D4AF37] font-bold uppercase tracking-wider backdrop-blur-sm pointer-events-none group-hover/zone:border-[#D4AF37] group-hover/zone:bg-[#D4AF37] group-hover/zone:text-[#07140E] transition-all">
+                Pantalla Gigante
               </div>
             </div>
 
-            <!-- Pin 7: Central Pitch (top: 36%, left: 48%) -->
+            <!-- 7. CAMPO CENTRAL DE POLO (left: 10%-90%, top: 34%-78%) -->
             <div 
-              class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer group/pin z-20"
-              style="top: 36%; left: 48%;"
+              class="absolute border border-transparent hover:border-[#D4AF37]/50 hover:bg-[#D4AF37]/5 transition-all duration-300 rounded-xl cursor-pointer group/zone z-0"
+              style="left: 10%; top: 34%; width: 80%; height: 44%;"
               onclick="window.openZoneModal('field-pitch')"
+              title="Campo de Polo Central (300 x 200 m)"
             >
-              <div class="relative w-8 h-8 flex items-center justify-center">
-                <div class="radar-pulse"></div>
-                <div class="w-5 h-5 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_14px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/pin:scale-125 transition-transform duration-300">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#07140E]"></span>
+              <div class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20" style="left: 50%; top: 50%;">
+                <div class="relative w-10 h-10 flex items-center justify-center">
+                  <div class="radar-pulse"></div>
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-[#A88344] via-[#D4AF37] to-[#F3E5AB] border-2 border-[#07140E] shadow-[0_0_20px_rgba(212,175,55,0.9)] flex items-center justify-center group-hover/zone:scale-125 transition-transform duration-300">
+                    <span class="material-symbols-outlined text-[16px] text-[#07140E] font-bold">sports_score</span>
+                  </div>
                 </div>
               </div>
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/pin:flex flex-col items-center pointer-events-none min-w-[200px] z-30">
-                <div class="bg-[#07140E]/95 border border-[#D4AF37] px-3 py-1.5 rounded-lg shadow-2xl backdrop-blur-md text-center">
-                  <span class="text-[10px] text-[#D4AF37] font-bold uppercase tracking-widest block">Campo Central</span>
-                  <span class="text-xs text-[#FBF9F5] font-semibold block">Naming Campo $15k / Torneo $80k</span>
-                </div>
-                <div class="w-2 h-2 bg-[#D4AF37] rotate-45 -mt-1"></div>
+              <div class="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#07140E]/90 border border-[#D4AF37]/60 px-3 py-1 rounded-full text-[11px] text-[#D4AF37] font-bold uppercase tracking-widest backdrop-blur-sm pointer-events-none group-hover/zone:border-[#D4AF37] group-hover/zone:bg-[#D4AF37] group-hover/zone:text-[#07140E] transition-all shadow-xl">
+                Campo Central (300 x 200 m)
               </div>
             </div>
 
