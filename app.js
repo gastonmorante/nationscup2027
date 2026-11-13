@@ -25,6 +25,26 @@
   // Centralized Bilingual Dictionary (i18n)
   const i18n = {
     es: {
+    "legal_tab_cookies": "Política de Cookies",
+    "footer_cookies_policy": "Política de Cookies",
+    "footer_cookies_settings": "Configuración de Cookies",
+    "cookie_banner_title": "Privacidad & Uso de Cookies",
+    "cookie_banner_desc": "Utilizamos cookies técnicas necesarias para el funcionamiento del sitio y para recordar sus preferencias de idioma y divisa, además de analíticas anónimas para evaluar el rendimiento. Puede aceptar todas, configurar sus preferencias o continuar solo con las esenciales conforme a nuestro Aviso de Privacidad y la normativa aplicable (LFPDPPP y GDPR).",
+    "cookie_accept_all": "Aceptar Todas",
+    "cookie_essential_only": "Solo Esenciales",
+    "cookie_configure": "Configurar",
+    "cookie_policy_link": "Leer Política de Cookies",
+    "cookie_modal_title": "Centro de Preferencias de Privacidad & Cookies",
+    "cookie_modal_sub": "Nations Cup 2027 · El Rey Polo Country Club",
+    "cookie_cat_necessary_title": "Cookies Técnicas & Esenciales (Obligatorias)",
+    "cookie_cat_necessary_badge": "Siempre Activas",
+    "cookie_cat_necessary_desc": "Indispensables para la navegación segura, persistencia de sesión, selección de divisa y verificación de consentimiento. No almacenan datos de identificación personal.",
+    "cookie_cat_pref_title": "Cookies de Personalización & Preferencias",
+    "cookie_cat_pref_desc": "Permiten recordar sus preferencias lingüísticas (Español/Inglés), divisa operativa y personalizaciones visuales de los visores interactivos.",
+    "cookie_cat_analytics_title": "Cookies de Análisis & Rendimiento",
+    "cookie_cat_analytics_desc": "Nos ayudan a medir de forma anónima y agregada el tráfico y la interacción con los dossiers y el plano del campo, sin realizar perfilado individual.",
+    "cookie_btn_save": "Guardar Preferencias",
+    "cookie_btn_accept_all_modal": "Aceptar Todas las Cookies",
     "status_beacon": "Comité de Patrocinios · Acceso Privado 2027",
     "nav_vision": "La Visión",
     "nav_pitch": "Pitch Deck",
@@ -490,6 +510,26 @@
       "btn_close_modal": "Cerrar",
     },
     en: {
+    "legal_tab_cookies": "Cookie Policy",
+    "footer_cookies_policy": "Cookie Policy",
+    "footer_cookies_settings": "Cookie Settings",
+    "cookie_banner_title": "Privacy & Cookie Notice",
+    "cookie_banner_desc": "We use necessary technical cookies to ensure platform functionality and remember your language and currency preferences, along with anonymous analytics to assess performance. You may accept all, customize preferences, or proceed with essential cookies only under our Privacy Policy and statutory standards (LFPDPPP & GDPR).",
+    "cookie_accept_all": "Accept All",
+    "cookie_essential_only": "Essential Only",
+    "cookie_configure": "Preferences",
+    "cookie_policy_link": "View Cookie Policy",
+    "cookie_modal_title": "Privacy & Cookie Preference Center",
+    "cookie_modal_sub": "Nations Cup 2027 · El Rey Polo Country Club",
+    "cookie_cat_necessary_title": "Essential Technical Cookies (Mandatory)",
+    "cookie_cat_necessary_badge": "Always Active",
+    "cookie_cat_necessary_desc": "Vital for secure navigation, session integrity, currency conversion, and consent tracking. They do not store personally identifiable data.",
+    "cookie_cat_pref_title": "Personalization & Preference Cookies",
+    "cookie_cat_pref_desc": "Remember your interface language (English/Spanish), operative currency, and visual states for interactive tour & layout viewers.",
+    "cookie_cat_analytics_title": "Anonymous Performance & Analytics Cookies",
+    "cookie_cat_analytics_desc": "Allow us to monitor aggregated traffic patterns and dossier downloads without creating personal profiles.",
+    "cookie_btn_save": "Save Preferences",
+    "cookie_btn_accept_all_modal": "Accept All Cookies",
     "status_beacon": "Sponsorship Committee · Private Access 2027",
     "nav_vision": "The Vision",
     "nav_pitch": "Pitch Deck",
@@ -1599,10 +1639,17 @@
     const privEn = document.getElementById('legal-privacy-en');
     const termsEs = document.getElementById('legal-terms-es');
     const termsEn = document.getElementById('legal-terms-en');
+    const cookiesEs = document.getElementById('legal-cookies-es');
+    const cookiesEn = document.getElementById('legal-cookies-en');
     if (privEs) privEs.classList.toggle('hidden', !isEs);
     if (privEn) privEn.classList.toggle('hidden', isEs);
     if (termsEs) termsEs.classList.toggle('hidden', !isEs);
     if (termsEn) termsEn.classList.toggle('hidden', isEs);
+    if (cookiesEs) cookiesEs.classList.toggle('hidden', !isEs);
+    if (cookiesEn) cookiesEn.classList.toggle('hidden', isEs);
+    if (typeof window.updateCookieTexts === 'function') {
+      window.updateCookieTexts(lang);
+    }
 
     // Synchronize all internal page links to maintain active language in URL when navigating
     try {
@@ -2751,19 +2798,32 @@
   window.switchLegalTab = function (tab) {
     const privacyContent = document.getElementById('legal-privacy-content');
     const termsContent = document.getElementById('legal-terms-content');
+    const cookiesContent = document.getElementById('legal-cookies-content');
     const tabPrivacyBtn = document.getElementById('tab-privacy-btn');
     const tabTermsBtn = document.getElementById('tab-terms-btn');
+    const tabCookiesBtn = document.getElementById('tab-cookies-btn');
 
     if (tab === 'privacy') {
       if (privacyContent) privacyContent.classList.remove('hidden');
       if (termsContent) termsContent.classList.add('hidden');
+      if (cookiesContent) cookiesContent.classList.add('hidden');
       if (tabPrivacyBtn) tabPrivacyBtn.className = "px-4 py-2 border-b-2 border-warm-bronze text-racing-green-dark font-label-md uppercase font-semibold text-xs tracking-wider";
       if (tabTermsBtn) tabTermsBtn.className = "px-4 py-2 border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark font-label-md uppercase text-xs tracking-wider";
-    } else {
+      if (tabCookiesBtn) tabCookiesBtn.className = "px-4 py-2 border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark font-label-md uppercase text-xs tracking-wider";
+    } else if (tab === 'terms') {
       if (privacyContent) privacyContent.classList.add('hidden');
       if (termsContent) termsContent.classList.remove('hidden');
+      if (cookiesContent) cookiesContent.classList.add('hidden');
       if (tabPrivacyBtn) tabPrivacyBtn.className = "px-4 py-2 border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark font-label-md uppercase text-xs tracking-wider";
       if (tabTermsBtn) tabTermsBtn.className = "px-4 py-2 border-b-2 border-warm-bronze text-racing-green-dark font-label-md uppercase font-semibold text-xs tracking-wider";
+      if (tabCookiesBtn) tabCookiesBtn.className = "px-4 py-2 border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark font-label-md uppercase text-xs tracking-wider";
+    } else if (tab === 'cookies') {
+      if (privacyContent) privacyContent.classList.add('hidden');
+      if (termsContent) termsContent.classList.add('hidden');
+      if (cookiesContent) cookiesContent.classList.remove('hidden');
+      if (tabPrivacyBtn) tabPrivacyBtn.className = "px-4 py-2 border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark font-label-md uppercase text-xs tracking-wider";
+      if (tabTermsBtn) tabTermsBtn.className = "px-4 py-2 border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark font-label-md uppercase text-xs tracking-wider";
+      if (tabCookiesBtn) tabCookiesBtn.className = "px-4 py-2 border-b-2 border-warm-bronze text-racing-green-dark font-label-md uppercase font-semibold text-xs tracking-wider";
     }
   };
 
@@ -2903,5 +2963,303 @@
       if (modal && !modal.classList.contains('hidden')) {
         window.closeBankModal();
       }
+    }
+  });
+
+
+  // ==============================================================================
+  // COOKIE CONSENT ENGINE & PREFERENCE MANAGER (LFPDPPP & GDPR COMPLIANT)
+  // ==============================================================================
+  const COOKIE_STORAGE_KEY = 'nc_cookie_consent';
+
+  function buildCookieDOM() {
+    if (document.getElementById('nc-cookie-banner')) return;
+
+    // 1. Create Cookie Banner
+    const banner = document.createElement('div');
+    banner.id = 'nc-cookie-banner';
+    banner.className = 'fixed bottom-20 sm:bottom-6 left-3 right-3 sm:left-auto sm:right-6 sm:max-w-xl z-[95] bg-[#06110B]/95 backdrop-blur-xl border border-[#D4AF37]/50 rounded-2xl p-4 sm:p-5 shadow-[0_20px_50px_rgba(0,0,0,0.85)] text-[#FBF9F5] transition-all duration-500 transform translate-y-8 opacity-0 pointer-events-none';
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Aviso de Cookies y Privacidad');
+    banner.innerHTML = `
+      <div class="flex items-start gap-3">
+        <div class="w-9 h-9 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/40 flex items-center justify-center shrink-0 mt-0.5">
+          <span class="material-symbols-outlined text-[20px] text-[#D4AF37]">cookie</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <h4 id="cookie-banner-title" class="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#D4AF37] font-headline">
+              Privacidad & Uso de Cookies
+            </h4>
+            <button onclick="window.acceptEssentialCookies()" type="button" class="text-[#F3E5AB]/60 hover:text-white p-1" aria-label="Cerrar aviso">
+              <span class="material-symbols-outlined text-[18px]">close</span>
+            </button>
+          </div>
+          <p id="cookie-banner-desc" class="text-[11px] sm:text-xs text-[#F3E5AB]/85 font-light leading-relaxed mb-3">
+            Utilizamos cookies técnicas necesarias para el funcionamiento del sitio y para recordar sus preferencias de idioma y divisa, además de analíticas anónimas para evaluar el rendimiento. Puede aceptar todas, configurar sus preferencias o continuar solo con las esenciales conforme a nuestro Aviso de Privacidad y la normativa aplicable (LFPDPPP y GDPR).
+          </p>
+          <div class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-white/10">
+            <button type="button" onclick="window.openLegalModal('cookies')" id="cookie-policy-link" class="text-[11px] text-[#D4AF37] underline underline-offset-2 hover:text-white transition-colors cursor-pointer">
+              Leer Política de Cookies
+            </button>
+            <div class="flex items-center gap-2">
+              <button type="button" onclick="window.openCookieSettings()" id="cookie-btn-configure" class="px-3 py-1.5 rounded-full border border-[#D4AF37]/40 bg-[#081810] hover:bg-white/10 text-[11px] font-semibold text-[#F3E5AB] transition-colors cursor-pointer">
+                Configurar
+              </button>
+              <button type="button" onclick="window.acceptEssentialCookies()" id="cookie-btn-essential" class="px-3 py-1.5 rounded-full border border-[#D4AF37]/40 bg-[#081810] hover:bg-white/10 text-[11px] font-semibold text-[#F3E5AB] transition-colors cursor-pointer">
+                Solo Esenciales
+              </button>
+              <button type="button" onclick="window.acceptAllCookies()" id="cookie-btn-accept" class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#06110B] text-[11px] font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-transform hover:scale-[1.02] cursor-pointer">
+                Aceptar Todas
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(banner);
+
+    // 2. Create Cookie Preferences Modal
+    const modal = document.createElement('div');
+    modal.id = 'nc-cookie-preferences-modal';
+    modal.className = 'fixed inset-0 z-[125] bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6 transition-all duration-300';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-labelledby', 'cookie-pref-modal-title');
+    modal.onclick = function(e) { if (e.target === modal) window.closeCookieSettings(); };
+    modal.innerHTML = `
+      <div class="bg-[#081810] border border-[#D4AF37]/50 rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden text-[#FBF9F5]">
+        <!-- Header -->
+        <div class="p-4 sm:p-5 border-b border-[#D4AF37]/30 flex items-center justify-between bg-[#06110B]">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37]">
+              <span class="material-symbols-outlined text-[20px]">tune</span>
+            </div>
+            <div>
+              <h3 id="cookie-pref-modal-title" class="font-headline font-bold text-base sm:text-lg text-[#FBF9F5]">Centro de Preferencias de Cookies</h3>
+              <p id="cookie-pref-modal-sub" class="text-[10px] sm:text-[11px] text-[#D4AF37] uppercase tracking-wider">Nations Cup 2027 · El Rey Polo Country Club</p>
+            </div>
+          </div>
+          <button onclick="window.closeCookieSettings()" type="button" class="p-2 text-[#F3E5AB]/70 hover:text-white rounded-full transition-colors cursor-pointer" aria-label="Cerrar ventana">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="p-5 sm:p-6 overflow-y-auto space-y-4 text-xs modal-scroll">
+          
+          <!-- Category 1: Necessary -->
+          <div class="p-4 rounded-xl bg-[#06110B]/80 border border-[#D4AF37]/25 flex items-start justify-between gap-4">
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-bold text-sm text-[#FBF9F5]" id="pref-cat1-title">Cookies Técnicas & Esenciales</span>
+                <span class="px-2 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] text-[10px] font-bold uppercase tracking-widest" id="pref-cat1-badge">Siempre Activas</span>
+              </div>
+              <p class="text-[11px] text-[#F3E5AB]/75 leading-relaxed" id="pref-cat1-desc">
+                Indispensables para la navegación segura, persistencia de sesión, selección de divisa y verificación de consentimiento. No almacenan datos de identificación personal.
+              </p>
+            </div>
+            <div class="shrink-0 pt-1">
+              <input type="checkbox" checked disabled class="w-4 h-4 accent-[#D4AF37] cursor-not-allowed">
+            </div>
+          </div>
+
+          <!-- Category 2: Preferences -->
+          <div class="p-4 rounded-xl bg-[#06110B]/80 border border-[#D4AF37]/25 flex items-start justify-between gap-4">
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-bold text-sm text-[#FBF9F5]" id="pref-cat2-title">Cookies de Personalización & Preferencias</span>
+              </div>
+              <p class="text-[11px] text-[#F3E5AB]/75 leading-relaxed" id="pref-cat2-desc">
+                Permiten recordar sus preferencias lingüísticas (Español/Inglés), divisa operativa y personalizaciones visuales de los visores interactivos.
+              </p>
+            </div>
+            <div class="shrink-0 pt-1">
+              <input type="checkbox" id="nc-toggle-preferences" checked class="w-4 h-4 accent-[#D4AF37] cursor-pointer">
+            </div>
+          </div>
+
+          <!-- Category 3: Analytics -->
+          <div class="p-4 rounded-xl bg-[#06110B]/80 border border-[#D4AF37]/25 flex items-start justify-between gap-4">
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="font-bold text-sm text-[#FBF9F5]" id="pref-cat3-title">Cookies de Análisis & Rendimiento</span>
+              </div>
+              <p class="text-[11px] text-[#F3E5AB]/75 leading-relaxed" id="pref-cat3-desc">
+                Nos ayudan a medir de forma anónima y agregada el tráfico y la interacción con los dossiers y el plano del campo, sin realizar perfilado individual.
+              </p>
+            </div>
+            <div class="shrink-0 pt-1">
+              <input type="checkbox" id="nc-toggle-analytics" checked class="w-4 h-4 accent-[#D4AF37] cursor-pointer">
+            </div>
+          </div>
+
+          <div class="text-[11px] text-[#F3E5AB]/60 leading-relaxed border-t border-white/5 pt-3">
+            Conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) de México y el Reglamento General de Protección de Datos (RGPD/GDPR) de la Unión Europea. Puede revocar o alterar su consentimiento en cualquier momento.
+          </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="p-4 border-t border-[#D4AF37]/30 flex flex-col sm:flex-row items-center justify-between gap-3 bg-[#06110B]">
+          <button type="button" onclick="window.openLegalModal('cookies')" class="text-xs text-[#D4AF37] hover:underline cursor-pointer">
+            Ver Política de Cookies Completa
+          </button>
+          <div class="flex items-center gap-2 w-full sm:w-auto">
+            <button type="button" onclick="window.saveCustomCookiePreferences()" id="btn-save-cookie-pref" class="flex-1 sm:flex-none px-4 py-2 rounded-full border border-[#D4AF37]/50 bg-[#081810] hover:bg-white/10 text-xs font-semibold text-[#F3E5AB] transition-colors cursor-pointer">
+              Guardar Preferencias
+            </button>
+            <button type="button" onclick="window.acceptAllCookies()" id="btn-accept-all-cookie-modal" class="flex-1 sm:flex-none px-4 py-2 rounded-full bg-gradient-to-r from-[#A88344] via-[#D4AF37] to-[#A88344] text-[#06110B] text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-transform hover:scale-[1.02] cursor-pointer">
+              Aceptar Todas
+            </button>
+          </div>
+        </div>
+
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Initial language setup for cookie elements
+    const curLang = (window.state && window.state.lang) || 'es';
+    window.updateCookieTexts(curLang);
+  }
+
+  window.showCookieBanner = function() {
+    const banner = document.getElementById('nc-cookie-banner');
+    if (!banner) return;
+    banner.classList.remove('translate-y-8', 'opacity-0', 'pointer-events-none');
+    banner.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+  };
+
+  window.hideCookieBanner = function() {
+    const banner = document.getElementById('nc-cookie-banner');
+    if (!banner) return;
+    banner.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+    banner.classList.add('translate-y-8', 'opacity-0', 'pointer-events-none');
+  };
+
+  window.acceptAllCookies = function() {
+    const consent = {
+      necessary: true,
+      preferences: true,
+      analytics: true,
+      status: 'all',
+      timestamp: new Date().toISOString(),
+      version: '1.0'
+    };
+    try { localStorage.setItem(COOKIE_STORAGE_KEY, JSON.stringify(consent)); } catch(e){}
+    window.hideCookieBanner();
+    window.closeCookieSettings();
+  };
+
+  window.acceptEssentialCookies = function() {
+    const consent = {
+      necessary: true,
+      preferences: false,
+      analytics: false,
+      status: 'essential',
+      timestamp: new Date().toISOString(),
+      version: '1.0'
+    };
+    try { localStorage.setItem(COOKIE_STORAGE_KEY, JSON.stringify(consent)); } catch(e){}
+    window.hideCookieBanner();
+    window.closeCookieSettings();
+  };
+
+  window.saveCustomCookiePreferences = function() {
+    const prefToggle = document.getElementById('nc-toggle-preferences');
+    const anaToggle = document.getElementById('nc-toggle-analytics');
+    const consent = {
+      necessary: true,
+      preferences: prefToggle ? prefToggle.checked : true,
+      analytics: anaToggle ? anaToggle.checked : false,
+      status: 'custom',
+      timestamp: new Date().toISOString(),
+      version: '1.0'
+    };
+    try { localStorage.setItem(COOKIE_STORAGE_KEY, JSON.stringify(consent)); } catch(e){}
+    window.hideCookieBanner();
+    window.closeCookieSettings();
+  };
+
+  window.openCookieSettings = function() {
+    const modal = document.getElementById('nc-cookie-preferences-modal');
+    if (!modal) {
+      buildCookieDOM();
+    }
+    const m = document.getElementById('nc-cookie-preferences-modal');
+    if (m) {
+      // Load saved state
+      try {
+        const raw = localStorage.getItem(COOKIE_STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          const prefToggle = document.getElementById('nc-toggle-preferences');
+          const anaToggle = document.getElementById('nc-toggle-analytics');
+          if (prefToggle) prefToggle.checked = !!parsed.preferences;
+          if (anaToggle) anaToggle.checked = !!parsed.analytics;
+        }
+      } catch(e){}
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeCookieSettings = function() {
+    const modal = document.getElementById('nc-cookie-preferences-modal');
+    if (!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  };
+
+  window.updateCookieTexts = function(lang) {
+    const isEs = lang === 'es';
+    const setTxt = (id, txt) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = txt;
+    };
+
+    setTxt('cookie-banner-title', isEs ? 'Privacidad & Uso de Cookies' : 'Privacy & Cookie Notice');
+    setTxt('cookie-banner-desc', isEs 
+      ? 'Utilizamos cookies técnicas necesarias para el funcionamiento del sitio y para recordar sus preferencias de idioma y divisa, además de analíticas anónimas para evaluar el rendimiento. Puede aceptar todas, configurar sus preferencias o continuar solo con las esenciales conforme a nuestro Aviso de Privacidad y la normativa aplicable (LFPDPPP y GDPR).' 
+      : 'We use necessary technical cookies to ensure platform functionality and remember your language and currency preferences, along with anonymous analytics to assess performance. You may accept all, customize preferences, or proceed with essential cookies only under our Privacy Policy and statutory standards (LFPDPPP & GDPR).');
+    setTxt('cookie-policy-link', isEs ? 'Leer Política de Cookies' : 'View Cookie Policy');
+    setTxt('cookie-btn-configure', isEs ? 'Configurar' : 'Preferences');
+    setTxt('cookie-btn-essential', isEs ? 'Solo Esenciales' : 'Essential Only');
+    setTxt('cookie-btn-accept', isEs ? 'Aceptar Todas' : 'Accept All');
+
+    setTxt('cookie-pref-modal-title', isEs ? 'Centro de Preferencias de Cookies' : 'Cookie Preference Center');
+    setTxt('cookie-pref-modal-sub', isEs ? 'Nations Cup 2027 · El Rey Polo Country Club' : 'Nations Cup 2027 · El Rey Polo Country Club');
+    setTxt('pref-cat1-title', isEs ? 'Cookies Técnicas & Esenciales' : 'Essential Technical Cookies');
+    setTxt('pref-cat1-badge', isEs ? 'Siempre Activas' : 'Always Active');
+    setTxt('pref-cat1-desc', isEs 
+      ? 'Indispensables para la navegación segura, persistencia de sesión, selección de divisa y verificación de consentimiento. No almacenan datos de identificación personal.' 
+      : 'Vital for secure navigation, session integrity, currency conversion, and consent tracking. They do not store personally identifiable data.');
+    setTxt('pref-cat2-title', isEs ? 'Cookies de Personalización & Preferencias' : 'Personalization & Preference Cookies');
+    setTxt('pref-cat2-desc', isEs 
+      ? 'Permiten recordar sus preferencias lingüísticas (Español/Inglés), divisa operativa y personalizaciones visuales de los visores interactivos.' 
+      : 'Remember your interface language (English/Spanish), operative currency, and visual states for interactive tour & layout viewers.');
+    setTxt('pref-cat3-title', isEs ? 'Cookies de Análisis & Rendimiento' : 'Anonymous Analytics & Performance');
+    setTxt('pref-cat3-desc', isEs 
+      ? 'Nos ayudan a medir de forma anónima y agregada el tráfico y la interacción con los dossiers y el plano del campo, sin realizar perfilado individual.' 
+      : 'Allow us to monitor aggregated traffic patterns and dossier downloads without creating personal profiles.');
+    setTxt('btn-save-cookie-pref', isEs ? 'Guardar Preferencias' : 'Save Preferences');
+    setTxt('btn-accept-all-cookie-modal', isEs ? 'Aceptar Todas' : 'Accept All');
+  };
+
+  // Initialize Cookie Consent on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', function() {
+    buildCookieDOM();
+    try {
+      const consent = localStorage.getItem(COOKIE_STORAGE_KEY);
+      if (!consent) {
+        setTimeout(function() {
+          window.showCookieBanner();
+        }, 700);
+      }
+    } catch(e) {
+      window.showCookieBanner();
     }
   });

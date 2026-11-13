@@ -1758,6 +1758,12 @@
                 <span class="font-medium underline decoration-warm-bronze/40 underline-offset-2" data-i18n="footer_btn_terms">Términos Comerciales & Exclusividad</span>
               </button>
             </li>
+                        <li>
+              <button onclick="window.openLegalModal('cookies')" type="button" class="flex items-center gap-space-xs text-on-surface-variant hover:text-racing-green-dark transition-colors text-left group">
+                <span class="material-symbols-outlined text-warm-bronze text-[17px] group-hover:scale-110 transition-transform">cookie</span>
+                <span class="font-medium underline decoration-warm-bronze/40 underline-offset-2" data-i18n="footer_cookies_policy">Política de Cookies (GDPR & ePrivacy)</span>
+              </button>
+            </li>
             <li>
               <a href="pitch_deck_nations_cup_2027.pdf" download="Pitch_Deck_Nations_Cup_2027.pdf" class="flex items-center gap-space-xs text-on-surface-variant hover:text-racing-green-dark transition-colors">
                 <span class="material-symbols-outlined text-warm-bronze text-[17px]">picture_as_pdf</span>
@@ -2103,6 +2109,15 @@
         >
           Términos de Patrocinio & Exclusividad
         </button>
+        <button 
+          id="tab-cookies-btn" 
+          onclick="window.switchLegalTab('cookies')" 
+          type="button" 
+          class="px-4 py-2 border-b-2 border-transparent text-on-surface-variant hover:text-racing-green-dark font-label-md uppercase text-xs tracking-wider"
+          data-i18n="legal_tab_cookies"
+        >
+          Política de Cookies (GDPR & ePrivacy)
+        </button>
       </div>
 
       <!-- Contenido del Marco Legal -->
@@ -2215,8 +2230,62 @@
               </p>
             </div>
           </div>
-      </div>
 
+          <!-- Pestaña 3: Politica de Cookies & Privacidad Digital -->
+          <div id="legal-cookies-content" class="space-y-4 hidden">
+            <!-- Cookies en Español -->
+            <div id="legal-cookies-es" class="space-y-4">
+              <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">POLÍTICA DE COOKIES & PRIVACIDAD DIGITAL</h4>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                En cumplimiento con la normativa mexicana aplicable (LFPDPPP) y las directrices internacionales del Reglamento General de Protección de Datos (RGPD / GDPR) y la Directiva ePrivacy, el Comité Organizador de <strong>Nations Cup 2027</strong> informa de manera transparente sobre el uso de cookies y tecnologías de almacenamiento local en este portal.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">1. ¿Qué son las Cookies y Tecnologías de Almacenamiento?</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Las cookies son pequeños ficheros de datos que los sitios web descargan en su dispositivo para asegurar su funcionamiento técnico, resguardar sus preferencias de idioma y divisa, y garantizar una navegación ágil y segura. Adicionalmente, este portal utiliza el almacenamiento local del navegador (<code>localStorage</code>) para recordar su consentimiento y la divisa seleccionada sin transferir datos personales a terceros.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">2. Categorías de Cookies Empleadas:</h5>
+              <ul class="list-disc pl-5 font-body-sm text-[13px] text-on-surface-variant space-y-1.5">
+                <li><strong>Cookies Técnicas y Estrictamente Necesarias:</strong> Imprescindibles para la visualización del sitio, balanceo de carga, seguridad de cifrado SSL y persistencia de su estado de sesión. Se encuentran activas de forma permanente.</li>
+                <li><strong>Cookies de Personalización y Preferencias:</strong> Almacenan de manera local su idioma seleccionado (Español / English), divisa de referencia (USD, EUR, MXN), y estado de los visores interactivos (Tour 360° y visor con zoom del Layout).</li>
+                <li><strong>Cookies Analíticas Anónimas:</strong> Miden de forma agregada el rendimiento de carga y la interacción general con los dossiers digitales, sin asociar la navegación a perfiles individuales ni rastreo publicitario entre dominios.</li>
+              </ul>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">3. Gestión y Modificación del Consentimiento:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Usted puede modificar o revocar su consentimiento en cualquier momento utilizando nuestro <button type="button" onclick="window.openCookieSettings()" class="text-warm-bronze font-semibold underline cursor-pointer">Centro de Preferencias de Cookies</button> o ajustando la configuración de privacidad de su navegador web (Chrome, Safari, Firefox, Edge).
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">4. Plazo de Conservación:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Las preferencias de cookies se almacenan por un período máximo de doce (12) meses, tras el cual se le solicitará nuevamente su confirmación, salvo que limpie el almacenamiento local de su navegador con anterioridad.
+              </p>
+            </div>
+
+            <!-- Cookies en Ingles -->
+            <div id="legal-cookies-en" class="space-y-4 hidden">
+              <h4 class="font-headline-sm text-[18px] text-racing-green-dark font-bold">COOKIE POLICY & DIGITAL PRIVACY</h4>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                In adherence to statutory data protection regulations (Mexican LFPDPPP) and international benchmarks under the European Union General Data Protection Regulation (GDPR) and the ePrivacy Directive, the Organizing Committee of <strong>Nations Cup 2027</strong> transparently sets forth its policy governing cookies and local storage technologies across this platform.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">1. What are Cookies and Storage Technologies?</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Cookies are small data files deposited on your device upon accessing web portals to ensure technical reliability, preserve your language and currency selections, and deliver smooth, secure browsing. Furthermore, this platform utilizes browser local storage (<code>localStorage</code>) to maintain your preferences locally without transmitting personal identities to external third parties.
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">2. Categories of Cookies Employed:</h5>
+              <ul class="list-disc pl-5 font-body-sm text-[13px] text-on-surface-variant space-y-1.5">
+                <li><strong>Strictly Necessary Technical Cookies:</strong> Vital for core platform display, server load balancing, SSL encryption protocols, and session continuity. These remain active by default and cannot be switched off.</li>
+                <li><strong>Personalization & Preference Cookies:</strong> Securely retain your language of choice (English / Spanish), operative currency (USD, EUR, MXN), and state memory for interactive widgets (360° Tour and Master Plan zoom viewer).</li>
+                <li><strong>Anonymous Performance & Analytics:</strong> Measure aggregated response times and dossier engagement anonymously, without creating individual behavioral profiles or cross-domain advertising tracking.</li>
+              </ul>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">3. Managing & Revoking Consent:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Executives may revise or revoke their consent at any point via our interactive <button type="button" onclick="window.openCookieSettings()" class="text-warm-bronze font-semibold underline cursor-pointer">Cookie Preference Center</button> or through standard browser privacy preferences (Chrome, Safari, Firefox, Edge).
+              </p>
+              <h5 class="font-bold text-racing-green-dark text-[14px]">4. Retention Schedule:</h5>
+              <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                Cookie preferences are preserved for a statutory maximum term of twelve (12) months, after which reaffirmation is requested, unless browser local storage is cleared beforehand.
+              </p>
+            </div>
+          </div>
+      </div>
       <!-- Acciones Inferiores del Modal -->
       <div class="p-space-md border-t border-outline-variant/30 flex justify-between items-center bg-surface-container-low shrink-0">
         <span class="text-[11px] text-on-surface-variant font-mono">Documento Oficial V. 2.4 · Noviembre 2026</span>
