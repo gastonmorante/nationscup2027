@@ -31,7 +31,48 @@
     "nav_tour": "Tour 360°",
     "nav_ecosystem": "Ecosistema",
     "nav_gallery": "Galería Editorial",
-    "nav_tiers": "Inversión & Exclusividad",
+          "nav_layout": "Layout & Precios",
+      "dock_layout": "Layout",
+      "breadcrumb_layout": "Layout & Hospitalidad",
+      "layout_badge": "Master Plan Oficial · 6 Hectáreas de Ultralujo",
+      "layout_hero_title": "Distribución del Campo & Corporate Hospitality",
+      "layout_hero_desc": "Explora de manera interactiva el plano oficial de El Rey Polo Country Club. Selecciona cualquier zona en el mapa o en las tarjetas inferiores para abrir el visor interactivo de alta resolución con precios oficiales, amenidades detalladas y reserva prioritaria.",
+      "btn_download_pricing_pdf": "Descargar PDF de Precios",
+      "map_interactive_hint": "Haz clic sobre cualquier pin en el campo para inspeccionar la zona",
+      "btn_map_with_prices": "Con Precios",
+      "btn_map_clean_view": "Vista Aérea HD",
+      "map_legend": "Puntos interactivos: Haz clic para abrir el zoom HD de la zona con precios oficiales",
+      "zones_grid_title": "Zonas del Torneo & Categorías de Acceso",
+      "zones_grid_desc": "Selecciona cualquier categoría para abrir el visor con zoom interactivo y desglose de amenidades.",
+      "pricing_table_badge": "Matriz Oficial de Tarifas",
+      "pricing_table_title": "Comparativa de Boletos & Corporate Hospitality",
+      "pricing_table_desc": "Tarifas oficiales según el dossier de hospitalidad. Los precios se actualizan según la divisa seleccionada.",
+      "table_individual_title": "1. Boletos Individuales por Jornada",
+      "th_category": "Categoría",
+      "th_quals": "Eliminatorias (Días 2 y 3)",
+      "th_final": "Gran Final (Día 4)",
+      "th_includes": "Beneficio Clave",
+      "vip_key_benefit": "Open Bar Premium, Gourmet, Champagne Divot Stomping & Concierge",
+      "prem_key_benefit": "Lounge con sombra, gastronomía selecta, cerveza y vino incluidos",
+      "gen_key_benefit": "Partidos, Polo Village, Luxury Boulevard, Pabellón de Arte y Divot Stomping",
+      "dinner_key_benefit": "Cena de gala privada, presentación de selecciones y convivencia con polistas",
+      "table_corp_title": "2. Mesas Corporativas & Suites (Corporate Hospitality)",
+      "th_table_type": "Modalidad",
+      "th_capacity": "Capacidad",
+      "th_elim_table": "Eliminatoria",
+      "th_final_table": "Gran Final",
+      "th_pass_table": "Tournament Pass (3 Días)",
+      "table_custom_quote": "Cotización a Medida",
+      "table_incl_pass": "Incluido en Pase",
+      "modal_pricing_title": "Precios Oficiales de la Zona",
+      "modal_amenities_title": "Amenidades & Beneficios Oficiales",
+      "modal_zoom_hint": "Doble clic o usa los botones para zoom",
+      "btn_reserve_zone_whatsapp": "Solicitar Reserva en esta Zona",
+      "btn_prev_zone": "Anterior",
+      "btn_next_zone": "Siguiente",
+      "meta_title_layout": "Layout Oficial del Campo & Precios | Nations Cup 2027 · El Rey Polo Club",
+      "meta_desc_layout": "Master plan interactivo del campo de polo de El Rey Polo Country Club con distribución de zonas, precios oficiales de boletos individuales, hospitalidad corporativa, suites y patrocinios exclusivos.",
+"nav_tiers": "Inversión & Exclusividad",
     "nav_contact": "Contacto Privado",
     "btn_whatsapp_vip": "WhatsApp VIP",
     "hero_badge": "TORNEO INTERNACIONAL DE POLO & ALTA SOCIEDAD · ENERO 2027",
@@ -455,7 +496,48 @@
     "nav_tour": "360° Tour",
     "nav_ecosystem": "Ecosystem",
     "nav_gallery": "Editorial Gallery",
-    "nav_tiers": "Investment & Exclusivity",
+          "nav_layout": "Layout & Pricing",
+      "dock_layout": "Layout",
+      "breadcrumb_layout": "Layout & Hospitality",
+      "layout_badge": "Official Master Plan · 6 Hectares of Luxury",
+      "layout_hero_title": "Field Layout & Corporate Hospitality",
+      "layout_hero_desc": "Explore the official master plan of El Rey Polo Country Club interactively. Select any zone on the map or in the cards below to open the interactive high-resolution viewer with official prices, detailed amenities, and priority booking.",
+      "btn_download_pricing_pdf": "Download Pricing PDF",
+      "map_interactive_hint": "Click on any pin on the field to inspect the zone",
+      "btn_map_with_prices": "With Prices",
+      "btn_map_clean_view": "HD Aerial View",
+      "map_legend": "Interactive hotspots: Click to open HD zone zoom with official pricing",
+      "zones_grid_title": "Tournament Zones & Access Tiers",
+      "zones_grid_desc": "Select any category to open the interactive zoom viewer with full amenities breakdown.",
+      "pricing_table_badge": "Official Tariff Matrix",
+      "pricing_table_title": "Tickets & Corporate Hospitality Comparison",
+      "pricing_table_desc": "Official rates according to the hospitality dossier. Rates update according to active currency.",
+      "table_individual_title": "1. Individual Tickets per Matchday",
+      "th_category": "Category",
+      "th_quals": "Qualifiers (Days 2 & 3)",
+      "th_final": "Grand Final (Day 4)",
+      "th_includes": "Key Benefit",
+      "vip_key_benefit": "Premium Open Bar, Gourmet, Champagne Divot Stomping & Concierge",
+      "prem_key_benefit": "Shaded lounge, curated culinary service, complimentary beer & wine",
+      "gen_key_benefit": "Matches, Polo Village, Luxury Boulevard, Art Pavilion & Divot Stomping",
+      "dinner_key_benefit": "Private gala dinner, team presentations, and player mingling",
+      "table_corp_title": "2. Corporate Tables & Suites (Corporate Hospitality)",
+      "th_table_type": "Package Tier",
+      "th_capacity": "Capacity",
+      "th_elim_table": "Qualifiers",
+      "th_final_table": "Grand Final",
+      "th_pass_table": "Tournament Pass (3 Days)",
+      "table_custom_quote": "Bespoke Quote",
+      "table_incl_pass": "Included in Pass",
+      "modal_pricing_title": "Official Zone Pricing",
+      "modal_amenities_title": "Official Amenities & Privileges",
+      "modal_zoom_hint": "Double click or use buttons to zoom",
+      "btn_reserve_zone_whatsapp": "Reserve / Inquire for this Zone",
+      "btn_prev_zone": "Previous",
+      "btn_next_zone": "Next",
+      "meta_title_layout": "Official Field Layout & Pricing | Nations Cup 2027 · El Rey Polo Club",
+      "meta_desc_layout": "Interactive master plan of El Rey Polo Country Club polo field with zone distribution, official individual ticket prices, corporate hospitality, private suites, and exclusive sponsorships.",
+"nav_tiers": "Investment & Exclusivity",
     "nav_contact": "Private Liaison",
     "btn_whatsapp_vip": "VIP WhatsApp",
     "hero_badge": "INTERNATIONAL POLO & HIGH SOCIETY CHAMPIONSHIP · JANUARY 2027",
@@ -1452,6 +1534,9 @@
     } else if (path.includes('galeria')) {
       titleKey = 'meta_title_galeria';
       descKey = 'meta_desc_galeria';
+    } else if (path.includes('layout')) {
+      titleKey = 'meta_title_layout';
+      descKey = 'meta_desc_layout';
     } else if (path.includes('contacto')) {
       titleKey = 'meta_title_contacto';
       descKey = 'meta_desc_contacto';
@@ -2270,6 +2355,64 @@
   };
 
   function updateCurrencyDisplay() {
+    // Layout Table Price Dynamic Updates
+    try {
+      const isMxn = state.currency === 'MXN';
+      const isEur = state.currency === 'EUR';
+      
+      const setVal = (attr, txt) => {
+        const el = document.querySelector(`[data-table-val="${attr}"]`);
+        if (el) el.textContent = txt;
+      };
+
+      if (isMxn) {
+        setVal('vip_elim', '$4,500 MXN');
+        setVal('vip_final', '$5,400 MXN');
+        setVal('prem_elim', '$3,500 MXN');
+        setVal('prem_final', '$4,200 MXN');
+        setVal('gen_elim', '$1,000 MXN');
+        setVal('gen_final', '$1,200 MXN');
+        setVal('dinner_val', '$2,500 MXN (Por persona)');
+        setVal('ct_elim', '$35,000 MXN');
+        setVal('ct_final', '$45,000 MXN');
+        setVal('ct_pass', '$105,000 MXN');
+        setVal('cp_elim', '$50,000 MXN');
+        setVal('cp_final', '$65,000 MXN');
+        setVal('cp_pass', '$150,000 MXN');
+        setVal('ce_elim', '$75,000 MXN');
+        setVal('ce_final', '$95,000 MXN');
+        setVal('ce_pass', '$220,000 MXN');
+        setVal('ps_elim', '$150,000+ MXN');
+        setVal('ps_final', '$200,000+ MXN');
+        setVal('ctp_pass', '$250,000 MXN');
+      } else {
+        setVal('vip_elim', '$265 USD');
+        setVal('vip_final', '$318 USD');
+        setVal('prem_elim', '$205 USD');
+        setVal('prem_final', '$246 USD');
+        setVal('gen_elim', '$56 USD');
+        setVal('gen_final', '$67 USD');
+        setVal('dinner_val', '$147 USD (Per person)');
+        setVal('ct_elim', '~$2,060 USD');
+        setVal('ct_final', '~$2,650 USD');
+        setVal('ct_pass', '$6,175 USD');
+        setVal('cp_elim', '~$2,940 USD');
+        setVal('cp_final', '~$3,825 USD');
+        setVal('cp_pass', '$8,825 USD');
+        setVal('ce_elim', '~$4,410 USD');
+        setVal('ce_final', '~$5,590 USD');
+        setVal('ce_pass', '$12,940 USD');
+        setVal('ps_elim', '~$8,825+ USD');
+        setVal('ps_final', '~$11,765+ USD');
+        setVal('ctp_pass', '$14,700 USD');
+      }
+
+      // Also trigger renderZonesCards if on layout page
+      if (typeof renderZonesCards === 'function') {
+        renderZonesCards();
+      }
+    } catch (e) {}
+
     const curr = currencyRates[state.currency] || currencyRates['USD'];
     const isEs = state.lang === 'es';
 
