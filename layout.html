@@ -462,7 +462,7 @@
           <!-- Imagen de Fondo del Campo Oficial -->
           <img 
             id="field-master-map" 
-            src="assets/layout/campo con precios1.webp" 
+            src="assets/layout/campo con precios1.webp?v=20261114_v3" 
             alt="Plano General del Campo Nations Cup 2027" 
             class="w-full h-full object-cover transition-transform duration-700 select-none cursor-crosshair"
             decoding="async"
@@ -789,7 +789,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 flex-1 overflow-y-auto modal-scroll">
         
         <!-- Columna Izquierda: Visor con Zoom de la Zona (7 cols) -->
-        <div class="lg:col-span-7 bg-black/70 p-4 sm:p-6 flex flex-col items-center justify-center border-b lg:border-b-0 lg:border-r border-[#D4AF37]/25 relative group/imgview">
+        <div class="lg:col-span-7 bg-black/70 p-4 sm:p-6 flex flex-col items-center justify-start lg:sticky lg:top-0 lg:self-start border-b lg:border-b-0 lg:border-r border-[#D4AF37]/25 relative group/imgview">
           
           <!-- Contenedor con Zoom -->
           <div class="relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-[#D4AF37]/35 shadow-2xl bg-[#06110B]">
@@ -1098,8 +1098,8 @@
         "name_en": "VIP Polo Club, Corporate Hospitality & Gala Dinner",
         "badge_es": "Flagship · Máxima Exclusividad · Palcos & Cena Gala",
         "badge_en": "Flagship · Ultra-Luxury · VIP Boxes & Gala Dinner",
-        "img": "assets/layout/vip.webp",
-        "img_fallback": "assets/layout/vip.jfif",
+        "img": "assets/layout/vip.webp?v=20261114_v3",
+        "img_fallback": "assets/layout/vip.jfif?v=20261114_v3",
         "desc_es": "El pináculo de la exclusividad en Nations Cup 2027. Frente al campo central de polo, con acceso a salones climatizados, palcos de honor, gastronomía gourmet ilimitada, Open Bar Premium y la exclusiva Cena de Gala con Polistas (Players Welcome Dinner) en el Día 1.",
         "desc_en": "The pinnacle of luxury at Nations Cup 2027. Situated directly along the championship pitch, featuring private climate-controlled lounges, reserved boxes, unlimited gourmet dining, full premium open bar, and the exclusive Day 1 Players Welcome Gala Dinner.",
         "individual_prices": {
@@ -1193,8 +1193,8 @@
         "name_en": "Premium Lounge Zone",
         "badge_es": "Confort & Observación Preferente",
         "badge_en": "Elevated Comfort & Prime Sightlines",
-        "img": "assets/layout/premium.webp",
-        "img_fallback": "assets/layout/premium.jfif",
+        "img": "assets/layout/premium.webp?v=20261114_v3",
+        "img_fallback": "assets/layout/premium.jfif?v=20261114_v3",
         "desc_es": "Un espacio diseñado para disfrutar de la emoción del polo con máxima comodidad. Sala lounge con sombra total, mobiliario de diseño, gastronomía selecta incluida y barra libre de cerveza y vino.",
         "desc_en": "A refined lounge setting designed to experience polo in total comfort. Completely shaded lounges with designer furnishings, curated gastronomy included, and open beer & wine service.",
         "individual_prices": {
@@ -1242,8 +1242,8 @@
         "name_en": "General Admission & Polo Village",
         "badge_es": "Acceso General & Cultura Ecuestre",
         "badge_en": "General Access & Equestrian Culture",
-        "img": "assets/layout/General.webp",
-        "img_fallback": "assets/layout/General.jfif",
+        "img": "assets/layout/General.webp?v=20261114_v3",
+        "img_fallback": "assets/layout/General.jfif?v=20261114_v3",
         "desc_es": "La atmósfera vibrante de Nations Cup 2027. Disfruta de los partidos de polo de alto hándicap, camina por el Luxury Boulevard, el Pabellón de Arte, las activaciones de patrocinadores y la gastronomía del Gourmet Village.",
         "desc_en": "The vibrant atmosphere of Nations Cup 2027. Witness high-goal international polo matches, stroll through the Luxury Boulevard, Art Pavilion, sponsor activations, and gourmet food village.",
         "individual_prices": {
@@ -1281,8 +1281,8 @@
         "name_en": "Main Stage & Fashion Show Runway",
         "badge_es": "Alta Costura, Premiación & After-Polo",
         "badge_en": "High Fashion, Awards & After-Polo",
-        "img": "assets/layout/stage.webp",
-        "img_fallback": "assets/layout/stage.jfif",
+        "img": "assets/layout/stage.webp?v=20261114_v3",
+        "img_fallback": "assets/layout/stage.jfif?v=20261114_v3",
         "desc_es": "La pasarela donde el deporte de reyes se fusiona con la alta costura y el entretenimiento. Alberga el Fashion Show estelar, la ceremonia de coronación del trofeo Nations Cup y las sesiones de DJ de clausura.",
         "desc_en": "The runway where the sport of kings converges with haute couture and prestige entertainment. Home to the signature Fashion Show, Nations Cup trophy ceremony, and headline DJ sunset sessions.",
         "individual_prices": {},
@@ -1322,8 +1322,8 @@
         "name_en": "Giant Video Screen & Digital Scoreboard (West Wing)",
         "badge_es": "Exclusivo · Impacto Audiovisual Continuo",
         "badge_en": "Exclusive · Continuous High-Impact Visibility",
-        "img": "assets/layout/screen.webp",
-        "img_fallback": "assets/layout/screen.jfif",
+        "img": "assets/layout/screen.webp?v=20261114_v3",
+        "img_fallback": "assets/layout/screen.jfif?v=20261114_v3",
         "desc_es": "Ubicada en el flanco izquierdo con vista directa a todos los palcos, terrazas y gradas. Estructura LED monumental para repeticiones en cámara lenta, transmisión 4K en tiempo real y emisión exclusiva de spots de patrocinadores.",
         "desc_en": "Positioned on the west wing with direct sightlines across all VIP boxes, terraces, and grandstands. High-brightness LED screen for instant replays, 4K multi-camera broadcast, and continuous sponsor commercial broadcast.",
         "individual_prices": {},
@@ -1612,11 +1612,11 @@
       if (!mapImg) return;
 
       if (mode === 'prices') {
-        mapImg.src = 'assets/layout/campo con precios1.webp';
+        mapImg.src = 'assets/layout/campo con precios1.webp?v=20261114_v3';
         btnPrices.className = 'px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase transition-all bg-[#D4AF37] text-[#06110B] shadow-md';
         btnClean.className = 'px-3.5 py-1.5 rounded-full text-[11px] font-medium uppercase transition-all text-[#F3E5AB]/75 hover:text-white';
       } else {
-        mapImg.src = 'assets/layout/General.webp';
+        mapImg.src = 'assets/layout/General.webp?v=20261114_v3';
         btnClean.className = 'px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase transition-all bg-[#D4AF37] text-[#06110B] shadow-md';
         btnPrices.className = 'px-3.5 py-1.5 rounded-full text-[11px] font-medium uppercase transition-all text-[#F3E5AB]/75 hover:text-white';
       }

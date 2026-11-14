@@ -54,6 +54,11 @@ AddDefaultCharset UTF-8
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-XSS-Protection "1; mode=block"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Force immediate revalidation on layout renders to prevent stale browser cache
+  <FilesMatch "\.(webp|jfif|jpg|png)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
 </IfModule>
 
 # 3. COMPRESSION (GZIP & DEFLATE) FOR ULTRA-FAST LOADING
