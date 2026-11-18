@@ -435,19 +435,19 @@
             <span class="material-symbols-outlined text-[14px]">explore</span> Acceso Directo:
           </span>
           <button onclick="window.openZoneModal('giant-screen')" type="button" class="px-2.5 py-1 rounded-full bg-[#081810] hover:bg-[#D4AF37]/20 border border-[#D4AF37]/30 text-[#F3E5AB] hover:text-[#D4AF37] transition-all flex items-center gap-1">
-            <span>📺</span> Pantalla Gigante (Lado Izquierdo)
+            <span>📺</span> <span data-i18n="layout_quick_screen">Pantalla Gigante (Lado Izquierdo)</span>
           </button>
           <button onclick="window.openZoneModal('fashion-stage')" type="button" class="px-2.5 py-1 rounded-full bg-[#081810] hover:bg-[#D4AF37]/20 border border-[#D4AF37]/30 text-[#F3E5AB] hover:text-[#D4AF37] transition-all flex items-center gap-1">
-            <span>💃</span> Escenario Runway
+            <span>💃</span> <span data-i18n="layout_quick_runway">Escenario Runway</span>
           </button>
           <button onclick="window.openZoneModal('vip-polo-club')" type="button" class="px-2.5 py-1 rounded-full bg-[#D4AF37]/15 hover:bg-[#D4AF37]/30 border border-[#D4AF37]/60 text-[#D4AF37] font-bold transition-all flex items-center gap-1">
-            <span>👑</span> ★ VIP Polo Club & Cena Gala
+            <span>👑</span> <span data-i18n="layout_quick_vip">★ VIP Polo Club & Cena Gala</span>
           </button>
           <button onclick="window.openZoneModal('premium-lounge')" type="button" class="px-2.5 py-1 rounded-full bg-[#081810] hover:bg-[#D4AF37]/20 border border-[#D4AF37]/30 text-[#F3E5AB] hover:text-[#D4AF37] transition-all flex items-center gap-1">
-            <span>🛋️</span> Premium Lounge
+            <span>🛋️</span> <span data-i18n="layout_quick_premium">Premium Lounge</span>
           </button>
           <button onclick="window.openZoneModal('general-village')" type="button" class="px-2.5 py-1 rounded-full bg-[#081810] hover:bg-[#D4AF37]/20 border border-[#D4AF37]/30 text-[#F3E5AB] hover:text-[#D4AF37] transition-all flex items-center gap-1">
-            <span>🏇</span> General & Village
+            <span>🏇</span> <span data-i18n="layout_quick_general">General & Village</span>
           </button>
         </div>
 
@@ -780,6 +780,7 @@
             type="button" 
             class="p-2 rounded-full text-[#F3E5AB]/75 hover:text-white hover:bg-white/10 transition-colors"
             aria-label="Cerrar modal"
+            data-i18n-aria="aria_close_modal"
           >
             <span class="material-symbols-outlined text-[24px]">close</span>
           </button>
@@ -805,13 +806,13 @@
           <!-- Controles de Zoom -->
           <div class="flex items-center justify-between w-full mt-3 px-1 text-xs text-[#F3E5AB]/70">
             <div class="flex items-center gap-2">
-              <button onclick="window.zoomInZoneImg()" type="button" class="p-1.5 rounded-lg bg-[#081810] border border-[#D4AF37]/40 hover:bg-white/10 text-[#D4AF37]" title="Acercar zoom">
+              <button onclick="window.zoomInZoneImg()" type="button" class="p-1.5 rounded-lg bg-[#081810] border border-[#D4AF37]/40 hover:bg-white/10 text-[#D4AF37]" title="Acercar zoom" data-i18n-title="modal_zoom_in_title">
                 <span class="material-symbols-outlined text-[16px]">zoom_in</span>
               </button>
-              <button onclick="window.zoomOutZoneImg()" type="button" class="p-1.5 rounded-lg bg-[#081810] border border-[#D4AF37]/40 hover:bg-white/10 text-[#D4AF37]" title="Alejar zoom">
+              <button onclick="window.zoomOutZoneImg()" type="button" class="p-1.5 rounded-lg bg-[#081810] border border-[#D4AF37]/40 hover:bg-white/10 text-[#D4AF37]" title="Alejar zoom" data-i18n-title="modal_zoom_out_title">
                 <span class="material-symbols-outlined text-[16px]">zoom_out</span>
               </button>
-              <button onclick="window.resetZoomZoneImg()" type="button" class="px-2.5 py-1 rounded-lg bg-[#081810] border border-[#D4AF37]/40 hover:bg-white/10 text-[#D4AF37] text-[10px] uppercase font-bold" title="Restablecer">
+              <button onclick="window.resetZoomZoneImg()" type="button" class="px-2.5 py-1 rounded-lg bg-[#081810] border border-[#D4AF37]/40 hover:bg-white/10 text-[#D4AF37] text-[10px] uppercase font-bold" title="Restablecer" data-i18n="modal_zoom_reset">
                 Reset
               </button>
               <span id="zoom-level-indicator" class="text-[11px] font-mono text-[#D4AF37] ml-2">100%</span>
@@ -1092,7 +1093,7 @@
   <!-- ============================================================================== -->
   <!-- 9. SCRIPTS: APLICACIÓN Y CONTROLADOR INTERACTIVO DEL LAYOUT                     -->
   <!-- ============================================================================== -->
-  <script src="app.js"></script>
+  <script src="app.js?v=20261118_v4"></script>
   <script>
     // ZONES DATA EMBEDDED WITH SCREEN ON THE LEFT WING (25.1% Left, 13.4% Top)
     window.NC_ZONES = [
@@ -1637,22 +1638,32 @@
       }
     });
 
+    // Expose layout functions to window for global cross-module synchronization
+    window.renderZonesCards = renderZonesCards;
+    window.renderModalZone = renderModalZone;
+    window.getCurrentZoneIndex = function() { return currentZoneIndex; };
+
+    // Listen to global language and currency change events
+    window.addEventListener('languageChanged', (e) => {
+      renderZonesCards();
+      const modal = document.getElementById('zone-react-modal');
+      if (modal && !modal.classList.contains('hidden') && window.NC_ZONES) {
+        renderModalZone(window.NC_ZONES[currentZoneIndex]);
+      }
+    });
+
+    window.addEventListener('currencyChanged', (e) => {
+      renderZonesCards();
+      const modal = document.getElementById('zone-react-modal');
+      if (modal && !modal.classList.contains('hidden') && window.NC_ZONES) {
+        renderModalZone(window.NC_ZONES[currentZoneIndex]);
+      }
+    });
+
     // Initialize Cards on DOM ready
     document.addEventListener('DOMContentLoaded', () => {
       renderZonesCards();
     });
-
-    // Hook into global language/currency changes
-    const originalUpdateLang = window.updateLanguageDOM;
-    if (typeof originalUpdateLang === 'function') {
-      window.updateLanguageDOM = function(lang, autoCurrency) {
-        originalUpdateLang(lang, autoCurrency);
-        renderZonesCards();
-        if (document.getElementById('zone-react-modal') && !document.getElementById('zone-react-modal').classList.contains('hidden')) {
-          renderModalZone(window.NC_ZONES[currentZoneIndex]);
-        }
-      };
-    }
   </script>
 
 

@@ -22,6 +22,11 @@
     lightboxIndex: 0
   };
 
+  // Expose global state to window for cross-module synchronization
+  if (typeof window !== 'undefined') {
+    window.state = state;
+  }
+
   // Centralized Bilingual Dictionary (i18n)
   const i18n = {
     es: {
@@ -185,6 +190,17 @@
       "prog_contact_address": "Ruta de los Cenotes Km 11.5, Puerto Morelos, Quintana Roo",
       "prog_contact_web": "elreypolo.com · FB elreypolocountryclub",
       "prog_endorsed_label": "Instituciones y Avales Oficiales:",
+      "layout_quick_screen": "Pantalla Gigante (Lado Izquierdo)",
+      "layout_quick_runway": "Escenario Runway",
+      "layout_quick_vip": "★ VIP Polo Club & Cena Gala",
+      "layout_quick_premium": "Premium Lounge",
+      "layout_quick_general": "General & Village",
+      "modal_zoom_reset": "Reset",
+      "modal_zoom_in_title": "Acercar zoom",
+      "modal_zoom_out_title": "Alejar zoom",
+      "aria_close_modal": "Cerrar modal",
+      "aria_prev_zone": "Zona anterior",
+      "aria_next_zone": "Zona siguiente",
       "dock_layout": "Layout",
       "breadcrumb_layout": "Layout & Hospitalidad",
       "layout_badge": "Master Plan Oficial · 6 Hectáreas de Ultralujo",
@@ -815,6 +831,17 @@
       "prog_contact_address": "Ruta de los Cenotes Km 11.5, Puerto Morelos, Quintana Roo, Mexico",
       "prog_contact_web": "elreypolo.com · FB elreypolocountryclub",
       "prog_endorsed_label": "Official Sanctioning Bodies & Tourism:",
+      "layout_quick_screen": "Giant Screen (West Wing)",
+      "layout_quick_runway": "Runway & Main Stage",
+      "layout_quick_vip": "★ VIP Polo Club & Gala Dinner",
+      "layout_quick_premium": "Premium Lounge",
+      "layout_quick_general": "General & Polo Village",
+      "modal_zoom_reset": "Reset",
+      "modal_zoom_in_title": "Zoom in",
+      "modal_zoom_out_title": "Zoom out",
+      "aria_close_modal": "Close modal",
+      "aria_prev_zone": "Previous zone",
+      "aria_next_zone": "Next zone",
       "dock_layout": "Layout",
       "breadcrumb_layout": "Layout & Hospitality",
       "layout_badge": "Official Master Plan · 6 Hectares of Luxury",
@@ -1249,6 +1276,10 @@
       "btn_close_modal": "Close",
     }
   };
+
+  if (typeof window !== 'undefined') {
+    window.i18n = i18n;
+  }
 
   // --- 2. 14-SLIDE PITCH DECK DATA ---
   const pitchDeckData = [
@@ -1789,6 +1820,13 @@
     return 'en';
   }
 
+  window.updateLanguageDOM = updateLanguageDOM;
+  window.updateCurrencyDisplay = updateCurrencyDisplay;
+  window.updateWhatsAppLinks = updateWhatsAppLinks;
+  window.generateWhatsAppMessage = generateWhatsAppMessage;
+  window.updateFormWhatsAppPreview = updateFormWhatsAppPreview;
+  window.getLanguage = function () { return state.lang; };
+
   window.setWebsiteLanguage = function (lang) {
     updateLanguageDOM(lang, false);
 
@@ -1810,6 +1848,9 @@
   // --- 5. RENDER TRANSLATIONS (DOM UPDATE) ---
   function updateLanguageDOM(lang, autoCurrency = true) {
     state.lang = lang;
+    if (typeof window !== 'undefined' && window.state) {
+      window.state.lang = lang;
+    }
     localStorage.setItem('nationscup_lang', lang);
 
     // By default, prices are ALWAYS in USD; currency ONLY changes to MXN if user explicitly chooses MXN.
@@ -1943,11 +1984,178 @@
       });
     } catch (e) {}
 
-    // Refresh dynamic components
+    // Refresh dynamic components & dispatches
     renderPitchDeckSlide();
     updateCurrencyDisplay();
     updateFormWhatsAppPreview();
+    updateWhatsAppLinks(lang);
+
+    // Re-render layout page cards and modal if present
+    if (typeof window.renderZonesCards === 'function') {
+      try { window.renderZonesCards(); } catch (e) {}
+    }
+    if (typeof window.renderModalZone === 'function' && typeof window.getCurrentZoneIndex === 'function') {
+      try {
+        const modal = document.getElementById('zone-react-modal');
+        if (modal && !modal.classList.contains('hidden') && window.NC_ZONES) {
+          window.renderModalZone(window.NC_ZONES[window.getCurrentZoneIndex()]);
+        }
+      } catch (e) {}
+    }
+
+    // Broadcast global language change event
+    try {
+      window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
+    } catch (e) {}
   }
+  // --- 5B. DYNAMIC MULTILINGUAL WHATSAPP DISPATCH ENGINE ---
+  function updateWhatsAppLinks(lang) {
+    const isEs = lang === 'es';
+    const waLinks = document.querySelectorAll('a[href*="wa.me"]');
+    if (!waLinks || !waLinks.length) return;
+
+    const waCatalog = [
+      {
+        kw: ['inscribir un equipo', 'register a team', 'inscripción de equipo'],
+        phone: "529988600499",
+        es: "Hola, solicito información para inscribir un equipo en la Nations Cup 2027",
+        en: "Hello, I would like to request information to register a team for Nations Cup 2027"
+      },
+      {
+        kw: ['registrar un equipo para el torneo', 'register a team for the nations cup', 'deseo registrar un equipo'],
+        phone: "529988600499",
+        es: "Hola, deseo registrar un equipo para el torneo Nations Cup 2027",
+        en: "Hello, I would like to register a team for the Nations Cup 2027 tournament"
+      },
+      {
+        kw: ['información sobre el programa y registro', 'information regarding the official schedule and team registration', 'programa y registro'],
+        phone: "529988600499",
+        es: "Hola, deseo solicitar información sobre el Programa y Registro de Equipos para Nations Cup 2027",
+        en: "Hello, I would like to request information regarding the Official Schedule and Team Registration for Nations Cup 2027"
+      },
+      {
+        kw: ['información sobre el torneo', 'information regarding the nations cup 2027 tournament', 'información sobre nations cup', 'deseo información sobre'],
+        phone: "529988600499",
+        es: "Hola, deseo información sobre el torneo Nations Cup 2027",
+        en: "Hello, I would like information regarding the Nations Cup 2027 tournament"
+      },
+      {
+        kw: ['reservar una mesa vip', 'reserve a vip table', 'mesa vip'],
+        phone: "529988600499",
+        es: "Hola, deseo reservar una mesa VIP en Nations Cup 2027",
+        en: "Hello, I would like to reserve a VIP table for Nations Cup 2027"
+      },
+      {
+        kw: ['información y reserva para nations cup', 'information and vip reservation', 'solicitar información y reserva'],
+        phone: "529988600499",
+        es: "Hola, deseo solicitar información y reserva para Nations Cup 2027",
+        en: "Hello, I would like to request information and VIP reservation for Nations Cup 2027"
+      },
+      {
+        kw: ['nivel platino', 'platinum level', 'patrocinador principal'],
+        phone: "34722116248",
+        es: "Hola, solicito formalmente el bloqueo del Nivel Platino (Patrocinador Principal) para Nations Cup 2027.",
+        en: "Hello, I formally request category hold for Platinum Level (Lead Partner) for Nations Cup 2027."
+      },
+      {
+        kw: ['nivel oro', 'gold level'],
+        phone: "34722116248",
+        es: "Hola, deseo bloquear el Nivel Oro para Nations Cup 2027.",
+        en: "Hello, I wish to reserve Gold Level for Nations Cup 2027."
+      },
+      {
+        kw: ['nivel plata', 'silver level'],
+        phone: "34722116248",
+        es: "Hola, deseo bloquear el Nivel Plata para Nations Cup 2027.",
+        en: "Hello, I wish to reserve Silver Level for Nations Cup 2027."
+      },
+      {
+        kw: ['nivel bronce', 'bronze level'],
+        phone: "34722116248",
+        es: "Hola, deseo bloquear el Nivel Bronce para Nations Cup 2027.",
+        en: "Hello, I wish to reserve Bronze Level for Nations Cup 2027."
+      },
+      {
+        kw: ['nombre del torneo', 'tournament naming rights', '80,000'],
+        phone: "34722116248",
+        es: "Hola, deseo solicitar la exclusividad del Nombre del Torneo (80,000 USD) para Nations Cup 2027.",
+        en: "Hello, I wish to request Tournament Naming Rights exclusivity (80,000 USD) for Nations Cup 2027."
+      },
+      {
+        kw: ['sponsoreo exclusivo de un equipo', 'exclusive team sponsorship', '25,000'],
+        phone: "34722116248",
+        es: "Hola, deseo bloquear el Sponsoreo Exclusivo de un Equipo (25,000 USD) para Nations Cup 2027.",
+        en: "Hello, I wish to reserve Exclusive Team Sponsorship (25,000 USD) for Nations Cup 2027."
+      },
+      {
+        kw: ['speaker del torneo', 'tournament speaker'],
+        phone: "34722116248",
+        es: "Hola, deseo bloquear el Patrocinio del Speaker del Torneo (20,000 USD) para Nations Cup 2027.",
+        en: "Hello, I wish to reserve Tournament Speaker Sponsorship (20,000 USD) for Nations Cup 2027."
+      },
+      {
+        kw: ['pantallas gigantes', 'giant video screens', 'vídeos en pantallas'],
+        phone: "34722116248",
+        es: "Hola, deseo bloquear el Patrocinio de Vídeos en Pantallas Gigantes (20,000 USD) para Nations Cup 2027.",
+        en: "Hello, I wish to reserve Giant Video Screens Sponsorship (20,000 USD) for Nations Cup 2027."
+      },
+      {
+        kw: ['campo de polo', 'polo pitch naming', '15,000'],
+        phone: "34722116248",
+        es: "Hola, deseo bloquear el Nombre del Campo de Polo (15,000 USD) para Nations Cup 2027.",
+        en: "Hello, I wish to reserve Polo Pitch Naming Rights (15,000 USD) for Nations Cup 2027."
+      },
+      {
+        kw: ['patrocinio de cartelera', 'pitchside board'],
+        phone: "34722116248",
+        es: "Hola, deseo bloquear el Patrocinio de Cartelera (5,000 USD) para Nations Cup 2027.",
+        en: "Hello, I wish to reserve Pitchside Board Sponsorship (5,000 USD) for Nations Cup 2027."
+      },
+      {
+        kw: ['mejor jugador mvp', 'mvp player award'],
+        phone: "34722116248",
+        es: "Hola, deseo bloquear el Patrocinio Premio Mejor Jugador MVP (5,000 USD) para Nations Cup 2027.",
+        en: "Hello, I wish to reserve MVP Player Award Sponsorship (5,000 USD) for Nations Cup 2027."
+      },
+      {
+        kw: ['mejor caballo', 'best playing pony'],
+        phone: "34722116248",
+        es: "Hola, deseo bloquear el Patrocinio Premio Mejor Caballo (5,000 USD) para Nations Cup 2027.",
+        en: "Hello, I wish to reserve Best Playing Pony Award Sponsorship (5,000 USD) for Nations Cup 2027."
+      },
+      {
+        kw: ['sponsor gastronómico', 'culinary sponsor', 'restaurante como sponsor'],
+        phone: "34722116248",
+        es: "Hola, deseo postular nuestro restaurante como Sponsor Gastronómico para Nations Cup 2027.",
+        en: "Hello, I wish to apply our restaurant as Official Culinary Sponsor for Nations Cup 2027."
+      },
+      {
+        kw: ['movilidad o transporte', 'mobility or luxury fleet'],
+        phone: "34722116248",
+        es: "Hola, deseo coordinar una alianza de Movilidad o Transporte Oficial para Nations Cup 2027.",
+        en: "Hello, I wish to coordinate an Official Mobility or Luxury Fleet Partnership for Nations Cup 2027."
+      }
+    ];
+
+    waLinks.forEach(a => {
+      if (a.id === 'modal-zone-whatsapp-btn') return;
+      try {
+        const rawHref = a.getAttribute('href') || '';
+        const url = new URL(rawHref, window.location.href);
+        const textParam = decodeURIComponent(url.searchParams.get('text') || '').toLowerCase();
+        
+        for (const item of waCatalog) {
+          if (item.kw.some(k => textParam.includes(k.toLowerCase()))) {
+            const targetMsg = isEs ? item.es : item.en;
+            url.searchParams.set('text', targetMsg);
+            a.setAttribute('href', url.toString());
+            break;
+          }
+        }
+      } catch (e) {}
+    });
+  }
+
 
   // --- 6. VIDEO CONTROLLER (STREAMLINED) ---
   function initVideoPlayer() {
@@ -1967,11 +2175,11 @@
     const isMuted = video.muted;
 
     const newSrc = lang === 'en' ? 'assets/video/sizzle_ing.mp4' : 'assets/video/sizzle_esp.mp4';
-    if (!video.src.endsWith(newSrc)) {
+    if (!(video && video.src && typeof video.src === "string" && video.src.endsWith(newSrc))) {
       video.src = newSrc;
       video.currentTime = currentTime;
       video.muted = isMuted;
-      if (!isPaused) {
+      if (!isPaused && video && typeof video.play === "function") {
         video.play().catch(() => {});
       }
     }
@@ -2068,7 +2276,7 @@
     const selectedLang = optLang || state.lang || 'es';
     const videoSrc = selectedLang === 'en' ? 'assets/video/sizzle_ing.mp4' : 'assets/video/sizzle_esp.mp4';
 
-    if (!theaterVideo.src.endsWith(videoSrc)) {
+    if (!(theaterVideo && theaterVideo.src && typeof theaterVideo.src === "string" && theaterVideo.src.endsWith(videoSrc))) {
       theaterVideo.src = videoSrc;
     }
 
@@ -2196,7 +2404,7 @@
     const isPaused = theaterVideo.paused;
     const newSrc = lang === 'en' ? 'assets/video/sizzle_ing.mp4' : 'assets/video/sizzle_esp.mp4';
 
-    if (!theaterVideo.src.endsWith(newSrc)) {
+    if (!(theaterVideo && theaterVideo.src && typeof theaterVideo.src === "string" && theaterVideo.src.endsWith(newSrc))) {
       theaterVideo.src = newSrc;
       theaterVideo.currentTime = currTime;
       theaterVideo.muted = false;
@@ -2735,10 +2943,21 @@
         setVal('ctp_pass', '$14,700 USD');
       }
 
-      // Also trigger renderZonesCards if on layout page
-      if (typeof renderZonesCards === 'function') {
-        renderZonesCards();
+      // Trigger layout cards and modal if on layout page
+      if (typeof window.renderZonesCards === 'function') {
+        try { window.renderZonesCards(); } catch (e) {}
       }
+      if (typeof window.renderModalZone === 'function' && typeof window.getCurrentZoneIndex === 'function') {
+        try {
+          const modal = document.getElementById('zone-react-modal');
+          if (modal && !modal.classList.contains('hidden') && window.NC_ZONES) {
+            window.renderModalZone(window.NC_ZONES[window.getCurrentZoneIndex()]);
+          }
+        } catch (e) {}
+      }
+      try {
+        window.dispatchEvent(new CustomEvent('currencyChanged', { detail: { currency: state.currency } }));
+      } catch (e) {}
     } catch (e) {}
 
     const curr = currencyRates[state.currency] || currencyRates['USD'];
