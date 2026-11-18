@@ -7,9 +7,20 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/?lang=es"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/"/>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Programa Oficial, Cronograma de Partidos & Convocatoria -->
+  <url>
+    <loc>https://www.nationscup2027.com/programa.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/programa.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/programa.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/programa.html"/>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
   </url>
 
   <!-- 2. Matriz de Patrocinios, Tiers & Exclusividad -->
@@ -18,7 +29,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/patrocinios.html?lang=es"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/patrocinios.html?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/patrocinios.html"/>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -29,7 +40,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/pitch-deck.html?lang=es"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/pitch-deck.html?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/pitch-deck.html"/>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -40,7 +51,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/tour-360.html?lang=es"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/tour-360.html?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/tour-360.html"/>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -51,7 +62,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/layout.html?lang=es"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/layout.html?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/layout.html"/>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -62,7 +73,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/galeria.html?lang=es"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/galeria.html?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/galeria.html"/>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -73,7 +84,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.nationscup2027.com/contacto.html?lang=es"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.nationscup2027.com/contacto.html?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nationscup2027.com/contacto.html"/>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
